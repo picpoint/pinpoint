@@ -13,4 +13,59 @@
 }
 
 
+.indx {
+  // border: @border;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+    &__wrp {
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f5f5;
+    }  
+    &__mainblock {
+      border: @border;
+      display: flex;
+      width: 70%;
+      height: 70%;
+    }
+    &__descblock {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+    &__nameblock {
+      border: @border;
+      display: flex;
+      align-items: flex-end;
+      height: 40%;
+        h3 {
+          font-size: 2.5rem;
+          font-weight: bolder;
+          color: #00046C;
+        }
+    }
+    &__aboutblock {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      height: 60%;
+        span {
+          font-size: 1.2rem;
+          margin: 10px;
+        }
+    }
+
+    
+    &__loginblock {
+      border: @border;
+      width: 40%;
+    }
+}
+
 
