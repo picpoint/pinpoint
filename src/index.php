@@ -14,19 +14,22 @@ session_start();
 
   <section class="indx">
     <div class="indx__wrp">
-      <div class="indx__mainblock">
-        <div class="indx__descblock">
-          <div class="indx__nameblock">
-            <h3>Pinpoint</h3>
+      
+      <div class="indx__hdr">
+        <div class="indx__hdrcontent">
+          <div class="indx__logo">
+            <img src="../dist/pict/pinWhite.png" alt="logo">
           </div>
-          <div class="indx__aboutblock">
-            <span>Pinpoint это международная социальная сеть.</span>
-            <span>Мы помогаем сохранять память о путешествиях</span>
-          </div>          
-        </div>
-        <div class="indx__loginblock">
+          <div class="indx__reg">
+            <a href="#">Регистрация</a>
+          </div>
         </div>
       </div>
+
+      <div class="indx__bdy">
+
+      </div>
+
     </div>
   </section>
 
