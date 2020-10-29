@@ -65,10 +65,48 @@
     &__bdy {
       border: @border;
       display: flex;
-      height: 80%;
+      justify-content: center;
+      height: 85%;
       width: 100%;
-      background-image: url("../pict/travel.png");
+      background-image: url("../pict/travel.jpg");
       background-size: cover;
+    }
+    &__auth {
+      border: @border;
+      display: flex;
+      align-items: flex-end;
+      width: 70%;
+    }
+    &__authblock {
+      border: @border;
+      display: flex;
+      flex-direction: column;      
+      background-color: aquamarine;      
+      margin: 0 0 50px 50px;      
+        input {
+          width: 300px;
+          height: 25px;
+          margin: 10px;
+        }
+    }
+
+
+
+    &__ftr {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 8%;
+      // background-color: @colorindxpanel;      
+    }
+    &__about {
+      border: @border;
+      a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: @colorindxpanel;
+      }
     }
 
 

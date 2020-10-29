@@ -27,7 +27,19 @@ session_start();
       </div>
 
       <div class="indx__bdy">
+        <div class="indx__auth">
+          <form method="post" class="indx__authblock">
+            <input type="text" name="authlogin">
+            <input type="text" name="authpass">
+            <button type="submit">Войти</button>
+          </form>
+        </div>
+      </div>
 
+      <div class="indx__ftr">
+        <div class="indx__about">
+          <a href="#">О нас</a>
+        </div>
       </div>
 
     </div>
