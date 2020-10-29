@@ -18,7 +18,9 @@ session_start();
       <div class="indx__hdr">
         <div class="indx__hdrcontent">
           <div class="indx__logo">
-            <img src="../dist/pict/pinWhite.png" alt="logo">
+            <a href="#">
+              <img src="../dist/pict/pinWhite.png" alt="logo">
+            </a>
           </div>
           <div class="indx__reg">
             <a href="#">Регистрация</a>
@@ -29,8 +31,8 @@ session_start();
       <div class="indx__bdy">
         <div class="indx__auth">
           <form method="post" class="indx__authblock">
-            <input type="text" name="authlogin">
-            <input type="text" name="authpass">
+            <input type="text" name="authlogin" placeholder="Логин">
+            <input type="password" name="authpass" placeholder="Пароль">
             <button type="submit">Войти</button>
           </form>
         </div>

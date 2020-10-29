@@ -19,7 +19,7 @@
   display: flex;
   height: 100vh;
     &__wrp {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -27,7 +27,7 @@
       background-color: @colorindxbody;
     }
     &__hdr {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -35,22 +35,30 @@
       background-color: @colorindxpanel;
     }
     &__hdrcontent {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: space-between;
       width: 70%;
     }
     &__logo {
-      border: @border;
+      // border: @border;
       display: flex;
       align-items: center;
       height: 100%;
-        img {
+        a {
+          // border: @border;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           height: 90%;
+          img {
+            // border: @border;
+            height: 90%;
+          }
         }
     }
     &__reg {
-      border: @border;
+      // border: @border;
       display: flex;
       align-items: center;
         a {
@@ -63,7 +71,7 @@
     }
 
     &__bdy {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       height: 85%;
@@ -72,28 +80,44 @@
       background-size: cover;
     }
     &__auth {
-      border: @border;
+      // border: @border;
       display: flex;
       align-items: flex-end;
       width: 70%;
     }
     &__authblock {
-      border: @border;
+      // border: @border;
       display: flex;
-      flex-direction: column;      
-      background-color: aquamarine;      
-      margin: 0 0 50px 50px;      
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;      
+      background-color: rgba(0, 0, 0, 0.7);      
+      width: 400px;
+      height: 250px;
+      margin: 0 0 50px 50px;
+      border-radius: 7px;
         input {
           width: 300px;
-          height: 25px;
+          height: 30px;
           margin: 10px;
+        }
+        button {
+          width: 160px;
+          height: 40px;
+          margin-top: 30px;
+          background-color: @colorindxbtn;
+          color: white;
+          font-weight: bolder;
+          border: none;
+          outline: none;
+          cursor: pointer;
         }
     }
 
 
 
     &__ftr {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -101,7 +125,7 @@
       // background-color: @colorindxpanel;      
     }
     &__about {
-      border: @border;
+      // border: @border;
       a {
         text-decoration: none;
         font-size: 1.2rem;
