@@ -23,7 +23,7 @@ session_start();
             </a>
           </div>
           <div class="indx__reg">
-            <a href="#">Регистрация</a>
+            <a href="registration.php">Регистрация</a>
           </div>
         </div>
       </div>
