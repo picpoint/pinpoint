@@ -10,8 +10,8 @@
 
   <section class="reg">
     <div class="reg__wrp">
+      
       <div class="reg__hdr">
-
         <div class="reg__hdrcontent">
           <div class="reg__logo">
             <a href="index.php">
@@ -19,8 +19,15 @@
             </a>
           </div>
         </div>
-
       </div>
+
+      <div class="reg__bdy">
+        <div class="reg__bdyhead">
+          <h3>Регистрация</h3>
+        </div>
+        
+      </div>
+
     </div>
   </section>
 

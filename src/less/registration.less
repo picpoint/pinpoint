@@ -7,13 +7,14 @@
   width: 100vw;
   height: 100vh;
     &__wrp {
-      // border: @border;
+      border: @border;
       display: flex;
+      flex-direction: column;
       width: 100%;
       background-color: @colorindxbody;
     }
     &__hdr {
-      // border: @border;
+      border: @border;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -43,4 +44,27 @@
           }
         }
     }
+
+    &__bdy {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      height: 93%;      
+    }
+    &__bdyhead {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+        h3 {
+          font-size: 3rem;
+          font-family: 'Play', sans-serif;
+          color: @colorindxpanel;          
+        }      
+    }
+
+
+
+
+
 }
