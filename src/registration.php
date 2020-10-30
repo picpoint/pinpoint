@@ -25,6 +25,15 @@
         <div class="reg__bdyhead">
           <h3>Регистрация</h3>
         </div>
+        <div class="reg__regform">
+          <form method="post" class="reg__form">
+            <input type="text" name="regfirstname" placeholder="Имя">
+            <input type="text" name="reglastname" placeholder="Фамилия">
+            <input type="text" name="reglogin" placeholder="Логин">
+            <input type="password" name="regpass" placeholder="Пароль">
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+        </div>
         
       </div>
 
