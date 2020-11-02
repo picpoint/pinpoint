@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<?php
+  require_once "../controller/registrationUserController.php";
+
+?>
+
   <section class="reg">
     <div class="reg__wrp">
       
@@ -31,8 +36,12 @@
             <input type="text" name="reglastname" placeholder="Фамилия">
             <input type="text" name="reglogin" placeholder="Логин">
             <input type="password" name="regpass" placeholder="Пароль">
-            <button type="submit">Зарегистрироваться</button>
+            <button type="submit" name="regbtn">Зарегистрироваться</button>
           </form>
+          <?php
+            $regUser = new RegistrationUserC();
+            $regUser -> getDatasUser();
+          ?>
         </div>
         
       </div>
