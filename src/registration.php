@@ -35,14 +35,19 @@
             <input type="text" name="regfirstname" placeholder="Имя">
             <input type="text" name="reglastname" placeholder="Фамилия">
             <input type="text" name="reglogin" placeholder="Логин">
-            <input type="password" name="regpass" placeholder="Пароль">
+            <input type="password" name="regpass" placeholder="Пароль">            
             <button type="submit" name="regbtn">Зарегистрироваться</button>
-          </form>
-          <?php
-            $regUser = new RegistrationUserC();
-            $regUser -> getDatasUser();
-          ?>
-        </div>
+          </form>          
+        </div>        
+
+        <div class="reg__msg">
+          <span>
+            <?php
+              $regUser = new RegistrationUserC();
+              $regUser -> getDatasUser();
+            ?>
+          </span>
+        </div>        
         
       </div>
 

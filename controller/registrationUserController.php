@@ -1,18 +1,26 @@
 <?php 
 
 
+
 class RegistrationUserC {
   
   public function getDatasUser() {
-    if(isset($_POST['regbtn']) && !empty($_POST['regfirstname']) && !empty($_POST['reglastname']) && $_POST['reglogin'] && !empty($_POST['regpass'])) {
-      echo($_POST['regfirstname']);
-      echo("<br>");
-      echo($_POST['reglastname']);
-      echo("<br>");
-      echo($_POST['reglogin']);
-      echo("<br>");
-      echo($_POST['regpass']);
-    }
+    $arrRegUser = [];
+    
+    if(isset($_POST['regbtn'])) {
+      if(!empty($_POST['regfirstname']) && !empty($_POST['reglastname']) && !empty($_POST['reglogin']) && !empty($_POST['regpass'])) {
+        $arrRegUser[] = $_POST['regfirstname'];
+        $arrRegUser[] = $_POST['reglastname'];
+        $arrRegUser[] = $_POST['reglogin'];
+        $arrRegUser[] = $_POST['regpass'];
+
+        print_r($arrRegUser);
+        
+      } else {
+        echo("Не все поля заполнены");
+      }
+
+    }   
   }
   
 
