@@ -10,7 +10,7 @@
 
 <?php
   require_once "../controller/registrationUserController.php";
-
+  require_once "../model/registrationUserModel.php";
 ?>
 
   <section class="reg">
