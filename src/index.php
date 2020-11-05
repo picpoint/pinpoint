@@ -11,6 +11,10 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+  require_once "../controller/authorizationUserController.php";  
+  require_once "../model/authorizationUserModel.php";
+?>
 
   <section class="indx">
     <div class="indx__wrp">
@@ -33,7 +37,13 @@ session_start();
           <form method="post" class="indx__authblock">
             <input type="text" name="authlogin" placeholder="Логин">
             <input type="password" name="authpass" placeholder="Пароль">
-            <button type="submit">Войти</button>
+            <button type="submit" name="authbth">Войти</button>
+            <span>
+              <?php
+                $authUser = new AuthorizationUserC();
+                $authUser -> getDatasUserAuth();
+              ?>
+            </span>
           </form>
         </div>
       </div>
