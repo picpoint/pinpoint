@@ -15,8 +15,21 @@ class RegistrationUserM {
     $login = $arrRegUser[2];
     $password = $arrRegUser[3];
 
-    $sth = $this->cnnct -> prepare("INSERT INTO users (firstname, lastname, login, password) VALUES ('$firstname', '$lastname', '$login', '$password') ");
+
+    $sth = $this->cnnct -> prepare("SELECT login FROM `users`");
     $sth -> execute();
+    $allUsrs = $sth -> fetchAll(PDO::FETCH_ASSOC);
+
+    foreach($allUsrs as $usr) {
+      print_r($usr);
+      echo("<br>");
+    }
+
+
+
+
+    // $sth = $this->cnnct -> prepare("INSERT INTO users (firstname, lastname, login, password) VALUES ('$firstname', '$lastname', '$login', '$password') ");
+    // $sth -> execute();
   }
 
 
