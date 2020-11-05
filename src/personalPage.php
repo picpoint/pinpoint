@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,11 @@
             <img src="pict/profileimg.png" alt="profile">
           </div>
           <div class="pp__nameblock">
-            <span>Иванов Иван</span>
+            <span>
+              <?php
+                echo($_SESSION['login']);
+              ?>
+            </span>
           </div>
           <div class="pp__placeblock">
             <span>г. Санкт-Петербург пер. Косыгина 23</span>
