@@ -14,7 +14,9 @@ class AuthorizationUserC {
         $arrAuthUser[] = trim($_POST['authpass']);
         
         $authUsr = new AuthorizationUserM();
-        $arrAuthUser -> authUser($arrAuthUser);
+        $authUsr -> authUser($arrAuthUser);
+      } else {
+        echo("Поля не заполнены");
       }
     }
     
