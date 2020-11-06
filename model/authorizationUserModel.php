@@ -2,7 +2,7 @@
 
 
 
-class AuthorizationUserM {
+class AuthorizationUserM {  
 
   public function __construct() {
     $this->cnnct = new PDO('mysql:host=localhost;dbname=ppdb', 'rmtar', '2203');
@@ -10,6 +10,9 @@ class AuthorizationUserM {
 
 
   public function authUser(array $arrAuthUser) {
+    $arrLog = [];
+    $arrPass = [];
+
     $login = $arrAuthUser[0];
     $password = $arrAuthUser[1];
     
@@ -23,10 +26,18 @@ class AuthorizationUserM {
       
       foreach($res as $rs) {
         foreach($rs as $key => $value) {
-          echo("$key - $value");
-          echo("<br>");
-        }        
-      }
+          if($key == 'login') {
+            $arrLog[] = $value;
+          } elseif($key == 'password') {
+            $arrPass[] = $value;
+          }
+        }
+      }      
+
+      $arrUsr = array_combine($arrLog, $arrPass);
+
+      print_r($arrUsr);
+
       
 
     }
