@@ -38,6 +38,8 @@ class AuthorizationUserM {
       foreach($arrUsr as $key => $value) {
         if($login == $key && $password == password_verify($password, $value)) {
           echo("Авторизация");
+          $_SESSION['login'] = $login;
+          header('location: personalPage.php');
         } else {
           echo("Логин или пароль неправильный");
         }
