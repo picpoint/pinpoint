@@ -20,7 +20,6 @@ class AuthorizationUserM {
     $sth -> execute();
     $res = $sth -> fetchAll(PDO::FETCH_ASSOC);
 
-    // print_r($res);
 
     if(count($res) > 0) {
       
@@ -36,9 +35,14 @@ class AuthorizationUserM {
 
       $arrUsr = array_combine($arrLog, $arrPass);
 
-      print_r($arrUsr);
-
-      
+      foreach($arrUsr as $key => $value) {
+        if($login == $key && $password == password_verify($password, $value)) {
+          echo("Авторизация");
+        } else {
+          echo("Логин или пароль неправильный");
+        }
+      }
+            
 
     }
 
