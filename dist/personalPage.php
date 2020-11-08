@@ -9,6 +9,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal page</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
   
@@ -36,7 +37,20 @@ session_start();
         </div>
 
         <div class="pp__topmenu">
+          <div class="pp__basemenublock">
+            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-users" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+          </div>
           
+          <div class="pp__exitblock">
+            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+          </div>
         </div>
 
       </div>

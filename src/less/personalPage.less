@@ -46,7 +46,6 @@
       // border: @border;
       display: flex;
       justify-content: center;
-      // height: 20px;
       width: 100%;
       margin-top: 7px;
         span {
@@ -84,10 +83,53 @@
 
     
     &__topmenu {
-      // border: @border;
+      border: @border;
+      display: flex;
       width: 85%;
       height: 50px;
       background-color: @colorindxpanel;
+    }
+    &__basemenublock {
+      border: @border;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      height: 100%;
+        a {
+          border: @border;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 45px;
+          height: 45px;
+          margin-left: 15px;
+          text-decoration: none;
+            i {
+              color: white;
+              font-size: 2rem;
+            }
+        }
+    }
+    &__exitblock {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 10%;
+      height: 100%;
+        a {
+          border: @border;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 45px;
+          height: 45px;
+          text-decoration: none;
+            i {
+              color: white;
+              font-size: 2rem;
+            }
+        }
     }
 
 
