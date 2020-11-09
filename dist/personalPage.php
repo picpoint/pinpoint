@@ -38,14 +38,50 @@ session_start();
 
         <div class="pp__topmenu">
           <div class="pp__basemenublock">
-            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-users" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i></a>
+            <div class="pp__msgblock">
+              <a href="#">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span>сообщения</span>
+              </a>              
+            </div>
+
+            <div class="pp__pinsblock">
+              <a href="#">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>метки</span>
+              </a>              
+            </div>
+
+            <div class="pp__frndsblock">
+              <a href="#">
+              <i class="fa fa-users" aria-hidden="true"></i>
+                <span>друзья</span>
+              </a>              
+            </div>
+
+            <div class="pp__nwsblock">
+              <a href="#">
+              <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                <span>новости</span>
+              </a>              
+            </div>
+            
+            <div class="pp__waysblock">
+              <a href="#">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+                <span>маршруты</span>
+              </a>              
+            </div>
+
+            
+            
+          
+            <!-- 
+            <a href="#"></a>
             <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a> -->
           </div>
           
           <div class="pp__exitblock">

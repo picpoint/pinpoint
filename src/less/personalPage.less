@@ -1,6 +1,43 @@
 @import "var.less";
 
 
+//----------------------------------
+//MIXINS
+.mixintopmenu {
+  border: @border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  padding: 0 5px;
+  margin-left: 15px;
+    a {
+      // border: @border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      height: 100%;          
+        i {
+          border: @border;
+          height: 60%;
+          font-size: 1.5rem;              
+        }          
+        span {
+          border: @border;
+          height: 40%;
+          color: white;
+        }
+    }
+}
+//----------------------------------
+
+
+
+
 .pp {
 	// border: @border;
 	display: flex;
@@ -96,21 +133,23 @@
       align-items: center;
       width: 90%;
       height: 100%;
-        a {
-          border: @border;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 45px;
-          height: 45px;
-          margin-left: 15px;
-          text-decoration: none;
-            i {
-              color: white;
-              font-size: 2rem;
-            }
-        }
     }
+    &__msgblock {
+      .mixintopmenu();
+    }
+    &__pinsblock {
+      .mixintopmenu();
+    }
+    &__frndsblock {
+      .mixintopmenu();
+    }
+    &__nwsblock {
+      .mixintopmenu();
+    }
+    &__waysblock {
+      .mixintopmenu();
+    }
+
     &__exitblock {
       border: @border;
       display: flex;
