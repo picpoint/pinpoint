@@ -38,7 +38,7 @@ session_start();
 
         <div class="pp__topmenu">
           <div class="pp__basemenublock">
-            <div class="pp__msgblock">
+            <div class="pp__messageblock">
               <a href="#">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 <span>сообщения</span>
@@ -52,40 +52,54 @@ session_start();
               </a>              
             </div>
 
-            <div class="pp__frndsblock">
+            <div class="pp__freindsblock">
               <a href="#">
-              <i class="fa fa-users" aria-hidden="true"></i>
+                <i class="fa fa-users" aria-hidden="true"></i>
                 <span>друзья</span>
               </a>              
             </div>
 
-            <div class="pp__nwsblock">
+            <div class="pp__newsblock">
               <a href="#">
-              <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>
                 <span>новости</span>
               </a>              
             </div>
             
             <div class="pp__waysblock">
               <a href="#">
-              <i class="fa fa-globe" aria-hidden="true"></i>
+                <i class="fa fa-globe" aria-hidden="true"></i>
                 <span>маршруты</span>
               </a>              
             </div>
 
-            
-            
-          
-            <!-- 
-            <a href="#"></a>
-            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a> -->
+            <div class="pp__albumsblock">
+              <a href="#">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <span>альбомы</span>
+              </a>              
+            </div>
+
+            <div class="pp__findblock">
+              <a href="#">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span>поиск</span>
+              </a>              
+            </div>
+
+            <div class="pp__settingsblock">
+              <a href="#">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <span>настройка</span>
+              </a>              
+            </div>
           </div>
-          
+
           <div class="pp__exitblock">
-            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <a href="#">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              <span>выход</span>
+            </a>              
           </div>
         </div>
 

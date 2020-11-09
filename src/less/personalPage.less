@@ -4,7 +4,7 @@
 //----------------------------------
 //MIXINS
 .mixintopmenu {
-  border: @border;
+  // border: @border;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,12 +22,12 @@
       text-decoration: none;
       height: 100%;          
         i {
-          border: @border;
+          // border: @border;
           height: 60%;
           font-size: 1.5rem;              
         }          
         span {
-          border: @border;
+          // border: @border;
           height: 40%;
           color: white;
         }
@@ -131,44 +131,38 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      width: 90%;
+      width: 95%;
       height: 100%;
     }
-    &__msgblock {
+    &__messageblock {
       .mixintopmenu();
     }
     &__pinsblock {
       .mixintopmenu();
     }
-    &__frndsblock {
+    &__freindsblock {
       .mixintopmenu();
     }
-    &__nwsblock {
+    &__newsblock {
       .mixintopmenu();
     }
     &__waysblock {
       .mixintopmenu();
     }
+    &__albumsblock {
+      .mixintopmenu();
+    }
+    &__findblock {
+      .mixintopmenu();
+    }
+    &__settingsblock {
+      .mixintopmenu();
+    }
 
     &__exitblock {
-      border: @border;
-      display: flex;
-      justify-content: center;
-      width: 10%;
+      .mixintopmenu();
       height: 100%;
-        a {
-          border: @border;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 45px;
-          height: 45px;
-          text-decoration: none;
-            i {
-              color: white;
-              font-size: 2rem;
-            }
-        }
+      width: 5%;
     }
 
 
