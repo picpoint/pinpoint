@@ -96,7 +96,7 @@ session_start();
           </div>
 
           <div class="pp__exitblock">
-            <a href="#">
+            <a href="index.php">
               <i class="fa fa-sign-out" aria-hidden="true"></i>
               <span>выход</span>
             </a>              
