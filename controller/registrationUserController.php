@@ -14,11 +14,11 @@ class RegistrationUserC {                                                 // к�
         $arrRegUser[] = trim($_POST['reglogin']);                         // -||- записываем логин
         $arrRegUser[] = trim(password_hash($_POST['regpass'], PASSWORD_DEFAULT));  //-||- записываем хеш пароля 
 
-        $regUser = new RegistrationUserM();
-        $regUser -> regUserToDb($arrRegUser);
+        $regUser = new RegistrationUserM();                               // вызываем модель-класс регистрации 
+        $regUser -> regUserToDb($arrRegUser);                             // вызываем метод регистрации и передаём туда массив
         
       } else {
-        echo("Не все поля заполнены");
+        echo("Не все поля заполнены");                                    // иначе выдаём сообщение
       }
 
     }
