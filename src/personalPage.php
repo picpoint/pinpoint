@@ -12,7 +12,7 @@ session_start();
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506" type="text/javascript"></script>
   <script src="js/mapbasics.js" type="text/javascript"></script>
-  <script src="js/rightClickClass.js"></script>
+  <script src="js/contextMenuOnMap.js"></script>
 </head>
 <body>
   
