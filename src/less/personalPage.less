@@ -49,31 +49,23 @@
 	height: 100vh;
 		&__wrp {
 			// border: @border;
-			display: flex;
-			flex-direction: column;
-      justify-content: space-between;
+			display: flex;			     
       position: relative;
 			width: 100%;
 			height: 100%;
 		}
-		&__topblock {
-      border: @border;
-      display: flex;
-      position: absolute;
-			width: 100%;
-      height: 40%;
-      z-index: 1;
-    }
     &__profile {
       // border: @border;
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100%;
+      position: absolute;
+      height: 300px;
       width: 15%;
       background-color: @colorindxpanel;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
+      z-index: 1;
     }
     &__logoblock {
       // border: @border;
@@ -81,10 +73,7 @@
       justify-content: center;
       width: 150px;
       height: 150px;
-      margin-top: 7px;
-        img {
-          
-        }
+      margin-top: 7px;        
     } 
     &__nameblock {
       // border: @border;
@@ -100,8 +89,7 @@
     &__placeblock {
       // border: @border;
       display: flex;
-      justify-content: center;
-      // height: 20px;
+      justify-content: center;      
       width: 100%;
       margin-top: 7px;
         span {
@@ -113,8 +101,7 @@
     &__detailblock {
       // border: @border;
       display: flex;
-      justify-content: center;
-      // height: 20px;
+      justify-content: center;      
       width: 100%;
       margin-top: 7px;
         a {
@@ -123,18 +110,17 @@
           text-align: center;
         }
     }
-
-
     
-    &__topmenu {
-      // border: @border;
-      display: flex;
+    &__topmenu {      
+      display: flex;      
+      position: absolute;
+      right: 0;
       width: 85%;
       height: 50px;
       background-color: @colorindxpanel;
+      z-index: 1;
     }
-    &__basemenublock {
-      // border: @border;
+    &__basemenublock {     
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -174,17 +160,17 @@
 
 
 
-
-
-
-		&__bottomblock {
-      // border: @border;
+		&__bottomblock {     
       align-self: center;
 			width: 50%;
       height: 7%;
+      position: absolute;
+      left: 25%;      
+      bottom: 0;
       background-color: @colorindxpanel;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
+      z-index: 1;
 		}
 
 

@@ -16,8 +16,8 @@ session_start();
 <body>
   
   <section class="pp">
-    <div class="pp__wrp" id="map">
-      <div class="pp__topblock">
+    <div class="pp__wrp" id="map">      
+
         
         <div class="pp__profile">
           <div class="pp__logoblock">
@@ -105,11 +105,14 @@ session_start();
           </div>
         </div>
 
-      </div>
+      
+
+
 
       <div class="pp__bottomblock">
 
       </div>
+
     </div>
   </section>
 
