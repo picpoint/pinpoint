@@ -20,6 +20,7 @@ session_start();
     <div class="pp__wrp" id="map">
       
       <div class="pp__sendfile">
+        
         <div class="pp__hdrsf">
           <div class="pp__hdricon">
             <img src="pict/pinWhite.png" alt="iconpin">
@@ -31,8 +32,24 @@ session_start();
             <span>+</span>
           </div>
         </div>
+
+        <div class="pp__uploadfiles">
+          <div class="pp__textblock">
+            <span>Загрузить файл</span>            
+          </div>
+          <div class="pp__uploadblock">
+            <form method="post">
+              
+            </form>
+          </div>
+        </div>
+
+
+
       </div>
 
+      
+      
       <div class="pp__profile">
         <div class="pp__logoblock">
           <img src="pict/profileimg.png" alt="profile">

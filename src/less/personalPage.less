@@ -57,8 +57,9 @@
     
     &__sendfile {
       border: @border;
-      display: flex;
+      display: flex;      
       flex-direction: column;
+      align-items: center;
       position: absolute;
       top: 30%;      
       left: 50%;
@@ -72,11 +73,15 @@
       display: flex;  
       justify-content: center;    
       align-items: center;
-      height: 50px;
-      background-color: @colororang1;
+      height: 10%;
+      width: 100%;
+      background-color: @colororange1;
     }
     &__hdricon {
       border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 10%;
       height: 100%;      
         img {
@@ -95,8 +100,28 @@
     &__hdrclose {
       border: @border;
       display: flex;
+      justify-content: center;
+      align-items: center;
       width: 10%;
       height: 100%;
+        span {
+          font-weight: bold;
+          color: white;
+          font-size: 1.5rem;
+          transform: rotate(45deg);
+          cursor: pointer;          
+        }
+    }
+
+    &__uploadfiles {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 40%;      
+    }
+    &__textblock {
+      border: @border;
     }
 
 
