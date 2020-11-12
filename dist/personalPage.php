@@ -38,7 +38,7 @@ session_start();
             <span>Загрузить файл</span>            
           </div>
           <div class="pp__uploadblock">
-            <form method="post">
+            <form method="post" class="pp__form">
               
             </form>
           </div>
