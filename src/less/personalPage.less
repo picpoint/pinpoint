@@ -56,7 +56,7 @@
     }
     
     &__sendfile {
-      border: @border;
+      // border: @border;
       display: flex;      
       flex-direction: column;
       align-items: center;
@@ -66,10 +66,11 @@
       width: 350px;
       height: 450px;
       background-color: white;
+      box-shadow: 5px 5px 5px 7px rgba(0,0,0,0.6);
       z-index: 2;
     }
     &__hdrsf {
-      border: @border;
+      // border: @border;
       display: flex;  
       justify-content: center;    
       align-items: center;
@@ -78,7 +79,7 @@
       background-color: @colororange1;
     }
     &__hdricon {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -90,7 +91,7 @@
         }
     }
     &__hdrplace {
-      border: @border;
+      // border: @border;
       display: flex;
       width: 80%;
         span {
@@ -98,7 +99,7 @@
         }
     }
     &__hdrclose {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -113,35 +114,92 @@
         }
     }
 
+    &__uploadform {
+      // border: @border;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 90%;
+      width: 100%;
+    }
+
     &__uploadfiles {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
       width: 95%;
-      height: 40%;      
+      height: 45%;      
     }
     &__textblock {
-      border: @border;
+      // border: @border;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       height: 15%;
         span {
-          border: @border;
+          // border: @border;
           font-size: 1.2rem;
         }
     }
     &__uploadblock {
-      border: @border;
+      border: 1px solid @colorgray;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
       height: 85%;
     }
-    &__form {
-      border: @border;
+    &__uploadfields {
+      // border: @border;
       width: 100%;
-      height: 100%;
     }
+    &__addfiles {
+      // border: @border;
+      width: 100%;
+        button {
+          width: 150px;
+          height: 30px;
+          background-color: @colorindxpanel;
+          color: white;
+          font-weight: bold;
+        }
+    }
+    &__addcomments {
+      // border: @border;
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      height: 45%;
+    }
+    &__textblock {
+      // border: @border;
+    }
+    &__commentsblock {
+      // border: @border;
+      height: 90%;
+        textarea {
+          border: 1px solid @colorgray;
+          width: 100%;
+          height: 100%;
+        }
+    }
+    &__addcontent {
+      // border: @border;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 95%;
+      height: 10%;
+        button {
+          width: 150px;
+          height: 70%;
+          background-color: @colorindxbtn;
+          color: white;
+          font-weight: bolder;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+    }
+    
 
 
     &__profile {

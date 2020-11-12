@@ -33,16 +33,38 @@ session_start();
           </div>
         </div>
 
-        <div class="pp__uploadfiles">
-          <div class="pp__textblock">
-            <span>Загрузить файл</span>            
+        <form method="post" enctype="multipart/form-data" class="pp__uploadform">
+          <div class="pp__uploadfiles">
+            <div class="pp__textblock">
+              <span>Загрузить файл</span>            
+            </div>
+            <div class="pp__uploadblock">
+              <div class="pp__uploadfields">
+                <input type="file" name="upfile" multiple>
+              </div>
+              <div class="pp__addfiles">
+                <button>Добавить поле</button>
+              </div>
+            </div>
           </div>
-          <div class="pp__uploadblock">
-            <form method="post" class="pp__form">
-              
-            </form>
+
+          <div class="pp__addcomments">
+            <div class="pp__textblock">
+              <span>Добавить комментарии</span>            
+            </div>
+            <div class="pp__commentsblock">
+              <textarea name="comments"></textarea>
+            </div>
           </div>
-        </div>
+
+          <div class="pp__addcontent">
+            <button type="submit">Добавить метку</button>
+          </div>
+
+
+        </form>
+
+        
 
 
 
