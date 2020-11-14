@@ -12,15 +12,13 @@ session_start();
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506" type="text/javascript"></script>
   <script src="js/mapbasics.js" type="text/javascript"></script>
-  <script src="js/contextMenuOnMap.js"></script>
 </head>
 <body>
   
   <section class="pp">
     <div class="pp__wrp" id="map">
       
-      <div class="pp__sendfile">
-        
+      <div class="pp__sendfile">        
         <div class="pp__hdrsf">
           <div class="pp__hdricon">
             <img src="pict/pinWhite.png" alt="iconpin">
@@ -29,7 +27,7 @@ session_start();
             <span>Россия, Москва, ул. Ленина 52</span>
           </div>
           <div class="pp__hdrclose">
-            <span>+</span>
+            <span class="closeform">+</span>
           </div>
         </div>
 
@@ -60,14 +58,7 @@ session_start();
           <div class="pp__addcontent">
             <button type="submit">Добавить метку</button>
           </div>
-
-
         </form>
-
-        
-
-
-
       </div>
 
       
@@ -167,6 +158,7 @@ session_start();
     </div>
   </section>
 
+<script src="js/contextMenuOnMap.js"></script>
 
 </body>
 </html>
