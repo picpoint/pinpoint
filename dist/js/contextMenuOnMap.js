@@ -13,8 +13,12 @@ class ContextMenuOnMapClass {
 
   contextMenu() {
     document.addEventListener('contextmenu', (e) => {
-      // console.log(e.target);
       this.sendfile.classList.toggle('showblock');
+      console.log(e.clientX);
+      console.log(e.clientY);
+      console.log('--------------');
+      this.sendfile.style.left = e.clientX + 'px';
+      this.sendfile.style.top = e.clientY + 'px';
     });
 
     this.closeform.addEventListener('click', () => {
