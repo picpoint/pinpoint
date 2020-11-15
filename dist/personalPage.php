@@ -10,10 +10,12 @@ session_start();
   <title>Personal page</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506" type="text/javascript"></script>
-  <script src="js/mapbasics.js" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506" type="text/javascript"></script>  
 </head>
 <body>
+<?php
+  require_once "../controller/getDatasFromPinController.php";
+?>
   
   <section class="pp">
     <div class="pp__wrp" id="map">
@@ -53,12 +55,18 @@ session_start();
             <div class="pp__commentsblock">
               <textarea name="comments"></textarea>
             </div>
+            <span class="pp__latitude" name="latitude"></span>
+            <span class="pp__longitude" name="longitude"></span>
           </div>
 
           <div class="pp__addcontent">
-            <button type="submit">Добавить метку</button>
+            <button type="submit" name="addpinbtn">Добавить метку</button>
           </div>
         </form>
+        <?php
+          $getdatas = new GetDatasFromPinC();
+          $getdatas -> addPins();
+        ?>
       </div>
 
       
@@ -159,6 +167,7 @@ session_start();
   </section>
 
 <script src="js/contextMenuOnMap.js"></script>
+<script src="js/mapbasics.js" type="text/javascript"></script>
 
 </body>
 </html>

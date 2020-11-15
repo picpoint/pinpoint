@@ -1,4 +1,5 @@
 #ignore directories
 node_modules
 .idea
+debug.log
 

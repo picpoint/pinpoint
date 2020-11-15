@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 06 2020 г., 06:53
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Ноя 15 2020 г., 13:14
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- База данных: `ppdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `pins`
+--
+
+CREATE TABLE `pins` (
+  `id_pin` bigint(20) UNSIGNED NOT NULL,
+  `id_user` varchar(50) NOT NULL,
+  `photo` varchar(255) NOT NULL,
+  `video` varchar(255) NOT NULL,
+  `commentaries` text NOT NULL,
+  `latitude` float NOT NULL,
+  `longitude` float NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -50,6 +67,14 @@ INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`) VA
 --
 
 --
+-- Индексы таблицы `pins`
+--
+ALTER TABLE `pins`
+  ADD PRIMARY KEY (`id_pin`),
+  ADD UNIQUE KEY `id_pin` (`id_pin`),
+  ADD KEY `id_user` (`id_user`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -59,6 +84,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `pins`
+--
+ALTER TABLE `pins`
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

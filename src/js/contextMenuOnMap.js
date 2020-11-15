@@ -1,4 +1,3 @@
-// const wrp = document.querySelector('.pp__wrp');
 const sendfile = document.querySelector('.pp__sendfile');
 const closeform = document.querySelector('.closeform');
 
