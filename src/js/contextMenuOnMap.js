@@ -1,24 +1,24 @@
-const sendfile = document.querySelector('.pp__sendfile');
-const closeform = document.querySelector('.closeform');
+const sendfile = document.querySelector('.pp__sendfile');                             // блок контекстного меню, который появляется на карте при on.contextmenu
+const closeform = document.querySelector('.closeform');                               // крестик для закрытия контекстной формы
 
 
 
-class ContextMenuOnMapClass {
+class ContextMenuOnMapClass {                                                         // класс контекстного меню формы
 
-  constructor(sendfile, closeform) {
+  constructor(sendfile, closeform) {                                                  // конструктор с параметрами
     this.sendfile = sendfile;
     this.closeform = closeform;
   }
 
-  contextMenu() {
-    document.addEventListener('contextmenu', (e) => {
-      this.sendfile.classList.toggle('showblock');
-      this.sendfile.style.left = e.clientX + 'px';
+  contextMenu() {                                                                     // метод для создания контекстной формы
+    document.addEventListener('contextmenu', (e) => {                                 // на документ вешаем событие контекста
+      this.sendfile.classList.toggle('showblock');                                    // на блок вешаем по переключению класс показа/скрытия
+      this.sendfile.style.left = e.clientX + 'px';                                    // присваиваем координаты окна на форму
       this.sendfile.style.top = e.clientY + 'px';
     });
 
-    this.closeform.addEventListener('click', () => {
-      this.sendfile.classList.toggle('showblock');
+    this.closeform.addEventListener('click', () => {                                  // на крестик закрытия вешаем событие клика
+      this.sendfile.classList.toggle('showblock');                                    // так же вешаем класс скрытия/показа формы
     });
   }
 
