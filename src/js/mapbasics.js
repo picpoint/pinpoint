@@ -14,11 +14,8 @@ function init () {
 
     myMap.events.add('contextmenu', function (e) {
       var coords = e.get('coords');
-      lat.innerHTML = coords[0].toPrecision(7);
-      lon.innerHTML = coords[1].toPrecision(7);
-    //   console.log('long - ' + coords[0].toPrecision(7));
-    //   console.log('lat - ' + coords[1].toPrecision(7));
-    //   console.log('------------------------');
+      lat.value = coords[0].toPrecision(7);
+      lon.value = coords[1].toPrecision(7);    
     });
 
     

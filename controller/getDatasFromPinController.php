@@ -4,14 +4,14 @@
 
 class GetDatasFromPinC {
   public $pathToUsersFolder = __DIR__ . '/../usersFolders/';
-  
 
   public function addPins() {
-    if(isset($_POST['addpinbtn'])) {      
+    if(isset($_POST['addpinbtn'])) {
+      $fullArrData = [];
+      $lat = $_POST['latitude'];
+      $lon = $_POST['longitude'];
 
-      if($_FILES['upfile']['size'] != 0) {
-        // var_dump($_FILES['upfile']);        
-        echo("<br>");
+      if($_FILES['upfile']['size'] != 0) {                
         $pathToFolder = $this->pathToUsersFolder . $_SESSION['login'];                
 
         if(!file_exists($pathToFolder)) {
@@ -30,13 +30,33 @@ class GetDatasFromPinC {
       }
       
 
-      if($_POST['comments'] != 0) {
-        echo("<br>");
-        var_dump($_POST['comments']);
-      } else {
-        echo("<br>");
-        var_dump($_POST['comments']);
-      }
+      // if($_POST['comments'] != 0) {
+      //   echo("<br>");
+      //   // var_dump($_POST['comments']);
+      // } else {
+      //   echo("<br>");
+      //   // var_dump($_POST['comments']);
+      // }      
+
+      $fullArrData[] = $_SESSION['login'];
+      $fullArrData[] = $pathToFolder.'/pict/'. $_FILES['upfile']['name'];
+      $fullArrData[] = $_POST['comments'];
+      $fullArrData[] = $lat;
+      $fullArrData[] = $lon;
+
+      $writeDataToDB = new WriteDataPinToDBM();
+      $writeDataToDB -> writePin($fullArrData);
+      // print_r($fullArrData);
+      
+      // echo($_SESSION['login']);
+      // echo("<br>");
+      // echo($pathToFolder.'/pict/'. $_FILES['upfile']['name']);
+      // echo("<br>");
+      // echo($_POST['comments']);
+      // echo("<br>");
+      // echo($lat);
+      // echo("<br>");
+      // echo($lon);
 
 
     }

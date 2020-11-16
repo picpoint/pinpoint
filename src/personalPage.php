@@ -15,6 +15,7 @@ session_start();
 <body>
 <?php
   require_once "../controller/getDatasFromPinController.php";
+  require_once "../model/writeDataPinToDBModel.php";
 ?>
   
   <section class="pp">
@@ -55,8 +56,8 @@ session_start();
             <div class="pp__commentsblock">
               <textarea name="comments"></textarea>
             </div>
-            <span class="pp__latitude" name="latitude"></span>
-            <span class="pp__longitude" name="longitude"></span>
+            <input type="text" class="pp__latitude" name="latitude"></input>
+            <input type="text" class="pp__longitude" name="longitude"></input>
           </div>
 
           <div class="pp__addcontent">
