@@ -10,7 +10,7 @@ session_start();
   <title>Personal page</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506" type="text/javascript"></script>  
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506" type="text/javascript"></script>    
 </head>
 <body>
 <?php
@@ -169,6 +169,8 @@ session_start();
 
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js" type="text/javascript"></script>
+
+
 
 </body>
 </html>
