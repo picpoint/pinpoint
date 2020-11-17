@@ -14,7 +14,7 @@ class GetDataPinContentC {
     foreach($res as $rs) {
       foreach($rs as $key => $value) {
         echo("$key - $value");
-        echo("<br>");
+        echo("<br>");        
       }
     }
 
