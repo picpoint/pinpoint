@@ -16,6 +16,9 @@ session_start();
 <?php
   require_once "../controller/getDatasFromPinController.php";
   require_once "../model/writeDataPinToDBModel.php";
+  
+  require_once "../controller/getDataPinContentController.php";
+  require_once "../model/getDataFromDBPinContentModel.php";
 ?>
   
   <section class="pp">
@@ -88,7 +91,7 @@ session_start();
         </div>
         <div class="pp__detailblock">
           <a href="#">Показать подробную информацию</a>
-        </div>
+        </div>        
       </div>
 
       <div class="pp__topmenu">
@@ -160,12 +163,16 @@ session_start();
       </div>
 
       
-      <div class="pp__bottomblock">
+      <div class="pp__bottomblock">        
       </div>
 
 
     </div>
   </section>
+    <?php          
+      $resdt = new GetDataPinContentC();
+      $resdt -> getDataUserPins();
+    ?>
 
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js" type="text/javascript"></script>
