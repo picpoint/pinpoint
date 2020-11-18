@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 16 2020 г., 10:47
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Ноя 18 2020 г., 21:03
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,13 +43,9 @@ CREATE TABLE `pins` (
 --
 
 INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `latitude`, `longitude`, `date`) VALUES
-(1, 'den', '/den/photo/000.jpg', '', 'test comments', 45.0732, 41.8971, '2020-11-16 09:30:57'),
-(2, 'den', 'C:xampphtdocswwwpinpointcontroller/../usersFolders/den/pict/20122705172238.jpeg', '', '', 45.0718, 41.8954, '2020-11-16 09:36:47'),
-(3, 'den', 'C:xampphtdocswwwpinpointcontroller/../usersFolders/den/pict/20122705172238.jpeg', '', '', 45.0378, 41.9515, '2020-11-16 09:36:59'),
-(4, 'den', 'C:xampphtdocswwwpinpointcontroller/../usersFolders/den/pict/04.jpg', '', 'тестовое добавление данных в БД', 45.0401, 41.9073, '2020-11-16 09:41:33'),
-(5, 'freeAlex', 'C:xampphtdocswwwpinpointcontroller/../usersFolders/freeAlex/pict/06.jpg', '', 'комменты к первой фото от фриалекс', 45.0504, 41.9017, '2020-11-16 09:43:24'),
-(6, 'freeAlex', 'C:xampphtdocswwwpinpointcontroller/../usersFolders/freeAlex/pict/07.jpg', '', 'Здесь классную свинину делают!\r\nВсем рекомендую )))', 45.0396, 41.9457, '2020-11-16 09:45:05'),
-(7, 'arcUc', 'C:xampphtdocswwwpinpointcontroller/../usersFolders/arcUc/pict/05.jpg', '', 'Я аркадий укупник, приглашаю всех на свой концерт!!!!', 45.0431, 41.9657, '2020-11-16 09:46:38');
+(8, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/1564557629_0_0_3072_1728_600x0_80_0_0_9346434537c91fa434bf783acafb5b6e.jpg', '', 'Красивый лес тут', 45.0436, 41.9353, '2020-11-18 18:18:26'),
+(10, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/IMG_9238.jpg', '', 'Тут постоянно заправляюсь', 45.0318, 41.9284, '2020-11-18 18:21:21'),
+(13, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/11864631.jpg', '', 'Красивый памятник!!!', 45.0804, 41.9386, '2020-11-18 18:35:35');
 
 -- --------------------------------------------------------
 
@@ -102,7 +98,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
