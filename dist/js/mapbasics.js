@@ -1,5 +1,8 @@
 const lat = document.querySelector('.pp__latitude');                                      // доступ к полю координат широты
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
+const arrdt = document.querySelector('.pp__arrdt');
+console.log(arrdt);
+
 
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 ymaps.ready(init);                                                                        // инициализируется карта

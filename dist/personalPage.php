@@ -168,11 +168,17 @@ session_start();
 
 
     </div>
-  </section>
-    <?php          
-      $resdt = new GetDataPinContentC();
-      $resdt -> getDataUserPins();
+    
+    <input class="pp__arrdt" value="
+    <?php 
+      $resdt = new GetDataPinContentC(); 
+      print_r($resdt -> getDataUserPins());
     ?>
+    ">
+  </section>  
+      
+    
+    
 
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js" type="text/javascript"></script>
