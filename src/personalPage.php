@@ -169,7 +169,7 @@ session_start();
 
     </div>
     
-    <input class="pp__arrdt" value="
+    <input class="pp__arrdt" data-ms="
     <?php 
       $resdt = new GetDataPinContentC(); 
       print_r($resdt -> getDataUserPins());

@@ -1,3 +1,13 @@
+console.log(arrdt);
+let massPins = arrdt.getAttribute("data-ms");
+
+let str = massPins.split('    ');
+console.log(str);
+
+for(let i = 0; i < str.length; i++) {
+  console.log(str[i].split('=>')[1]);
+}
+
 
 
 var placemark = new ymaps.Placemark([55.751574, 37.573856], {
