@@ -19,7 +19,7 @@ function includeShowBalloons(url) {                                             
 
 function init () {                                                                      // ф-ия инициализации
   myMap = new ymaps.Map("map", {
-    center: [55.751574, 37.573856],
+    center: [45.0320, 41.9419],
     // center: [45.0320, 41.9419],                                                      // координаты места загрузки и показа карты
     zoom: 12                                                                            // масштаб отображения
   }, {

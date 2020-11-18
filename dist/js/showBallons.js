@@ -1,15 +1,43 @@
-console.log(arrdt);
+// console.log(arrdt);
 let massPins = arrdt.getAttribute("data-ms");
-
 let str = massPins.split('    ');
-console.log(str);
+let ondt;
+let massForPin = [];
+// console.log(str);
 
-for(let i = 0; i < str.length; i++) {
-  console.log(str[i].split('=>')[1]);
+for(let i = 0; i < str.length; i++) {  
+  // console.log(str[i].split('=>')[1]);
+  if(str[i].split('=>')[1] != undefined && str[i].split('=>')[1] != '\n') {
+    massForPin.push(str[i].split('=>')[1]);
+  }
+}
+
+// console.log(massForPin);
+
+
+for(let y = 0; y < massForPin.length; y++) {
+  console.log(massForPin[y]);
+  
+  for(let z = 0; z < 4; z++) {
+    var placemark = new ymaps.Placemark([massForPin[2], massForPin[3]], {      
+      balloonContentHeader: '<a href = "#">' + massForPin[1] + '</a><br>' +
+        '<span class="description">Пицерия</span>',      
+      balloonContentBody: '<img src=" ' + massForPin[0] + ' " height="150" width="200"> <br/> ' +
+        '<a href="tel:+7-123-456-78-90">+7 (123) 456-78-90</a><br/>',                  
+      hintContent: 'пицерия'
+    });
+
+    myMap.geoObjects.add(placemark);
+
+  }
+  
 }
 
 
 
+
+
+/*
 var placemark = new ymaps.Placemark([55.751574, 37.573856], {
     // Зададим содержимое заголовка балуна.                
   balloonContentHeader: '<a href = "#" width="500">Рога и копыта</a><br>' +
@@ -41,5 +69,5 @@ myMap.geoObjects
   .add(placemark2);
   // Откроем балун на метке.
   // placemark.balloon.open();
-
+*/
     
