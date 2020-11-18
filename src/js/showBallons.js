@@ -26,10 +26,10 @@ for(let y = 0; y < massForPin.length; y++) {
         '<a href="tel:+7-123-456-78-90">+7 (123) 456-78-90</a><br/>',                  
       hintContent: 'пицерия'
     });
-
-    myMap.geoObjects.add(placemark);
-
   }
+  
+
+  myMap.geoObjects.add(placemark);
   
 }
 
