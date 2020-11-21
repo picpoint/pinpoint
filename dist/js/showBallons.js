@@ -1,10 +1,17 @@
 // console.log(arrdt);
-let massPins = arrdt.getAttribute("data-ms");
-let str = massPins.split('    ');
-let ondt;
-let massForPin = [];
-// console.log(str);
+let arrPins = arrdt.getAttribute("data-arrpins");
+console.log(arrPins);
 
+let rawStr = arrPins.slice(19, arrPins.length - 6);
+console.log(rawStr);
+
+
+
+
+
+
+
+/*
 for(let i = 0; i < str.length; i++) {  
   // console.log(str[i].split('=>')[1]);
   if(str[i].split('=>')[1] != undefined && str[i].split('=>')[1] != '\n') {
@@ -32,6 +39,8 @@ for(let y = 0; y < massForPin.length; y++) {
   myMap.geoObjects.add(placemark);
   
 }
+
+*/
 
 
 

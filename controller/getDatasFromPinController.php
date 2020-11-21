@@ -31,7 +31,7 @@ class GetDatasFromPinC {                                                        
 
       $fullArrData[] = $_SESSION['login'];                                                     // формируем массив с данными о метке, логин, путь до файла, комменты, широту, долготу
       $fullArrData[] = $pathToFolder.'/pict/'. $_FILES['upfile']['name'];
-      $fullArrData[] = $_POST['comments'];
+      $fullArrData[] = trim($_POST['comments']);
       $fullArrData[] = $lat;
       $fullArrData[] = $lon;
 
