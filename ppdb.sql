@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 18 2020 г., 21:03
+-- Время создания: Ноя 22 2020 г., 14:51
 -- Версия сервера: 10.4.14-MariaDB
 -- Версия PHP: 7.4.9
 
@@ -45,7 +45,12 @@ CREATE TABLE `pins` (
 INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `latitude`, `longitude`, `date`) VALUES
 (8, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/1564557629_0_0_3072_1728_600x0_80_0_0_9346434537c91fa434bf783acafb5b6e.jpg', '', 'Красивый лес тут', 45.0436, 41.9353, '2020-11-18 18:18:26'),
 (10, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/IMG_9238.jpg', '', 'Тут постоянно заправляюсь', 45.0318, 41.9284, '2020-11-18 18:21:21'),
-(13, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/11864631.jpg', '', 'Красивый памятник!!!', 45.0804, 41.9386, '2020-11-18 18:35:35');
+(13, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/11864631.jpg', '', 'Красивый памятник!!!', 45.0804, 41.9386, '2020-11-18 18:35:35'),
+(14, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/szap1.jpg', '', 'Некогда в советское время был огромным заводом, выпускавшим сотни прицепов, сейчас на 90% это развалины.\r\n', 45.0641, 41.9206, '2020-11-21 17:24:36'),
+(15, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/szap1.jpg', '', 'Некогда в советское время был огромным заводом, выпускавшим сотни прицепов, сейчас на 90% это развалины.\r\n', 45.0641, 41.9206, '2020-11-21 17:26:37'),
+(16, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/тропа здоровья.jpg', '', 'Тропа здоровья, классно и красиво!', 45.0487, 41.9255, '2020-11-21 17:34:02'),
+(17, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL.jpg', '', 'АРХИЕРЕЙСКАЯ ДАЧА С 2Х-ЕНТЕРОМ В КОНЦЕ СТРОКИ\r\n\r\n', 45.0523, 41.944, '2020-11-21 17:36:45'),
+(18, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL (1).jpg', '', 'комменты с 3мя ентерами в конце', 45.0609, 41.9281, '2020-11-21 17:41:19');
 
 -- --------------------------------------------------------
 
@@ -98,7 +103,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
