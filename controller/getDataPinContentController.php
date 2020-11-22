@@ -18,6 +18,7 @@ class GetDataPinContentC {
       }
     }
 
+    // return json_encode($arrDt, JSON_UNESCAPED_UNICODE);
     return $arrDt;
 
   }
