@@ -13,7 +13,10 @@ let arr1 = rawStr.split('\n');
 for(let i = 0; i < arr1.length; i++) {
   let tmp = arr1[i].split('=> ');
   // console.log(tmp[1]);
-  alldts.push(tmp[1]);
+  if(tmp[1] != undefined) {
+    alldts.push(tmp[1]);
+  }
+  
 }
 
 console.log(alldts);
