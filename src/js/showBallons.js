@@ -1,11 +1,22 @@
 // console.log(arrdt);
 let arrPins = arrdt.getAttribute("data-arrpins");
-console.log(arrPins);
+// console.log(arrPins);
+let alldts = [];
 
 
 let rawStr = arrPins.slice(19, arrPins.length - 6);
 // console.log(rawStr);
 
+let arr1 = rawStr.split('\n');
+// console.log(arr1);
+
+for(let i = 0; i < arr1.length; i++) {
+  let tmp = arr1[i].split('=> ');
+  // console.log(tmp[1]);
+  alldts.push(tmp[1]);
+}
+
+console.log(alldts);
 
 
 
