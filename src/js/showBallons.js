@@ -1,9 +1,10 @@
 // console.log(arrdt);
-// let arrPins = arrdt.getAttribute("data-arrpins");
-// console.log(arrPins);
+let arrPins = arrdt.getAttribute("data-arrpins");
+console.log(arrPins);
+
 
 let rawStr = arrPins.slice(19, arrPins.length - 6);
-console.log(rawStr);
+// console.log(rawStr);
 
 
 
