@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 22 2020 г., 14:51
+-- Время создания: Ноя 24 2020 г., 18:25
 -- Версия сервера: 10.4.14-MariaDB
 -- Версия PHP: 7.4.9
 
@@ -50,7 +50,10 @@ INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `lati
 (15, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/szap1.jpg', '', 'Некогда в советское время был огромным заводом, выпускавшим сотни прицепов, сейчас на 90% это развалины.\r\n', 45.0641, 41.9206, '2020-11-21 17:26:37'),
 (16, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/тропа здоровья.jpg', '', 'Тропа здоровья, классно и красиво!', 45.0487, 41.9255, '2020-11-21 17:34:02'),
 (17, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL.jpg', '', 'АРХИЕРЕЙСКАЯ ДАЧА С 2Х-ЕНТЕРОМ В КОНЦЕ СТРОКИ\r\n\r\n', 45.0523, 41.944, '2020-11-21 17:36:45'),
-(18, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL (1).jpg', '', 'комменты с 3мя ентерами в конце', 45.0609, 41.9281, '2020-11-21 17:41:19');
+(18, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL (1).jpg', '', 'комменты с 3мя ентерами в конце', 45.0609, 41.9281, '2020-11-21 17:41:19'),
+(19, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/13251253.jpg', '', 'Наш жд вокзал!', 45.0555, 41.9999, '2020-11-24 17:22:42'),
+(20, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/15a90b68_resizedScaled_740to950.jpg', '', 'Комментарии по поводу данных людей', 45.0433, 41.9679, '2020-11-24 17:23:21'),
+(21, 'arcUc', 'C:xampphtdocspinpointcontroller/../usersFolders/arcUc/pict/Торт-с-днем-рождения.jpg', '', 'Отмечаем ДР!', 45.0425, 41.965, '2020-11-24 17:24:55');
 
 -- --------------------------------------------------------
 
@@ -103,7 +106,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
