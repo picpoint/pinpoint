@@ -1,9 +1,9 @@
 var placemark;
-let photoPin;
-let commentsPin;
-let latitudePin;
-let longitudePin;
-let alldts = [];
+var photoPin;
+var commentsPin;
+var latitudePin;
+var longitudePin;
+var alldts = [];
 let arrPins = arrdt.getAttribute("data-arrpins");
 
 let rawStr = arrPins.slice(19, arrPins.length - 6);

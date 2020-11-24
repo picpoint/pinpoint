@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 24 2020 г., 18:25
+-- Время создания: Ноя 24 2020 г., 20:00
 -- Версия сервера: 10.4.14-MariaDB
 -- Версия PHP: 7.4.9
 
@@ -33,8 +33,8 @@ CREATE TABLE `pins` (
   `photo` varchar(255) NOT NULL,
   `video` varchar(255) NOT NULL,
   `commentaries` text NOT NULL,
-  `latitude` float NOT NULL,
-  `longitude` float NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -43,17 +43,10 @@ CREATE TABLE `pins` (
 --
 
 INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `latitude`, `longitude`, `date`) VALUES
-(8, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/1564557629_0_0_3072_1728_600x0_80_0_0_9346434537c91fa434bf783acafb5b6e.jpg', '', 'Красивый лес тут', 45.0436, 41.9353, '2020-11-18 18:18:26'),
-(10, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/IMG_9238.jpg', '', 'Тут постоянно заправляюсь', 45.0318, 41.9284, '2020-11-18 18:21:21'),
-(13, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/11864631.jpg', '', 'Красивый памятник!!!', 45.0804, 41.9386, '2020-11-18 18:35:35'),
-(14, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/szap1.jpg', '', 'Некогда в советское время был огромным заводом, выпускавшим сотни прицепов, сейчас на 90% это развалины.\r\n', 45.0641, 41.9206, '2020-11-21 17:24:36'),
-(15, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/szap1.jpg', '', 'Некогда в советское время был огромным заводом, выпускавшим сотни прицепов, сейчас на 90% это развалины.\r\n', 45.0641, 41.9206, '2020-11-21 17:26:37'),
-(16, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/тропа здоровья.jpg', '', 'Тропа здоровья, классно и красиво!', 45.0487, 41.9255, '2020-11-21 17:34:02'),
-(17, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL.jpg', '', 'АРХИЕРЕЙСКАЯ ДАЧА С 2Х-ЕНТЕРОМ В КОНЦЕ СТРОКИ\r\n\r\n', 45.0523, 41.944, '2020-11-21 17:36:45'),
-(18, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL (1).jpg', '', 'комменты с 3мя ентерами в конце', 45.0609, 41.9281, '2020-11-21 17:41:19'),
-(19, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/13251253.jpg', '', 'Наш жд вокзал!', 45.0555, 41.9999, '2020-11-24 17:22:42'),
-(20, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/15a90b68_resizedScaled_740to950.jpg', '', 'Комментарии по поводу данных людей', 45.0433, 41.9679, '2020-11-24 17:23:21'),
-(21, 'arcUc', 'C:xampphtdocspinpointcontroller/../usersFolders/arcUc/pict/Торт-с-днем-рождения.jpg', '', 'Отмечаем ДР!', 45.0425, 41.965, '2020-11-24 17:24:55');
+(23, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/IMG_9238.jpg', '', 'Заправляюсь тут постоянно!!', 45.03173, 41.92834, '2020-11-24 18:45:04'),
+(25, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/тропа здоровья.jpg', '', 'Классно гулять здесь!', 45.05676, 41.92557, '2020-11-24 18:50:16'),
+(27, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL (1).jpg', '', 'школа 37', 45.06079, 41.92824, '2020-11-24 18:56:58'),
+(28, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/15a90b68_resizedScaled_740to950.jpg', '', 'коммент по поводу работы', 45.0433, 41.96759, '2020-11-24 18:58:48');
 
 -- --------------------------------------------------------
 
@@ -106,7 +99,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
