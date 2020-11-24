@@ -177,11 +177,11 @@ session_start();
     ">
   </section>  
       
-
+<!-- 
    <?php 
     $resdt = new GetDataPinContentC(); 
     print_r($resdt -> getDataUserPins());
-   ?>   
+   ?>    -->
     
     
 

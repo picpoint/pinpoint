@@ -1,28 +1,77 @@
-// console.log(arrdt);
-let arrPins = arrdt.getAttribute("data-arrpins");
-// console.log(arrPins);
+var placemark;
+let photoPin;
+let commentsPin;
+let latitudePin;
+let longitudePin;
 let alldts = [];
-
+let arrPins = arrdt.getAttribute("data-arrpins");
 
 let rawStr = arrPins.slice(19, arrPins.length - 6);
-// console.log(rawStr);
-
 let arr1 = rawStr.split('\n');
-// console.log(arr1);
+
 
 for(let i = 0; i < arr1.length; i++) {
   let tmp = arr1[i].split('=> ');
-  // console.log(tmp[1]);
+
   if(tmp[1] != undefined) {
     alldts.push(tmp[1]);
   }
   
 }
 
-console.log(alldts);
+
+
+for(let x = 0; x < alldts.length; x++) {
+  let onms = alldts[x].split(' - ');
+
+  if(onms[0] == 'photo') {
+    photoPin = onms[1];
+  } else if(onms[0] == 'commentaries') {
+    commentsPin = onms[1];
+  } else if(onms[0] == 'latitude') {
+    latitudePin = onms[1];
+  } else if(onms[0] == 'longitude') {
+    longitudePin = onms[1];
+  }
+
+  
+
+
+  placemark = new ymaps.Placemark([latitudePin, longitudePin], {      
+    balloonContentHeader: '<a href = "#">ОБЖОРА</a><br>' +
+      '<span class="description">Пицерия</span>',      
+    balloonContentBody: '<img src=" ' + photoPin + ' " height="150" width="200"> <br/> ' +
+      commentsPin,                  
+    hintContent: 'пицерия'
+  });
+  
+  
+  
+  // Добавим метку на карту.
+  myMap.geoObjects
+    .add(placemark);
+    // Откроем балун на метке.
+    // placemark.balloon.open();
+
+
+}
+
+
+// placemark = new ymaps.Placemark([latitudePin, longitudePin], {      
+//   balloonContentHeader: '<a href = "#">ОБЖОРА</a><br>' +
+//     '<span class="description">Пицерия</span>',      
+//   balloonContentBody: '<img src=" ' + photoPin + ' " height="150" width="200"> <br/> ' +
+//     commentsPin,                  
+//   hintContent: 'пицерия'
+// });
 
 
 
+// // Добавим метку на карту.
+// myMap.geoObjects
+//   .add(placemark);
+//   // Откроем балун на метке.
+//   // placemark.balloon.open();
 
 
 
