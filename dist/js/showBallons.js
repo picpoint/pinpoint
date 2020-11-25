@@ -42,10 +42,12 @@ for(let x = 0; x < alldts.length; x++) {
       '<span class="description"> Пицерия </span>',      
     balloonContentBody: '<img src=" ' + photoPin + ' " height="150" width="200"> <br/> ' +
       commentsPin,
-    hintContent: 'пицерия'
+    hintContent: commentsPin
   });
   
-  
+  /*
+    balloonContentBody: '<img src="../usersFolders/freeAlex/pict/18b0a4b31ad55084690a46198f88a671_XL.jpg" height="150" width="200"> <br/> ' +
+  */
   
   // Добавим метку на карту.
   myMap.geoObjects
@@ -55,3 +57,5 @@ for(let x = 0; x < alldts.length; x++) {
 
 
 }
+
+// console.log('/../' + photoPin);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 25 2020 г., 18:22
+-- Время создания: Ноя 25 2020 г., 20:25
 -- Версия сервера: 10.4.14-MariaDB
 -- Версия PHP: 7.4.9
 
@@ -43,12 +43,12 @@ CREATE TABLE `pins` (
 --
 
 INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `latitude`, `longitude`, `date`) VALUES
-(34, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/81_big.jpg', '', 'памятник танку т 34-85!', '45.080324', '41.938543', '2020-11-25 17:09:42'),
-(35, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/13251253.jpg', '', 'наш жд', '45.055228', '41.999393', '2020-11-25 17:10:13'),
-(36, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/98e3ff1e09f4804f78da2596d2cfd407.jpg', '', 'камсак', '45.050169', '41.957564', '2020-11-25 17:15:46'),
-(37, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/07.jpg', '', 'свинные отбивные', '45.049480', '41.913962', '2020-11-25 17:17:16'),
-(38, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/18b0a4b31ad55084690a46198f88a671_XL.jpg', '', 'кафе лайнер', '45.024474', '41.923579', '2020-11-25 17:18:39'),
-(39, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/15a90b68_resizedScaled_740to950.jpg', '', 'Фотка говорит сама за себя', '45.043241', '41.967502', '2020-11-25 17:21:32');
+(61, 'freeAlex', '../usersFolders/freeAlex/pict/11864631.jpg', '', 'памятник', '45.080191', '41.938526', '2020-11-25 18:48:32'),
+(62, 'freeAlex', '../usersFolders/freeAlex/pict/IMG_9238.jpg', '', 'заправка на объездной', '45.031678', '41.928281', '2020-11-25 18:52:12'),
+(63, 'freeAlex', '../usersFolders/freeAlex/pict/13251253.jpg', '', 'жд', '45.055231', '41.999396', '2020-11-25 18:53:00'),
+(64, 'freeAlex', '../usersFolders/freeAlex/pict/3681443_800.jpg', '', 'камсак', '45.050167', '41.957376', '2020-11-25 18:54:32'),
+(65, 'den', '../usersFolders/den/pict/тропа здоровья.jpg', '', 'наша тропа', '45.056777', '41.925567', '2020-11-25 18:57:44'),
+(66, 'den', '../usersFolders/den/pict/szap1.jpg', '', 'завод нептун', '45.060361', '41.916327', '2020-11-25 18:59:24');
 
 -- --------------------------------------------------------
 
@@ -101,7 +101,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
