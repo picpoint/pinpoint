@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 24 2020 г., 20:00
+-- Время создания: Ноя 25 2020 г., 18:22
 -- Версия сервера: 10.4.14-MariaDB
 -- Версия PHP: 7.4.9
 
@@ -33,8 +33,8 @@ CREATE TABLE `pins` (
   `photo` varchar(255) NOT NULL,
   `video` varchar(255) NOT NULL,
   `commentaries` text NOT NULL,
-  `latitude` double NOT NULL,
-  `longitude` double NOT NULL,
+  `latitude` varchar(10) NOT NULL,
+  `longitude` varchar(10) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -43,10 +43,12 @@ CREATE TABLE `pins` (
 --
 
 INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `latitude`, `longitude`, `date`) VALUES
-(23, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/IMG_9238.jpg', '', 'Заправляюсь тут постоянно!!', 45.03173, 41.92834, '2020-11-24 18:45:04'),
-(25, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/тропа здоровья.jpg', '', 'Классно гулять здесь!', 45.05676, 41.92557, '2020-11-24 18:50:16'),
-(27, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/XXL (1).jpg', '', 'школа 37', 45.06079, 41.92824, '2020-11-24 18:56:58'),
-(28, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/15a90b68_resizedScaled_740to950.jpg', '', 'коммент по поводу работы', 45.0433, 41.96759, '2020-11-24 18:58:48');
+(34, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/81_big.jpg', '', 'памятник танку т 34-85!', '45.080324', '41.938543', '2020-11-25 17:09:42'),
+(35, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/13251253.jpg', '', 'наш жд', '45.055228', '41.999393', '2020-11-25 17:10:13'),
+(36, 'den', 'C:xampphtdocspinpointcontroller/../usersFolders/den/pict/98e3ff1e09f4804f78da2596d2cfd407.jpg', '', 'камсак', '45.050169', '41.957564', '2020-11-25 17:15:46'),
+(37, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/07.jpg', '', 'свинные отбивные', '45.049480', '41.913962', '2020-11-25 17:17:16'),
+(38, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/18b0a4b31ad55084690a46198f88a671_XL.jpg', '', 'кафе лайнер', '45.024474', '41.923579', '2020-11-25 17:18:39'),
+(39, 'freeAlex', 'C:xampphtdocspinpointcontroller/../usersFolders/freeAlex/pict/15a90b68_resizedScaled_740to950.jpg', '', 'Фотка говорит сама за себя', '45.043241', '41.967502', '2020-11-25 17:21:32');
 
 -- --------------------------------------------------------
 
@@ -99,7 +101,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
