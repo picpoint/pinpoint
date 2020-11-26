@@ -1,24 +1,24 @@
-var placemark;
+var placemark;                                                     // создаём переменные для работы метки
 var photoPin;
 var commentsPin;
 var latitudePin;
 var longitudePin;
-var alldts = [];
-let arrPins = arrdt.getAttribute("data-arrpins");
+var alldts = [];                                                   // пустой массив для дальнейшего перебора для метки
+let arrPins = arrdt.getAttribute("data-arrpins");                  // получаем данные из дата атрибута элемента
+let rawStr = arrPins.slice(19, arrPins.length - 6);                // отсекаем из строки ненужные элементы
+let arr1 = rawStr.split('\n');                                     // разбиваем строку по \n на массив элементов
 
-let rawStr = arrPins.slice(19, arrPins.length - 6);
-let arr1 = rawStr.split('\n');
 
+for(let i = 0; i < arr1.length; i++) {                             // перебираем массив строк
+  let tmp = arr1[i].split('=> ');                                  // каждую строку из массива бьём по =>
 
-for(let i = 0; i < arr1.length; i++) {
-  let tmp = arr1[i].split('=> ');
-
-  if(tmp[1] != undefined) {
+  if(tmp[1] != undefined) {                                        // если элемент(значение) был не пустой, пушим в массив
     alldts.push(tmp[1]);
   }
   
 }
 
+console.log(alldts);
 
 
 for(let x = 0; x < alldts.length; x++) {
