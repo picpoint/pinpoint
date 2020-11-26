@@ -175,19 +175,11 @@ session_start();
         print_r($resdt -> getDataUserPins());
       ?>
     ">
-  </section>  
-      
-<!-- 
-   <?php 
-    $resdt = new GetDataPinContentC(); 
-    print_r($resdt -> getDataUserPins());
-   ?>    -->
-    
+  </section>    
     
 
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js" type="text/javascript"></script>
-
 
 
 </body>

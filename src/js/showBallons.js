@@ -26,7 +26,7 @@ for(let x = 0, y = 0; x < alldts.length; x++) {
   y++;
 
   let onms = alldts[x].split(' - ');
-  console.log(onms);
+  // console.log(onms);
 
   if(onms[0] == 'photo') {
     photoPin = onms[1];
@@ -43,22 +43,15 @@ for(let x = 0, y = 0; x < alldts.length; x++) {
 
 
   if(y == 4) {
-
     placemark = new ymaps.Placemark([latitudePin, longitudePin], {      
-      balloonContentHeader: '<a href = "#">ОБЖОРА</a><br>' +
-        '<span class="description"> Пицерия </span>',      
-      balloonContentBody: '<img src=" ' + photoPin + ' " height="150" width="200"> <br/> ' +
-        commentsPin,
+      balloonContentBody: '<img src=" ' + photoPin + ' " height="250" width="220"> <br/> ' + commentsPin,
       hintContent: commentsPin
     });
     
-
     myMap.geoObjects
       .add(placemark);
-
-      console.log('-------');
       y = 0;
-    }
+  }
 
 
 }
