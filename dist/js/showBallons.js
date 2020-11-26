@@ -18,8 +18,6 @@ for(let i = 0; i < arr1.length; i++) {                             // переб
   
 }
 
-// console.log(alldts);
-
 
 for(let x = 0, y = 0; x < alldts.length; x++) {
   // console.log(alldts[x]);
