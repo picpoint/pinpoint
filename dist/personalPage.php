@@ -111,7 +111,7 @@ session_start();
           </div>
 
           <div class="pp__freindsblock">
-            <a href="#">
+            <a href="freinds.php">
               <i class="fa fa-users" aria-hidden="true"></i>
               <span>друзья</span>
             </a>              
