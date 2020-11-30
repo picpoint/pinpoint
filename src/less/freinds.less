@@ -70,6 +70,8 @@
     }
     &__searchparam {
       border: @border;
+      display: flex;
+      flex-direction: column;
       width: 30%;
     }
     &__searchparamhdr {
@@ -79,6 +81,44 @@
       margin-top: 15px;
         span {
           font-size: 1.5rem;
+        }
+    }
+    &__searchparamblock {
+      border: @border;
+      display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      margin-top: 50px;
+    }
+    &__searchform {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      // margin-top: 50px;
+        input {
+          width: 85%;
+          height: 30px;
+          margin: 7px 0;
+          padding-left: 10px;
+            &:nth-child(1) {
+              margin-top: 15px;
+            }
+        }
+        button {
+          width: 150px;
+          height: 35px;
+          color: white;
+          background-color: @colorindxpanel;
+          margin: 15px 0;
+          font-weight: bolder;
+          border: none;
+          border-radius: 7px;
+          outline: none;
+          cursor: pointer;
         }
     }
 

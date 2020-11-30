@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<?php
+  require_once "../controller/findFreindsController.php";
+?>
 
   <section class="frds">
     <div class="frds__wrp">
@@ -26,10 +33,22 @@
             <span>Все друзья: </span>
             <span>0</span>
           </div>
+          <?php
+            $resFind = new FindFreindsC();
+            $resFind -> findAllFreinds();
+          ?>
         </div>
         <div class="frds__searchparam">
           <div class="frds__searchparamhdr">
             <span>Параметры поиска</span>
+          </div>
+          <div class="frds__searchparamblock">
+            <form method="post" class="frds__searchform">
+              <input type="text" name="searchlastname" placeholder="Фамилия">
+              <input type="text" name="searchfirstname" placeholder="Имя">
+              <input type="text" name="searchlogin" placeholder="Логин">
+              <button type="submit" name="searchbtn">Найти</button>
+            </form>
           </div>
         </div>
       </div>
