@@ -36,7 +36,7 @@
           </div>
           <?php
             $resFind = new FindFreindsC();
-            $resFind -> findAllFreinds();
+            print_r($resFind -> findAllFreinds());
           ?>
         </div>
         <div class="frds__searchparam">

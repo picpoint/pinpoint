@@ -14,7 +14,6 @@ class FindFreindsM {
 
 
   public function findFreindsMeth(array $arrParamsPeople) {  
-
     foreach($arrParamsPeople as $key => $value) {
       if($key == 'searchlastname' || $key == 'searchfirstname') {
 
@@ -42,12 +41,9 @@ class FindFreindsM {
       }
     }
 
-    // $sth = $this->cnnct -> prepare("SELECT firstname, lastname, login FROM users");
-    // $sth -> execute(); 
-    // $findFreind = $sth->fetchAll(PDO::FETCH_ASSOC);
-    // return $findFreind;
   }
 
 
+  
 
 }
