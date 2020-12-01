@@ -12,16 +12,21 @@ class FindFreindsC {
         $arrParamsPeople['searchlastname'] = $_POST['searchlastname'];
         $arrParamsPeople['searchfirstname'] = $_POST['searchfirstname'];
         
+        $resFindFreind = new FindFreindsM();
+        print_r($resFindFreind -> findFreindsMeth($arrParamsPeople));
       } elseif(!empty($_POST['searchlogin'])) {
         $arrParamsPeople['searchlogin'] = $_POST['searchlogin'];
+        
+        $resFindFreind = new FindFreindsM();
+        print_r($resFindFreind -> findFreindsMeth($arrParamsPeople));
       } else {
         echo("Ни одно поле не заполнено");
       }
 
 
 
-      $resFindFreind = new FindFreindsM();
-      print_r($resFindFreind -> findFreindsMeth($arrParamsPeople));
+      // $resFindFreind = new FindFreindsM();
+      // print_r($resFindFreind -> findFreindsMeth($arrParamsPeople));
     }
 
 
