@@ -13,6 +13,7 @@
 
 <?php
   require_once "../controller/findFreindsController.php";
+  require_once "../model/findFreindsModel.php";
 ?>
 
   <section class="frds">

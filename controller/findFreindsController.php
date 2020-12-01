@@ -11,19 +11,24 @@ class FindFreindsC {
       if(!empty($_POST['searchlastname']) || !empty($_POST['searchfirstname'])) {
         $arrParamsPeople['searchlastname'] = $_POST['searchlastname'];
         $arrParamsPeople['searchfirstname'] = $_POST['searchfirstname'];
+        
       } elseif(!empty($_POST['searchlogin'])) {
         $arrParamsPeople['searchlogin'] = $_POST['searchlogin'];
       } else {
         echo("Ни одно поле не заполнено");
       }
 
-      echo("<br>");
-      print_r($arrParamsPeople);
-      
+
+
+      $resFindFreind = new FindFreindsM();
+      print_r($resFindFreind -> findFreindsMeth($arrParamsPeople));
     }
+
 
   }
 
+
+  
 
 
 }
