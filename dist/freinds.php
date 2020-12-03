@@ -43,7 +43,11 @@
                 <img src="pict/avatarka.png" alt="logo">
               </div>
               <div class="frds__freindsblockpersondata">
-                
+                <div class="frds__datas">
+                  <span class="frds__lastname">Белоцерковцев</span>
+                  <span class="frds__firstname">Денис</span>
+                  <span class="frds__login">den</span>
+                </div>
               </div>
               <div class="frds__freindsblockadd">
                 <form method="POST" class="frds__freindsblockaddform">
