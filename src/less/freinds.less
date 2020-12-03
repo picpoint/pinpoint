@@ -45,7 +45,7 @@
         }
     }
     &__find {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       width: 70%;
@@ -54,12 +54,17 @@
     }
     &__allfreinds {
       border: @border;
+      display: flex;
+      flex-direction: column;
       width: 70%;
     }
     &__allfreindshdr {
       border: @border;
       display: flex;      
+      align-items: center;
       margin-top: 15px;
+      height: 5%;
+      width: 100%;
         span {
           font-size: 1.5rem;
           margin-left: 30px;
@@ -68,14 +73,45 @@
           }
         }
     }
-    &__searchparam {
+    &__allfreindsresult {
       border: @border;
+      display: flex;
+      flex-direction: column;
+      height: 95%;
+      width: 100%;
+    }
+    &__freindsblock {
+      border: @border;
+      display: flex;
+      width: 100%;
+      height: 120px;
+    }
+    &__freindsblocklogo {
+      border: @border;
+      width: 15%;
+      height: 120px;
+      margin-left: 30px;
+    }
+    &__freindsblockpersondata {
+      border: @border;
+      display: flex;
+      width: 60%;
+    }
+    &__freindsblockadd {
+      border: @border;
+      display: flex;
+      width: 25%;
+    }
+
+
+    &__searchparam {
+      // border: @border;
       display: flex;
       flex-direction: column;
       width: 30%;
     }
     &__searchparamhdr {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       margin-top: 15px;
@@ -84,7 +120,7 @@
         }
     }
     &__searchparamblock {
-      border: @border;
+      // border: @border;
       display: flex;
       // flex-direction: column;
       // justify-content: center;
@@ -92,7 +128,7 @@
       margin-top: 50px;
     }
     &__searchform {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
       justify-content: center;

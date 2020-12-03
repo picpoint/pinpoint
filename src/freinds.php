@@ -29,16 +29,35 @@
       </div>
 
       <div class="frds__find">
+        
         <div class="frds__allfreinds">
           <div class="frds__allfreindshdr">
             <span>Все друзья: </span>
             <span>0</span>
           </div>
-          <?php
-            $resFind = new FindFreindsC();
-            print_r($resFind -> findAllFreinds());
-          ?>
+          <div class="frds__allfreindsresult">
+            
+            <div class="frds__freindsblock">
+              <div class="frds__freindsblocklogo">
+                <img src="" alt="logo">
+              </div>
+              <div class="frds__freindsblockpersondata">
+
+              </div>
+              <div class="frds__freindsblockadd">
+                <form method="POST" class="frds__freindsblockaddform">
+                  <button>Добавить</button>
+                </form>
+              </div>
+            </div>
+
+            <?php
+              $resFind = new FindFreindsC();
+              print_r($resFind -> findAllFreinds());
+            ?>
+          </div>
         </div>
+
         <div class="frds__searchparam">
           <div class="frds__searchparamhdr">
             <span>Параметры поиска</span>

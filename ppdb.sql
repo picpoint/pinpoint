@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 26 2020 г., 19:45
--- Версия сервера: 10.4.14-MariaDB
--- Версия PHP: 7.4.9
+-- Время создания: Дек 03 2020 г., 06:54
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -68,7 +68,8 @@ INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `lati
 (86, 'freeAlex', '../usersFolders/freeAlex/pict/75d03b8485b589216d98fe6e2870236e.jpg', '', 'Гора лягушка в Александровском', '44.727929', '42.990781', '2020-11-26 18:24:00'),
 (87, 'freeAlex', '../usersFolders/freeAlex/pict/969875_1000.jpg', '', 'Пятигорский Провал', '44.046483', '43.099207', '2020-11-26 18:38:51'),
 (88, 'freeAlex', '../usersFolders/freeAlex/pict/melbourne-is-7957668.jpg', '', 'мельбурн', '-37.835828', '144.95281', '2020-11-26 18:41:21'),
-(89, 'den', '../usersFolders/den/pict/000026_1569869403_363994_big.jpg', '', 'Здесь я плавал на корабле', '-83.480215', '-59.446877', '2020-11-26 18:44:18');
+(89, 'den', '../usersFolders/den/pict/000026_1569869403_363994_big.jpg', '', 'Здесь я плавал на корабле', '-83.480215', '-59.446877', '2020-11-26 18:44:18'),
+(90, 'den', '../usersFolders/den/pict/54070840.jpg', '', 'наше озеро', '45.032000', '41.752729', '2020-11-27 13:36:51');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,10 @@ INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`) VA
 (5, 'Аркадий', 'Укупник', 'arcUc', '$2y$10$hKQu1Jz60Fxd5eCb8i2w4e1PJTtMHf/I5X4yEFTER1EhhCRLcaVEi'),
 (6, 'Александр', 'Лукашенко', 'AlexLOOK', '$2y$10$XukrP4iGzMT822Qn8F2qmuzABoiRFJ9eSvwjLKGA83xXJQnPM3m9m'),
 (7, 'Денис', 'Белоцерковцев', 'den', '$2y$10$1BKt6lIfI/i8Jbpqt2tPsetey2DfrHFsjRnjVsdQF.zN1PBUnSGbO'),
-(8, 'Alex', 'Freedman', 'freeAlex', '$2y$10$Lr0WynYjhY4Se0AANwneC.YJLqdAxvwveQeAg6.KkwBj6jE6nWw.W');
+(8, 'Alex', 'Freedman', 'freeAlex', '$2y$10$Lr0WynYjhY4Se0AANwneC.YJLqdAxvwveQeAg6.KkwBj6jE6nWw.W'),
+(9, 'Александр', 'Пушной', 'push', '$2y$10$VCw5EGJWZSQOELdOGTpjUe.bGy62jnL7S57P3YorCL.YwT9EnM9Q.'),
+(10, 'Денис', 'Денисов', 'denden', '$2y$10$z8lN7yRvRJgcYBC8OO.X3u4.zrtUMmtmm7olR6Xc5wllpS.v3Icli'),
+(11, 'Денис', 'Старовойтов', 'denstar', '$2y$10$ZqGXx7u14IBvnbXVM/MEm.MJt1hg3a4sexqRFHpm0Z5whxiMKt6C6');
 
 --
 -- Индексы сохранённых таблиц
@@ -121,13 +125,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
