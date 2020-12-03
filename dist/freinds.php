@@ -37,12 +37,13 @@
           </div>
           <div class="frds__allfreindsresult">
             
+            
             <div class="frds__freindsblock">
               <div class="frds__freindsblocklogo">
-                <img src="" alt="logo">
+                <img src="pict/avatarka.png" alt="logo">
               </div>
               <div class="frds__freindsblockpersondata">
-
+                
               </div>
               <div class="frds__freindsblockadd">
                 <form method="POST" class="frds__freindsblockaddform">
@@ -50,6 +51,7 @@
                 </form>
               </div>
             </div>
+
 
             <?php
               $resFind = new FindFreindsC();
