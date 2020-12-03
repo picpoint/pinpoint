@@ -38,7 +38,7 @@
           <div class="frds__allfreindsresult">
             
             
-            <div class="frds__freindsblock">
+            <!-- <div class="frds__freindsblock">
               <div class="frds__freindsblocklogo">
                 <img src="pict/avatarka.png" alt="logo">
               </div>
@@ -54,13 +54,14 @@
                   <button>Добавить</button>
                 </form>
               </div>
-            </div>
+            </div> -->
 
 
             <?php
               $resFind = new FindFreindsC();
               print_r($resFind -> findAllFreinds());
             ?>
+
           </div>
         </div>
 
