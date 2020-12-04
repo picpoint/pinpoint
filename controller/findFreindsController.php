@@ -25,16 +25,30 @@ class FindFreindsC {                                              // контр�
       if(count($resfind) == 0) {                                  // если результат вернувшегося массива пустой
         return "Нет пользователей с такими параметрами ...";      // уведомляем пользователя
       } else {
-        // return $resfind;                                          // иначе отдаём результат
-
-
         foreach($resfind as $rf) {
-          echo($rf['login']);
-          echo("<br>");
+         ?>
+          <div class="frds__freindsblock">
+            <div class="frds__freindsblocklogo">
+              <img src="pict/avatarka.png" alt="logo">
+            </div>
+            <div class="frds__freindsblockpersondata">
+              <div class="frds__datas">
+                <span class="frds__lastname"><?php echo($rf['lastname']);?></span>
+                <span class="frds__firstname"><?php echo($rf['firstname']);?></span>
+                <span class="frds__login"><?php echo($rf['login']);?></span>
+              </div>
+            </div>
+            <div class="frds__freindsblockadd">
+              <form method="POST" class="frds__freindsblockaddform">
+                <button>Добавить</button>
+              </form>
+            </div>
+          </div>
+         <?php
         }
 
-
       }
+      
     }
 
 
