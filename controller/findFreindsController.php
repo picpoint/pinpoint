@@ -25,7 +25,7 @@ class FindFreindsC {                                              // контр�
       if(count($resfind) == 0) {                                  // если результат вернувшегося массива пустой
         return "Нет пользователей с такими параметрами ...";      // уведомляем пользователя
       } else {
-        foreach($resfind as $rf) {
+        foreach($resfind as $rf) {                                // перебираем пришедний массив данных
          ?>
           <div class="frds__freindsblock">
             <div class="frds__freindsblocklogo">
@@ -33,9 +33,9 @@ class FindFreindsC {                                              // контр�
             </div>
             <div class="frds__freindsblockpersondata">
               <div class="frds__datas">
-                <span class="frds__lastname"><?php echo($rf['lastname']);?></span>
-                <span class="frds__firstname"><?php echo($rf['firstname']);?></span>
-                <span class="frds__login"><?php echo($rf['login']);?></span>
+                <span class="frds__lastname"><?php echo($rf['lastname']);?></span>  <!-- в фамилию вставляем значение из массива по ключу --> 
+                <span class="frds__firstname"><?php echo($rf['firstname']);?></span>  <!-- в имя вставляем значение из массива по ключу --> 
+                <span class="frds__login"><?php echo($rf['login']);?></span>  <!-- в логин вставляем значение из массива по ключу --> 
               </div>
             </div>
             <div class="frds__freindsblockadd">
