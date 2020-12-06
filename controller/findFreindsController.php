@@ -36,11 +36,12 @@ class FindFreindsC {                                              // контр�
                 <span class="frds__lastname"><?php echo($rf['lastname']);?></span>  <!-- в фамилию вставляем значение из массива по ключу --> 
                 <span class="frds__firstname"><?php echo($rf['firstname']);?></span>  <!-- в имя вставляем значение из массива по ключу --> 
                 <span class="frds__login"><?php echo($rf['login']);?></span>  <!-- в логин вставляем значение из массива по ключу --> 
+                <!-- <span class="frds__iduser"><?php echo($rf['id_user']);?></span> -->
               </div>
             </div>
             <div class="frds__freindsblockadd">
               <form method="POST" class="frds__freindsblockaddform">
-                <button>Добавить</button>
+                <button type="submit" value=" <?php echo($rf['id_user']);?> ">Отправить заявку</button>
               </form>
             </div>
           </div>

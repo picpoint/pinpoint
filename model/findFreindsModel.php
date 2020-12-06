@@ -25,13 +25,13 @@ class FindFreindsM {                                                      // к�
           $this->searchlastname = $value;                                 // переменной присваиваем значение фамилии
         }        
     
-        $sth = $this->cnnct -> prepare("SELECT firstname, lastname, login FROM users WHERE firstname = '$this->searchfirstname' OR lastname = '$this->searchlastname' "); // делаем выборку по имени или фамилии
+        $sth = $this->cnnct -> prepare("SELECT id_user, firstname, lastname, login FROM users WHERE firstname = '$this->searchfirstname' OR lastname = '$this->searchlastname' "); // делаем выборку по имени или фамилии
         $sth -> execute();                                                // выполняем запрос
         $findFreind = $sth->fetchAll(PDO::FETCH_ASSOC);                   // получаем данные
         return $findFreind;                                               // возвращаем массив
       } else if($key == 'searchlogin') {                                  // иначе если ключ - логин
         $this->searchlogin = $value;                                      // присваиваем переменной значение логина
-        $sth = $this->cnnct -> prepare("SELECT firstname, lastname, login FROM users WHERE login = '$this->searchlogin' "); // делаем запрос по логину
+        $sth = $this->cnnct -> prepare("SELECT id_user, firstname, lastname, login FROM users WHERE login = '$this->searchlogin' "); // делаем запрос по логину
         $sth -> execute();                                                // выполняем запрос
         $findFreind = $sth->fetchAll(PDO::FETCH_ASSOC);                   // получаем данные
         return $findFreind;                                               // возвращаем масссив
