@@ -15,6 +15,7 @@
   require_once "../controller/findFreindsController.php";
   require_once "../model/findFreindsModel.php";
   require_once "../controller/sendRequestFreindController.php";
+  require_once "../model/addRequestFreindModel.php";
 ?>
 
   <section class="frds">

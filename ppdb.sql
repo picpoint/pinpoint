@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 03 2020 г., 06:54
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Дек 08 2020 г., 18:06
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -69,7 +69,8 @@ INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `lati
 (87, 'freeAlex', '../usersFolders/freeAlex/pict/969875_1000.jpg', '', 'Пятигорский Провал', '44.046483', '43.099207', '2020-11-26 18:38:51'),
 (88, 'freeAlex', '../usersFolders/freeAlex/pict/melbourne-is-7957668.jpg', '', 'мельбурн', '-37.835828', '144.95281', '2020-11-26 18:41:21'),
 (89, 'den', '../usersFolders/den/pict/000026_1569869403_363994_big.jpg', '', 'Здесь я плавал на корабле', '-83.480215', '-59.446877', '2020-11-26 18:44:18'),
-(90, 'den', '../usersFolders/den/pict/54070840.jpg', '', 'наше озеро', '45.032000', '41.752729', '2020-11-27 13:36:51');
+(90, 'arcUc', '../usersFolders/arcUc/pict/3cd3a483ebe69c0fc91d2683989e2782.jpg', '', 'тут я живу', '55.720604', '37.599423', '2020-11-26 18:56:34'),
+(91, 'arcUc', '../usersFolders/arcUc/pict/a7c70c24-1d32-4411-8f7f-0797bf501247_jpg_800x1000_q85.jpg', '', 'приглашаю на мой концерт', '52.272919', '104.25647', '2020-11-26 18:58:07');
 
 -- --------------------------------------------------------
 
@@ -94,9 +95,9 @@ INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`) VA
 (6, 'Александр', 'Лукашенко', 'AlexLOOK', '$2y$10$XukrP4iGzMT822Qn8F2qmuzABoiRFJ9eSvwjLKGA83xXJQnPM3m9m'),
 (7, 'Денис', 'Белоцерковцев', 'den', '$2y$10$1BKt6lIfI/i8Jbpqt2tPsetey2DfrHFsjRnjVsdQF.zN1PBUnSGbO'),
 (8, 'Alex', 'Freedman', 'freeAlex', '$2y$10$Lr0WynYjhY4Se0AANwneC.YJLqdAxvwveQeAg6.KkwBj6jE6nWw.W'),
-(9, 'Александр', 'Пушной', 'push', '$2y$10$VCw5EGJWZSQOELdOGTpjUe.bGy62jnL7S57P3YorCL.YwT9EnM9Q.'),
-(10, 'Денис', 'Денисов', 'denden', '$2y$10$z8lN7yRvRJgcYBC8OO.X3u4.zrtUMmtmm7olR6Xc5wllpS.v3Icli'),
-(11, 'Денис', 'Старовойтов', 'denstar', '$2y$10$ZqGXx7u14IBvnbXVM/MEm.MJt1hg3a4sexqRFHpm0Z5whxiMKt6C6');
+(9, 'Александр', 'Пушной', 'push', '$2y$10$m2DuO.V7SVSvZqplS7isOOR.OdS7r8PnXzu1swZ5R2QbiCgRzMdWm'),
+(10, 'Денис', 'Денисов', 'denden', '$2y$10$89ebdNApke03heD/Wwv69.f3CTkDowOa7HHLthkaoQNX7p6IN7vyC'),
+(11, 'Денис', 'Старовойтов', 'denstar', '$2y$10$FqUOxF8bW8Rgg5DO4oWxzehTEO4ubXDCvKEr/5wpyT22y8taKSdIK');
 
 --
 -- Индексы сохранённых таблиц
@@ -125,7 +126,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
