@@ -40,8 +40,8 @@ class FindFreindsC {                                              // контр�
             </div>
             <div class="frds__freindsblockadd">
               <form method="POST" action="sendRequestFreindController.php" class="frds__freindsblockaddform">
-                <button type="submit" name="sendReqbtn" value="<?php echo($rf['id_user']);?>" class="frds__bthadd">Отправить заявку</button>
-                <?php echo($_SESSION['login'])?>
+                <button type="submit" name="sendReqbtn" class="frds__bthadd">Отправить заявку</button>
+                <input type="text"  name="userID" value="<?php echo($rf['id_user']);?>">                
               </form>
             </div>
           </div>
