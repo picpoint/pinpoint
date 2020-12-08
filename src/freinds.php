@@ -14,6 +14,7 @@
 <?php
   require_once "../controller/findFreindsController.php";
   require_once "../model/findFreindsModel.php";
+  require_once "../controller/sendRequestFreindController.php";
 ?>
 
   <section class="frds">
@@ -34,34 +35,16 @@
           <div class="frds__allfreindshdr">
             <span>Все друзья: </span>
             <span>0</span>
+            <?php
+              $sendReq = new sendRequestFreindC();
+              $sendReq -> getDatasAboutAddFreind();
+            ?>
           </div>
           <div class="frds__allfreindsresult">
-            
-            
-            <!-- <div class="frds__freindsblock">
-              <div class="frds__freindsblocklogo">
-                <img src="pict/avatarka.png" alt="logo">
-              </div>
-              <div class="frds__freindsblockpersondata">
-                <div class="frds__datas">
-                  <span class="frds__lastname">Белоцерковцев</span>
-                  <span class="frds__firstname">Денис</span>
-                  <span class="frds__login">den</span>
-                </div>
-              </div>
-              <div class="frds__freindsblockadd">
-                <form method="POST" class="frds__freindsblockaddform">
-                  <button>Добавить</button>
-                </form>
-              </div>
-            </div> -->
-
-
             <?php
               $resFind = new FindFreindsC();
               print_r($resFind -> findAllFreinds());
             ?>
-
           </div>
         </div>
 
