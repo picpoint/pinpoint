@@ -1,0 +1,58 @@
+@import "var.less";
+
+
+.nws {
+  border: @border;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+    &__wrp {
+      border: @border; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      background-color: @colorindxbody;
+    }
+    &__hdr {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 7%;      
+      background-color: @colorindxpanel;
+    }
+    &__hdrcontent {
+      border: @border;
+      width: 70%;
+    }
+    &__logo {
+      border: @border;
+      display: flex;
+      align-items: center;
+      height: 100%;
+        a {
+          // border: @border;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90%;
+          img {
+            // border: @border;
+            height: 90%;
+          }
+        }
+    }
+    &__allnews {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      height: 93%;
+      background-color: white;
+    }
+    
+
+
+
+}

@@ -15,8 +15,7 @@ session_start();
 <body>
 <?php
   require_once "../controller/getDatasFromPinController.php";
-  require_once "../model/writeDataPinToDBModel.php";
-  
+  require_once "../model/writeDataPinToDBModel.php";  
   require_once "../controller/getDataPinContentController.php";
   require_once "../model/getDataFromDBPinContentModel.php";
 ?>
@@ -118,7 +117,7 @@ session_start();
           </div>
 
           <div class="pp__newsblock">
-            <a href="#">
+            <a href="news.php">
               <i class="fa fa-bullhorn" aria-hidden="true"></i>
               <span>новости</span>
             </a>              
