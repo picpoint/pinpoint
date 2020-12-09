@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 08 2020 г., 18:06
--- Версия сервера: 10.4.14-MariaDB
--- Версия PHP: 7.4.9
+-- Время создания: Дек 09 2020 г., 06:35
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- База данных: `ppdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `freinds`
+--
+
+CREATE TABLE `freinds` (
+  `id_freinds` bigint(20) UNSIGNED NOT NULL,
+  `id_user` varchar(255) NOT NULL,
+  `id_myfreind` varchar(255) NOT NULL,
+  `freindship` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `freinds`
+--
+
+INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VALUES
+(1, 'den', '5', 0),
+(2, 'den', '4', 0),
+(3, 'den', '6', 0);
 
 -- --------------------------------------------------------
 
@@ -104,6 +126,13 @@ INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`) VA
 --
 
 --
+-- Индексы таблицы `freinds`
+--
+ALTER TABLE `freinds`
+  ADD PRIMARY KEY (`id_freinds`),
+  ADD UNIQUE KEY `id_freinds` (`id_freinds`);
+
+--
 -- Индексы таблицы `pins`
 --
 ALTER TABLE `pins`
@@ -121,6 +150,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `freinds`
+--
+ALTER TABLE `freinds`
+  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `pins`

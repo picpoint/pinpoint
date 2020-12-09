@@ -4,18 +4,19 @@
 
 class sendRequestFreindC {
 
-  public function getDatasAboutAddFreind() {
-     $arrDatas = [];
-    
+  public function getDatasAboutAddFreind() {    
     if(isset($_POST['sendReqbtn'])) {
-      print_r($_POST['userID']);
-      print_r($_SESSION['login']);
+      $arrDatas = [];
+      // print_r($_POST['userID']);
+      // print_r($_SESSION['login']);
       
-      $this->arrDatas['userID'] = $_POST['userID'];
-      $this->arrDatas['mylogin'] = $_SESSION['login'];
+      $arrDatas['userID'] = $_POST['userID'];
+      $arrDatas['mylogin'] = $_SESSION['login'];
+
+      // print_r($arrDatas);
 
       $addFreind = new AddRequestFreindM();
-      $addFreind -> freindsRequest($this->arrDatas);
+      $addFreind -> freindsRequest($arrDatas);
       // header('location: freinds.php');
     }
   }
