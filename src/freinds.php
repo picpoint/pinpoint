@@ -61,6 +61,9 @@
               <button type="submit" name="searchbtn">Найти</button>
             </form>
           </div>
+          <div class="frds__myfreinds">
+            
+          </div>
         </div>
       </div>
 
