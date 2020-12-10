@@ -10,7 +10,7 @@ class sendRequestFreindC {
       // print_r($_POST['userID']);
       // print_r($_SESSION['login']);
       
-      $arrDatas['userID'] = $_POST['userID'];
+      $arrDatas['freindsLogin'] = $_POST['freindsLogin'];
       $arrDatas['mylogin'] = $_SESSION['login'];
 
       // print_r($arrDatas);

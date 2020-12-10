@@ -13,12 +13,7 @@ class CheckForAddingToFreindsM {
     $sth = $this->cnnct -> prepare("SELECT * FROM freinds WHERE id_user = '$loginUser'");
     $sth -> execute();
     $data = $sth -> fetchAll(PDO::FETCH_ASSOC);
-    // return $data;
-
-    foreach($data as $dt) {
-      print_r($dt);
-      echo("<br>");
-    }
+    
 
   }
 

@@ -5,8 +5,7 @@
 class ShowRequestOnAddedFreindC {
 
   public function getLogin() {
-    $loginUser = $_SESSION['login'];
-    // echo($loginUser);
+    $loginUser = $_SESSION['login'];    
 
     $checkAddFrdn = new CheckForAddingToFreindsM();
     print_r($checkAddFrdn -> checkFreinds($loginUser));
