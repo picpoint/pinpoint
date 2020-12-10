@@ -38,10 +38,10 @@ class FindFreindsC {                                              // контр�
                 <span class="frds__login"><?php echo($rf['login']);?></span>  <!-- в логин вставляем значение из массива по ключу --> 
               </div>
             </div>
-            <div class="frds__freindsblockadd">
-              <form method="POST" class="frds__freindsblockaddform">
-                <button type="submit" name="sendReqbtn" class="frds__bthadd">Отправить заявку</button>
-                <input type="hidden" name="freindsLogin" value="<?php echo($rf['login']);?>">                
+            <div class="frds__freindsblockadd">                    <!-- блок с кнопкой "отправить заявку" -->
+              <form method="POST" class="frds__freindsblockaddform"> <!-- форма -->
+                <button type="submit" name="sendReqbtn" class="frds__bthadd">Отправить заявку</button> <!-- кнопка для отправки запроса -->
+                <input type="hidden" name="freindsLogin" value="<?php echo($rf['login']);?>"> <!-- скрытый input для передачи логина пользователя которого добавляю друзья -->
               </form>
             </div>
           </div>

@@ -2,29 +2,23 @@
 
 
 
-class GetDataPinContentC {
+class GetDataPinContentC {                                    // контроллер для получения данных о пине(контент конкретного пина) и передаче тх в js для вывода на карте
   
 
-  public function getDataUserPins() {
-    $login = $_SESSION['login'];
-    $arrDt = [];
+  public function getDataUserPins() {                         // метод, получение данных 
+    $login = $_SESSION['login'];                              // получаем логин пользователя
+    $arrDt = [];                                              // объявляем массив для записи данных для пинов
     
-    $dataPins = new GetDataFromDBPinContentM();
-    $res = $dataPins -> getDataPinContent($login);    
+    $dataPins = new GetDataFromDBPinContentM();               // вызываем модель которая дёргает данные пинов из бд
+    $res = $dataPins -> getDataPinContent($login);            // передаём в метод логин, для получения пинов конкретного пользователя
     
-    foreach($res as $rs) {
+    foreach($res as $rs) {                                    // перебираем получившийся результат как ключ-значение, для дальнейшей обработке в showBallons.js
       foreach($rs as $key => $value) {
-        // echo("$key - $value");
-        // echo("<br>");
         $arrDt[] = "$key - $value";
       }
     }
-    
-    
-    return $arrDt;
-
-    // return json_encode($arrDt, JSON_UNESCAPED_UNICODE);
-    // return $res;
+        
+    return $arrDt;                                            // возвращаем результат
 
   }
   
