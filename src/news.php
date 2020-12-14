@@ -30,7 +30,26 @@
         <?php
           $showReqOnAdded = new ShowRequestOnAddedFreindC();
           $showReqOnAdded -> getLogin();
+          $showReqOnAdded -> showPeopleToFreindship();
         ?>
+
+        <div class="nws__reqfreindsblock">
+          <div class="nws__reqimg">
+            <img src="pict/avatarka.png" alt="avatar">
+          </div>
+          <div class="nws__reqcontent">
+            <div class="nws__requser">
+              <span>Пользователь </span> <span> xxx </span> <span> хочет добавить вас в друзья</span>
+            </div>
+            <div class="nws__reqbtns">
+              <form method="post" class="nws__sendyesno">
+                <button type="submit">Добавить</button>
+                <button type="submit">Отклонить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
 

@@ -6,7 +6,7 @@ class ShowRequestOnAddedFreindC {                                 // класс 
   public $resFreindship;
 
   
-  public function getLogin() {                                    // метод полученя логина текущего пользователя
+  public function getLogin() {                                    // метод получения логина текущего пользователя
     $loginUser = $_SESSION['login'];    
 
     $checkAddFrdn = new CheckForAddingToFreindsM();               // вызываем модель, которая возвращает данные по пользователям, которые подали заявку в друзья текущему пользователю
@@ -15,7 +15,12 @@ class ShowRequestOnAddedFreindC {                                 // класс 
 
   
   public function showPeopleToFreindship() {
-    print_r($this->resFreindship);
+    $allReqToFreinds = $this->resFreindship;
+    
+    foreach($allReqToFreinds as $allFrnds) {
+      print_r($allFrnds);
+      echo("<br>");
+    }
   }
 
 
