@@ -13,6 +13,7 @@
 <?php
   require_once "../controller/showRequestOnAddedFreindController.php";
   require_once "../model/checkForAddingToFreindModel.php";
+  require_once "../controller/addFreindController.php";
 ?>
   
   <section class="nws">
@@ -53,6 +54,11 @@
 
         
       </div>
+
+      <?php
+        $addFreinship = new AddFreindC();
+        $addFreinship -> addFreindToFreinship();
+      ?>
 
 
     </div>

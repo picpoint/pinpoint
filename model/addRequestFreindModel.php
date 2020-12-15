@@ -15,7 +15,6 @@ class AddRequestFreindM {                                       // класс м
 
     $sth = $this->cnnct -> prepare("INSERT INTO freinds (id_user, id_myfreind) VALUES('$mylogin', '$freindsLogin')"); // записываем в таблицу свой логин и логин пользователя кому отправляем заявку в друзья
     $sth -> execute();                                          // выполняем запрос
-
   }
 
 

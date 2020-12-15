@@ -17,8 +17,8 @@ class ShowRequestOnAddedFreindC {                                 // класс 
     $allReqToFreinds = $this->resFreindship;                      // получаем результат из предыдущего метода
     
     foreach($allReqToFreinds as $allFrnds) {                      // перебираем массив и в шаблоне выводим данные по каждому пользователю
-      print_r($allFrnds);
-      echo("<br>");
+      // print_r($allFrnds);
+      // echo("<br>");
       ?>
         <div class="nws__reqfreindsblock">
           <div class="nws__reqimg">
@@ -34,8 +34,8 @@ class ShowRequestOnAddedFreindC {                                 // класс 
             <div class="nws__reqbtns">
               <form method="post" class="nws__sendyesno">
                 <button type="submit" name="btnyes">Добавить</button>
-                <input type="text" name="sendyes" value="<?php echo($allFrnds['id_freinds']);?>">
-                <button type="submit" name="btnno">Отклонить</button>                
+                <button type="submit" name="btnno">Отклонить</button>
+                <input type="text" name="sendyes" value="<?php echo($allFrnds['id_freinds']);?>">                
               </form>
             </div>
           </div>
