@@ -33,7 +33,8 @@
           $showReqOnAdded -> showPeopleToFreindship();
         ?>
 
-        <div class="nws__reqfreindsblock">
+        
+        <!-- <div class="nws__reqfreindsblock">
           <div class="nws__reqimg">
             <img src="pict/avatarka.png" alt="avatar">
           </div>
@@ -48,7 +49,8 @@
               </form>
             </div>
           </div>
-        </div>
+        </div> -->
+
         
       </div>
 

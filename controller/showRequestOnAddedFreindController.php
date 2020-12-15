@@ -18,8 +18,14 @@ class ShowRequestOnAddedFreindC {                                 // класс 
     $allReqToFreinds = $this->resFreindship;
     
     foreach($allReqToFreinds as $allFrnds) {
-      print_r($allFrnds);
-      echo("<br>");
+      foreach($allFrnds as $key => $value) {
+
+
+          echo("$key - $value");
+          echo("<br>");
+        
+
+      }
     }
   }
 
