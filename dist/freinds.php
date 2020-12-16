@@ -17,6 +17,8 @@
   require_once "../controller/sendRequestFreindController.php";
   require_once "../model/addRequestFreindModel.php";
   require_once "../controller/showFreindsController.php";
+  require_once "../controller/showFreindsController.php";
+  require_once "../model/getAllFreinds.php";
 ?>
 
   <section class="frds">
@@ -68,9 +70,15 @@
               $resShowFreinds -> showAllFreinds();
             ?>
 
-            <div class="frds__frnd">
-              
-            </div>
+            <!-- <div class="frds__frnd">
+              <div class="frds__avatar">
+                <img src="pict/avatarka.png" alt="avatar">
+              </div>
+              <div class="frds__names">
+                <span>lastname</span>
+                <span>firstname</span>
+              </div>
+            </div> -->
 
             
           </div>
