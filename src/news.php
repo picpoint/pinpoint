@@ -14,6 +14,7 @@
   require_once "../controller/showRequestOnAddedFreindController.php";
   require_once "../model/checkForAddingToFreindModel.php";
   require_once "../controller/addFreindController.php";
+  require_once "../model/addFreindModel.php";
 ?>
   
   <section class="nws">
@@ -32,27 +33,7 @@
           $showReqOnAdded = new ShowRequestOnAddedFreindC();
           $showReqOnAdded -> getLogin();
           $showReqOnAdded -> showPeopleToFreindship();
-        ?>
-
-        
-        <!-- <div class="nws__reqfreindsblock">
-          <div class="nws__reqimg">
-            <img src="pict/avatarka.png" alt="avatar">
-          </div>
-          <div class="nws__reqcontent">
-            <div class="nws__requser">
-              <span>Пользователь </span> <span> xxx </span> <span> хочет добавить вас в друзья</span>
-            </div>
-            <div class="nws__reqbtns">
-              <form method="post" class="nws__sendyesno">
-                <button type="submit">Добавить</button>
-                <button type="submit">Отклонить</button>
-              </form>
-            </div>
-          </div>
-        </div> -->
-
-        
+        ?>        
       </div>
 
       <?php

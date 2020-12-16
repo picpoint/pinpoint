@@ -16,9 +16,7 @@ class ShowRequestOnAddedFreindC {                                 // класс 
   public function showPeopleToFreindship() {                      // метод показа списка пользователей которые хотят добавить в друзья текущего пользователя
     $allReqToFreinds = $this->resFreindship;                      // получаем результат из предыдущего метода
     
-    foreach($allReqToFreinds as $allFrnds) {                      // перебираем массив и в шаблоне выводим данные по каждому пользователю
-      // print_r($allFrnds);
-      // echo("<br>");
+    foreach($allReqToFreinds as $allFrnds) {                      // перебираем массив и в шаблоне выводим данные по каждому пользователю      
       ?>
         <div class="nws__reqfreindsblock">
           <div class="nws__reqimg">
@@ -35,7 +33,7 @@ class ShowRequestOnAddedFreindC {                                 // класс 
               <form method="post" class="nws__sendyesno">
                 <button type="submit" name="btnyes">Добавить</button>
                 <button type="submit" name="btnno">Отклонить</button>
-                <input type="text" name="sendyes" value="<?php echo($allFrnds['id_freinds']);?>">                
+                <input type="hidden" name="sendyes" value="<?php echo($allFrnds['id_freinds']);?>">                
               </form>
             </div>
           </div>

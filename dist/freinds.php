@@ -62,7 +62,7 @@
             </form>
           </div>
           <div class="frds__myfreinds">
-            
+                      
           </div>
         </div>
       </div>
