@@ -16,6 +16,7 @@
   require_once "../model/findFreindsModel.php";
   require_once "../controller/sendRequestFreindController.php";
   require_once "../model/addRequestFreindModel.php";
+  require_once "../controller/showFreindsController.php";
 ?>
 
   <section class="frds">
@@ -35,7 +36,7 @@
         <div class="frds__allfreinds">
           <div class="frds__allfreindshdr">
             <span>Все друзья: </span>
-            <span>0</span>
+            <span> ... </span>
             <?php
               $sendReq = new sendRequestFreindC();
               $sendReq -> getDatasAboutAddFreind();
@@ -62,7 +63,16 @@
             </form>
           </div>
           <div class="frds__myfreinds">
-                      
+            <?php
+              $resShowFreinds = new ShowMyFreindsC();
+              $resShowFreinds -> showAllFreinds();
+            ?>
+
+            <div class="frds__frnd">
+              
+            </div>
+
+            
           </div>
         </div>
       </div>
