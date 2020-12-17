@@ -32,7 +32,14 @@
 
         </div>
         <div class="msg__msgcurrentuser">
-          
+          <div class="msg__correspondence">
+          </div>
+          <div class="msg__sendmsg">
+            <form method="post" name="sendmsgform" class="msg__sendmsgform">
+              <input type="text" name="sendmsgfield" placeholder="Введите сообщение ...">
+              <button type="submit" name="sendmsgbtn">Отправить</button>
+            </form>
+          </div>
         </div>
       </div>
 
