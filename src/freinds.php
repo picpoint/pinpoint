@@ -68,19 +68,7 @@
             <?php
               $resShowFreinds = new ShowMyFreindsC();
               $resShowFreinds -> showAllFreinds();
-            ?>
-
-            <!-- <div class="frds__frnd">
-              <div class="frds__avatar">
-                <img src="pict/avatarka.png" alt="avatar">
-              </div>
-              <div class="frds__names">
-                <span>lastname</span>
-                <span>firstname</span>
-              </div>
-            </div> -->
-
-            
+            ?>            
           </div>
         </div>
       </div>

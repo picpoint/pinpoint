@@ -96,7 +96,7 @@ session_start();
       <div class="pp__topmenu">
         <div class="pp__basemenublock">
           <div class="pp__messageblock">
-            <a href="#">
+            <a href="messages.php">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
               <span>сообщения</span>
             </a>              
