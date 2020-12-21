@@ -229,7 +229,7 @@
       flex-direction: column;
       align-items: center;
       width: 80px;
-      height: 80px;
+      // height: 80px;
       margin: 5px 3px;
       padding: 3px;
       background-color: @colorindxbody;
@@ -238,7 +238,8 @@
     &__avatar {
       // border: @border;
       display: flex;
-      height: 50%;
+      height: 50px;
+      width: 50px;
         img {
           height: 100%;
         }
@@ -253,6 +254,24 @@
       width: 90%;
         span {
           font-weight: bolder;
+        }
+    }
+    &__funcblock {
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      // height: 100px;
+      width: 100%;
+        a {
+          // border: @border;
+          display: flex;
+          justify-content: center;
+          margin: 2px;
+          i {
+            font-size: 1rem;
+            color: @colorindxpanel;
+            font-weight: bold;
+          }
         }
     }
 

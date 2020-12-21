@@ -19,6 +19,14 @@ class ShowMyFreindsC {
           <div class="frds__names">
             <span><?php echo($resAll['firstname'])?></span>
             <span><?php echo($resAll['lastname'])?></span>
+            <!-- <span><?php print_r($resAll)?></span> -->
+          </div>
+          <div class="frds__funcblock">
+            <form method="post" class="frds__funcblockform">
+              <input type="hidden" value="<?php echo($resAll['id_freinds'])?>">
+                <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
+              </a>
+            </form>
           </div>
         </div>
       <?php
