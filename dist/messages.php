@@ -11,7 +11,8 @@
 </head>
 <body>
 <?php
-  
+  require_once "../controller/writeMessagesFreindController.php";
+  require_once "../model/writeMessageFreindModel.php";
 ?>
   
   <section class="msg">
@@ -29,7 +30,16 @@
 
       <div class="msg__content">
         <div class="msg__allusrs">
+          <?php
+            $wrtMsgFrnd = new WriteMessageToFreindC();
+            $wrtMsgFrnd -> writeMsgToFreind();
+          ?>          
           
+          <!-- <div class="msg__dialog">           
+            <img src="pict/avatarka.png" alt="avatar">            
+            <span>000</span>            
+          </div> -->
+
         </div>
         <div class="msg__msgcurrentuser">
           <div class="msg__correspondence">

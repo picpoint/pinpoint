@@ -52,6 +52,9 @@
     }
     &__allusrs {
       border: 1px solid @colorgray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 30%;
       border-radius: 7px;
       margin: 3px;
@@ -101,6 +104,26 @@
           border-radius: 7px;
           background-color: @colorindxpanel;
           cursor: pointer;
+        }
+    }
+    
+    &__dialog {
+      // border: @border;      
+      display: flex;
+      align-items: center;
+      width: 95%;
+      height: 70px;
+      margin: 5px 0;
+      border-radius: 7px;
+      background-color: @colorindxbody;
+        img {
+          height: 70px;
+          width: 70px;
+          border-radius: 7px;
+        }
+        span {
+          font-weight: bolder;
+          margin-left: 7px;
         }
     }
 
