@@ -22,10 +22,9 @@ class ShowMyFreindsC {
             <!-- <span><?php print_r($resAll)?></span> -->
           </div>
           <div class="frds__funcblock">
-            <form method="post" class="frds__funcblockform">
-              <input type="hidden" value="<?php echo($resAll['id_freinds'])?>">
-                <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
-              </a>
+            <form method="post" action="messages.php" class="frds__funcblockform">
+              <input type="hidden" name="idtowrtmsg" value="<?php echo($resAll['id_freinds'])?>">
+              <button type="submit" name="btnwrtmsg"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>              
             </form>
           </div>
         </div>

@@ -20,6 +20,7 @@
   require_once "../controller/showFreindsController.php";
   require_once "../controller/showFreindsController.php";
   require_once "../model/getAllFreinds.php";
+  
 ?>
 
   <section class="frds">
@@ -69,7 +70,7 @@
             <?php
               $resShowFreinds = new ShowMyFreindsC();
               $resShowFreinds -> showAllFreinds();
-            ?>            
+            ?>
           </div>
         </div>
       </div>

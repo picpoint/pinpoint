@@ -29,7 +29,7 @@
 
       <div class="msg__content">
         <div class="msg__allusrs">
-
+          
         </div>
         <div class="msg__msgcurrentuser">
           <div class="msg__correspondence">
