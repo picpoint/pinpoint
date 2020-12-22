@@ -2,19 +2,18 @@
 
 
 
-class WriteMessageToFreindC {
+class WriteMessageToFreindC {                                   // класс контроллер для написания сообщения другу
   
-  public function writeMsgToFreind() {
-    if(isset($_POST['btnwrtmsg'])) {
-      echo($_POST['idtowrtmsg']);
-      $idtowrtmsg = $_POST['idtowrtmsg'];
+  public function writeMsgToFreind() {                          // метод для вывода конкретного пользователя для написания сообщения
+    if(isset($_POST['btnwrtmsg'])) {                            // если нажата кнопка "написать сообщение - конвертик"
+      $idtowrtmsg = $_POST['idtowrtmsg'];                       // в переменную записываем значение конкретного id которому будет адресованно сообщение
 
-      $resWriteMsg = new WriteMessagesToFreindM();
-      $res = $resWriteMsg -> getDataTowriteMsg($idtowrtmsg);
+      $resWriteMsg = new WriteMessagesToFreindM();              // вызываем класс для передачи 
+      $res = $resWriteMsg -> getDataTowriteMsg($idtowrtmsg);    // ы=вызов метода и передача id
 
-      print_r($res);
+      // print_r($res);
 
-      foreach($res as $rs) {
+      foreach($res as $rs) {                                    // перебираем массив для вывода блока с другом
         ?>
           <div class="msg__dialog">           
             <img src="pict/avatarka.png" alt="avatar">            
