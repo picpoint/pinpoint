@@ -33,13 +33,7 @@
           <?php
             $wrtMsgFrnd = new WriteMessageToFreindC();
             $wrtMsgFrnd -> writeMsgToFreind();
-          ?>          
-          
-          <!-- <div class="msg__dialog">           
-            <img src="pict/avatarka.png" alt="avatar">            
-            <span>000</span>            
-          </div> -->
-
+          ?>
         </div>
         <div class="msg__msgcurrentuser">
           <div class="msg__correspondence">
@@ -56,6 +50,7 @@
 
     </div>
   </section>
-  
+
+<script src="js/selectFreindToMessages.js"></script>
 </body>
 </html>

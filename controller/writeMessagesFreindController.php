@@ -9,7 +9,7 @@ class WriteMessageToFreindC {                                   // класс к
       $idtowrtmsg = $_POST['idtowrtmsg'];                       // в переменную записываем значение конкретного id которому будет адресованно сообщение
 
       $resWriteMsg = new WriteMessagesToFreindM();              // вызываем класс для передачи 
-      $res = $resWriteMsg -> getDataTowriteMsg($idtowrtmsg);    // ы=вызов метода и передача id
+      $res = $resWriteMsg -> getDataTowriteMsg($idtowrtmsg);    // ы=вызов метода и передача id      
 
       // print_r($res);
 
@@ -19,6 +19,7 @@ class WriteMessageToFreindC {                                   // класс к
             <img src="pict/avatarka.png" alt="avatar">            
             <span><?php echo($rs['firstname']);?></span>
             <span><?php echo($rs['lastname']);?></span>
+            <input type="hidden" name="hideid" value="<?php echo($rs['id_freinds']);?>">
           </div>
         <?php
       }
