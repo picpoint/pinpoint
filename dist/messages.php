@@ -14,6 +14,7 @@
   require_once "../controller/writeMessagesFreindController.php";
   require_once "../model/writeMessageFreindModel.php";
   require_once "../controller/sendMessagesToFreindController.php";
+  require_once "../model/writeToDBmessagesModel.php";
 ?>
   
   <section class="msg">
