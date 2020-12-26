@@ -13,6 +13,7 @@
 <?php
   require_once "../controller/writeMessagesFreindController.php";
   require_once "../model/writeMessageFreindModel.php";
+  require_once "../controller/sendMessagesToFreindController.php";
 ?>
   
   <section class="msg">
@@ -34,6 +35,11 @@
             $wrtMsgFrnd = new WriteMessageToFreindC();
             $wrtMsgFrnd -> writeMsgToFreind();
           ?>
+
+          <?php
+            $idFrndToMsg = new SendMessageToOneFreindC();
+            $idFrndToMsg -> sendMessage();
+          ?>
         </div>
         <div class="msg__msgcurrentuser">
           <div class="msg__correspondence">
@@ -42,6 +48,7 @@
             <form method="post" name="sendmsgform" class="msg__sendmsgform">
               <input type="text" name="sendmsgfield" placeholder="Введите сообщение ...">
               <button type="submit" name="sendmsgbtn">Отправить</button>
+              <input type="hidden" name="msgtofrnd" class="msg__msgtofrnd" value="">
             </form>
           </div>
         </div>

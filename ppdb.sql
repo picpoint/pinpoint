@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 10 2020 г., 19:57
--- Версия сервера: 10.4.14-MariaDB
--- Версия PHP: 7.4.9
+-- Время создания: Дек 26 2020 г., 07:55
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,14 +40,35 @@ CREATE TABLE `freinds` (
 
 INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VALUES
 (27, 'den', 'AlexLOOK', 0),
-(28, 'den', 'freeAlex', 0),
+(28, 'den', 'freeAlex', 1),
 (29, 'den', 'denden', 0),
-(31, 'arcUc', 'den', 0),
+(31, 'arcUc', 'den', 1),
 (32, 'arcUc', 'denden', 0),
-(33, 'arcUc', 'freeAlex', 0),
-(34, 'AlexLOOK', 'den', 0),
-(35, 'freeAlex', 'den', 0),
-(36, 'push', 'den', 0);
+(33, 'arcUc', 'freeAlex', 1),
+(34, 'AlexLOOK', 'den', 1),
+(35, 'freeAlex', 'den', 1),
+(37, 'den', 'push', 1),
+(38, 'den', 'denstar', 0),
+(39, 'den', 'denstar', 0),
+(40, 'den', 'denstar', 0),
+(41, 'den', 'denstar', 0),
+(42, 'den', 'push', 1),
+(43, 'push', 'den', 1),
+(44, 'denstar', 'den', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `messages`
+--
+
+CREATE TABLE `messages` (
+  `id_messages` bigint(20) UNSIGNED NOT NULL,
+  `id_frommsg` varchar(255) NOT NULL,
+  `id_tomsg` varchar(255) NOT NULL,
+  `messag` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -139,6 +160,13 @@ ALTER TABLE `freinds`
   ADD UNIQUE KEY `id_freinds` (`id_freinds`);
 
 --
+-- Индексы таблицы `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id_messages`),
+  ADD UNIQUE KEY `id_messages` (`id_messages`);
+
+--
 -- Индексы таблицы `pins`
 --
 ALTER TABLE `pins`
@@ -161,7 +189,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `freinds`
 --
 ALTER TABLE `freinds`
-  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT для таблицы `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id_messages` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `pins`
