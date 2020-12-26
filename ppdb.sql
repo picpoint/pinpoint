@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 26 2020 г., 07:55
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Дек 26 2020 г., 20:15
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -67,8 +67,17 @@ CREATE TABLE `messages` (
   `id_frommsg` varchar(255) NOT NULL,
   `id_tomsg` varchar(255) NOT NULL,
   `messag` text NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `messages`
+--
+
+INSERT INTO `messages` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `date`) VALUES
+(3, 'den', 'arcUc', 'привет', '2020-12-26 19:09:24'),
+(4, 'den', 'push', 'даровте, как ваши ничего????', '2020-12-26 19:11:02'),
+(5, 'den', 'freeAlex', 'алекс, проверка даты', '2020-12-26 19:11:56');
 
 -- --------------------------------------------------------
 
@@ -119,7 +128,8 @@ INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `lati
 (88, 'freeAlex', '../usersFolders/freeAlex/pict/melbourne-is-7957668.jpg', '', 'мельбурн', '-37.835828', '144.95281', '2020-11-26 18:41:21'),
 (89, 'den', '../usersFolders/den/pict/000026_1569869403_363994_big.jpg', '', 'Здесь я плавал на корабле', '-83.480215', '-59.446877', '2020-11-26 18:44:18'),
 (90, 'arcUc', '../usersFolders/arcUc/pict/3cd3a483ebe69c0fc91d2683989e2782.jpg', '', 'тут я живу', '55.720604', '37.599423', '2020-11-26 18:56:34'),
-(91, 'arcUc', '../usersFolders/arcUc/pict/a7c70c24-1d32-4411-8f7f-0797bf501247_jpg_800x1000_q85.jpg', '', 'приглашаю на мой концерт', '52.272919', '104.25647', '2020-11-26 18:58:07');
+(91, 'arcUc', '../usersFolders/arcUc/pict/a7c70c24-1d32-4411-8f7f-0797bf501247_jpg_800x1000_q85.jpg', '', 'приглашаю на мой концерт', '52.272919', '104.25647', '2020-11-26 18:58:07'),
+(92, 'den', '../usersFolders/den/pict/unnamed.jpg', '', 'светлоградское', '45.254439', '42.851840', '2020-12-26 18:33:34');
 
 -- --------------------------------------------------------
 
@@ -195,13 +205,13 @@ ALTER TABLE `freinds`
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id_messages` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_messages` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
