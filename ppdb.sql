@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 26 2020 г., 21:42
--- Версия сервера: 10.4.14-MariaDB
--- Версия PHP: 7.4.9
+-- Время создания: Дек 27 2020 г., 08:03
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,7 @@ CREATE TABLE `freinds` (
 --
 
 INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VALUES
-(27, 'den', 'AlexLOOK', 0),
+(27, 'den', 'AlexLOOK', 1),
 (28, 'den', 'freeAlex', 1),
 (29, 'den', 'denden', 0),
 (31, 'arcUc', 'den', 1),
@@ -54,7 +54,10 @@ INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VAL
 (41, 'den', 'denstar', 0),
 (42, 'den', 'push', 1),
 (43, 'push', 'den', 1),
-(44, 'denstar', 'den', 0);
+(44, 'denstar', 'den', 1),
+(45, 'arcUc', 'den', 0),
+(46, 'AlexLOOK', 'arcUc', 1),
+(47, 'AlexLOOK', 'freeAlex', 1);
 
 -- --------------------------------------------------------
 
@@ -77,7 +80,19 @@ CREATE TABLE `messages` (
 INSERT INTO `messages` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `date`) VALUES
 (3, 'den', 'arcUc', 'привет', '2020-12-26 19:09:24'),
 (4, 'den', 'push', 'даровте, как ваши ничего????', '2020-12-26 19:11:02'),
-(5, 'den', 'freeAlex', 'алекс, проверка даты', '2020-12-26 19:11:56');
+(5, 'den', 'freeAlex', 'алекс, проверка даты', '2020-12-26 19:11:56'),
+(6, 'den', 'AlexLOOK', 'фывфыв', '2020-12-27 06:27:49'),
+(7, 'den', 'freeAlex', 'ghjgh', '2020-12-27 06:28:11'),
+(8, 'den', 'freeAlex', 'ghjgh', '2020-12-27 06:38:51'),
+(9, 'push', 'den', 'fgfgh', '2020-12-27 06:48:48'),
+(10, 'freeAlex', 'den', 'привет', '2020-12-27 06:49:18'),
+(11, 'freeAlex', 'arcUc', 'фывфыв', '2020-12-27 06:49:24'),
+(12, 'arcUc', 'AlexLOOK', 'фывфывфвыфвы', '2020-12-27 06:51:16'),
+(13, 'AlexLOOK', 'den', 'asdasd', '2020-12-27 06:51:40'),
+(14, 'freeAlex', 'arcUc', 'fgfgh', '2020-12-27 06:51:59'),
+(15, 'freeAlex', 'AlexLOOK', 'asdasd', '2020-12-27 06:52:06'),
+(16, 'freeAlex', 'arcUc', 'фывфыв', '2020-12-27 06:52:14'),
+(17, 'push', 'den', 'фывфывфвыфвы', '2020-12-27 06:52:34');
 
 -- --------------------------------------------------------
 
@@ -199,13 +214,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `freinds`
 --
 ALTER TABLE `freinds`
-  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id_messages` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_messages` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT для таблицы `pins`
