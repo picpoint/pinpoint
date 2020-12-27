@@ -15,7 +15,7 @@
   require_once "../model/writeMessageFreindModel.php";
   require_once "../controller/sendMessagesToFreindController.php";
   require_once "../model/writeToDBmessagesModel.php";
-  require_once "../controller/readUserMessagesController.php";
+  require_once "../controller/showUserWithMessagesController.php";
   require_once "../model/readUserMessagesModel.php";
 ?>
   
@@ -45,7 +45,7 @@
           ?>
 
           <?php
-            $showMsg = new ReadUserMsgC();
+            $showMsg = new ShowUserWithMsgC();
             $showMsg -> showMsg();
           ?>
         </div>

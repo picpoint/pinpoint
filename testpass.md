@@ -38,3 +38,16 @@ denden
 Старовойтов
 denstar
 000
+
+
+SELECT messages.id_frommsg, messages.id_tomsg, messages.messag, users.firstname, users.lastname
+FROM messages JOIN users
+WHERE messages.id_frommsg = 'den' AND messages.id_tomsg = 'freeAlex'
+
+
+
+
+запрос на вывод сообщений к одному пользователю
+SELECT messages.messag, messages.date, users.firstname, users.lastname
+FROM messages JOIN users 
+WHERE messages.id_frommsg = 'den' AND messages.id_frommsg = users.login AND messages.id_tomsg = 'freeAlex'
