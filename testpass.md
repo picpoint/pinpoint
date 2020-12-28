@@ -51,3 +51,12 @@ WHERE messages.id_frommsg = 'den' AND messages.id_tomsg = 'freeAlex'
 SELECT messages.messag, messages.date, users.firstname, users.lastname
 FROM messages JOIN users 
 WHERE messages.id_frommsg = 'den' AND messages.id_frommsg = users.login AND messages.id_tomsg = 'freeAlex'
+
+
+
+CREATE TABLE den__arcUc
+(id_messages SERIAL NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_frommsg VARCHAR(255) NOT NULL,
+id_tomsg VARCHAR(255) NOT NULL,
+messag TEXT NOT NULL,
+dates TIMESTAMP)
