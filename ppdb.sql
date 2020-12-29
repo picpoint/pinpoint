@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 29 2020 г., 14:41
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Дек 29 2020 г., 20:43
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `alexlook__den`
+-- Структура таблицы `arcuc`
 --
 
-CREATE TABLE `alexlook__den` (
+CREATE TABLE `arcuc` (
   `id_messages` bigint(20) NOT NULL,
   `id_frommsg` varchar(255) NOT NULL,
   `id_tomsg` varchar(255) NOT NULL,
@@ -36,19 +36,22 @@ CREATE TABLE `alexlook__den` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `alexlook__den`
+-- Дамп данных таблицы `arcuc`
 --
 
-INSERT INTO `alexlook__den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
-(1, 'den', 'AlexLOOK', 'проба!', '2020-12-29 12:31:46');
+INSERT INTO `arcuc` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
+(1, 'den', 'arcUc', 'Дарова!', '2020-12-29 18:06:58'),
+(2, 'den', 'arcUc', 'как ваши ничего?', '2020-12-29 18:09:02'),
+(3, 'den', 'arcUc', 'я тут один фильмец смотрел, погляди, интересный', '2020-12-29 18:09:58'),
+(4, 'den', 'arcUc', 'https://www.youtube.com/watch?v=L7pvGDmTRm4', '2020-12-29 18:12:08');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `den__alexlook`
+-- Структура таблицы `den`
 --
 
-CREATE TABLE `den__alexlook` (
+CREATE TABLE `den` (
   `id_messages` bigint(20) NOT NULL,
   `id_frommsg` varchar(255) NOT NULL,
   `id_tomsg` varchar(255) NOT NULL,
@@ -57,88 +60,14 @@ CREATE TABLE `den__alexlook` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `den__alexlook`
+-- Дамп данных таблицы `den`
 --
 
-INSERT INTO `den__alexlook` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
-(1, 'den', 'AlexLOOK', 'проба!', '2020-12-29 12:31:46');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `den__freealex`
---
-
-CREATE TABLE `den__freealex` (
-  `id_messages` bigint(20) NOT NULL,
-  `id_frommsg` varchar(255) NOT NULL,
-  `id_tomsg` varchar(255) NOT NULL,
-  `messag` text NOT NULL,
-  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Дамп данных таблицы `den__freealex`
---
-
-INSERT INTO `den__freealex` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
-(1, 'den', 'freeAlex', 'свободу фридману!', '2020-12-29 12:43:09'),
-(2, 'den', 'freeAlex', 'освободите вилли!', '2020-12-29 12:44:45'),
-(3, 'den', 'freeAlex', 'свободная касса!', '2020-12-29 12:45:00'),
-(4, 'den', 'freeAlex', 'объединение запросов!', '2020-12-29 13:00:05'),
-(5, 'freeAlex', 'den', 'от Алекса, дену! )))', '2020-12-29 13:06:27'),
-(6, 'freeAlex', 'den', 'проба!', '2020-12-29 13:39:21'),
-(7, 'den', 'freeAlex', 'time', '2020-12-29 13:39:54'),
-(8, 'den', 'freeAlex', 'time2', '2020-12-29 13:40:23');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `den__push`
---
-
-CREATE TABLE `den__push` (
-  `id_messages` bigint(20) NOT NULL,
-  `id_frommsg` varchar(255) NOT NULL,
-  `id_tomsg` varchar(255) NOT NULL,
-  `messag` text NOT NULL,
-  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Дамп данных таблицы `den__push`
---
-
-INSERT INTO `den__push` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
-(1, 'den', 'push', 'пуш хеллов!', '2020-12-29 12:42:00');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `freealex__den`
---
-
-CREATE TABLE `freealex__den` (
-  `id_messages` bigint(20) NOT NULL,
-  `id_frommsg` varchar(255) NOT NULL,
-  `id_tomsg` varchar(255) NOT NULL,
-  `messag` text NOT NULL,
-  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Дамп данных таблицы `freealex__den`
---
-
-INSERT INTO `freealex__den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
-(1, 'den', 'freeAlex', 'свободу фридману!', '2020-12-29 12:43:09'),
-(2, 'den', 'freeAlex', 'освободите вилли!', '2020-12-29 12:44:46'),
-(3, 'den', 'freeAlex', 'свободная касса!', '2020-12-29 12:45:00'),
-(4, 'den', 'freeAlex', 'объединение запросов!', '2020-12-29 13:00:06'),
-(5, 'freeAlex', 'den', 'от Алекса, дену! )))', '2020-12-29 13:06:27'),
-(6, 'freeAlex', 'den', 'проба!', '2020-12-29 13:39:21'),
-(7, 'den', 'freeAlex', 'time', '2020-12-29 13:39:54'),
-(8, 'den', 'freeAlex', 'time2', '2020-12-29 13:40:23');
+INSERT INTO `den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
+(1, 'den', 'arcUc', 'Дарова!', '2020-12-29 18:06:58'),
+(2, 'den', 'arcUc', 'как ваши ничего?', '2020-12-29 18:09:02'),
+(3, 'den', 'arcUc', 'я тут один фильмец смотрел, погляди, интересный', '2020-12-29 18:09:58'),
+(4, 'den', 'arcUc', 'https://www.youtube.com/watch?v=L7pvGDmTRm4', '2020-12-29 18:12:07');
 
 -- --------------------------------------------------------
 
@@ -167,54 +96,12 @@ INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VAL
 (34, 'AlexLOOK', 'den', 1),
 (35, 'freeAlex', 'den', 1),
 (37, 'den', 'push', 1),
-(38, 'den', 'denstar', 0),
-(39, 'den', 'denstar', 0),
-(40, 'den', 'denstar', 0),
 (41, 'den', 'denstar', 0),
 (42, 'den', 'push', 1),
 (43, 'push', 'den', 1),
 (44, 'denstar', 'den', 1),
-(45, 'arcUc', 'den', 0),
 (46, 'AlexLOOK', 'arcUc', 1),
 (47, 'AlexLOOK', 'freeAlex', 1);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `messages`
---
-
-CREATE TABLE `messages` (
-  `id_messages` bigint(20) UNSIGNED NOT NULL,
-  `id_frommsg` varchar(255) NOT NULL,
-  `id_tomsg` varchar(255) NOT NULL,
-  `messag` text NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Дамп данных таблицы `messages`
---
-
-INSERT INTO `messages` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `date`) VALUES
-(3, 'den', 'arcUc', 'привет', '2020-12-26 19:09:24'),
-(4, 'den', 'push', 'даровте, как ваши ничего????', '2020-12-26 19:11:02'),
-(5, 'den', 'freeAlex', 'алекс, проверка даты', '2020-12-26 19:11:56'),
-(6, 'den', 'AlexLOOK', 'фывфыв', '2020-12-27 06:27:49'),
-(8, 'den', 'freeAlex', 'ghjgh', '2020-12-27 06:38:51'),
-(9, 'push', 'den', 'fgfgh', '2020-12-27 06:48:48'),
-(10, 'freeAlex', 'den', 'привет', '2020-12-27 06:49:18'),
-(11, 'freeAlex', 'arcUc', 'фывфыв', '2020-12-27 06:49:24'),
-(12, 'arcUc', 'AlexLOOK', 'фывфывфвыфвы', '2020-12-27 06:51:16'),
-(13, 'AlexLOOK', 'den', 'asdasd', '2020-12-27 06:51:40'),
-(14, 'freeAlex', 'arcUc', 'fgfgh', '2020-12-27 06:51:59'),
-(15, 'freeAlex', 'AlexLOOK', 'asdasd', '2020-12-27 06:52:06'),
-(16, 'freeAlex', 'arcUc', 'фывфыв', '2020-12-27 06:52:14'),
-(17, 'push', 'den', 'фывфывфвыфвы', '2020-12-27 06:52:34'),
-(18, 'den', 'arcUc', 'привет', '2020-12-28 05:38:27'),
-(19, 'den', 'arcUc', 'ghjgh', '2020-12-28 13:50:43'),
-(20, 'den', 'push', 'gei vb', '2020-12-28 13:51:27'),
-(21, 'den', 'push', 'пушпуш !', '2020-12-29 05:47:47');
 
 -- --------------------------------------------------------
 
@@ -271,27 +158,6 @@ INSERT INTO `pins` (`id_pin`, `id_user`, `photo`, `video`, `commentaries`, `lati
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `push__den`
---
-
-CREATE TABLE `push__den` (
-  `id_messages` bigint(20) NOT NULL,
-  `id_frommsg` varchar(255) NOT NULL,
-  `id_tomsg` varchar(255) NOT NULL,
-  `messag` text NOT NULL,
-  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Дамп данных таблицы `push__den`
---
-
-INSERT INTO `push__den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
-(1, 'den', 'push', 'пуш хеллов!', '2020-12-29 12:42:00');
-
--- --------------------------------------------------------
-
---
 -- Структура таблицы `users`
 --
 
@@ -321,33 +187,15 @@ INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`) VA
 --
 
 --
--- Индексы таблицы `alexlook__den`
+-- Индексы таблицы `arcuc`
 --
-ALTER TABLE `alexlook__den`
+ALTER TABLE `arcuc`
   ADD PRIMARY KEY (`id_messages`);
 
 --
--- Индексы таблицы `den__alexlook`
+-- Индексы таблицы `den`
 --
-ALTER TABLE `den__alexlook`
-  ADD PRIMARY KEY (`id_messages`);
-
---
--- Индексы таблицы `den__freealex`
---
-ALTER TABLE `den__freealex`
-  ADD PRIMARY KEY (`id_messages`);
-
---
--- Индексы таблицы `den__push`
---
-ALTER TABLE `den__push`
-  ADD PRIMARY KEY (`id_messages`);
-
---
--- Индексы таблицы `freealex__den`
---
-ALTER TABLE `freealex__den`
+ALTER TABLE `den`
   ADD PRIMARY KEY (`id_messages`);
 
 --
@@ -358,25 +206,12 @@ ALTER TABLE `freinds`
   ADD UNIQUE KEY `id_freinds` (`id_freinds`);
 
 --
--- Индексы таблицы `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id_messages`),
-  ADD UNIQUE KEY `id_messages` (`id_messages`);
-
---
 -- Индексы таблицы `pins`
 --
 ALTER TABLE `pins`
   ADD PRIMARY KEY (`id_pin`),
   ADD UNIQUE KEY `id_pin` (`id_pin`),
   ADD KEY `id_user` (`id_user`);
-
---
--- Индексы таблицы `push__den`
---
-ALTER TABLE `push__den`
-  ADD PRIMARY KEY (`id_messages`);
 
 --
 -- Индексы таблицы `users`
@@ -390,58 +225,28 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT для таблицы `alexlook__den`
+-- AUTO_INCREMENT для таблицы `arcuc`
 --
-ALTER TABLE `alexlook__den`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `arcuc`
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `den__alexlook`
+-- AUTO_INCREMENT для таблицы `den`
 --
-ALTER TABLE `den__alexlook`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT для таблицы `den__freealex`
---
-ALTER TABLE `den__freealex`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT для таблицы `den__push`
---
-ALTER TABLE `den__push`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT для таблицы `freealex__den`
---
-ALTER TABLE `freealex__den`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `den`
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `freinds`
 --
 ALTER TABLE `freinds`
-  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-
---
--- AUTO_INCREMENT для таблицы `messages`
---
-ALTER TABLE `messages`
-  MODIFY `id_messages` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
   MODIFY `id_pin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
-
---
--- AUTO_INCREMENT для таблицы `push__den`
---
-ALTER TABLE `push__den`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

@@ -9,9 +9,8 @@ class WriteMessageToFreindC {                                   // класс к
       $idtowrtmsg = $_POST['idtowrtmsg'];                       // в переменную записываем значение конкретного id которому будет адресованно сообщение
 
       $resWriteMsg = new WriteMessagesToFreindM();              // вызываем класс для передачи 
-      $res = $resWriteMsg -> getDataTowriteMsg($idtowrtmsg);    // вызов метода и передача id      
-
-      // print_r($res);
+      $res = $resWriteMsg -> getDataTowriteMsg($idtowrtmsg);    // вызов метода и передача id 
+      
 
       foreach($res as $rs) {                                    // перебираем массив для вывода блока с другом
         ?>

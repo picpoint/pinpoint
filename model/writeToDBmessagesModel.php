@@ -31,7 +31,7 @@ class WriteMessagesToDB {                                                       
       $fromtUserTables = $msgFromUser . '__' . $msgToUser;                        // переменная для таблицы сообщений типа от_кого_сообщение'__'кому_сообщение;
       $toUserTables = $msgToUser . '__' . $msgFromUser;                           // переменная для таблицы сообщений типа кому_сообщение'__'от_кого_сообщение;
       
-      $sth = $this->cnnct -> prepare("CREATE TABLE $fromtUserTables
+      $sth = $this->cnnct -> prepare("CREATE TABLE $msgFromUser
                                       (id_messages bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                                       id_frommsg VARCHAR(255) NOT NULL,
                                       id_tomsg VARCHAR(255) NOT NULL,
@@ -40,22 +40,21 @@ class WriteMessagesToDB {                                                       
       );
       $sth -> execute();                                                           // запрос на создание таблицы для сообщений от_кого_сообщение => кому_сообщение;
 
-      $sth = $this->cnnct -> prepare("CREATE TABLE $toUserTables
+      
+      $sth = $this->cnnct -> prepare("CREATE TABLE $msgToUser
                                       (id_messages bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                                       id_frommsg VARCHAR(255) NOT NULL,
                                       id_tomsg VARCHAR(255) NOT NULL,
                                       messag TEXT NOT NULL,
                                       dates TIMESTAMP)"
       );
-      $sth -> execute();                                                           // переменная для таблицы сообщений типа кому_сообщение => от_кого_сообщение;
+      $sth -> execute();                                                           // запрос на создание таблицы сообщений типа кому_сообщение => от_кого_сообщение;
 
 
-      // $sth = $this->cnnct -> prepare("INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')"); // записываем данные в одну таблицу
-      // $sth -> execute();                                                           // выполняем запрос
       $sth = $this->cnnct -> prepare("
-                                      INSERT INTO $toUserTables (id_tomsg, id_frommsg, messag) VALUES('$msgToUser', '$msgFromUser', '$msg');
-                                      INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')"
-                                    ); // записываем данные в другую таблицу
+                                      INSERT INTO $msgFromUser (id_tomsg, id_frommsg, messag) VALUES('$msgToUser', '$msgFromUser', '$msg');
+                                      INSERT INTO $msgToUser (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')"
+                                    );                                             // вставляем данные в таблицы
       $sth -> execute();                                                           // выполняем запрос
       
     }
