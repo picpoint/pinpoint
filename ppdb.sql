@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 29 2020 г., 14:10
+-- Время создания: Дек 29 2020 г., 14:41
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -86,7 +86,10 @@ INSERT INTO `den__freealex` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, 
 (2, 'den', 'freeAlex', 'освободите вилли!', '2020-12-29 12:44:45'),
 (3, 'den', 'freeAlex', 'свободная касса!', '2020-12-29 12:45:00'),
 (4, 'den', 'freeAlex', 'объединение запросов!', '2020-12-29 13:00:05'),
-(5, 'freeAlex', 'den', 'от Алекса, дену! )))', '2020-12-29 13:06:27');
+(5, 'freeAlex', 'den', 'от Алекса, дену! )))', '2020-12-29 13:06:27'),
+(6, 'freeAlex', 'den', 'проба!', '2020-12-29 13:39:21'),
+(7, 'den', 'freeAlex', 'time', '2020-12-29 13:39:54'),
+(8, 'den', 'freeAlex', 'time2', '2020-12-29 13:40:23');
 
 -- --------------------------------------------------------
 
@@ -132,7 +135,10 @@ INSERT INTO `freealex__den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, 
 (2, 'den', 'freeAlex', 'освободите вилли!', '2020-12-29 12:44:46'),
 (3, 'den', 'freeAlex', 'свободная касса!', '2020-12-29 12:45:00'),
 (4, 'den', 'freeAlex', 'объединение запросов!', '2020-12-29 13:00:06'),
-(5, 'freeAlex', 'den', 'от Алекса, дену! )))', '2020-12-29 13:06:27');
+(5, 'freeAlex', 'den', 'от Алекса, дену! )))', '2020-12-29 13:06:27'),
+(6, 'freeAlex', 'den', 'проба!', '2020-12-29 13:39:21'),
+(7, 'den', 'freeAlex', 'time', '2020-12-29 13:39:54'),
+(8, 'den', 'freeAlex', 'time2', '2020-12-29 13:40:23');
 
 -- --------------------------------------------------------
 
@@ -399,7 +405,7 @@ ALTER TABLE `den__alexlook`
 -- AUTO_INCREMENT для таблицы `den__freealex`
 --
 ALTER TABLE `den__freealex`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `den__push`
@@ -411,7 +417,7 @@ ALTER TABLE `den__push`
 -- AUTO_INCREMENT для таблицы `freealex__den`
 --
 ALTER TABLE `freealex__den`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `freinds`

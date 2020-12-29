@@ -28,8 +28,8 @@ class WriteMessagesToDB {                                                       
     foreach($writeMsg as $arrms) {                                                // перебираем массив с данными
       $msgFromUser = $arrms['id_myfreind'];                                       // записываем в $msgFromUser от кого будет сообщение
       $msgToUser = $arrms['id_user'];                                             // записываем в $msgToUser кому будет сообщение 
-      $fromtUserTables = $msgFromUser . '__' . $msgToUser;
-      $toUserTables = $msgToUser . '__' . $msgFromUser;
+      $fromtUserTables = $msgFromUser . '__' . $msgToUser;                        // переменная для таблицы сообщений типа от_кого_сообщение'__'кому_сообщение;
+      $toUserTables = $msgToUser . '__' . $msgFromUser;                           // переменная для таблицы сообщений типа кому_сообщение'__'от_кого_сообщение;
       
       $sth = $this->cnnct -> prepare("CREATE TABLE $fromtUserTables
                                       (id_messages bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -38,7 +38,7 @@ class WriteMessagesToDB {                                                       
                                       messag TEXT NOT NULL,
                                       dates TIMESTAMP)"
       );
-      $sth -> execute();
+      $sth -> execute();                                                           // запрос на создание таблицы для сообщений от_кого_сообщение => кому_сообщение;
 
       $sth = $this->cnnct -> prepare("CREATE TABLE $toUserTables
                                       (id_messages bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -47,13 +47,16 @@ class WriteMessagesToDB {                                                       
                                       messag TEXT NOT NULL,
                                       dates TIMESTAMP)"
       );
-      $sth -> execute();
+      $sth -> execute();                                                           // переменная для таблицы сообщений типа кому_сообщение => от_кого_сообщение;
 
 
-      $sth = $this->cnnct -> prepare("INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')");
-      $sth -> execute();
-      $sth = $this->cnnct -> prepare("INSERT INTO $toUserTables (id_tomsg, id_frommsg, messag) VALUES('$msgToUser', '$msgFromUser', '$msg')");
-      $sth -> execute();      
+      // $sth = $this->cnnct -> prepare("INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')"); // записываем данные в одну таблицу
+      // $sth -> execute();                                                           // выполняем запрос
+      $sth = $this->cnnct -> prepare("
+                                      INSERT INTO $toUserTables (id_tomsg, id_frommsg, messag) VALUES('$msgToUser', '$msgFromUser', '$msg');
+                                      INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')"
+                                    ); // записываем данные в другую таблицу
+      $sth -> execute();                                                           // выполняем запрос
       
     }
 
