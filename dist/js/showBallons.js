@@ -36,7 +36,7 @@ for(let x = 0, y = 0; x < alldts.length; x++) {                   // переб�
 
   if(y == 4) {                                                    // если шаг уже достиг значения 4
     placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
-      balloonContentBody: '<img src=" ' + photoPin + ' " height="250" width="220"> <br/> ' + commentsPin, // картинку и комментарий к ней
+      balloonContentBody: '<img src=" ' + photoPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
       hintContent: commentsPin                                    // всплывающий комментарий
     });
     

@@ -52,7 +52,7 @@ class WriteMessagesToDB {                                                       
 
       $sth = $this->cnnct -> prepare("INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')");
       $sth -> execute();
-      $sth = $this->cnnct -> prepare("INSERT INTO $toUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')");
+      $sth = $this->cnnct -> prepare("INSERT INTO $toUserTables (id_tomsg, id_frommsg, messag) VALUES('$msgToUser', '$msgFromUser', '$msg')");
       $sth -> execute();      
       
     }
