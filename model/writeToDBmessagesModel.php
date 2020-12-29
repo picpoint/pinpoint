@@ -27,10 +27,34 @@ class WriteMessagesToDB {                                                       
 
     foreach($writeMsg as $arrms) {                                                // перебираем массив с данными
       $msgFromUser = $arrms['id_myfreind'];                                       // записываем в $msgFromUser от кого будет сообщение
-      $msgToUser = $arrms['id_user'];                                             // записываем в $msgToUser кому будет сообщение      
+      $msgToUser = $arrms['id_user'];                                             // записываем в $msgToUser кому будет сообщение 
+      $fromtUserTables = $msgFromUser . '__' . $msgToUser;
+      $toUserTables = $msgToUser . '__' . $msgFromUser;
+      
+      $sth = $this->cnnct -> prepare("CREATE TABLE $fromtUserTables
+                                      (id_messages bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                      id_frommsg VARCHAR(255) NOT NULL,
+                                      id_tomsg VARCHAR(255) NOT NULL,
+                                      messag TEXT NOT NULL,
+                                      dates TIMESTAMP)"
+      );
+      $sth -> execute();
 
-      $sth = $this->cnnct -> prepare("INSERT INTO messages (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')"); // вставляем в бд данные от кого и кому будет сообщение и само сообщение
-      $sth -> execute();                                                          // выполняем запрос
+      $sth = $this->cnnct -> prepare("CREATE TABLE $toUserTables
+                                      (id_messages bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                      id_frommsg VARCHAR(255) NOT NULL,
+                                      id_tomsg VARCHAR(255) NOT NULL,
+                                      messag TEXT NOT NULL,
+                                      dates TIMESTAMP)"
+      );
+      $sth -> execute();
+
+
+      $sth = $this->cnnct -> prepare("INSERT INTO $fromtUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')");
+      $sth -> execute();
+      $sth = $this->cnnct -> prepare("INSERT INTO $toUserTables (id_frommsg, id_tomsg, messag) VALUES('$msgFromUser', '$msgToUser', '$msg')");
+      $sth -> execute();      
+      
     }
 
   }
