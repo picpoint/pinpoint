@@ -39,3 +39,7 @@ denden
 denstar
 000
 
+
+
+
+SELECT DISTINCT freinds.id_freinds, users.firstname, users.lastname FROM den JOIN users ON den.id_frommsg != 'den' AND den.id_frommsg = users.login JOIN freinds ON freinds.id_user = den.id_frommsg

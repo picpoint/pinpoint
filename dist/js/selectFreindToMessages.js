@@ -6,7 +6,8 @@ const msgtofrnd = document.querySelector('.msg__msgtofrnd');
 
 for(let x = 0; x < msgsblockChildrens.length; x++) {
   msgsblockChildrens[x].addEventListener('click', () => {    
-    msgtofrnd.value = msgsblockChildrens[x].lastElementChild.value;    
+    msgtofrnd.value = msgsblockChildrens[x].lastElementChild.value;
+    
   });
 
 

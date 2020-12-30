@@ -14,7 +14,9 @@
   require_once "../controller/writeMessagesFreindController.php";
   require_once "../model/writeMessageFreindModel.php";
   require_once "../controller/sendMessagesToFreindController.php";
-  require_once "../model/writeToDBmessagesModel.php";  
+  require_once "../model/writeToDBmessagesModel.php";
+  require_once "../controller/readFreindsMessagesController.php";
+  require_once "../model/readFreindsMessagesModel.php";
 ?>
   
   <section class="msg">
@@ -40,6 +42,11 @@
           <?php
             $idFrndToMsg = new SendMessageToOneFreindC();
             $idFrndToMsg -> sendMessage();
+          ?>
+
+          <?php
+            $readMsgs = new ReadFreindsMessagesC();
+            $readMsgs -> readFrndMessg();
           ?>
 
           
