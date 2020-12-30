@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 29 2020 г., 20:43
--- Версия сервера: 10.4.14-MariaDB
--- Версия PHP: 7.4.9
+-- Время создания: Дек 30 2020 г., 06:45
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,11 @@ INSERT INTO `arcuc` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`)
 (1, 'den', 'arcUc', 'Дарова!', '2020-12-29 18:06:58'),
 (2, 'den', 'arcUc', 'как ваши ничего?', '2020-12-29 18:09:02'),
 (3, 'den', 'arcUc', 'я тут один фильмец смотрел, погляди, интересный', '2020-12-29 18:09:58'),
-(4, 'den', 'arcUc', 'https://www.youtube.com/watch?v=L7pvGDmTRm4', '2020-12-29 18:12:08');
+(4, 'den', 'arcUc', 'https://www.youtube.com/watch?v=L7pvGDmTRm4', '2020-12-29 18:12:08'),
+(5, 'arcUc', 'den', 'Ответное сообщение дену', '2020-12-30 05:17:05'),
+(6, 'arcUc', 'den', 'как дела? как сам?', '2020-12-30 05:28:42'),
+(7, 'den', 'arcUc', 'всё нормально!', '2020-12-30 05:30:25'),
+(8, 'den', 'arcUc', 'что нового, какие новости на фронте?', '2020-12-30 05:30:56');
 
 -- --------------------------------------------------------
 
@@ -67,7 +71,11 @@ INSERT INTO `den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) V
 (1, 'den', 'arcUc', 'Дарова!', '2020-12-29 18:06:58'),
 (2, 'den', 'arcUc', 'как ваши ничего?', '2020-12-29 18:09:02'),
 (3, 'den', 'arcUc', 'я тут один фильмец смотрел, погляди, интересный', '2020-12-29 18:09:58'),
-(4, 'den', 'arcUc', 'https://www.youtube.com/watch?v=L7pvGDmTRm4', '2020-12-29 18:12:07');
+(4, 'den', 'arcUc', 'https://www.youtube.com/watch?v=L7pvGDmTRm4', '2020-12-29 18:12:07'),
+(5, 'arcUc', 'den', 'Ответное сообщение дену', '2020-12-30 05:17:05'),
+(6, 'arcUc', 'den', 'как дела? как сам?', '2020-12-30 05:28:43'),
+(7, 'den', 'arcUc', 'всё нормально!', '2020-12-30 05:30:25'),
+(8, 'den', 'arcUc', 'что нового, какие новости на фронте?', '2020-12-30 05:30:55');
 
 -- --------------------------------------------------------
 
@@ -101,7 +109,9 @@ INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VAL
 (43, 'push', 'den', 1),
 (44, 'denstar', 'den', 1),
 (46, 'AlexLOOK', 'arcUc', 1),
-(47, 'AlexLOOK', 'freeAlex', 1);
+(47, 'AlexLOOK', 'freeAlex', 1),
+(52, 'arcUc', 'den', 1),
+(53, 'den', 'arcUc', 1);
 
 -- --------------------------------------------------------
 
@@ -228,19 +238,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `arcuc`
 --
 ALTER TABLE `arcuc`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `den`
 --
 ALTER TABLE `den`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `freinds`
 --
 ALTER TABLE `freinds`
-  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_freinds` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT для таблицы `pins`
