@@ -24,9 +24,9 @@ class ReadFreindsMessagesC {
 
 
 
-  public function showMessagesSelectedFreind() {
+  // public function showMessagesSelectedFreind() {
     
-  }
+  // }
 
 
 
