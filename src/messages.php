@@ -69,6 +69,6 @@
   </section>
 
 <script src="js/selectFreindToMessages.js"></script>
-<script src="js/tst.js"></script>
+<script src="js/ajaxReadFreindsMessages.js"></script>
 </body>
 </html>
