@@ -4,21 +4,28 @@
 
 class ReadFreindsMessagesM {
 
-  public function __construct() {
+  public function __construct($login) {
     $this->cnnct = new PDO('mysql:host=localhost;dbname=ppdb', 'rmtar', '2203');
+    $this->login = $login;
   }
 
 
-  public function selectAllFreinds($login) {
+  public function selectAllFreinds() {
     $sth = $this->cnnct -> prepare("SELECT DISTINCT users.firstname, users.lastname, freinds.id_freinds
-                                    FROM $login 
+                                    FROM $this->login 
                                     JOIN users 
-                                      ON $login.id_frommsg != '$login' AND $login.id_frommsg = users.login 
+                                      ON $this->login.id_frommsg != '$this->login' AND $this->login.id_frommsg = users.login 
                                     JOIN freinds 
-                                      ON freinds.id_user = $login.id_frommsg");
+                                      ON freinds.id_user = $this->login.id_frommsg");
     $sth -> execute();
     $data = $sth -> fetchAll(PDO::FETCH_ASSOC);
     return $data;
+  }
+
+
+
+  public function readFreindsMsg($idFreinds) {
+    $sth = $this->cnnct -> prepare("");
   }
 
 
