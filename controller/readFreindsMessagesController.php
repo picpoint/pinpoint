@@ -24,9 +24,13 @@ class ReadFreindsMessagesC {
 
 
 
-  // public function showMessagesSelectedFreind() {
-    
-  // }
+  public function showMessagesSelectedFreind() {        
+    print_r($_GET);
+    print_r($_POST);
+
+    // $data_json = json_encode($_POST, JSON_UNESCAPED_UNICODE);
+    // echo $data_json;
+  }
 
 
 
