@@ -7,7 +7,6 @@ for(let x = 0; x < allUsers.children.length; x++) {
     
     const req = new XMLHttpRequest();
     const url = "http://localhost/pinpoint/dist/messages.php?idfrnd=" + idFreinds;
-    //req.responseType =	"json";
     req.open("GET", url, true);
     req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     

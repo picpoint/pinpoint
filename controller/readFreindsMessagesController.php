@@ -24,20 +24,16 @@ class ReadFreindsMessagesC {
 
 
 
-  public function showMessagesSelectedFreind() {            
-    // print_r($_GET);
-    // print_r($_POST);
-
-    // $data_json = json_encode($_GET, JSON_UNESCAPED_UNICODE);
-    // echo $data_json;
-    
+  public function showMessagesSelectedFreind() {
+    $login = $_SESSION['login'];
     $idFreinds = $_GET;
-    // print_r($res);
-    // echo($res["idfrnd"]);
 
     foreach($idFreinds as $key => $value) {
-      echo("$key - $value");
+      $readMsgDB = new ReadFreindsMessagesM($login);
+      print_r($readMsgDB -> readFreindsMsg($value));
     }
+
+    
 
   }
 
