@@ -29,7 +29,7 @@ class ReadFreindsMessagesM {
                                     FROM freinds
                                     JOIN $this->login
                                     WHERE freinds.id_freinds = $idFreinds AND freinds.id_user = '$this->login.id_tomsg' AND $this->login.id_frommsg = '$this->login' 
-                                    OR freinds.id_freinds = $idFreinds AND freinds.id_user = 'arcUc' AND $this->login.id_frommsg = 'arcUc' ");
+                                    OR freinds.id_freinds = $idFreinds AND freinds.id_user = '$this->login.id_frommsg' ");
     $sth -> execute();
     $data = $sth -> fetchAll(PDO::FETCH_ASSOC);
     return $data;                                    

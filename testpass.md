@@ -46,3 +46,19 @@ FROM freinds
 JOIN den
 WHERE freinds.id_freinds = 31 AND freinds.id_user = 'arcUc' AND den.id_frommsg = 'den' 
 OR freinds.id_freinds = 31 AND freinds.id_user = 'arcUc' AND den.id_frommsg = 'arcUc'
+
+
+
+SELECT den.id_frommsg, den.id_tomsg, den.messag
+FROM freinds
+JOIN den
+WHERE freinds.id_freinds = 31 AND freinds.id_user = den.id_tomsg AND den.id_frommsg = 'den' 
+OR freinds.id_freinds = 31 AND freinds.id_user = 'arcUc' AND den.id_frommsg = 'arcUc'
+
+
+
+SELECT den.id_frommsg, den.id_tomsg, den.messag
+FROM freinds
+JOIN den
+WHERE freinds.id_freinds = 31 AND freinds.id_user = den.id_tomsg AND den.id_frommsg = 'den' 
+OR freinds.id_freinds = 31 AND freinds.id_user = den.id_frommsg
