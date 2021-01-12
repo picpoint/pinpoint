@@ -12,7 +12,11 @@ for(let x = 0; x < allUsers.children.length; x++) {
     
     req.addEventListener("readystatechange", () => {
       if(req.readyState == 4 && req.status == 200) {
-        console.log(req.response);        
+        strResData = req.response;
+        console.log(strResData);
+        console.log('-------------------');
+        
+      
       }
     });
 
@@ -20,4 +24,6 @@ for(let x = 0; x < allUsers.children.length; x++) {
   });
 
 }
+
+
 

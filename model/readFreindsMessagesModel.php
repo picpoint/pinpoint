@@ -24,14 +24,7 @@ class ReadFreindsMessagesM {
 
 
 
-  public function readFreindsMsg($idFreinds) {
-    // $sth = $this->cnnct -> prepare("SELECT $this->login.id_frommsg, $this->login.id_tomsg, $this->login.messag
-    //                                 FROM freinds
-    //                                 JOIN $this->login
-    //                                 WHERE freinds.id_freinds = $idFreinds AND freinds.id_user = '$this->login.id_tomsg' AND $this->login.id_frommsg = '$this->login' 
-    //                                 OR freinds.id_freinds = $idFreinds AND freinds.id_user = '$this->login.id_frommsg' ");
-
-
+  public function readFreindsMsg($idFreinds) {    
     $sth = $this->cnnct -> prepare("SELECT $this->login.id_frommsg, $this->login.id_tomsg, $this->login.messag
                                     FROM $this->login
                                     JOIN freinds

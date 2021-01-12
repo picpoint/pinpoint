@@ -47,7 +47,7 @@
           <?php
             $readMsgs = new ReadFreindsMessagesC();
             $readMsgs -> readFrndMessg();
-            $readMsgs -> showMessagesSelectedFreind();
+            print_r($readMsgs -> showMessagesSelectedFreind());
           ?>
 
           

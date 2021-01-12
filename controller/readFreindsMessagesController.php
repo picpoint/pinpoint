@@ -30,7 +30,7 @@ class ReadFreindsMessagesC {
 
     foreach($idFreinds as $key => $value) {
       $readMsgDB = new ReadFreindsMessagesM($login);
-      print_r($readMsgDB -> readFreindsMsg($value));
+      return json_encode($readMsgDB -> readFreindsMsg($value), JSON_UNESCAPED_UNICODE);
     }
 
     
