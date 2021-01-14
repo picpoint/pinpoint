@@ -70,6 +70,7 @@
     </div>
   </section>
 
+<script src="js/removeBlocks.js"></script>
 <script src="js/selectFreindToMessages.js"></script>
 <script src="js/ajaxReadFreindsMessages.js"></script>
 </body>

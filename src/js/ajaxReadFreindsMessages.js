@@ -1,15 +1,9 @@
-const allUsers = document.querySelector('.msg__allusrs');
-const correspondence = document.querySelector('.msg__correspondence');
 const currentLogin = document.querySelector('.msg__curlog');
 
 
-for(let x = 0; x < correspondence.children.length; x++) {
-  correspondence.children[x].remove();
-}
-
 
 for(let x = 0; x < allUsers.children.length; x++) {
-  allUsers.children[x].addEventListener('click', (e) => {    
+  allUsers.children[x].addEventListener('click', (e) => {
     let idFreinds = allUsers.children[x].lastElementChild.value;
 
     const req = new XMLHttpRequest();
@@ -20,14 +14,10 @@ for(let x = 0; x < allUsers.children.length; x++) {
     req.addEventListener("readystatechange", () => {
       if(req.readyState == 4 && req.status == 200) {
         strResData = req.response;
-        let frstcrop = strResData.slice(0, -820);
+        let frstcrop = strResData.slice(0, -850);
         let scndcrop = frstcrop.slice(1443);
-        // console.log(scndcrop);
-
+        // console.log(scndcrop);        
         let resDatas = JSON.parse(scndcrop);
-        
-        // console.log(resDatas);
-        // console.log(currentLogin.value);
 
         for(let key in resDatas) {
           if(resDatas[key]['id_frommsg'] == currentLogin.value) {
@@ -54,8 +44,8 @@ for(let x = 0; x < allUsers.children.length; x++) {
           }
         }
         
-      
       }
+      
     });
 
     req.send();
