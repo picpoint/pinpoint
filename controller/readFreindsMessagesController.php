@@ -15,7 +15,7 @@ class ReadFreindsMessagesC {
           <img src="pict/avatarka.png" alt="avatar">            
           <span><?php echo($fwm['firstname']);?></span>
           <span><?php echo($fwm['lastname']);?></span>
-          <input type="text" name="hideid" value="<?php echo($fwm['id_freinds']);?>">
+          <input type="hidden" name="hideid" value="<?php echo($fwm['id_freinds']);?>">
         </div>
       <?php
     }   

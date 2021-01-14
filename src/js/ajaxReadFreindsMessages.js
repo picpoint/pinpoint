@@ -3,6 +3,8 @@ const correspondence = document.querySelector('.msg__correspondence');
 const currentLogin = document.querySelector('.msg__curlog');
 
 
+
+
 for(let x = 0; x < allUsers.children.length; x++) {
   allUsers.children[x].addEventListener('click', (e) => {    
     let idFreinds = allUsers.children[x].lastElementChild.value;
@@ -21,12 +23,31 @@ for(let x = 0; x < allUsers.children.length; x++) {
 
         let resDatas = JSON.parse(scndcrop);
         
-        console.log(resDatas);
+        // console.log(resDatas);
         // console.log(currentLogin.value);
 
         for(let key in resDatas) {
           if(resDatas[key]['id_frommsg'] == currentLogin.value) {
-           
+           let block = document.createElement('div');
+           block.style.display = 'flex';
+           block.style.width = '50%';
+           block.style.height = '100px';
+           block.style.margin = '5px';           
+           block.style.backgroundColor = '#e2e2e2';
+           block.style.borderRadius = '5px';
+           block.innerHTML = resDatas[key]['messag'];
+           correspondence.appendChild(block);
+          } else if(resDatas[key]['id_frommsg'] != currentLogin.value) {
+            let block = document.createElement('div');
+            block.style.display = 'flex';
+            block.style.width = '50%';
+            block.style.height = '100px';
+            block.style.margin = '5px';           
+            block.style.backgroundColor = '#e2e2e2';
+            block.style.borderRadius = '5px';            
+            block.style.alignSelf = 'flex-end';
+            block.innerHTML = resDatas[key]['messag'];
+            correspondence.appendChild(block);
           }
         }
         
@@ -40,4 +61,10 @@ for(let x = 0; x < allUsers.children.length; x++) {
 }
 
 
+
+// console.log(correspondence.children);
+
+for(let x = 0; x < correspondence.children.length; x++) {
+  console.log(correspondence.children[x]);
+}
 
