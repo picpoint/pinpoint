@@ -1,14 +1,19 @@
-const allUsers = document.querySelector('.msg__allusrs');
-const correspondence = document.querySelector('.msg__correspondence');
+// const allUsers = document.querySelector('.msg__allusrs');
+// const correspondence = document.querySelector('.msg__correspondence');
 
 
 
-for(let z = 0; z < allUsers.children.length; z++) {
-  // console.log(allUsers.children[z]);
-  allUsers.children[z].addEventListener('click', () => {
-    // console.log(correspondence.children);
-    for(let y = 0; y < correspondence.children.length; y++) {
-      console.log(correspondence.children[y]);
-    }
+for(let z = 0; z < allUsers.children.length; z++) {  
+  allUsers.children[z].addEventListener('click', () => {    
+    console.log(correspondence.children);
+    
+    setTimeout(() => {
+      console.log(correspondence.children.length);
+      for(let i = 0; i < correspondence.children.length; i++) {
+        console.log(correspondence.children[i]);
+        correspondence.children[i].remove();
+      }
+    }, 3000);
+
   });
 }

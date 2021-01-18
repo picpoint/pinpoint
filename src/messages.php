@@ -54,7 +54,7 @@
         </div>
         <div class="msg__msgcurrentuser">
           <input type="hidden" class="msg__curlog" name="curuser" value="<?php echo($_SESSION['login'])?>">
-          <div class="msg__correspondence">            
+          <div class="msg__correspondence">
           </div>
           <div class="msg__sendmsg">
             <form method="post" name="sendmsgform" class="msg__sendmsgform">
@@ -70,8 +70,8 @@
     </div>
   </section>
 
-<script src="js/removeBlocks.js"></script>
 <script src="js/selectFreindToMessages.js"></script>
 <script src="js/ajaxReadFreindsMessages.js"></script>
+<script src="js/removeBlocks.js"></script>
 </body>
 </html>

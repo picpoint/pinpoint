@@ -1,5 +1,5 @@
-// const allUsers = document.querySelector('.msg__allusrs');
-// const correspondence = document.querySelector('.msg__correspondence');
+const allUsers = document.querySelector('.msg__allusrs');
+const correspondence = document.querySelector('.msg__correspondence');
 const currentLogin = document.querySelector('.msg__curlog');
 
 
