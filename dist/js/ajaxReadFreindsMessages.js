@@ -17,8 +17,8 @@ for(let x = 0; x < allUsers.children.length; x++) {
       if(req.readyState == 4 && req.status == 200) {
         strResData = req.response;
         let frstcrop = strResData.slice(0, -850);
-        let scndcrop = frstcrop.slice(1443);
-        // console.log(scndcrop);        
+        let scndcrop = frstcrop.slice(2222);
+        console.log(scndcrop);        
         let resDatas = JSON.parse(scndcrop);
 
         for(let key in resDatas) {

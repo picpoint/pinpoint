@@ -5,15 +5,13 @@
 
 for(let z = 0; z < allUsers.children.length; z++) {  
   allUsers.children[z].addEventListener('click', () => {    
-    console.log(correspondence.children);
+    // console.log(correspondence.children);
+
+    for(let i = correspondence.children.length - 1; i >= 0; --i) {
+      // console.log(correspondence.children[i]);
+      correspondence.children[i].remove();
+    }
     
-    setTimeout(() => {
-      console.log(correspondence.children.length);
-      for(let i = 0; i < correspondence.children.length; i++) {
-        console.log(correspondence.children[i]);
-        correspondence.children[i].remove();
-      }
-    }, 3000);
 
   });
 }
