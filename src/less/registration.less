@@ -74,6 +74,28 @@
       padding: 50px 0;
       background-color: rgba(0, 0, 0, 0.1);      
       border-radius: 5px;
+       input {
+         &:valid {
+          border-color: green;
+          color: green;
+          box-shadow: none;
+         }
+         &:invalid {
+          border-color: red;
+          color: red;
+          box-shadow: none;
+         }
+         &:focus:valid {
+          border-color: green;
+          color: green;
+          box-shadow: none;
+         }
+         &:focus:invalid {
+          border-color: red;
+          color: red;
+          box-shadow: none;
+         }
+       }
     }
     &__form {
       // border: @border;
