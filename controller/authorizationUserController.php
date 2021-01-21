@@ -12,6 +12,7 @@ class AuthorizationUserC {                                              // кл�
       $authlogin;
       $authpass;
       if(!empty($_POST['authlogin']) && !empty($_POST['authpass'])) {   // если поля логин и пароль не пусты
+        
         $authlogin = trim($_POST['authlogin']);
         $authlogin = strip_tags($authlogin);
         $authlogin = stripcslashes($authlogin);
@@ -21,7 +22,7 @@ class AuthorizationUserC {                                              // кл�
         $authpass = strip_tags($authpass);
         $authpass = stripcslashes($authpass);
         $authpass = htmlspecialchars($authpass);
-        
+                
         
         $arrAuthUser[] = $authlogin;                     // в массив записываем логин и пароль
         $arrAuthUser[] = $authpass;
