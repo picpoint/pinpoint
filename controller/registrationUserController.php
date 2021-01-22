@@ -6,10 +6,10 @@ class RegistrationUserC {                                                 // к�
   
   public function getDatasUser() {                                        // метод получения данных о пользователе
     $arrRegUser = [];
-    $regfirstname;
-    $reglastname;
-    $reglogin;
-    $regpass;
+    $regfirstname = '';
+    $reglastname = '';
+    $reglogin = '';
+    $regpass = '';
 
     
     if(isset($_POST['regbtn'])) {                                         // если нажата кнопка "регистрация"
@@ -34,18 +34,30 @@ class RegistrationUserC {                                                 // к�
         $regpass = strip_tags($regpass);
         $regpass = stripcslashes($regpass);
         $regpass = htmlspecialchars($regpass);
-        $regpass = password_hash($regpass, PASSWORD_DEFAULT);
+        // $regpass = password_hash($regpass, PASSWORD_DEFAULT);
 
+        if(mb_strlen($regfirstname) > 30) {
+          echo("Слишком длинное имя");
+          return;
+        } elseif(mb_strlen($reglastname) > 30) {
+          echo("Слишком длинная фамилия");
+          return;
+        } elseif(strlen($reglogin) < 3 || strlen($reglogin) > 20) {
+          echo("Логин должен быть от 3 до 20 символов");
+          return;
+        } elseif(strlen($regpass) < 5) {
+          echo("Пароль должен быть не короче 5 символов");
+          return;
+        } else {
+          $regpass = password_hash($regpass, PASSWORD_DEFAULT);
+          $arrRegUser[] = $regfirstname;                     // в массив записываем имя
+          $arrRegUser[] = $reglastname;                      // -||- записываем фамилию
+          $arrRegUser[] = $reglogin;                         // -||- записываем логин
+          $arrRegUser[] = $regpass;  //-||- записываем хеш пароля 
 
-
-
-        $arrRegUser[] = $regfirstname;                     // в массив записываем имя
-        $arrRegUser[] = $reglastname;                      // -||- записываем фамилию
-        $arrRegUser[] = $reglogin;                         // -||- записываем логин
-        $arrRegUser[] = $regpass;  //-||- записываем хеш пароля 
-
-        $regUser = new RegistrationUserM();                               // вызываем модель-класс регистрации 
-        $regUser -> regUserToDb($arrRegUser);                             // вызываем метод регистрации и передаём туда массив
+          $regUser = new RegistrationUserM();                               // вызываем модель-класс регистрации 
+          $regUser -> regUserToDb($arrRegUser);                             // вызываем метод регистрации и передаём туда массив
+        }        
         
       } else {
         echo("Не все поля заполнены");                                    // иначе выдаём сообщение
