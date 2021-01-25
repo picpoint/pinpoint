@@ -1,5 +1,5 @@
 <?php
-session_start();
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +35,8 @@ session_start();
       <div class="indx__bdy">
         <div class="indx__auth">
           <form method="post" class="indx__authblock">
-            <input type="text" name="authlogin" placeholder="Логин">
-            <input type="password" name="authpass" placeholder="Пароль">
+            <input type="text" name="authlogin" placeholder="Логин" pattern="^[a-zA-Z0-9]+$">
+            <input type="password" name="authpass" placeholder="Пароль" pattern="^[a-zA-Z0-9]+$">
             <button type="submit" name="authbth">Войти</button>
             <span>
               <?php

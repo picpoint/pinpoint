@@ -1,5 +1,6 @@
 <?php
-session_start();
+  session_start();
+  setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400 * 7, '/');
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +19,7 @@ session_start();
   require_once "../model/writeDataPinToDBModel.php";  
   require_once "../controller/getDataPinContentController.php";
   require_once "../model/getDataFromDBPinContentModel.php";
+  require_once "../controller/logOutController.php";
 ?>
   
   <section class="pp">
@@ -150,19 +152,25 @@ session_start();
               <span>настройка</span>
             </a>              
           </div>
-        </div>
+        </div>       
 
         <div class="pp__exitblock">
-          <a href="index.php">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
-            <span>выход</span>
-          </a>              
+          <form method="post" class="pp__formout">
+            <button class="pp__btnlogout" name="btnlogout">              
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              <span>выход</span>              
+            </button>
+          </form>
         </div>
 
       </div>
 
       
       <div class="pp__bottomblock">        
+        <?php
+          $res = new LogoutUserC();
+          $res -> logoutUsr();
+        ?>
       </div>
 
 
