@@ -39,7 +39,7 @@ session_start();
             <input type="text" name="regfirstname" placeholder="Имя">
             <input type="text" name="reglastname" placeholder="Фамилия">
             <input type="text" name="reglogin" placeholder="Логин(только латинские буквы и цифры)" pattern="^[a-zA-Z0-9]+$">
-            <input type="password" name="regpass" placeholder="Пароль(только латинские буквы и цифры)" pattern="^[a-zA-Z0-9]+$">            
+            <input type="password" name="regpass" placeholder="Пароль(только латинские буквы и цифры)" pattern="^[a-zA-Z0-9]+$">
             <button type="submit" name="regbtn">Зарегистрироваться</button>
           </form>          
         </div>        

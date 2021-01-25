@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 30 2020 г., 13:32
+-- Время создания: Янв 25 2021 г., 14:49
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- База данных: `ppdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `alexlook`
+--
+
+CREATE TABLE `alexlook` (
+  `id_messages` bigint(20) NOT NULL,
+  `id_frommsg` varchar(255) NOT NULL,
+  `id_tomsg` varchar(255) NOT NULL,
+  `messag` text NOT NULL,
+  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `alexlook`
+--
+
+INSERT INTO `alexlook` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
+(1, 'AlexLOOK', 'den', 'трям!', '2021-01-18 13:50:02'),
+(2, 'AlexLOOK', 'den', 'трям!', '2021-01-18 13:50:06');
 
 -- --------------------------------------------------------
 
@@ -50,7 +72,28 @@ INSERT INTO `arcuc` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`)
 (8, 'den', 'arcUc', 'что нового, какие новости на фронте?', '2020-12-30 05:30:56'),
 (9, 'den', 'arcUc', 'проверка на паралелизм', '2020-12-30 07:35:36'),
 (10, 'freeAlex', 'arcUc', 'Аркаш СНГ!!!', '2020-12-30 12:08:15'),
-(12, 'den', 'arcUc', 'С ПРЯЗДНИКОМ!!!!!!!!!!!!!', '2020-12-30 12:11:43');
+(12, 'den', 'arcUc', 'С ПРЯЗДНИКОМ!!!!!!!!!!!!!', '2020-12-30 12:11:43'),
+(13, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:21:26'),
+(14, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:47:37'),
+(15, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:47:56'),
+(16, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:50:03'),
+(17, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:50:21'),
+(18, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:50:42'),
+(19, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 05:51:02'),
+(20, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:25:11'),
+(21, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:31:44'),
+(22, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:31:56'),
+(23, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:32:02'),
+(24, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:34:48'),
+(25, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:37:37'),
+(26, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:39:19'),
+(27, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:40:28'),
+(28, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:40:33'),
+(29, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:40:45'),
+(30, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:40:56'),
+(31, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:41:41'),
+(32, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:42:49'),
+(33, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 11:30:49');
 
 -- --------------------------------------------------------
 
@@ -82,7 +125,33 @@ INSERT INTO `den` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) V
 (9, 'den', 'arcUc', 'проверка на паралелизм', '2020-12-30 07:35:36'),
 (10, 'freeAlex', 'den', 'сообщение тебе )))', '2020-12-30 09:41:47'),
 (11, 'freeAlex', 'den', 'и ещё одно!', '2020-12-30 09:42:44'),
-(31, 'den', 'arcUc', 'С ПРЯЗДНИКОМ!!!!!!!!!!!!!', '2020-12-30 12:11:43');
+(31, 'den', 'arcUc', 'С ПРЯЗДНИКОМ!!!!!!!!!!!!!', '2020-12-30 12:11:43'),
+(51, 'den', 'arcUc', '!!!!!!!!!!!!!!!!!!!!!!!!!!', '2020-12-31 09:42:49'),
+(53, 'den', 'freeAlex', 'Проба сообщения после правок удаления узлов', '2021-01-18 13:41:02'),
+(54, 'den', 'denstar', 'Ден старовойтов это ты?', '2021-01-18 13:42:34'),
+(55, 'AlexLOOK', 'den', 'трям!', '2021-01-18 13:50:02'),
+(56, 'AlexLOOK', 'den', 'трям!', '2021-01-18 13:50:06');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `denstar`
+--
+
+CREATE TABLE `denstar` (
+  `id_messages` bigint(20) NOT NULL,
+  `id_frommsg` varchar(255) NOT NULL,
+  `id_tomsg` varchar(255) NOT NULL,
+  `messag` text NOT NULL,
+  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `denstar`
+--
+
+INSERT INTO `denstar` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `dates`) VALUES
+(1, 'den', 'denstar', 'Ден старовойтов это ты?', '2021-01-18 13:42:34');
 
 -- --------------------------------------------------------
 
@@ -125,7 +194,8 @@ INSERT INTO `freealex` (`id_messages`, `id_frommsg`, `id_tomsg`, `messag`, `date
 (20, 'den', 'freeAlex', 'ну и тебе в ответочку!', '2020-12-30 11:27:13'),
 (21, 'den', 'freeAlex', 'ну и тебе в ответочку!', '2020-12-30 11:34:25'),
 (22, 'freeAlex', 'arcUc', 'Аркаш СНГ!!!', '2020-12-30 12:08:15'),
-(23, 'freeAlex', 'arcUc', 'Аркаш СНГ!!!', '2020-12-30 12:09:31');
+(23, 'freeAlex', 'arcUc', 'Аркаш СНГ!!!', '2020-12-30 12:09:31'),
+(24, 'den', 'freeAlex', 'Проба сообщения после правок удаления узлов', '2021-01-18 13:41:02');
 
 -- --------------------------------------------------------
 
@@ -152,7 +222,7 @@ INSERT INTO `freinds` (`id_freinds`, `id_user`, `id_myfreind`, `freindship`) VAL
 (34, 'AlexLOOK', 'den', 1),
 (35, 'freeAlex', 'den', 1),
 (37, 'den', 'push', 1),
-(41, 'den', 'denstar', 0),
+(41, 'den', 'denstar', 1),
 (42, 'den', 'push', 1),
 (43, 'push', 'den', 1),
 (44, 'denstar', 'den', 1),
@@ -224,25 +294,33 @@ CREATE TABLE `users` (
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `login` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `date_reg` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`) VALUES
-(5, 'Аркадий', 'Укупник', 'arcUc', '$2y$10$hKQu1Jz60Fxd5eCb8i2w4e1PJTtMHf/I5X4yEFTER1EhhCRLcaVEi'),
-(6, 'Александр', 'Лукашенко', 'AlexLOOK', '$2y$10$XukrP4iGzMT822Qn8F2qmuzABoiRFJ9eSvwjLKGA83xXJQnPM3m9m'),
-(7, 'Денис', 'Белоцерковцев', 'den', '$2y$10$1BKt6lIfI/i8Jbpqt2tPsetey2DfrHFsjRnjVsdQF.zN1PBUnSGbO'),
-(8, 'Alex', 'Freedman', 'freeAlex', '$2y$10$Lr0WynYjhY4Se0AANwneC.YJLqdAxvwveQeAg6.KkwBj6jE6nWw.W'),
-(9, 'Александр', 'Пушной', 'push', '$2y$10$m2DuO.V7SVSvZqplS7isOOR.OdS7r8PnXzu1swZ5R2QbiCgRzMdWm'),
-(10, 'Денис', 'Денисов', 'denden', '$2y$10$89ebdNApke03heD/Wwv69.f3CTkDowOa7HHLthkaoQNX7p6IN7vyC'),
-(11, 'Денис', 'Старовойтов', 'denstar', '$2y$10$FqUOxF8bW8Rgg5DO4oWxzehTEO4ubXDCvKEr/5wpyT22y8taKSdIK');
+INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `login`, `password`, `date_reg`) VALUES
+(5, 'Аркадий', 'Укупник', 'arcUc', '$2y$10$hKQu1Jz60Fxd5eCb8i2w4e1PJTtMHf/I5X4yEFTER1EhhCRLcaVEi', '0000-00-00 00:00:00'),
+(6, 'Александр', 'Лукашенко', 'AlexLOOK', '$2y$10$XukrP4iGzMT822Qn8F2qmuzABoiRFJ9eSvwjLKGA83xXJQnPM3m9m', '0000-00-00 00:00:00'),
+(7, 'Денис', 'Белоцерковцев', 'den', '$2y$10$1BKt6lIfI/i8Jbpqt2tPsetey2DfrHFsjRnjVsdQF.zN1PBUnSGbO', '0000-00-00 00:00:00'),
+(8, 'Alex', 'Freedman', 'freeAlex', '$2y$10$Lr0WynYjhY4Se0AANwneC.YJLqdAxvwveQeAg6.KkwBj6jE6nWw.W', '0000-00-00 00:00:00'),
+(9, 'Александр', 'Пушной', 'push', '$2y$10$m2DuO.V7SVSvZqplS7isOOR.OdS7r8PnXzu1swZ5R2QbiCgRzMdWm', '0000-00-00 00:00:00'),
+(10, 'Денис', 'Денисов', 'denden', '$2y$10$89ebdNApke03heD/Wwv69.f3CTkDowOa7HHLthkaoQNX7p6IN7vyC', '0000-00-00 00:00:00'),
+(11, 'Денис', 'Старовойтов', 'denstar', '$2y$10$FqUOxF8bW8Rgg5DO4oWxzehTEO4ubXDCvKEr/5wpyT22y8taKSdIK', '0000-00-00 00:00:00'),
+(26, 'sssssssssssssssssssssssssssssssss', 'sssssssssssssssssssssssssssssssss', 'nnn', '$2y$10$YQduD9RaP8qZlAAfkklQJ.mlkmXwckrFfHCumSuE0bF2LW0Lw9k7y', '2021-01-25 13:48:24');
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `alexlook`
+--
+ALTER TABLE `alexlook`
+  ADD PRIMARY KEY (`id_messages`);
 
 --
 -- Индексы таблицы `arcuc`
@@ -254,6 +332,12 @@ ALTER TABLE `arcuc`
 -- Индексы таблицы `den`
 --
 ALTER TABLE `den`
+  ADD PRIMARY KEY (`id_messages`);
+
+--
+-- Индексы таблицы `denstar`
+--
+ALTER TABLE `denstar`
   ADD PRIMARY KEY (`id_messages`);
 
 --
@@ -289,22 +373,34 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `alexlook`
+--
+ALTER TABLE `alexlook`
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT для таблицы `arcuc`
 --
 ALTER TABLE `arcuc`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT для таблицы `den`
 --
 ALTER TABLE `den`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT для таблицы `denstar`
+--
+ALTER TABLE `denstar`
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `freealex`
 --
 ALTER TABLE `freealex`
-  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_messages` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT для таблицы `freinds`
@@ -322,7 +418,7 @@ ALTER TABLE `pins`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

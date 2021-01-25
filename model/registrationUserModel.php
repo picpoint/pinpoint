@@ -23,7 +23,7 @@ class RegistrationUserM {                                               // кл�
     if(count($data) > 0) {                                              // если длинна массива больше 0(т.е. в бд был найден логин)
       echo("Такой логин уже существует");                               // выдаём сообщение о существующем юзере
     } else {
-      $sth = $this->cnnct -> prepare("INSERT INTO users (firstname, lastname, login, password) VALUES ('$firstname', '$lastname', '$login', '$password') ");  // иначе записываем в бд юзера с данными
+      $sth = $this->cnnct -> prepare("INSERT INTO users (firstname, lastname, login, password, ) VALUES ('$firstname', '$lastname', '$login', '$password') ");  // иначе записываем в бд юзера с данными
       $sth -> execute();                                                // выполняем запрос
       $_SESSION['login'] = $login;                                      // в сессию записываем логин
       header("location: ../dist/personalPage.php");                     // отправляем юзера в лк
