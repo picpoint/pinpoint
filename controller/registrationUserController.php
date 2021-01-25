@@ -36,14 +36,17 @@ class RegistrationUserC {                                                 // к�
         $regpass = htmlspecialchars($regpass);
         // $regpass = password_hash($regpass, PASSWORD_DEFAULT);
 
-        if(mb_strlen($regfirstname) > 30) {
+        if(mb_strlen($regfirstname) > 35) {
           echo("Слишком длинное имя");
           return;
-        } elseif(mb_strlen($reglastname) > 30) {
+        } elseif(mb_strlen($reglastname) > 35) {
           echo("Слишком длинная фамилия");
           return;
         } elseif(strlen($reglogin) < 3 || strlen($reglogin) > 20) {
           echo("Логин должен быть от 3 до 20 символов");
+          return;
+        } elseif(preg_match("/^[a-zA-Z0-9_]+$/i", $reglogin)) {
+          echo("Логин должен содержать только латинские буквы и/или цифры");
           return;
         } elseif(strlen($regpass) < 5) {
           echo("Пароль должен быть не короче 5 символов");
