@@ -20,6 +20,12 @@
   require_once "../controller/getDataPinContentController.php";
   require_once "../model/getDataFromDBPinContentModel.php";
   require_once "../controller/logOutController.php";
+  require_once "../controller/checkLoginController.php";
+?>
+
+<?php
+  $checkLog = new CheckLoginC();
+  $checkLog -> checkUserLogin();
 ?>
   
   <section class="pp">
@@ -167,10 +173,10 @@
 
       
       <div class="pp__bottomblock">        
-        <?php
+        <!-- <?php
           $res = new LogoutUserC();
           $res -> logoutUsr();
-        ?>
+        ?> -->
       </div>
 
 
