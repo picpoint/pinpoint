@@ -21,6 +21,7 @@
   require_once "../model/getDataFromDBPinContentModel.php";
   require_once "../controller/logOutController.php";
   require_once "../controller/checkLoginController.php";
+  require_once "../model/getLogPassUsersModel.php";
 ?>
 
 <?php

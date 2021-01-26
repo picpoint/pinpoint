@@ -6,10 +6,8 @@ class LogoutUserC {
 
   public function logoutUsr() {
     if(isset($_POST['btnlogout'])) {
-      setcookie($_SESSION['login'], $_SESSION['password'], time() - 86400, '/');      
-      session_destroy();      
-      session_unset();
-      header("location: ../dist/index.php");
+      // setcookie('PHPSESSID', session_start(), time() - 86400, '/');
+      // header("location: ../dist/index.php");
     }
   }
   
