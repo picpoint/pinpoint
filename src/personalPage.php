@@ -1,6 +1,6 @@
 <?php
   session_start();
-  setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400 * 7, '/');
+  setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400, '/');
 ?>
 
 <!DOCTYPE html>
@@ -162,7 +162,7 @@
 
         <div class="pp__exitblock">
           <form method="post" class="pp__formout">
-            <button class="pp__btnlogout" name="btnlogout">              
+            <button type="submit" name="btnlogout" class="pp__btnlogout">
               <i class="fa fa-sign-out" aria-hidden="true"></i>
               <span>выход</span>              
             </button>
@@ -173,10 +173,10 @@
 
       
       <div class="pp__bottomblock">        
-        <!-- <?php
+        <?php
           $res = new LogoutUserC();
           $res -> logoutUsr();
-        ?> -->
+        ?>
       </div>
 
 
