@@ -6,11 +6,9 @@
 class CheckLoginC {
 
   public function checkUserLogin() {
-    if(isset($_COOKIE)) {
-      print_r($_COOKIE);
-    } else {
-      echo("not coockie ......");
-    }
+    if(empty($_SESSION['login']) && empty($_SESSION['password'])) {
+      header("location: index.php");
+    } 
   }
 
 
