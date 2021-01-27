@@ -14,6 +14,12 @@
 <?php
   require_once "../controller/authorizationUserController.php";  
   require_once "../model/authorizationUserModel.php";
+  require_once "../controller/checkLoginController.php";
+?>
+
+<?php
+  // $checkLog = new CheckLoginC();
+  // $checkLog -> checkUserLogin();
 ?>
 
   <section class="indx">
