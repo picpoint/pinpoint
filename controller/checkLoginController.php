@@ -15,7 +15,7 @@ class CheckLoginC {
     echo("<br>");
     echo("----- COOCKIE/SESSION END -----");
 
-    if(isset($_SESSION['login'])) {
+    if(isset($_SESSION['login']) && isset($_SESSION['password'])) {
       echo("<br>");
       echo("<br>");
       
@@ -34,10 +34,10 @@ class CheckLoginC {
         //   echo("<br>");
         // }
 
-
       }
 
-
+    } else {
+      header("location: index.php");
     }
 
   }
