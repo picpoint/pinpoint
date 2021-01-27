@@ -24,7 +24,7 @@ class AuthorizationUserC {                                              // кл�
         $authpass = htmlspecialchars($authpass);
                 
         
-        $arrAuthUser[] = $authlogin;                     // в массив записываем логин и пароль
+        $arrAuthUser[] = $authlogin;                                    // в массив записываем логин и пароль
         $arrAuthUser[] = $authpass;
         
         $authUsr = new AuthorizationUserM();                            // вызываем модель авторизации

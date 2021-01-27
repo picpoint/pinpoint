@@ -38,7 +38,7 @@ class AuthorizationUserM {                                                      
       foreach($arrUsr as $key => $value) {                                        // перебираем получившийся ассоц.массив
         if($login == $key && $password == password_verify($password, $value)) {   // если введённый логин из поля формы == логину из массива и пароль == проверенному паролю 
           $_SESSION['login'] = $login;                                            // в сессию записываем логин
-          $_SESSION['password'] = ??????????;
+          $_SESSION['password'] = $value;                                         // и хешированный пароль
           header('location: personalPage.php');                                   // перебрасываем пользователя в лк
         } else {
           echo("Логин или пароль неправильный");                                  // иначе выдаём сообщение
