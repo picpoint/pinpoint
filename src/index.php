@@ -15,6 +15,7 @@
   require_once "../controller/authorizationUserController.php";  
   require_once "../model/authorizationUserModel.php";
   require_once "../controller/checkLoginController.php";
+  require_once "../model/getLogPassUsersModel.php";
 ?>
 
 <?php

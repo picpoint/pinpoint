@@ -25,7 +25,21 @@ class CheckLoginC {
     if(isset($_COOKIE)) {      
       print_r($_COOKIE);
       echo("<br>");
-    }
+      echo("<br>");
+      
+      $allUsrs = new GetLogPassUsersM();
+      $res = $allUsrs -> getAllUsr();      
+
+      foreach($res as $rs) {
+        foreach($_COOKIE as $key => $value) {
+          if($key == $rs['login'] && $value == $rs['password']) {
+            header("location: personalPage.php");
+          }
+        }
+
+      }
+    } 
+
   }
 
 
