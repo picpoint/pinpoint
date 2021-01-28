@@ -15,22 +15,17 @@ class CheckLoginC {
     echo("<br>");
     echo("----- COOCKIE/SESSION END -----");
 
-    if(isset($_SESSION['login']) && isset($_SESSION['password'])) {
-      echo("<br>");
-      echo("<br>");
-      
-      $logPass = new GetLogPassUsersM();
-      $res = $logPass -> getAllUsr();
+    if(!isset($_SESSION['login']) && !isset($_SESSION['password'])) {
+      header("location: index.php");      
+    } 
 
-      foreach($res as $rs) {
-        print_r($rs);
-        echo("<br>");
-      }
+  }
 
-    } else {
-      header("location: index.php");
+  public function autoEntrance() {
+    if(isset($_COOKIE)) {      
+      print_r($_COOKIE);
+      echo("<br>");
     }
-
   }
 
 

@@ -18,8 +18,9 @@
 ?>
 
 <?php
-  // $checkLog = new CheckLoginC();
+  $checkLog = new CheckLoginC();
   // $checkLog -> checkUserLogin();
+  $checkLog -> autoEntrance();
 ?>
 
   <section class="indx">
