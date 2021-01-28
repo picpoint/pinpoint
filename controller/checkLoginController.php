@@ -22,23 +22,31 @@ class CheckLoginC {
   }
 
   public function autoEntrance() {
-    if(isset($_COOKIE)) {      
-      print_r($_COOKIE);
-      echo("<br>");
-      echo("<br>");
-      
-      $allUsrs = new GetLogPassUsersM();
-      $res = $allUsrs -> getAllUsr();      
+    if(!empty($_COOKIE) && empty($_SESSION)) {
+      $_SESSION = $_COOKIE;
+    }
 
-      foreach($res as $rs) {
-        foreach($_COOKIE as $key => $value) {
-          if($key == $rs['login'] && $value == $rs['password']) {
-            header("location: personalPage.php");
-          }
-        }
+    // foreach($_COOKIE as $key => $value) {
+    //   echo("<br>");
+    //   echo("------------");
+    //   echo("$key - $value");
+    //   echo("------------");
+    //   echo("<br>");      
+    // }
 
-      }
-    } 
+    // if(empty(array_diff_assoc($_SESSION, $_COOKIE))) {
+    //   header("location: personalPage.php");
+    // }
+    
+
+    echo("----- COOCKIE/SESSION START -----");
+    echo("<br>");
+    print_r($_COOKIE);
+    echo("<br>");
+    echo("<br>");
+    print_r($_SESSION);
+    echo("<br>");
+    echo("----- COOCKIE/SESSION END -----");
 
   }
 
