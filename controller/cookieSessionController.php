@@ -15,14 +15,10 @@ class coockiesSessionsC {
     if(isset($_COOKIE)) {
       echo("<br>");
       echo("<br>");
-      // print_r($_COOKIE);
 
       foreach($_COOKIE as $key => $value) {
         echo("$key - $value");
         echo("<br>");
-        if($key != 'PHPSESSID') {
-          
-        }
       }
 
     }
@@ -30,12 +26,19 @@ class coockiesSessionsC {
   }
 
   public function autEntrance() {
-    // if(isset($_COOKIE)) {
-    //   echo("<br>");
-    //   echo("<br>");
-    //   print_r($_COOKIE);
+    // if(isset($_COOKIE) && !empty($_COOKIE)) {
+    //   header("location: personalPage.php");
     // }
 
+  }
+
+
+  public function logOut() {
+    if(isset($_POST['btnlogout'])) {
+      setcookie($_SESSION['login'], $_SESSION['password'], time() - 86400, '/');
+      session_destroy();
+      header("location: index.php");
+    }
   }
 
   

@@ -23,8 +23,10 @@
 ?>
 
 <?php
-  $showCS = new coockiesSessionsC();
-  $showCS -> showCoockiesSessions();
+  $resCS = new coockiesSessionsC();
+  $resCS -> showCoockiesSessions();
+  $resCS -> logOut();
+
 ?>
   
   <section class="pp">
