@@ -11,12 +11,30 @@ class coockiesSessionsC {
     echo("-----------");
     echo("<br>");
     print_r($_SESSION);
+    
+    if(isset($_COOKIE)) {
+      echo("<br>");
+      echo("<br>");
+      // print_r($_COOKIE);
+
+      foreach($_COOKIE as $key => $value) {
+        echo("$key - $value");
+        echo("<br>");
+        if($key != 'PHPSESSID') {
+          
+        }
+      }
+
+    }
+
   }
 
   public function autEntrance() {
-    // if(isset($_COOKIE['login'])) {
-    //   header("location: personalPage.php");
-    // } 
+    // if(isset($_COOKIE)) {
+    //   echo("<br>");
+    //   echo("<br>");
+    //   print_r($_COOKIE);
+    // }
 
   }
 
