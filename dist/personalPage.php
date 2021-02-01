@@ -19,14 +19,12 @@
   require_once "../model/writeDataPinToDBModel.php";  
   require_once "../controller/getDataPinContentController.php";
   require_once "../model/getDataFromDBPinContentModel.php";
-  require_once "../controller/logOutController.php";
-  require_once "../controller/checkLoginController.php";
-  require_once "../model/getLogPassUsersModel.php";
+  require_once "../controller/cookieSessionController.php";
 ?>
 
 <?php
-  $checkLog = new CheckLoginC();
-  $checkLog -> checkUserLogin();
+  $showCS = new coockiesSessionsC();
+  $showCS -> showCoockiesSessions();
 ?>
   
   <section class="pp">
@@ -174,10 +172,7 @@
 
       
       <div class="pp__bottomblock">        
-        <?php
-          $res = new LogoutUserC();
-          $res -> logoutUsr();
-        ?>
+       
       </div>
 
 

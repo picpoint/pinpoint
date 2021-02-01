@@ -14,14 +14,13 @@
 <?php
   require_once "../controller/authorizationUserController.php";  
   require_once "../model/authorizationUserModel.php";
-  require_once "../controller/checkLoginController.php";
-  require_once "../model/getLogPassUsersModel.php";
+  require_once "../controller/cookieSessionController.php";
 ?>
 
 <?php
-  $checkLog = new CheckLoginC();
-  // $checkLog -> checkUserLogin();
-  $checkLog -> autoEntrance();
+  $autEntr = new coockiesSessionsC();
+  $autEntr -> showCoockiesSessions();
+  $autEntr -> autEntrance();
 ?>
 
   <section class="indx">
