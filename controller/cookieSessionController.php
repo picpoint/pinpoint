@@ -15,24 +15,37 @@ class coockiesSessionsC {
     if(isset($_COOKIE)) {
       echo("<br>");
       echo("<br>");
+      echo("<br>");
+      echo("<br>");
 
       foreach($_COOKIE as $key => $value) {
         echo("$key - $value");
-        echo("<br>");
+        echo("<br>");        
       }
 
     }
 
   }
+  
 
+  
   public function autEntrance() {
-    // if(isset($_COOKIE) && !empty($_COOKIE)) {
-    //   header("location: personalPage.php");
-    // }
+    if(isset($_COOKIE)) {
+      print_r($_COOKIE[$key]);
+    } else {
+      echo("coockies is empty");
+    }
 
   }
 
 
+  
+  public function checkCoockie() {
+
+  }
+
+
+  
   public function logOut() {
     if(isset($_POST['btnlogout'])) {
       setcookie($_SESSION['login'], $_SESSION['password'], time() - 86400, '/');
