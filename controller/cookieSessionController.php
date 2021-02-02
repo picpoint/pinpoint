@@ -4,57 +4,40 @@
 
 
 class coockiesSessionsC {
-
-  public function showCoockiesSessions() {
-    print_r($_COOKIE);
-    echo("<br>");
-    echo("-----------");
-    echo("<br>");
-    print_r($_SESSION);
     
-    if(isset($_COOKIE)) {
-      echo("<br>");
-      echo("<br>");
-      echo("<br>");
-      echo("<br>");
+  public function autEntrance() {
+    if(isset($_COOKIE['ppusr']) && isset($_COOKIE['pppsw'])) {
+      $allUsr = new GetLogPassUsersM();
+      $res = $allUsr -> getAllUsr();
 
-      foreach($_COOKIE as $key => $value) {
-        echo("$key - $value");
-        echo("<br>");        
+      foreach($res as $rs) {
+        if($_COOKIE['ppusr'] === $rs['login'] && $_COOKIE['pppsw'] === $rs['password']) {
+          header('location: personalPage.php');
+        }
+
       }
 
-    }
+    } 
 
   }
-  
-
-  
-  public function autEntrance() {
-    if(isset($_COOKIE)) {
-      print_r($_COOKIE[$key]);
-    } else {
-      echo("coockies is empty");
-    }
-
-  }
-
 
   
   public function checkCoockie() {
+    if(!isset($_COOKIE['ppusr']) && !isset($_COOKIE['pppsw'])) {
+      header('location: index.php');
+    }
 
   }
-
 
   
   public function logOut() {
     if(isset($_POST['btnlogout'])) {
-      setcookie($_SESSION['login'], $_SESSION['password'], time() - 86400, '/');
+      setcookie('ppusr', $_SESSION['login'], time() - 86400, '/');
+      setcookie('pppsw', $_SESSION['password'], time() - 86400, '/');
       session_destroy();
       header("location: index.php");
     }
-  }
-
-  
+  }  
 
 
 }

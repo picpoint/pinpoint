@@ -1,6 +1,8 @@
 <?php
   session_start();
-  setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400, '/');
+  // setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400, '/');
+  setcookie('ppusr', $_SESSION['login'], time() + 86400, '/');
+  setcookie('pppsw', $_SESSION['password'], time() + 86400, '/');
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +26,7 @@
 
 <?php
   $resCS = new coockiesSessionsC();
-  $resCS -> showCoockiesSessions();
+  $resCS -> checkCoockie();
   $resCS -> logOut();
 
 ?>

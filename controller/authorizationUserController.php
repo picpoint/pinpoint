@@ -13,10 +13,10 @@ class AuthorizationUserC {                                              // кл�
       $authpass;
       if(!empty($_POST['authlogin']) && !empty($_POST['authpass'])) {   // если поля логин и пароль не пусты
         
-        $authlogin = trim($_POST['authlogin']);
-        $authlogin = strip_tags($authlogin);
-        $authlogin = stripcslashes($authlogin);
-        $authlogin = htmlspecialchars($authlogin);
+        $authlogin = trim($_POST['authlogin']);                         // удаляем пробелы
+        $authlogin = strip_tags($authlogin);                            // удаляем теги
+        $authlogin = stripcslashes($authlogin);                         // экранируем слеши
+        $authlogin = htmlspecialchars($authlogin);                      // конвертируем хтмл в сущности
 
         $authpass = trim($_POST['authpass']);
         $authpass = strip_tags($authpass);

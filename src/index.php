@@ -15,11 +15,11 @@
   require_once "../controller/authorizationUserController.php";  
   require_once "../model/authorizationUserModel.php";
   require_once "../controller/cookieSessionController.php";
+  require_once "../model/getLogPassUsersModel.php";
 ?>
 
 <?php
   $autEntr = new coockiesSessionsC();
-  $autEntr -> showCoockiesSessions();
   $autEntr -> autEntrance();
 ?>
 
@@ -42,8 +42,8 @@
       <div class="indx__bdy">
         <div class="indx__auth">
           <form method="post" class="indx__authblock">
-            <input type="text" name="authlogin" placeholder="Логин" pattern="^[a-zA-Z0-9]+$">
-            <input type="password" name="authpass" placeholder="Пароль" pattern="^[a-zA-Z0-9]+$">
+            <input type="text" name="authlogin" placeholder="Логин" pattern="^[a-zA-Z0-9]+$"> <!-- pattern="^[a-zA-Z0-9]+$"  --> 
+            <input type="password" name="authpass" placeholder="Пароль"> <!-- pattern="^[a-zA-Z0-9]+$" -->
             <button type="submit" name="authbth">Войти</button>
             <span>
               <?php
