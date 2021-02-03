@@ -29,7 +29,7 @@ function init () {                                                              
   myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
     var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
     lat.value = coords[0].toPrecision(8);                                               // координаты широты
-    lon.value = coords[1].toPrecision(8);                                               // координаты долготы 
+    lon.value = coords[1].toPrecision(8);                                               // координаты долготы     
   });      
   
   includeShowBalloons("js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты
