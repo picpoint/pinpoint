@@ -2,6 +2,8 @@ const lat = document.querySelector('.pp__latitude');                            
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
 const arrdt = document.querySelector('.pp__arrdt');
 
+let res = new DetermineLocatePosition();
+let curentCoords = res.locatePosition();
 
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 ymaps.ready(init);                                                                        // инициализируется карта
@@ -19,12 +21,14 @@ function includeShowBalloons(url) {                                             
 
 function init () {                                                                      // ф-ия инициализации
   myMap = new ymaps.Map("map", {
-    center: [45.0320, 41.9419],
+    center: curentCoords,
     // center: [45.0320, 41.9419],                                                      // координаты места загрузки и показа карты
-    zoom: 12                                                                            // масштаб отображения
+    zoom: 11                                                                            // масштаб отображения
   }, {
     searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс
   });
+
+  console.log(res.locatePosition());
 
   myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
     var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
