@@ -4,6 +4,8 @@ const arrdt = document.querySelector('.pp__arrdt');
 
 let res = new DetermineLocatePosition();
 let curentCoords = res.locatePosition();
+console.log(curentCoords);
+
 
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 ymaps.ready(init);                                                                        // инициализируется карта
@@ -21,14 +23,14 @@ function includeShowBalloons(url) {                                             
 
 function init () {                                                                      // ф-ия инициализации
   myMap = new ymaps.Map("map", {
-    center: curentCoords,
-    // center: [45.0320, 41.9419],                                                      // координаты места загрузки и показа карты
+    // center: curentCoords,
+    center: [55.7538, 37.6201],                                                      // координаты места загрузки и показа карты
     zoom: 11                                                                            // масштаб отображения
   }, {
     searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс
   });
 
-  console.log(res.locatePosition());
+  console.log(curentCoords);
 
   myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
     var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
@@ -36,7 +38,7 @@ function init () {                                                              
     lon.value = coords[1].toPrecision(8);                                               // координаты долготы     
   });      
   
-  includeShowBalloons("js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты
+  includeShowBalloons("js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты  
     
 }
 
