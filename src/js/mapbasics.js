@@ -2,19 +2,15 @@ const lat = document.querySelector('.pp__latitude');                            
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
 const arrdt = document.querySelector('.pp__arrdt');
 
-// res = new DetermineLocatePosition();
-// let curentCoords = res.locatePosition();
-
-setTimeout(() => {
-  console.log(window.curCoords);
-}, 3000);
-
-
-
 
 
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
-ymaps.ready(init);                                                                        // инициализируется карта
+
+setTimeout(() => {
+  ymaps.ready(init);
+}, 5000);
+
+// ymaps.ready(init);                                                                        // инициализируется карта
 
 
 
@@ -29,8 +25,8 @@ function includeShowBalloons(url) {                                             
 
 function init () {                                                                      // ф-ия инициализации
   myMap = new ymaps.Map("map", {
-    // center: curentCoords,
-    center: [55.7538, 37.6201],                                                      // координаты места загрузки и показа карты
+    center: window.curCoords || [55.7538, 37.6201],
+    // center: [55.7538, 37.6201],                                                      // координаты места загрузки и показа карты
     zoom: 11                                                                            // масштаб отображения
   }, {
     searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс

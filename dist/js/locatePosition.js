@@ -8,7 +8,6 @@ class DetermineLocatePosition {
   }
 
   locatePosition() {
-    // let position;
     window.addEventListener("load", (e) => {
       let arrCurrentCoords = [];
       if (e.type == 'load') {
