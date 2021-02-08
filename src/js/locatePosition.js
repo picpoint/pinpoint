@@ -4,12 +4,11 @@
 
 class DetermineLocatePosition {
 
-  // constructor() {
-
-  // }
+  constructor() {
+  }
 
   locatePosition() {
-    let position;
+    // let position;
     window.addEventListener("load", (e) => {
       let arrCurrentCoords = [];
       if (e.type == 'load') {
@@ -19,7 +18,8 @@ class DetermineLocatePosition {
           arrCurrentCoords.push(+lat);
           arrCurrentCoords.push(+lng);
           // console.log(arrCurrentCoords);
-          return arrCurrentCoords;
+          // return arrCurrentCoords;
+          window.curCoords = arrCurrentCoords;
         }, error => {
           console.error("Местоположение не определено ...");
         });
@@ -36,8 +36,8 @@ class DetermineLocatePosition {
 }
 
 
-// let res = new DetermineLocatePosition();
-// // res.locatePosition();
+let res = new DetermineLocatePosition();
+res.locatePosition();
 
 
 

@@ -2,9 +2,15 @@ const lat = document.querySelector('.pp__latitude');                            
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
 const arrdt = document.querySelector('.pp__arrdt');
 
-let res = new DetermineLocatePosition();
-let curentCoords = res.locatePosition();
-console.log(curentCoords);
+// res = new DetermineLocatePosition();
+// let curentCoords = res.locatePosition();
+
+setTimeout(() => {
+  console.log(window.curCoords);
+}, 3000);
+
+
+
 
 
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
@@ -30,7 +36,7 @@ function init () {                                                              
     searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс
   });
 
-  console.log(curentCoords);
+  // console.log(curentCoords);
 
   myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
     var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
