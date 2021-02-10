@@ -35,8 +35,8 @@ class DetermineLocatePosition {
 }
 
 
-let res = new DetermineLocatePosition();
-res.locatePosition();
+// let res = new DetermineLocatePosition();
+// res.locatePosition();
 
 
 
