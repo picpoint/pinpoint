@@ -17,8 +17,8 @@ class DetermineLocatePosition {
           arrCurrentCoords.push(+lat);
           arrCurrentCoords.push(+lng);
           // console.log(arrCurrentCoords);
-          // return arrCurrentCoords;
           window.curCoords = arrCurrentCoords;
+          return arrCurrentCoords;
         }, error => {
           console.error("Местоположение не определено ...");
         });

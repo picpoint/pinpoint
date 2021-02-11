@@ -192,7 +192,7 @@
     
 
 <script src="js/contextMenuOnMap.js"></script>
-<script src="js/mapbasics.js" type="text/javascript"></script>
+<script src="js/mapbasics.js"></script>
 
 
 </body>
