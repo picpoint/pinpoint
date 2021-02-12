@@ -33,6 +33,9 @@
   
   <section class="pp">
     <div class="pp__wrp" id="map">
+    
+    <div class="pp__warning">    
+    </div>
       
       <div class="pp__sendfile">        
         <div class="pp__hdrsf">
