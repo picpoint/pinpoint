@@ -5,7 +5,6 @@ var myMap;                                                                      
 let arrCurrentCoords = [];
 
 
-window.addEventListener("load", (e) => {
   
   function locatePosition() {
     return new Promise((resolve, reject) => {
@@ -18,9 +17,10 @@ window.addEventListener("load", (e) => {
         window.curCoords = arrCurrentCoords;
         // return arrCurrentCoords;
         // ymaps.ready(init);
-        resolve(arrCurrentCoords);
+        resolve();
       }, error => {
         console.error("Местоположение не определено ...");
+        ymaps.ready(init);
       });
     });
     
@@ -37,20 +37,15 @@ window.addEventListener("load", (e) => {
   
   
   
-  function init (coordinates) {                                                                      // ф-ия инициализации
+  function init () {                                                                      // ф-ия инициализации
     myMap = new ymaps.Map("map", {
-      center: coordinates || [55.7538, 37.6201],
+      center: window.curCoords || [55.7538, 37.6201],
       // center: [55.7538, 37.6201],                                                      // координаты места загрузки и показа карты
       zoom: 11                                                                            // масштаб отображения
     }, {
       searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс
     });
-  
-    // console.log(curentCoords);
-    setTimeout(() => {
-      console.log(coordinates);
-    }, 4000);
-  
+
     myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
       var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
       lat.value = coords[0].toPrecision(8);                                               // координаты широты
@@ -66,9 +61,7 @@ window.addEventListener("load", (e) => {
   locatePosition()
     .then((result) => {
       console.log(result);
-      setTimeout(() => {
-        ymaps.ready(init);
-      }, 4500);
+      ymaps.ready(init);      
     }, () => {
       ymaps.ready(init);
     });
@@ -76,13 +69,24 @@ window.addEventListener("load", (e) => {
 
 
 
-});
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// СТАРЫЙ РАБОЧИЙ КОД
 /* 
 
 const lat = document.querySelector('.pp__latitude');                                      // доступ к полю координат широты
