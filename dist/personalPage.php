@@ -39,7 +39,7 @@
           <i class="fa fa-times-circle-o" aria-hidden="true"></i>
         </div>
         <div class="pp__errnotice">
-          <span>К сожалению Вы запретили доступ к вашему местоположению ...   :-(</span>
+          <span>К сожалению Вы запретили доступ к вашему местоположению ...  :-(</span>
           <span>Для нормальной работы приложения, в настройках вашего браузера разрещите геолокацию, обновите браузер(Ctrl + F5) и разрешите доступ к своему местоположению</span>
         </div>
         <div class="pp__errok">
@@ -72,9 +72,9 @@
               <div class="pp__uploadfields">
                 <input type="file" name="upfile" multiple>
               </div>
-              <div class="pp__addfiles">
+              <!-- <div class="pp__addfiles">
                 <button>Добавить поле</button>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -99,6 +99,7 @@
         ?>
       </div>
 
+      
       
       
       <div class="pp__profile">
