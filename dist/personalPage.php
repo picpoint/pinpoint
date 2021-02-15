@@ -32,10 +32,20 @@
 ?>
   
   <section class="pp">
-    <div class="pp__wrp" id="map">
     
-    <div class="pp__warning">    
+    <div class="pp__errlocate">
+      <div class="pp__errmsg">
+        <div class="pp__errclose">
+          <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+        </div>
+        <div class="pp__errnotice">
+          <span>К сожалению Вы запретили доступ к вашему местоположению ... :-(</span>
+          <span>Для нормально работы приложения, в настройках вашего браузера разрещите геолокацию, обновите браузер и разрешите доступ к своему местоположению</span>
+        </div>
+      </div>
     </div>
+
+    <div class="pp__wrp" id="map">
       
       <div class="pp__sendfile">        
         <div class="pp__hdrsf">
