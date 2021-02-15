@@ -39,8 +39,11 @@
           <i class="fa fa-times-circle-o" aria-hidden="true"></i>
         </div>
         <div class="pp__errnotice">
-          <span>К сожалению Вы запретили доступ к вашему местоположению ... :-(</span>
-          <span>Для нормально работы приложения, в настройках вашего браузера разрещите геолокацию, обновите браузер и разрешите доступ к своему местоположению</span>
+          <span>К сожалению Вы запретили доступ к вашему местоположению ...   :-(</span>
+          <span>Для нормальной работы приложения, в настройках вашего браузера разрещите геолокацию, обновите браузер(Ctrl + F5) и разрешите доступ к своему местоположению</span>
+        </div>
+        <div class="pp__errok">
+          <button class="close">OK</button>
         </div>
       </div>
     </div>
@@ -207,7 +210,6 @@
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js"></script>
 <script src="js/errLocatePosition.js"></script>
-
 
 </body>
 </html>

@@ -57,7 +57,7 @@
     }
 
     &__errlocate {
-      display: flex;      
+      display: none;      
       justify-content: center;
       align-items: center;
       position: absolute;
@@ -67,16 +67,17 @@
       z-index: 10;
     }
     &__errmsg {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
-      width: 50%;
-      height: 50%;
+      align-items: center;
+      width: 500px;
+      height: 400px;
       background-color: white;
       border-radius: 7px;
     }
     &__errclose {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -89,13 +90,45 @@
         }
     }
     &__errnotice {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 95%;
-      height: 75%;
+      height: 65%;
         span {
+          // border: @border;
+          align-self: center;
           width: 100%;
+          margin: 10px 0;
+          text-align: center;
+            &:nth-child(1) {
+              font-weight: bolder;
+              font-size: 1.3rem;
+            }
+            &:nth-child(2) {
+              font-size: 1.1rem;
+            }
+        }
+    }
+    &__errok {
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 25%;
+        button {
+          width: 150px;
+          height: 40px;
+          border: none;
+          border-radius: 7px;
+          color: white;
+          font-weight: bolder;
+          background-color: @colorindxbtn;
+          outline: none;
+          cursor: pointer;
         }
     }
     

@@ -1,6 +1,7 @@
 const lat = document.querySelector('.pp__latitude');                                      // доступ к полю координат широты
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
 const arrdt = document.querySelector('.pp__arrdt');
+let errlocate = document.querySelector('.pp__errlocate');
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 let arrCurrentCoords = [];                                                                // пустой массив для записи туда координат геолокации
 
@@ -20,7 +21,8 @@ let arrCurrentCoords = [];                                                      
         resolve();                                                                        // резолвим промис
       }, error => {
         console.error("Местоположение не определено ...");                                // в случае ошибки инициализируем карту с координатами по умолчанию
-        ymaps.ready(init);
+        errlocate.style.display = 'flex';                                                 // если координаты не определены, показываем блок предупреждения
+        ymaps.ready(init);                                                                // инициализируем карту с координатами по умолчанию
       });
     });
     
