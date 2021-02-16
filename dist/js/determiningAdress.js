@@ -39,10 +39,9 @@ function init() {
         });
     }
 
-
     // Определяем адрес по координатам (обратное геокодирование).
     function getAddress(coords) {
-        // myPlacemark.properties.set('iconCaption', 'поиск...');
+        myPlacemark.properties.set('iconCaption', 'поиск...');
         ymaps.geocode(coords).then(function (res) {
             var firstGeoObject = res.geoObjects.get(0);
 
@@ -60,12 +59,4 @@ function init() {
                 });
         });
     }
-
-    
 }
-
-
-// var firstGeoObject = res.geoObjects.get(0);
-
-// console.log(firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas());
-// console.log(firstGeoObject.getThoroughfare() || firstGeoObject.getPremise());
