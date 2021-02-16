@@ -211,6 +211,7 @@
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js"></script>
 <script src="js/errLocatePosition.js"></script>
+<!-- <script src="js/determiningAdress.js"></script> -->
 
 </body>
 </html>
