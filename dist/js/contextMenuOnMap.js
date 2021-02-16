@@ -15,11 +15,22 @@ class ContextMenuOnMapClass {                                                   
       this.sendfile.classList.toggle('showblock');                                    // на блок вешаем по переключению класс показа/скрытия
       this.sendfile.style.left = e.clientX + 'px';                                    // присваиваем координаты окна на форму
       this.sendfile.style.top = e.clientY + 'px';
+      this.getPlaceName();
+
+      
     });
 
     this.closeform.addEventListener('click', () => {                                  // на крестик закрытия вешаем событие клика
       this.sendfile.classList.toggle('showblock');                                    // так же вешаем класс скрытия/показа формы
     });
+  }
+
+
+  getPlaceName() {
+
+    console.log("Get place Meth");
+
+    
   }
 
 
