@@ -1,16 +1,20 @@
-ymaps.ready(init);
+setTimeout(() => {
+    ymaps.ready(init);
+}, 3000);
+
+
 
 function init() {
     var myPlacemark,
         myMap = new ymaps.Map('map', {
-            center: [55.753994, 37.622093],
-            zoom: 9
+            center:  window.curCoords,
+            zoom: 13
         }, {
             searchControlProvider: 'yandex#search'
         });
 
     // Слушаем клик на карте.
-    myMap.events.add('click', function (e) {
+    myMap.events.add('contextmenu', function (e) {
         var coords = e.get('coords');
 
         // Если метка уже создана – просто передвигаем ее.
@@ -34,13 +38,14 @@ function init() {
         return new ymaps.Placemark(coords, {
             iconCaption: 'поиск...'
         }, {
-            preset: 'islands#violetDotIconWithCaption',
+            preset: 'islands#blueDotIcon',
             draggable: true
         });
     }
 
     // Определяем адрес по координатам (обратное геокодирование).
     function getAddress(coords) {
+        var curPlace;
         myPlacemark.properties.set('iconCaption', 'поиск...');
         ymaps.geocode(coords).then(function (res) {
             var firstGeoObject = res.geoObjects.get(0);
@@ -55,8 +60,13 @@ function init() {
                         firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
                     ].filter(Boolean).join(', '),
                     // В качестве контента балуна задаем строку с адресом объекта.
-                    balloonContent: firstGeoObject.getAddressLine()
+                    balloonContent: firstGeoObject.getAddressLine(),
                 });
+                console.log(firstGeoObject.getAddressLine());
+                window.curPlace = firstGeoObject.getAddressLine();
         });
     }
+    
+
+
 }

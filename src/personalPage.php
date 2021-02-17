@@ -56,7 +56,7 @@
             <img src="pict/pinWhite.png" alt="iconpin">
           </div>
           <div class="pp__hdrplace">
-            <span>Россия, Москва, ул. Ленина 52</span>
+            <span>Место ... </span>
           </div>
           <div class="pp__hdrclose">
             <span class="closeform">+</span>
@@ -211,7 +211,7 @@
 <script src="js/contextMenuOnMap.js"></script>
 <script src="js/mapbasics.js"></script>
 <script src="js/errLocatePosition.js"></script>
-<!-- <script src="js/determiningAdress.js"></script> -->
+<script src="js/determiningAdress.js"></script>
 
 </body>
 </html>
