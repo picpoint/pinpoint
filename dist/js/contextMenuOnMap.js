@@ -17,10 +17,10 @@ class ContextMenuOnMapClass {                                                   
       this.sendfile.style.left = e.clientX + 'px';                                    // присваиваем координаты окна на форму
       this.sendfile.style.top = e.clientY + 'px';
       // ymaps.ready(this.getPlaceName());
-      this.getPlaceName();
-      
+      this.getPlaceName();     
       
     });
+
 
     this.closeform.addEventListener('click', () => {                                  // на крестик закрытия вешаем событие клика
       this.sendfile.classList.toggle('showblock');                                    // так же вешаем класс скрытия/показа формы
@@ -32,11 +32,18 @@ class ContextMenuOnMapClass {                                                   
 
 
   getPlaceName() {
-    console.log("Get place Meth");
-    console.log(hdrplace);
+    console.log("Get place Meth");    
+    
     setTimeout(() => {
       hdrplace.innerHTML = window.curPlace;
     }, 500);
+
+       
+
+
+
+
+
   }
 
 
