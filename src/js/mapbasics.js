@@ -38,8 +38,11 @@ let arrCurrentCoords = [];                                                      
   
   
   
+
+
   
   function init () {                                                                      // ф-ия инициализации карты
+    var myPlacemark;
     myMap = new ymaps.Map("map", {
       center: window.curCoords || [55.7538, 37.6201],                                     // координаты места загрузки и показа карты(либо то что определилось, либо по умолчанию москва)
       // center: [55.7538, 37.6201],                                                      // координаты места загрузки и показа карты
@@ -48,10 +51,62 @@ let arrCurrentCoords = [];                                                      
       searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс
     });
 
+    
+
+
     myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
       var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
       lat.value = coords[0].toPrecision(8);                                               // координаты широты
       lon.value = coords[1].toPrecision(8);                                               // координаты долготы     
+      var coords = e.get('coords');
+
+      // Если метка уже создана – просто передвигаем ее.
+      if (myPlacemark) {
+          myPlacemark.geometry.setCoordinates(coords);
+      }
+      // Если нет – создаем.
+      else {
+          myPlacemark = createPlacemark(coords);
+          myMap.geoObjects.add(myPlacemark);          
+      }
+      
+      getAddress(coords);
+
+      function createPlacemark(coords) {
+        return new ymaps.Placemark(coords, {
+            // iconCaption: ''
+        }, {
+            preset: 'islands#violetDotIconWithCaption',
+            draggable: false
+        });
+      }
+  
+      // Определяем адрес по координатам (обратное геокодирование).
+      function getAddress(coords) {
+        // myPlacemark.properties.set('iconCaption', 'поиск...');
+        ymaps.geocode(coords).then(function (res) {
+          var firstGeoObject = res.geoObjects.get(0);
+
+          myPlacemark.properties
+              // .set({
+              //     // Формируем строку с данными об объекте.
+              //     iconCaption: [
+              //         // Название населенного пункта или вышестоящее административно-территориальное образование.
+              //         firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+              //         // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
+              //         firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+              //     ].filter(Boolean).join(', ')
+              //     // В качестве контента балуна задаем строку с адресом объекта.
+              //     // balloonContent: firstGeoObject.getAddressLine()
+              // });
+              console.log(firstGeoObject.getAddressLine());
+              window.curPosition = firstGeoObject.getAddressLine();
+          });
+      }
+
+
+
+
     });      
     
     includeShowBalloons("js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты  

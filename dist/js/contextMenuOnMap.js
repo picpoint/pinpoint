@@ -35,7 +35,7 @@ class ContextMenuOnMapClass {                                                   
     console.log("Get place Meth");    
     
     setTimeout(() => {
-      hdrplace.innerHTML = window.curPlace;
+      hdrplace.innerHTML = window.curPosition;
     }, 500);
 
        
