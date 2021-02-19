@@ -37,8 +37,6 @@ let arrCurrentCoords = [];                                                      
   }
   
   
-  
-
 
   
   function init () {                                                                      // ф-ия инициализации карты
@@ -59,35 +57,32 @@ let arrCurrentCoords = [];                                                      
       lat.value = coords[0].toPrecision(8);                                               // координаты широты
       lon.value = coords[1].toPrecision(8);                                               // координаты долготы     
       var coords = e.get('coords');
-
-      // Если метка уже создана – просто передвигаем ее.
+      
       if (myPlacemark) {
-          myPlacemark.geometry.setCoordinates(coords);
-      }
-      // Если нет – создаем.
-      else {
-          myPlacemark = createPlacemark(coords);
-          myMap.geoObjects.add(myPlacemark);          
+          myPlacemark.geometry.setCoordinates(coords);                                    // Если метка уже создана – просто передвигаем ее.
+      } else {
+          myPlacemark = createPlacemark(coords);                                          // Если нет – создаем.
+          myMap.geoObjects.add(myPlacemark);                                              // добавляем на карту
       }
       
-      getAddress(coords);
+      getAddress(coords);                                                                 // вызываем ф-ию получения адреса
 
-      function createPlacemark(coords) {
+      function createPlacemark(coords) {                                                  // ф-ия создания метки/пина, казывающей куда кликнул пользователь
         return new ymaps.Placemark(coords, {
             // iconCaption: ''
         }, {
-            preset: 'islands#violetDotIconWithCaption',
+            preset: 'islands#violetDotIconWithCaption',                                   // устанавливаем прессет отличный от стандартных меток
             draggable: false
         });
       }
   
-      // Определяем адрес по координатам (обратное геокодирование).
-      function getAddress(coords) {
+      
+      function getAddress(coords) {                                                       // Определяем адрес по координатам (обратное геокодирование).
         // myPlacemark.properties.set('iconCaption', 'поиск...');
-        ymaps.geocode(coords).then(function (res) {
-          var firstGeoObject = res.geoObjects.get(0);
+        ymaps.geocode(coords).then(function (res) {                                       // геокодирование на карте
+          var firstGeoObject = res.geoObjects.get(0);                                     // получение геообъекта
 
-          myPlacemark.properties
+              // myPlacemark.properties
               // .set({
               //     // Формируем строку с данными об объекте.
               //     iconCaption: [
@@ -98,14 +93,10 @@ let arrCurrentCoords = [];                                                      
               //     ].filter(Boolean).join(', ')
               //     // В качестве контента балуна задаем строку с адресом объекта.
               //     // balloonContent: firstGeoObject.getAddressLine()
-              // });
-              console.log(firstGeoObject.getAddressLine());
-              window.curPosition = firstGeoObject.getAddressLine();
+              // });              
+              window.curPosition = firstGeoObject.getAddressLine();                       // в windowsStorage сохраняем строку с адресом для передачи в шапку формы создания пина
           });
       }
-
-
-
 
     });      
     
