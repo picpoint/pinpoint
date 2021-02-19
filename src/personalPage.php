@@ -56,7 +56,7 @@
             <img src="pict/pinWhite.png" alt="iconpin">
           </div>
           <div class="pp__hdrplace">
-            <span>Место ... </span>
+            <span>Определение адреса пина</span>
           </div>
           <div class="pp__hdrclose">
             <span class="closeform">+</span>
