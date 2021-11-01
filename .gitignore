@@ -1,5 +1,7 @@
-#ignore directories
-node_modules
-.idea
+/.idea
+/.vscode
+/node_modules
+/vendor
+npm-debug.log
+yarn-error.log
 debug.log
-
