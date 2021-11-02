@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/registration', 'UserController@create')->name('registration.create');
+Route::post('/registration', 'UserController@store')->name('registration.store');

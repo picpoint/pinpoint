@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/public/assets/users/fonts/Montserrat-Regular.ttf");
+}
+.reg {
+  border: 1px solid red;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -8,13 +19,87 @@ body {
   overflow-x: hidden;
 }
 
-.index {
+.homepage {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
-.index__headerindx {
+.homepage__headerhp {
   border: 1px solid red;
   display: flex;
+  justify-content: center;
   height: 70px;
+}
+.homepage__headerwrp {
+  border: 1px solid red;
+  display: flex;
+  width: 60%;
+}
+.homepage__headerlogo {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.homepage__headerlogo a {
+  border: 1px solid red;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: black;
+  font-family: Montserrat-Regular;
+}
+.homepage__headernavigation {
+  border: 1px solid red;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+.homepage__headernavigation a {
+  border: 1px solid red;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: black;
+  font-family: Montserrat-Regular;
+}
+.homepage__contenthp {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 85%;
+}
+.homepage__contenthpwrp {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 60%;
+}
+.homepage__contenthpwrp img {
+  border: 1px solid red;
+  width: 100%;
+}
+.homepage__footerhp {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 5%;
+}
+.homepage__footerwrp {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.homepage__footerwrp a {
+  text-decoration: none;
+  color: black;
+  font-family: Montserrat-Regular;
 }
