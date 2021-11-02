@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
 
     public function index() {
-        $title = 'Добро пожаловать|Pinpoint';
+        $title = 'Добро пожаловать | Pinpoint';
         return view('index', compact('title'));
     }
 

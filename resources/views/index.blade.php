@@ -6,10 +6,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}}</title>
+    <link rel="stylesheet" href="public/assets/users/css/style.css">
 </head>
 <body>
 
-    <h3>PinPoint!!!</h3>
+    <section class="index">
+        <div class="index__headerindx">
+
+        </div>
+        <div class="index__bodyindx">
+
+        </div>
+        <div class="index__footerindx">
+
+        </div>
+    </section>
 
 </body>
 </html>

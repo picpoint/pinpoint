@@ -1,0 +1,20 @@
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.index {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.index__headerindx {
+  border: 1px solid red;
+  display: flex;
+  height: 70px;
+}
