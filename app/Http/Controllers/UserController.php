@@ -8,7 +8,7 @@ class UserController extends Controller
 {
 
     public function create() {
-        return view('registration');
+        return view('user.registration');
     }
 
 

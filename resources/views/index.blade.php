@@ -14,7 +14,7 @@
         <div class="homepage__headerhp">
             <div class="homepage__headerwrp">
                 <div class="homepage__headerlogo">
-                    <a href="#">PinPoint</a>
+                    <a href="/">PinPoint</a>
                 </div>
                 <div class="homepage__headernavigation">
                     <a href="{{ route('registration.create') }}">Регистрация</a>
