@@ -10,19 +10,28 @@
 </head>
 <body>
 
-    <section class="reg">
-        <div class="reg__formreg">
-            <form action="{{ route('registration.store') }}" method="post" class="reg__formblock">
-                @csrf
-                <h3>Регистрация</h3>
-                <input type="text" name="login" placeholder="Логин" value="{{ old('login') }}">
-                <input type="email" name="email" placeholder="Почта" value="{{ old('email') }}">
-                <input type="password" name="password" placeholder="Пароль">
-                <input type="password" name="password_confirmation" placeholder="Подтверждение пароля">
-                <button type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
-            </form>
-        </div>
-    </section>
+<section class="reg">
+    <div class="reg__formreg">
+
+        @if($errors->any())
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
+        <form action="{{ route('registration.store') }}" method="post" class="reg__formblock">
+            @csrf
+            <h3>Регистрация</h3>
+            <input type="text" name="login" placeholder="Логин" value="{{ old('login') }}">
+            <input type="email" name="email" placeholder="Почта" value="{{ old('email') }}">
+            <input type="password" name="password" placeholder="Пароль">
+            <input type="password" name="password_confirmation" placeholder="Подтверждение пароля">
+            <button type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </form>
+    </div>
+</section>
 
 </body>
 </html>
