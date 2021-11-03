@@ -10,32 +10,37 @@
 </head>
 <body>
 
-    <section class="homepage">
-        <div class="homepage__headerhp">
-            <div class="homepage__headerwrp">
-                <div class="homepage__headerlogo">
-                    <a href="/">PinPoint</a>
-                </div>
-                <div class="homepage__headernavigation">
-                    <a href="{{ route('registration.create') }}">Регистрация</a>
-                    <a href="#">Войти</a>
-                </div>
+<section class="homepage">
+
+    {{--@if(session('success'))--}}
+        {{--{{ session('success') }}--}}
+    {{--@endif--}}
+
+    <div class="homepage__headerhp">
+        <div class="homepage__headerwrp">
+            <div class="homepage__headerlogo">
+                <a href="/">PinPoint</a>
+            </div>
+            <div class="homepage__headernavigation">
+                <a href="{{ route('registration.create') }}">Регистрация</a>
+                <a href="#">Войти</a>
             </div>
         </div>
+    </div>
 
-        <div class="homepage__contenthp">
-            <div class="homepage__contenthpwrp">
-                <img src="public/assets/users/img/map.jpg" alt="map">
-            </div>
+    <div class="homepage__contenthp">
+        <div class="homepage__contenthpwrp">
+            <img src="public/assets/users/img/map.jpg" alt="map">
         </div>
+    </div>
 
-        <div class="homepage__footerhp">
-            <div class="homepage__footerwrp">
-                <a href="#">О нас</a>
-            </div>
+    <div class="homepage__footerhp">
+        <div class="homepage__footerwrp">
+            <a href="#">О нас</a>
         </div>
+    </div>
 
-    </section>
+</section>
 
 </body>
 </html>

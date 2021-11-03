@@ -20,3 +20,5 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/registration', 'UserController@create')->name('registration.create');
 Route::post('/registration', 'UserController@store')->name('registration.store');
+
+Route::get('/personalpage', 'PersonalPageController@index')->name('pp');

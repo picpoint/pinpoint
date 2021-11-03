@@ -10,7 +10,8 @@ class UserController extends Controller
 {
 
     public function create() {
-        return view('user.registration');
+        $title = "Регистрация | Pinpoint";
+        return view('user.registration', compact('title'));
     }
 
 
@@ -31,7 +32,7 @@ class UserController extends Controller
 
         Auth::login($user);
 
-//        return redirect()->route('lk');
+        return redirect()->route('pp');
 
 //        dd($request->all());
     }
