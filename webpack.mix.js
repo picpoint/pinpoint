@@ -17,6 +17,8 @@ const mix = require('laravel-mix');
 //     ]);
 
 
+// mix.js('resources/assets/users/js/map.js', 'public/assets/users/js/map.js');
+
 
 mix.sass('resources/assets/users/scss/style.scss', 'public/assets/users/css/style.css')
     .browserSync({
