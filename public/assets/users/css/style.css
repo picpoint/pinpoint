@@ -92,7 +92,6 @@
   color: white;
 }
 .pp__sidebar {
-  border: 1px solid red;
   display: flex;
   position: absolute;
   align-self: flex-end;
@@ -100,6 +99,47 @@
   width: calc(100% - 350px);
   background-color: #112b66;
   z-index: 10;
+}
+.pp__tools {
+  display: flex;
+  width: 95%;
+}
+.pp__tools a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10px;
+  padding: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-family: Montserrat-Regular;
+}
+.pp__tools a:hover {
+  background-color: #000041;
+}
+.pp__tools a i {
+  font-size: 1.5rem;
+}
+.pp__exit {
+  display: flex;
+  width: 5%;
+}
+.pp__exit a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-family: Montserrat-Regular;
+}
+.pp__exit a:hover {
+  background-color: #000041;
+}
+.pp__exit a i {
+  font-size: 1.5rem;
 }
 
 body {

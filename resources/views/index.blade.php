@@ -23,7 +23,7 @@
             </div>
             <div class="homepage__headernavigation">
                 <a href="{{ route('registration.create') }}">Регистрация</a>
-                <a href="#">Войти</a>
+                <a href="{{ route('login.create') }}">Войти</a>
             </div>
         </div>
     </div>

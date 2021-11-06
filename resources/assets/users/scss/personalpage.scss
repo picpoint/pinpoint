@@ -54,7 +54,7 @@
         }
     }
     &__sidebar {
-      border: $border;
+      //border: $border;
       display: flex;
       position: absolute;
       align-self: flex-end;
@@ -62,5 +62,51 @@
       width: calc(100% - 350px);
       background-color: $colorbluepanel;
       z-index: 10;
+    }
+    &__tools {
+      //border: $border;
+      display: flex;
+      width: 95%;
+        a {
+          //border: $border;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          margin-left: 10px;
+          padding: 0 15px;
+          text-decoration: none;
+          color: white;
+          font-family: Montserrat-Regular;
+            &:hover {
+              background-color: #000041;
+            }
+            i {
+              font-size: 1.5rem;
+            }
+        }
+    }
+    &__exit {
+      //border: $border;
+      display: flex;
+      width: 5%;
+        a {
+          //border: $border;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          //margin-left: 10px;
+          padding: 0 15px;
+          text-decoration: none;
+          color: white;
+          font-family: Montserrat-Regular;
+          &:hover {
+            background-color: #000041;
+          }
+          i {
+            font-size: 1.5rem;
+          }
+        }
     }
 }

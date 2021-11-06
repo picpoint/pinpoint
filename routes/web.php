@@ -20,5 +20,14 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/registration', 'UserController@create')->name('registration.create');
 Route::post('/registration', 'UserController@store')->name('registration.store');
+Route::get('/login', 'UserController@loginForm')->name('login.create');
+Route::post('/login', 'UserController@login')->name('login');
+Route::get('/logout', 'UserController@logout')->name('logout');
+
+
+//Route::group(['middleware' => 'notregistered'], function() {
+//
+//});
+
 
 Route::get('/personalpage', 'PersonalPageController@index')->name('personalpage');
