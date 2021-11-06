@@ -25,8 +25,9 @@
                 <img src="public/assets/users/img/noname.jpg" alt="user">
             </div>
             <div class="pp__userfullname">
-                <span>Денис</span>
-                <span>Белоцерковцев</span>
+                {{--<span>Денис</span>--}}
+                {{--<span>Белоцерковцев</span>--}}
+                <span>{{ \Illuminate\Support\Facades\Auth::user()->name }}</span>
             </div>
         </div>
         <div class="pp__sidebar">
@@ -67,7 +68,7 @@
             </div>
 
             <div class="pp__exit">
-                <a href="#">
+                <a href="{{ route('logout') }}">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                     <span>выход</span>
                 </a>
