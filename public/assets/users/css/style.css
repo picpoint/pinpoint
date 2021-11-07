@@ -142,6 +142,53 @@
   font-size: 1.5rem;
 }
 
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.login__formlog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  height: 700px;
+}
+.login__formblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__formblock h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: Montserrat-Regular;
+}
+.login__formblock input {
+  border: 1px solid gray;
+  width: 400px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 5px;
+  font-family: Montserrat-Regular;
+  padding-left: 10px;
+  font-size: 1.1rem;
+}
+.login__formblock button {
+  width: 250px;
+  height: 50px;
+  margin-top: 40px;
+  background-color: #00ad1e;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;

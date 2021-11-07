@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
+
 class UserController extends Controller
 {
 
@@ -27,6 +29,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);
+
 
         session()->flash('success', 'Вы зарегистрировались');
 

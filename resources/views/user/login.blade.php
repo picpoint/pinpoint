@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<section class="reg">
-    <div class="reg__formreg">
+<section class="login">
+    <div class="login__formlog">
 
         @if($errors->any())
             <ul>
@@ -25,7 +25,7 @@
             {{ session('error') }}
         @endif
 
-        <form action="{{ route('login') }}" method="post" class="reg__formblock">
+        <form action="{{ route('login') }}" method="post" class="login__formblock">
             @csrf
             <h3>Авторизация</h3>
             <input type="email" name="email" placeholder="Почта">
