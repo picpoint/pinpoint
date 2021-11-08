@@ -32,6 +32,7 @@
             </div>
 
             <form method="post" enctype="multipart/form-data" class="pp__uploadform">
+                @csrf
                 <div class="pp__uploadfiles">
                     <div class="pp__textblock">
                         <span>Загрузить файл</span>
@@ -40,9 +41,6 @@
                         <div class="pp__uploadfields">
                             <input type="file" name="upfile" multiple>
                         </div>
-                        <!-- <div class="pp__addfiles">
-                          <button>Добавить поле</button>
-                        </div> -->
                     </div>
                 </div>
 
@@ -53,8 +51,8 @@
                     <div class="pp__commentsblock">
                         <textarea name="comments"></textarea>
                     </div>
-                    <input type="text" class="pp__latitude" name="latitude"></input>
-                    <input type="text" class="pp__longitude" name="longitude"></input>
+                    <input type="text" class="pp__latitude" name="latitude">
+                    <input type="text" class="pp__longitude" name="longitude">
                 </div>
 
                 <div class="pp__addcontent">

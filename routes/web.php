@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['middleware' => 'notregistered'], function() {
-    Route::get('/personalpage', 'PersonalPageController@index')->name('personalpage');
+    Route::match(['get', 'post'], '/personalpage', 'PersonalPageController@index')->name('personalpage');
+    Route::resource('/pp', 'CreatePinController');
 });
 
 
@@ -27,5 +28,5 @@ Route::post('/registration', 'UserController@store')->name('registration.store')
 Route::get('/login', 'UserController@loginForm')->name('login.create');
 Route::post('/login', 'UserController@login')->name('login');
 
-
 Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
+
