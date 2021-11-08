@@ -16,9 +16,53 @@
 
 <section class="pp">
     <div class="pp__wrp" id="map">
-        {{--<div class="pp__navbarpp">--}}
-        {{----}}
-        {{--</div>--}}
+
+
+        <div class="pp__sendfile">
+            <div class="pp__hdrsf">
+                <div class="pp__hdricon">
+                    <img src="pict/pinWhite.png" alt="iconpin">
+                </div>
+                <div class="pp__hdrplace">
+                    <span>Определение адреса пина</span>
+                </div>
+                <div class="pp__hdrclose">
+                    <span class="closeform">+</span>
+                </div>
+            </div>
+
+            <form method="post" enctype="multipart/form-data" class="pp__uploadform">
+                <div class="pp__uploadfiles">
+                    <div class="pp__textblock">
+                        <span>Загрузить файл</span>
+                    </div>
+                    <div class="pp__uploadblock">
+                        <div class="pp__uploadfields">
+                            <input type="file" name="upfile" multiple>
+                        </div>
+                        <!-- <div class="pp__addfiles">
+                          <button>Добавить поле</button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="pp__addcomments">
+                    <div class="pp__textblock">
+                        <span>Добавить комментарии</span>
+                    </div>
+                    <div class="pp__commentsblock">
+                        <textarea name="comments"></textarea>
+                    </div>
+                    <input type="text" class="pp__latitude" name="latitude"></input>
+                    <input type="text" class="pp__longitude" name="longitude"></input>
+                </div>
+
+                <div class="pp__addcontent">
+                    <button type="submit" name="addpinbtn">Добавить метку</button>
+                </div>
+            </form>
+        </div>
+
 
         <div class="pp__profile">
             <div class="pp__userpict">
@@ -78,7 +122,7 @@
     </div>
 </section>
 
-
+<script src="public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="public/assets/users/js/mapbasics.js" type="text/javascript"></script>
 </body>
 </html>
