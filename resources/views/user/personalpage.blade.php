@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <form method="post" enctype="multipart/form-data" class="pp__uploadform">
+            <form action="{{ route('pp.store') }}" method="post" enctype="multipart/form-data" class="pp__uploadform">
                 @csrf
                 <div class="pp__uploadfiles">
                     <div class="pp__textblock">
@@ -49,7 +49,7 @@
                         <span>Добавить комментарии</span>
                     </div>
                     <div class="pp__commentsblock">
-                        <textarea name="comments"></textarea>
+                        <textarea name="commentaries"></textarea>
                     </div>
                     <input type="text" class="pp__latitude" name="latitude">
                     <input type="text" class="pp__longitude" name="longitude">

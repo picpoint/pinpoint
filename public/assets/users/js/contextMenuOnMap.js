@@ -3,7 +3,7 @@ const closeform = document.querySelector('.closeform');                         
 const hdrplace = document.querySelector('.pp__hdrplace').firstElementChild;
 
 
-console.log(sendfile);
+// console.log(sendfile);
 
 
 class ContextMenuOnMapClass {                                                         // класс контекстного меню формы
