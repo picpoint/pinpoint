@@ -21,6 +21,7 @@ Route::group(['middleware' => 'notregistered'], function() {
 });
 
 
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/registration', 'UserController@create')->name('registration.create');

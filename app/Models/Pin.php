@@ -12,5 +12,4 @@ class Pin extends Model
 
     protected $fillable = ['user_id', 'latitude', 'longitude', 'commentaries', 'image'];
 
-
 }

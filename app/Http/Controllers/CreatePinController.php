@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Pin;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CreatePinController extends Controller
 {
@@ -37,21 +39,19 @@ class CreatePinController extends Controller
      */
     public function store(Request $request)
     {
-//        $user_id = User::find($id)->where();
-//        dd($user_id);
 
 
-//        dd($request->all());
+        $user_id = Auth::user()->id;
 
         Pin::create([
-            'user_id' => '000',
+            'user_id' => $user_id,
             'latitude' => '000',
             'longitude' => '000',
             'commentaries' => $request->commentaries,
             'image' => '000'
 
         ]);
-//        Pin::create($request->all());
+
         return redirect()->route('personalpage');
     }
 

@@ -15,5 +15,4 @@ function init () {
         searchControlProvider: 'yandex#search'
     });
 
-
 }
