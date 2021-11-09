@@ -22,7 +22,7 @@
         <div class="pp__sendfile">
             <div class="pp__hdrsf">
                 <div class="pp__hdricon">
-                    <img src="pict/pinWhite.png" alt="iconpin">
+                    <img src="public/assets/users/img/pinWhite.png" alt="iconpin">
                 </div>
                 <div class="pp__hdrplace">
                     <span>Определение адреса пина</span>

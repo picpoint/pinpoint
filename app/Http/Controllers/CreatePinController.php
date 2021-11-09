@@ -17,8 +17,11 @@ class CreatePinController extends Controller
      */
     public function index()
     {
-//        $title = "PINS";
-//        return view('personalpage', compact('title'));
+        $title = Auth::user()->name;
+
+        $user_id = Auth::user()->id;
+        dd($user_id);
+        return view('personalpage', compact('title'));
     }
 
     /**
@@ -40,15 +43,21 @@ class CreatePinController extends Controller
     public function store(Request $request)
     {
 
-
         $user_id = Auth::user()->id;
+//        $user_name = Auth::user()->email;
+
+//        dd($user_name);
+
+        $fileName = $request->file('upfile')->getClientOriginalName();
+        $img = $request->file('upfile')->store("img/{$user_id}");
+
 
         Pin::create([
             'user_id' => $user_id,
-            'latitude' => '000',
-            'longitude' => '000',
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
             'commentaries' => $request->commentaries,
-            'image' => '000'
+            'image' => $img
 
         ]);
 
