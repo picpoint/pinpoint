@@ -139,9 +139,9 @@
     </div>
 </section>
 
-<script src="public/assets/users/js/showBallons.js"></script>
+
 <script src="public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="public/assets/users/js/mapbasics.js" type="text/javascript"></script>
-
+{{--<script src="public/assets/users/js/showBallons.js"></script>--}}
 </body>
 </html>

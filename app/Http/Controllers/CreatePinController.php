@@ -22,9 +22,6 @@ class CreatePinController extends Controller
 
         $pins = DB::table('pins')->where('user_id', $user_id)->get();
 
-
-//        dd($pins);
-
         return view('user.personalpage', compact('title', 'pins'));
     }
 

@@ -7,24 +7,42 @@ var imgPin;
 // console.log(hidedatas);
 
 
-for (var i = 0; i < 4; i++) {
-    if (i == 0) {
-        latitudePin = hidedatas[0].innerText;
-    }
-    if (i == 1) {
-        longitudePin = hidedatas[1].innerText;
+for (var i = 0; i < hidedatas.length; i++) {
+    // console.log(hidedatas[i]);
+
+    var y = 0;
+    y++;
+
+    if (y == 0) {
+        latitudePin = hidedatas[i].innerText;
+        console.log(y + '=y', latitudePin);
     }
 
-    if (i == 2) {
-        commentsPin = hidedatas[2].innerText;
+    if (y == 1) {
+        longitudePin = hidedatas[i].innerText;
+        console.log(y + '=y',longitudePin);
     }
-    if (i == 3) {
-        imgPin = hidedatas[3].innerText;
+
+    if (y == 2) {
+        commentsPin = hidedatas[i].innerText;
+        console.log(y + '=y',commentsPin);
     }
+
+    if (y == 3) {
+        imgPin = hidedatas[i].innerText;
+        console.log(y + '=y',imgPin);
+    }
+
+
+
+    if (y >= 3) {
+        y = 0;
+    }
+
 
 
     var placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
-        balloonContentBody: '<img src=" ' + imgPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
+        balloonContentBody: '<img src="public/assets/users/' + imgPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
         hintContent: commentsPin                                    // всплывающий комментарий
     });
 
@@ -32,12 +50,41 @@ for (var i = 0; i < 4; i++) {
         .add(placemark);                                            // добавляем метку на карту
 
 
+
+
+    // console.log(latitudePin);
+    // console.log(longitudePin);
+    // console.log(commentsPin);
+    // console.log(imgPin);
+    // console.log('--------');
+
 }
 
-console.log(latitudePin);
-console.log(longitudePin);
-console.log(commentsPin);
-console.log(imgPin);
+// console.log(latitudePin);
+
+
+
+// for (var i = 0; i < 4; i++) {
+//     if (i == 0) {
+//         latitudePin = hidedatas[0].innerText;
+//     }
+//     if (i == 1) {
+//         longitudePin = hidedatas[1].innerText;
+//     }
+//
+//     if (i == 2) {
+//         commentsPin = hidedatas[2].innerText;
+//     }
+//     if (i == 3) {
+//         imgPin = hidedatas[3].innerText;
+//     }
+//
+// }
+
+// console.log(latitudePin);
+// console.log(longitudePin);
+// console.log(commentsPin);
+// console.log(imgPin);
 
 
 

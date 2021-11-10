@@ -52,11 +52,11 @@ function locatePosition() {                                                     
 
 
 
-// function includeShowBalloons(url) {                                                       // ф-ия для подключения файла showBallons, который отображает метки на карте
-//     var script = document.createElement('script');                                          // создаём тег скрипт
-//     script.src = url;                                                                       // в путь записываем пришедший урл
-//     document.getElementsByTagName('head')[0].appendChild(script);                           // находим head, добавляем скрипт туда
-// }
+function includeShowBalloons(url) {                                                       // ф-ия для подключения файла showBallons, который отображает метки на карте
+    var script = document.createElement('script');                                          // создаём тег скрипт
+    script.src = url;                                                                       // в путь записываем пришедший урл
+    document.getElementsByTagName('head')[0].appendChild(script);                           // находим head, добавляем скрипт туда
+}
 
 
 
@@ -122,7 +122,7 @@ function init () {                                                              
 
     });
 
-    // includeShowBalloons("js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты
+    includeShowBalloons("public/assets/users/js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты
 
 }
 
