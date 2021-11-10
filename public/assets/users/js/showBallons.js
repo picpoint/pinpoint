@@ -1,49 +1,56 @@
-var placemark;                                                     // создаём переменные для работы метки
-var photoPin;
-var commentsPin;
+var hidedatas = document.querySelector('.hidedatas').children;
 var latitudePin;
 var longitudePin;
-var alldts = [];                                                   // пустой массив для дальнейшего перебора для метки
-let arrPins = arrdt.getAttribute("data-arrpins");                  // получаем данные из дата атрибута элемента
-let rawStr = arrPins.slice(19, arrPins.length - 6);                // отсекаем из строки ненужные элементы
-let arr1 = rawStr.split('\n');                                     // разбиваем строку по \n на массив элементов
+var commentsPin;
+var imgPin;
+
+// console.log(hidedatas);
 
 
-for(let i = 0; i < arr1.length; i++) {                             // перебираем массив строк
-    let tmp = arr1[i].split('=> ');                                  // каждую строку из массива бьём по =>
-
-    if(tmp[1] != undefined) {                                        // если элемент(значение) был не пустой, пушим в массив
-        alldts.push(tmp[1]);
+for (var i = 0; i < 4; i++) {
+    if (i == 0) {
+        latitudePin = hidedatas[0].innerText;
     }
+    if (i == 1) {
+        longitudePin = hidedatas[1].innerText;
+    }
+
+    if (i == 2) {
+        commentsPin = hidedatas[2].innerText;
+    }
+    if (i == 3) {
+        imgPin = hidedatas[3].innerText;
+    }
+
+
+    var placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
+        balloonContentBody: '<img src=" ' + imgPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
+        hintContent: commentsPin                                    // всплывающий комментарий
+    });
+
+    myMap.geoObjects                                              // у карты вызываем метод геообъекта
+        .add(placemark);                                            // добавляем метку на карту
+
 
 }
 
-
-for(let x = 0, y = 0; x < alldts.length; x++) {                   // перебираем весь получившийся массив
-    y++;                                                            // наращиваем переменную для шага по массиву
-    let onms = alldts[x].split(' - ');                              // каждый элемент разбиваем по -
-
-    if(onms[0] == 'photo') {                                        // если 0-й элемент массива это текст == photo
-        photoPin = onms[1];                                           // присваиваем переменной photoPin 1-е значение
-    } else if(onms[0] == 'commentaries') {                          // -||-
-        commentsPin = onms[1];                                        // -||-
-    } else if(onms[0] == 'latitude') {                              // -||-
-        latitudePin = onms[1];                                        // -||-
-    } else if(onms[0] == 'longitude') {                             // -||-
-        longitudePin = onms[1];                                       // -||-
-    }
+console.log(latitudePin);
+console.log(longitudePin);
+console.log(commentsPin);
+console.log(imgPin);
 
 
-    if(y == 4) {                                                    // если шаг уже достиг значения 4
-        placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
-            balloonContentBody: '<img src=" ' + photoPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
-            hintContent: commentsPin                                    // всплывающий комментарий
-        });
 
-        myMap.geoObjects                                              // у карты вызываем метод геообъекта
-            .add(placemark);                                            // добавляем метку на карту
-        y = 0;                                                      // обнуляем переменную для дальнейшего шага
-    }
+// var placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
+//     balloonContentBody: '<img src=" ' + imgPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
+//     hintContent: commentsPin                                    // всплывающий комментарий
+// });
+//
+// myMap.geoObjects                                              // у карты вызываем метод геообъекта
+//     .add(placemark);                                            // добавляем метку на карту
 
 
-}
+
+
+
+

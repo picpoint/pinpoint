@@ -70,6 +70,14 @@
                 {{--<span>Денис</span>--}}
                 {{--<span>Белоцерковцев</span>--}}
                 <span>{{ \Illuminate\Support\Facades\Auth::user()->name }}</span>
+
+                {{--@foreach($pins as $pin)--}}
+                    {{--<span>{{ $pin->latitude }}</span>--}}
+                    {{--<span>{{ $pin->longitude }}</span>--}}
+                    {{--<span>{{ $pin->commentaries }}</span>--}}
+                    {{--<span>{{ $pin->image }}</span>--}}
+                {{--@endforeach--}}
+
             </div>
         </div>
         <div class="pp__sidebar">
@@ -115,16 +123,25 @@
                     <span>выход</span>
                 </a>
             </div>
+
+
         </div>
 
-        @foreach($pins as $pin)
-            <span>{{ $pin->latitude }}</span>
-        @endforeach
+        <div class="hidedatas">
+            @foreach($pins as $pin)
+                <span>{{ $pin->latitude }}</span>
+                <span>{{ $pin->longitude }}</span>
+                <span>{{ $pin->commentaries }}</span>
+                <span>{{ $pin->image }}</span>
+            @endforeach
+        </div>
 
     </div>
 </section>
 
+<script src="public/assets/users/js/showBallons.js"></script>
 <script src="public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="public/assets/users/js/mapbasics.js" type="text/javascript"></script>
+
 </body>
 </html>

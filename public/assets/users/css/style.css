@@ -297,6 +297,10 @@
   display: flex;
 }
 
+.hidedatas {
+  display: none;
+}
+
 .login {
   display: flex;
   justify-content: center;
