@@ -18,10 +18,14 @@ class CreatePinController extends Controller
     public function index()
     {
         $title = Auth::user()->name;
-
         $user_id = Auth::user()->id;
-        dd($user_id);
-        return view('personalpage', compact('title'));
+
+        $pins = DB::table('pins')->where('user_id', $user_id)->get();
+
+
+//        dd($pins);
+
+        return view('user.personalpage', compact('title', 'pins'));
     }
 
     /**
@@ -48,7 +52,8 @@ class CreatePinController extends Controller
 
 //        dd($user_name);
 
-        $fileName = $request->file('upfile')->getClientOriginalName();
+//        $fileName = $request->file('upfile')->getClientOriginalName();
+
         $img = $request->file('upfile')->store("img/{$user_id}");
 
 
