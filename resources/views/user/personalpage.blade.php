@@ -67,17 +67,7 @@
                 <img src="public/assets/users/img/noname.jpg" alt="user">
             </div>
             <div class="pp__userfullname">
-                {{--<span>Денис</span>--}}
-                {{--<span>Белоцерковцев</span>--}}
                 <span>{{ \Illuminate\Support\Facades\Auth::user()->name }}</span>
-
-                {{--@foreach($pins as $pin)--}}
-                    {{--<span>{{ $pin->latitude }}</span>--}}
-                    {{--<span>{{ $pin->longitude }}</span>--}}
-                    {{--<span>{{ $pin->commentaries }}</span>--}}
-                    {{--<span>{{ $pin->image }}</span>--}}
-                {{--@endforeach--}}
-
             </div>
         </div>
         <div class="pp__sidebar">
@@ -90,7 +80,7 @@
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <span>метки</span>
                 </a>
-                <a href="#">
+                <a href="{{ route('freinds.index') }}">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <span>друзья</span>
                 </a>

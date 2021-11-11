@@ -9,6 +9,7 @@ class Freind extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['user_id', 'freind_id'];
 
 
 }
