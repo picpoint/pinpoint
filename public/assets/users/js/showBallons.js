@@ -4,64 +4,51 @@ var longitudePin;
 var commentsPin;
 var imgPin;
 
-// console.log(hidedatas);
-
 
 for (var i = 0; i < hidedatas.length; i++) {
-    // console.log(hidedatas[i]);
 
-    var y = 0;
-    y++;
+    console.log(i + " i " + hidedatas[i]);
 
-    if (y == 0) {
-        latitudePin = hidedatas[i].innerText;
-        console.log(y + '=y', latitudePin);
+
+    for (let x = 0; x < 4; x++) {
+
+        console.log()
+        if (x == 0) {
+            latitudePin = hidedatas[i].innerText;
+        }
+
+        if (x == 1) {
+            longitudePin = hidedatas[i].innerText;
+        }
+
+        if (x == 2) {
+            commentsPin = hidedatas[i].innerText;
+        }
+
+        if (x == 3) {
+            imgPin = hidedatas[i].innerText
+        }
+
+        if (x == 4) {
+            var placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
+                balloonContentBody: '<img src="public/assets/users/' + imgPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
+                hintContent: commentsPin                                    // всплывающий комментарий
+            });
+
+            myMap.geoObjects                                              // у карты вызываем метод геообъекта
+                .add(placemark);                                            // добавляем метку на карту
+        }
+
     }
 
-    if (y == 1) {
-        longitudePin = hidedatas[i].innerText;
-        console.log(y + '=y',longitudePin);
-    }
-
-    if (y == 2) {
-        commentsPin = hidedatas[i].innerText;
-        console.log(y + '=y',commentsPin);
-    }
-
-    if (y == 3) {
-        imgPin = hidedatas[i].innerText;
-        console.log(y + '=y',imgPin);
-    }
 
 
 
-    if (y >= 3) {
-        y = 0;
-    }
-
-
-
-    var placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
-        balloonContentBody: '<img src="public/assets/users/' + imgPin + ' " height="500px" width="500px"> <br/> ' + commentsPin, // картинку и комментарий к ней
-        hintContent: commentsPin                                    // всплывающий комментарий
-    });
-
-    myMap.geoObjects                                              // у карты вызываем метод геообъекта
-        .add(placemark);                                            // добавляем метку на карту
-
-
-
-
-    // console.log(latitudePin);
-    // console.log(longitudePin);
-    // console.log(commentsPin);
-    // console.log(imgPin);
-    // console.log('--------');
 
 }
 
-// console.log(latitudePin);
 
+// console.log(latitudePin);
 
 
 // for (var i = 0; i < 4; i++) {
@@ -85,7 +72,6 @@ for (var i = 0; i < hidedatas.length; i++) {
 // console.log(longitudePin);
 // console.log(commentsPin);
 // console.log(imgPin);
-
 
 
 // var placemark = new ymaps.Placemark([latitudePin, longitudePin], {  // создаём метку и присваиваем ей значения
