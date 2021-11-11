@@ -1,25 +1,3 @@
-// var myMap;
-//
-// // Дождёмся загрузки API и готовности DOM.
-// ymaps.ready(init);
-//
-// function init () {
-//     // Создание экземпляра карты и его привязка к контейнеру с
-//     // заданным id ("map").
-//     myMap = new ymaps.Map('map', {
-//         // При инициализации карты обязательно нужно указать
-//         // её центр и коэффициент масштабирования.
-//         center: [55.76, 37.64], // Москва
-//         zoom: 10
-//     }, {
-//         searchControlProvider: 'yandex#search'
-//     });
-//
-// }
-
-
-
-
 const lat = document.querySelector('.pp__latitude');                                      // доступ к полю координат широты
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
 const arrdt = document.querySelector('.pp__arrdt');
@@ -36,10 +14,7 @@ function locatePosition() {                                                     
     let lng = (position.coords.longitude).toFixed(6);                                 // получение долготы
     arrCurrentCoords.push(+lat);                                                      // добавляем в массив широту
     arrCurrentCoords.push(+lng);                                                      // добавляем в массив долготу
-    // console.log(arrCurrentCoords);
     window.curCoords = arrCurrentCoords;                                              // в window.Storage записываем массив
-    // return arrCurrentCoords;
-    // ymaps.ready(init);
     resolve();                                                                        // резолвим промис
 }, error => {
         console.error("Местоположение не определено ...");                                // в случае ошибки инициализируем карту с координатами по умолчанию
@@ -65,7 +40,6 @@ function init () {                                                              
     var myPlacemark;
     myMap = new ymaps.Map("map", {
         center: window.curCoords || [55.7538, 37.6201],                                     // координаты места загрузки и показа карты(либо то что определилось, либо по умолчанию москва)
-        // center: [55.7538, 37.6201],                                                      // координаты места загрузки и показа карты
         zoom: 13                                                                            // масштаб отображения
     }, {
         searchControlProvider: 'yandex#search'                                              // поисковая система отображения карты - яндекс
@@ -91,7 +65,6 @@ function init () {                                                              
 
         function createPlacemark(coords) {                                                  // ф-ия создания метки/пина, казывающей куда кликнул пользователь
             return new ymaps.Placemark(coords, {
-                // iconCaption: ''
             }, {
                 preset: 'islands#violetDotIconWithCaption',                                   // устанавливаем прессет отличный от стандартных меток
                 draggable: false
@@ -100,22 +73,8 @@ function init () {                                                              
 
 
         function getAddress(coords) {                                                       // Определяем адрес по координатам (обратное геокодирование).
-            // myPlacemark.properties.set('iconCaption', 'поиск...');
             ymaps.geocode(coords).then(function (res) {                                       // геокодирование на карте
                 var firstGeoObject = res.geoObjects.get(0);                                     // получение геообъекта
-
-                // myPlacemark.properties
-                // .set({
-                //     // Формируем строку с данными об объекте.
-                //     iconCaption: [
-                //         // Название населенного пункта или вышестоящее административно-территориальное образование.
-                //         firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
-                //         // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
-                //         firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
-                //     ].filter(Boolean).join(', ')
-                //     // В качестве контента балуна задаем строку с адресом объекта.
-                //     // balloonContent: firstGeoObject.getAddressLine()
-                // });
                 window.curPosition = firstGeoObject.getAddressLine();                       // в windowsStorage сохраняем строку с адресом для передачи в шапку формы создания пина
             });
         }

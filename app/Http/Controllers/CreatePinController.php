@@ -45,14 +45,7 @@ class CreatePinController extends Controller
     {
 
         $user_id = Auth::user()->id;
-//        $user_name = Auth::user()->email;
-
-//        dd($user_name);
-
-//        $fileName = $request->file('upfile')->getClientOriginalName();
-
         $img = $request->file('upfile')->store("img/{$user_id}");
-
 
         Pin::create([
             'user_id' => $user_id,
