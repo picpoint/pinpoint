@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 11 2021 г., 08:21
+-- Время создания: Ноя 11 2021 г., 15:04
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -112,14 +112,12 @@ CREATE TABLE `pins` (
 --
 
 INSERT INTO `pins` (`id`, `user_id`, `latitude`, `longitude`, `commentaries`, `image`, `created_at`, `updated_at`) VALUES
-(8, '20', '45.064931', '41.983919', 'гора эльбрус', 'img/20/o9nBH6W9IQpjinYVOHYJC6kJb1BHOfIAiGRt8CyG.jpg', '2021-11-10 02:05:05', '2021-11-10 02:05:05'),
-(9, '20', '45.067485', '41.944093', 'водопад такамукан', 'img/20/oabXGWLCJgwiXOz2EJUF8LWRFcT01TeVACt7WSX6.jpg', '2021-11-10 02:18:14', '2021-11-10 02:18:14'),
-(10, '20', '45.039987', '41.952677', 'восход над фудзиямой', 'img/20/cBRUqexxSGUS437rwvROovKvWdJWYxf47DyTYNpo.jpg', '2021-11-10 02:22:28', '2021-11-10 02:22:28'),
-(11, '7', '45.060308', '41.949415', 'первый пин', 'img/7/JZN6wuyIY2GTafmFQuPH5TPvUvgeW99KRhXrVyCY.jpg', '2021-11-10 02:31:17', '2021-11-10 02:31:17'),
-(12, '7', '45.013935', '41.991472', 'второй пин', 'img/7/fdBlmTeklB46JNaHp2K5aeBN7WIPMviFzg89AK5W.jpg', '2021-11-10 02:31:30', '2021-11-10 02:31:30'),
-(13, '21', '45.072899', '41.982889', 'тут', 'img/21/uBzp7G2AfAHt4wrdbVPWcd0T5nZsaSHdibPL4r1L.jpg', '2021-11-10 02:34:02', '2021-11-10 02:34:02'),
-(14, '21', '45.011439', '41.900148', 'здеся', 'img/21/YUm9JzyVhkhRB58Xg3hYjwfDFTgP8zzba0YXJWh6.jpg', '2021-11-10 02:34:17', '2021-11-10 02:34:17'),
-(15, '21', '45.068519', '41.932249', '0321321654', 'img/21/EKDsBqNMQz3oAo1VcBIvFQ13ywiMKAXaeudBtjKQ.jpg', '2021-11-10 02:34:33', '2021-11-10 02:34:33');
+(16, '20', '45.047229', '41.928193', 'таманский лес', 'img/20/xOrZZ9AS00x5z1E8CJ2cnII1yfNZvYaHUYS5WQ05.jpg', '2021-11-11 08:40:54', '2021-11-11 08:40:54'),
+(17, '20', '45.049729', '41.955118', 'камсак', 'img/20/zIW7pL5NzaOAhOr5RQkaz4O42X4FRIsXPNN7JLK8.jpg', '2021-11-11 08:41:47', '2021-11-11 08:41:47'),
+(18, '20', '45.002279', '42.167652', 'гора острая', 'img/20/pWdz8yuJewLnouEHlEf2hxSZkwCJDODpBGkdPSar.jpg', '2021-11-11 08:43:13', '2021-11-11 08:43:13'),
+(19, '21', '45.080417', '41.938541', '34-ка памятник', 'img/21/2iAHv92LChv3iHXtTk1g3BpvvOaXn98gxfxhniXC.jpg', '2021-11-11 08:53:35', '2021-11-11 08:53:35'),
+(20, '21', '45.059251', '41.917926', 'автоприцеп', 'img/21/2jefmLkphH3CvTwHp0pRg96GQ1yUsaORdUcRaV7g.jpg', '2021-11-11 08:56:10', '2021-11-11 08:56:10'),
+(21, '21', '45.056782', '41.925612', 'тропа здоровья', 'img/21/DQ2XCU01K8iUM1Zwhwmnz50FMcVZLgqZngh0SQI0.jpg', '2021-11-11 08:59:02', '2021-11-11 08:59:02');
 
 -- --------------------------------------------------------
 
@@ -217,7 +215,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
