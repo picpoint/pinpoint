@@ -10,20 +10,49 @@
 </head>
 <body>
 
-    <section class="freinds">
-        <div class="freinds__findblock">
-            <form method="post" class="freinds__search">
-                @csrf
-                <input type="text" name="search">
-                <button>НАЙТИ</button>
-            </form>
-        </div>
-        <div class="freinds__peoples">
-            <div class="freinds__peopleswrp">
+<section class="freinds">
+    <div class="freinds__findblock">
+        <form action="{{ route('searchfreind') }}" method="get" class="freinds__search">
+            <input type="text" name="searchfreind" placeholder="Поиск" required>
+            <button>НАЙТИ</button>
+        </form>
+    </div>
+    <div class="freinds__peoples">
+        <div class="freinds__peopleswrp">
 
-            </div>
+            @if($result->count())
+
+                @foreach($result as $res)
+
+                    <div class="freinds__cardppl">
+                        <form method="post" class="freinds__formadd">
+                            @csrf
+                            <div class="freinds__imgppl">
+                                <img src="public/assets/users/img/noname.jpg" alt="image">
+                            </div>
+                            <div class="freinds__fullnameppl">
+                                <span>{{ $res->name }}</span>
+                                {{--<span>Иван</span>--}}
+                            </div>
+                            <div class="freinds__addppl">
+                                <button>ДОБАВИТЬ</button>
+                            </div>
+                        </form>
+                    </div>
+
+                @endforeach
+
+            @else
+                <span>По Вашему запросу ничего не найдено ...</span>
+            @endif
+
+
         </div>
-    </section>
+
+        {{ $result->links() }}
+
+    </div>
+</section>
 
 </body>
 </html>

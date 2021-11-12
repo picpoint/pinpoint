@@ -349,20 +349,17 @@
 }
 
 .freinds {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
 .freinds__findblock {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 50px;
 }
 .freinds__search {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,6 +372,7 @@
   font-family: Montserrat-Regular;
   border-bottom-left-radius: 7px;
   border-top-left-radius: 7px;
+  padding-left: 10px;
 }
 .freinds__search button {
   border: none;
@@ -388,16 +386,59 @@
   border-top-right-radius: 7px;
 }
 .freinds__peoples {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   flex-grow: 1;
 }
 .freinds__peopleswrp {
-  border: 1px solid red;
+  border: 1px solid gray;
   display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
   width: 80%;
   height: 100%;
+}
+.freinds__cardppl {
+  border: 1px solid gray;
+  display: flex;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+}
+.freinds__formadd {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.freinds__imgppl {
+  display: flex;
+  justify-content: center;
+  height: 70%;
+}
+.freinds__fullnameppl {
+  display: flex;
+  justify-content: center;
+  height: 15%;
+}
+.freinds__fullnameppl span {
+  align-self: center;
+  margin: 0 5px;
+  font-family: Montserrat-Regular;
+}
+.freinds__addppl {
+  display: flex;
+  justify-content: center;
+  height: 15%;
+}
+.freinds__addppl button {
+  width: 100%;
+  background-color: #112b66;
+  border: none;
+  color: white;
+  font-family: Montserrat-Regular;
+  font-weight: bold;
 }
 
 body {
