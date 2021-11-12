@@ -11,7 +11,18 @@
 <body>
 
     <section class="freinds">
-        <h3>Page freinds</h3>
+        <div class="freinds__findblock">
+            <form method="post" class="freinds__search">
+                @csrf
+                <input type="text" name="search">
+                <button>НАЙТИ</button>
+            </form>
+        </div>
+        <div class="freinds__peoples">
+            <div class="freinds__peopleswrp">
+
+            </div>
+        </div>
     </section>
 
 </body>

@@ -348,6 +348,58 @@
   cursor: pointer;
 }
 
+.freinds {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.freinds__findblock {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+.freinds__search {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.freinds__search input {
+  border: 1px solid gray;
+  width: 80%;
+  height: 30px;
+  font-family: Montserrat-Regular;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.freinds__search button {
+  border: none;
+  height: 35px;
+  width: 70px;
+  font-family: Montserrat-Regular;
+  background-color: #112b66;
+  color: white;
+  font-weight: bold;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.freinds__peoples {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.freinds__peopleswrp {
+  border: 1px solid red;
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
