@@ -17,7 +17,8 @@ class FreindController extends Controller
     {
         $userName = Auth::user()->name;
         $title = "Друзья $userName";
-        return view('user.freinds', compact('title'));
+        $result = "Начните поиск друзей";
+        return view('user.freinds', compact('title', 'result'));
     }
 
     /**

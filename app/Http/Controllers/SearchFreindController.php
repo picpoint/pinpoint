@@ -16,7 +16,6 @@ class SearchFreindController extends Controller
             'searchfreind' => 'required'
         ]);
 
-//        dd($request->all());
 
         $search = $request->searchfreind;
 

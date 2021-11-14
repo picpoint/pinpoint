@@ -20,7 +20,7 @@
     <div class="freinds__peoples">
         <div class="freinds__peopleswrp">
 
-            @if($result->count())
+            @if(!is_string($result))
 
                 @foreach($result as $res)
 
@@ -42,6 +42,9 @@
 
                 @endforeach
 
+            @elseif(is_string($result))
+                {{--<span>По Вашему запросу ничего не найдено ...</span>--}}
+                {{ $result }}
             @else
                 <span>По Вашему запросу ничего не найдено ...</span>
             @endif
@@ -49,7 +52,7 @@
 
         </div>
 
-        {{ $result->links() }}
+        {{--{{ $result->links() }}--}}
 
     </div>
 </section>
