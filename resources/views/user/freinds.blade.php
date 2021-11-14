@@ -43,10 +43,7 @@
                 @endforeach
 
             @elseif(is_string($result))
-                {{--<span>По Вашему запросу ничего не найдено ...</span>--}}
                 {{ $result }}
-            @else
-                <span>По Вашему запросу ничего не найдено ...</span>
             @endif
 
 

@@ -21,6 +21,10 @@ class SearchFreindController extends Controller
 
         $result = User::where('name', 'LIKE', "%{$search}%")->paginate(100);
 
+        if($result->total() == 0) {
+            $result = "По Вашему запросу ничего не найдено ... :-( ";
+        }
+
         return view('user.freinds', compact('title', 'result'));
 
     }
