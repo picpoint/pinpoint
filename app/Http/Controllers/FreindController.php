@@ -37,9 +37,10 @@ class FreindController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $user_id = $request->id;
+        dd($user_id);
     }
 
     /**

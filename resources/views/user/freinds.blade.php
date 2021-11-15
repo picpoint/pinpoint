@@ -25,14 +25,14 @@
                 @foreach($result as $res)
 
                     <div class="freinds__cardppl">
-                        <form method="post" class="freinds__formadd">
+                        <form action="{{ route('freinds.store', ['id' => $res->id]) }}" method="post" class="freinds__formadd">
                             @csrf
                             <div class="freinds__imgppl">
                                 <img src="public/assets/users/img/noname.jpg" alt="image">
                             </div>
                             <div class="freinds__fullnameppl">
                                 <span>{{ $res->name }}</span>
-                                {{--<span>Иван</span>--}}
+                                <span>{{ $res->id }}</span>
                             </div>
                             <div class="freinds__addppl">
                                 <button>ДОБАВИТЬ</button>
