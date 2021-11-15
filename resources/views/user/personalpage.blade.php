@@ -114,7 +114,6 @@
                 </a>
             </div>
 
-
         </div>
 
         <div class="hidedatas">

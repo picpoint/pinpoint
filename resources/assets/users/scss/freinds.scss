@@ -9,6 +9,7 @@
       display: flex;
       justify-content: center;
       height: 50px;
+      margin: 20px 0;
     }
     &__search {
       //border: $border;
@@ -48,10 +49,62 @@
       border: 1px solid gray;
       display: flex;
       justify-content: center;
-      align-content: flex-start;
-      flex-wrap: wrap;
+      //align-content: flex-start;
+      //flex-wrap: wrap;
       width: 80%;
       height: 100%;
+    }
+    &__allfreinds {
+      border-right: 1px solid gray;
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      overflow: auto;
+        a {
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+          width: 100%;
+          height: 100px;
+          margin-bottom: 5px;
+          text-decoration: none;
+          color: black;
+          font-family: Montserrat-Regular;
+        }
+    }
+    &__findfreinds {
+      //border: $border;
+      display: flex;
+      //flex-direction: column;
+      justify-content: center;
+      width: 80%;
+    }
+    &__myfreind {
+      //border: $border;
+      display: flex;
+      width: 100%;
+      height: 100px;
+    }
+    &__imgfreind {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+    }
+    &__fullnamefreind {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+        span {
+          padding: 0 5px;
+        }
     }
     &__cardppl {
       border: 1px solid gray;

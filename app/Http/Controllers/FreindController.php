@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Freind;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,10 +38,23 @@ class FreindController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        $user_id = $request->id;
-        dd($user_id);
+        $user_id = Auth::user()->id;
+        $user_freind = $request->id;
+
+        Freind::create([
+            'user_id' => $user_id,
+            'freind_id' => $user_freind
+        ]);
+
+        Freind::create([
+            'user_id' => $user_freind,
+            'freind_id' => $user_id
+        ]);
+
+        return redirect()->route('personalpage');
+
     }
 
     /**
