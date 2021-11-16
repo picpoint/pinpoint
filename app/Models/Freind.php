@@ -9,11 +9,11 @@ class Freind extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'freind_id'];
+    protected $fillable = ['currentuser_id', 'user_id'];
 
 
-    public function user() {
-        return $this->hasMany(User::class);
+    public function users() {
+        return $this->belongsToMany(User::class);
     }
 
 

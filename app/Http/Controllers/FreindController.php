@@ -18,12 +18,12 @@ class FreindController extends Controller
     public function index()
     {
         $userName = Auth::user()->name;
-        $user_id = Auth::user()->id;
+        $currentuser_id = Auth::user()->id;
         $title = "Друзья $userName";
         $result = "Начните поиск друзей";
 
 
-        $allFreinds = DB::table('freinds')->get();
+        $allFreinds = DB::table('freinds')->join('users', 'freinds.user_id', '=', 'users.id')->where('currentuser_id', $currentuser_id)->get();
 
 //        dd($allFreinds);
 
@@ -49,17 +49,17 @@ class FreindController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = Auth::user()->id;
+        $currentuser_id = Auth::user()->id;
         $user_freind = $request->id;
 
         Freind::create([
-            'user_id' => $user_id,
-            'freind_id' => $user_freind
+            'currentuser_id' => $currentuser_id,
+            'user_id' => $user_freind
         ]);
 
         Freind::create([
-            'user_id' => $user_freind,
-            'freind_id' => $user_id
+            'currentuser_id' => $user_freind,
+            'user_id' => $currentuser_id
         ]);
 
         return redirect()->route('personalpage');

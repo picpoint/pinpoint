@@ -34,7 +34,7 @@
                                 <img src="public/assets/users/img/noname.jpg" alt="avatar">
                             </div>
                             <div class="freinds__fullnamefreind">
-                                <span>{{ $freind->freind_id }}</span>
+                                <span>{{ $freind->name }}</span>
                                 {{--<span>Иван</span>--}}
                             </div>
                         </div>

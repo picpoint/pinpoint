@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 15 2021 г., 23:42
+-- Время создания: Ноя 16 2021 г., 22:51
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -45,8 +45,8 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `freinds` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `currentuser_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `freind_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -55,11 +55,17 @@ CREATE TABLE `freinds` (
 -- Дамп данных таблицы `freinds`
 --
 
-INSERT INTO `freinds` (`id`, `user_id`, `freind_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `freinds` (`id`, `currentuser_id`, `user_id`, `created_at`, `updated_at`) VALUES
 (14, '20', '21', '2021-11-15 15:37:33', '2021-11-15 15:37:33'),
 (15, '21', '20', '2021-11-15 15:37:33', '2021-11-15 15:37:33'),
 (16, '20', '23', '2021-11-15 15:38:30', '2021-11-15 15:38:30'),
-(17, '23', '20', '2021-11-15 15:38:30', '2021-11-15 15:38:30');
+(17, '23', '20', '2021-11-15 15:38:30', '2021-11-15 15:38:30'),
+(18, '23', '7', '2021-11-16 14:16:18', '2021-11-16 14:16:18'),
+(19, '7', '23', '2021-11-16 14:16:18', '2021-11-16 14:16:18'),
+(20, '20', '22', '2021-11-16 15:04:59', '2021-11-16 15:04:59'),
+(21, '22', '20', '2021-11-16 15:04:59', '2021-11-16 15:04:59'),
+(22, '20', '7', '2021-11-16 16:50:17', '2021-11-16 16:50:17'),
+(23, '7', '20', '2021-11-16 16:50:17', '2021-11-16 16:50:17');
 
 -- --------------------------------------------------------
 
@@ -238,7 +244,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `freinds`
 --
 ALTER TABLE `freinds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
