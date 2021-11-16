@@ -6,6 +6,7 @@ use App\Models\Freind;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class FreindController extends Controller
 {
@@ -17,9 +18,17 @@ class FreindController extends Controller
     public function index()
     {
         $userName = Auth::user()->name;
+        $user_id = Auth::user()->id;
         $title = "Друзья $userName";
         $result = "Начните поиск друзей";
-        return view('user.freinds', compact('title', 'result'));
+
+
+        $allFreinds = DB::table('freinds')->get();
+
+//        dd($allFreinds);
+
+
+        return view('user.freinds', compact('title', 'result', 'allFreinds'));
     }
 
     /**

@@ -26,105 +26,22 @@
         <div class="freinds__peopleswrp">
 
             <div class="freinds__allfreinds">
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
+
+                @foreach($allFreinds as $freind)
+                    <a href="#">
+                        <div class="freinds__myfreind">
+                            <div class="freinds__imgfreind">
+                                <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                            </div>
+                            <div class="freinds__fullnamefreind">
+                                <span>{{ $freind->freind_id }}</span>
+                                {{--<span>Иван</span>--}}
+                            </div>
                         </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="freinds__myfreind">
-                        <div class="freinds__imgfreind">
-                            <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                        </div>
-                        <div class="freinds__fullnamefreind">
-                            <span>Иванов</span>
-                            <span>Иван</span>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                @endforeach
+
+
             </div>
 
             <div class="freinds__findfreinds">

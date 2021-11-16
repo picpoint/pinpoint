@@ -12,4 +12,9 @@ class Freind extends Model
     protected $fillable = ['user_id', 'freind_id'];
 
 
+    public function user() {
+        return $this->hasMany(User::class);
+    }
+
+
 }
