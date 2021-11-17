@@ -487,6 +487,20 @@
   font-weight: bold;
 }
 
+.messages {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.messages__messagwrp {
+  border: 1px solid red;
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;

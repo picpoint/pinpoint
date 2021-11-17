@@ -12,10 +12,6 @@
 
 <section class="freinds">
 
-    <div class="freinds__sidebar">
-
-    </div>
-
     <div class="freinds__findblock">
         <form action="{{ route('searchfreind') }}" method="get" class="freinds__search">
             <input type="text" name="searchfreind" placeholder="Поиск" required>

@@ -72,7 +72,7 @@
         </div>
         <div class="pp__sidebar">
             <div class="pp__tools">
-                <a href="#">
+                <a href="{{ route('messages.index') }}">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     <span>сообщения</span>
                 </a>
