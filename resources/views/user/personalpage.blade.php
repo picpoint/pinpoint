@@ -80,7 +80,7 @@
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <span>метки</span>
                 </a>
-                <a href="#">
+                <a href="{{ route('freinds') }}">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <span>друзья</span>
                 </a>
