@@ -72,7 +72,7 @@
         </div>
         <div class="pp__sidebar">
             <div class="pp__tools">
-                <a href="{{ route('messages.index') }}">
+                <a href="#">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     <span>сообщения</span>
                 </a>
@@ -80,7 +80,7 @@
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <span>метки</span>
                 </a>
-                <a href="{{ route('freinds.index') }}">
+                <a href="#">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <span>друзья</span>
                 </a>
