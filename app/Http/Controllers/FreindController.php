@@ -8,7 +8,7 @@ class FreindController extends Controller
 {
 
     public function index() {
-        $title = "Друзья|Picpoint";
+        $title = "Друзья | Picpoint";
         return view('user.freinds', compact('title'));
     }
 

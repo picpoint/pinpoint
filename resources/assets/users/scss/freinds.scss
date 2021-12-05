@@ -1,161 +1,28 @@
 .freinds {
   //border: $border;
   display: flex;
-  flex-direction: column;
-  height: 100vh;
   width: 100vw;
-    &__findblock {
-      //border: $border;
+  height: 100vh;
+    &__wrp {
+      border: $border;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    &__sidebarfrnd {
+      border: $border;
       display: flex;
       justify-content: center;
+      width: 100%;
       height: 50px;
-      margin: 20px 0;
     }
-    &__search {
-      //border: $border;
+    &__searchblock {
+      border: $border;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-        input {
-          border: 1px solid gray;
-          width: 80%;
-          height: 30px;
-          font-family: Montserrat-Regular;
-          border-bottom-left-radius: 7px;
-          border-top-left-radius: 7px;
-          padding-left: 10px;
-        }
-        button {
-          border: none;
-          height: 35px;
-          width: 70px;
-          font-family: Montserrat-Regular;
-          background-color: $colorbluepanel;
-          color: white;
-          font-weight: bold;
-          border-bottom-right-radius: 7px;
-          border-top-right-radius: 7px;
-        }
-    }
-
-    &__peoples {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      flex-grow: 1;
-    }
-    &__peopleswrp {
-      border: 1px solid gray;
-      display: flex;
-      justify-content: center;
-      //align-content: flex-start;
-      //flex-wrap: wrap;
-      width: 80%;
-      height: 100%;
-    }
-    &__allfreinds {
-      border-right: 1px solid gray;
-      display: flex;
-      flex-direction: column;
-      width: 20%;
-      overflow: auto;
-        a {
-          border-top: 1px solid gray;
-          border-bottom: 1px solid gray;
-          width: 100%;
-          height: 100px;
-          margin-bottom: 5px;
-          text-decoration: none;
-          color: black;
-          font-family: Montserrat-Regular;
-        }
-    }
-    &__findfreinds {
-      //border: $border;
-      display: flex;
-      //flex-direction: column;
-      justify-content: center;
-      width: 80%;
-    }
-    &__myfreind {
-      //border: $border;
-      display: flex;
+      height: 50px;
       width: 100%;
-      height: 100px;
+      margin-top: 10px;
     }
-    &__imgfreind {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100px;
-      height: 100px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-    }
-    &__fullnamefreind {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-        span {
-          padding: 0 5px;
-        }
-    }
-    &__cardppl {
-      border: 1px solid gray;
-      display: flex;
-      width: 200px;
-      height: 250px;
-      margin: 10px;
-    }
-    &__formadd {
-      //border: $border;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-    }
-    &__imgppl {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      height: 70%;
-        img {
-          //border: $border;
-        }
-    }
-    &__fullnameppl {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      height: 15%;
-        span {
-          //border: $border;
-          align-self: center;
-          margin: 0 5px;
-          font-family: Montserrat-Regular;
-        }
-    }
-    &__addppl {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      height: 15%;
-        button {
-          width: 100%;
-          background-color: $colorbluepanel;
-          border: none;
-          color: white;
-          font-family: Montserrat-Regular;
-          font-weight: bold;
-        }
-    }
-
-
-
 }
+
