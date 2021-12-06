@@ -63,6 +63,79 @@
           cursor: pointer;
         }
     }
+    &__resultsfrnd {
+      //border: $border;
+      display: flex;
+      flex-grow: 1;
+      width: 85%;
+      margin-top: 20px;
+    }
+    &__userfreinds {
+      border: $border;
+      display: flex;
+      width: 25%;
+      height: 100%;
+    }
+    &__resultsearch {
+      border: $border;
+      display: flex;
+      width: 75%;
+    }
+    &__currentuser {
+      border: 1px solid gray;
+      display: flex;
+      width: 250px;
+      height: 350px;
+      margin: 15px;
+    }
+    &__formadd {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    &__avataruser {
+      //border: $border;
+      display: flex;
+      width: 250px;
+      height: 250px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-bottom: 1px solid gray;
+        }
+    }
+    &__nameuser {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 45px;
+        span {
+          font-family: Montserrat-Regular;
+          font-size: 1.1rem;
+            &:nth-child(1) {
+              margin-right: 15px;
+            }
+
+        }
+    }
+    &__addblock {
+      //border: $border;
+      display: flex;
+      height: 55px;
+        button {
+          border: none;
+          width: 100%;
+          height: 100%;
+          background-color: $colorbluepanel;
+          color: white;
+          font-family: Montserrat-Regular;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
+    }
 
 
 }
