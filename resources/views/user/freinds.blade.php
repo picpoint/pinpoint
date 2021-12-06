@@ -18,8 +18,13 @@
                 @include('user.layouts.sidebar')
             </div>
 
-            <div class="freinds__searchblock">
-
+            <div class="freinds__contentfrnd">
+                <div class="freinds__searchblockfrnd">
+                    <form method="post" class="freinds__searchformfrnd">
+                        <input type="search" name="search">
+                        <button type="submit">Поиск</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

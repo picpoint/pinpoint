@@ -4,26 +4,64 @@
   width: 100vw;
   height: 100vh;
     &__wrp {
-      border: $border;
+      //border: $border;
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 100%;
     }
     &__sidebarfrnd {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       width: 100%;
       height: 50px;
       background-color: $colorbluepanel;
     }
-    &__searchblock {
-      border: $border;
+    &__contentfrnd {
+      //border: $border;
       display: flex;
-      height: 50px;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
       width: 100%;
+    }
+    &__searchblockfrnd {
+      //border: $border;
+      display: flex;
+      width: 60%;
+      height: 50px;
       margin-top: 10px;
+    }
+    &__searchformfrnd {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //background-color: lightgrey;
+      width: 100%;
+      border-radius: 7px;
+        input {
+          border: 1px solid gray;
+          width: 50%;
+          height: 35px;
+          border-top-left-radius: 7px;
+          border-bottom-left-radius: 7px;
+          padding-left: 10px;
+          font-family: Montserrat-Regular;
+        }
+        button {
+          border: none;
+          border-top-right-radius: 7px;
+          border-bottom-right-radius: 7px;
+          width: 80px;
+          height: 35px;
+          font-family: Montserrat-Regular;
+          background-color: $colorbluepanel;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
     }
 
 

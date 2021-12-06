@@ -62,14 +62,14 @@
         </div>
 
 
-        <div class="pp__profile">
-            <div class="pp__userpict">
-                <img src="public/assets/users/img/noname.jpg" alt="user">
-            </div>
-            <div class="pp__userfullname">
-                <span>{{ \Illuminate\Support\Facades\Auth::user()->name }}</span>
-            </div>
-        </div>
+        {{--<div class="pp__profile">--}}
+            {{--<div class="pp__userpict">--}}
+                {{--<img src="public/assets/users/img/noname.jpg" alt="user">--}}
+            {{--</div>--}}
+            {{--<div class="pp__userfullname">--}}
+                {{--<span>{{ \Illuminate\Support\Facades\Auth::user()->name }}</span>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
         @include('user.layouts.sidebar')
 
