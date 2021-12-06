@@ -1,5 +1,9 @@
 <div class="pp__sidebar">
     <div class="pp__tools">
+        <a href="{{ route('personalpage') }}">
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+            <span>мой профиль</span>
+        </a>
         <a href="#">
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <span>сообщения</span>
