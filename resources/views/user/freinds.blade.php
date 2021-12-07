@@ -11,50 +11,76 @@
 </head>
 <body>
 
-    <section class="freinds">
-        <div class="freinds__wrp">
+<section class="freinds">
+    <div class="freinds__wrp">
 
-            <div class="freinds__sidebarfrnd">
-                @include('user.layouts.sidebar')
-            </div>
-
-            <div class="freinds__contentfrnd">
-
-                <div class="freinds__searchblockfrnd">
-                    <form method="post" action="{{ route('search') }}" class="freinds__searchformfrnd">
-                        @csrf
-                        <input type="search" name="search">
-                        <button type="submit">Поиск</button>
-                    </form>
-                </div>
-
-                <div class="freinds__resultsfrnd">
-                    <div class="freinds__userfreinds">
-
-                    </div>
-                    <div class="freinds__resultsearch">
-
-                        {{--<div class="freinds__currentuser">--}}
-                            {{--<form method="post" class="freinds__formadd">--}}
-                                {{--<div class="freinds__avataruser">--}}
-                                    {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
-                                {{--</div>--}}
-                                {{--<div class="freinds__nameuser">--}}
-                                    {{--<span>Иванов</span>--}}
-                                    {{--<span>Иван</span>--}}
-                                {{--</div>--}}
-                                {{--<div class="freinds__addblock">--}}
-                                    {{--<button type="submit">Добавить в друзья</button>--}}
-                                {{--</div>--}}
-                            {{--</form>--}}
-                        {{--</div>--}}
-
-                    </div>
-                </div>
-
-            </div>
+        <div class="freinds__sidebarfrnd">
+            @include('user.layouts.sidebar')
         </div>
-    </section>
+
+        <div class="freinds__contentfrnd">
+
+            <div class="freinds__searchblockfrnd">
+                <form method="get" action="{{ route('search') }}" class="freinds__searchformfrnd">
+                    <input type="search" name="search" required>
+                    <button type="submit">Поиск</button>
+                </form>
+            </div>
+
+            <div class="freinds__resultsfrnd">
+                <div class="freinds__userfreinds">
+
+                </div>
+                <div class="freinds__resultsearch">
+
+
+                    @if(!is_string($users))
+
+                        @foreach($users as $user)
+
+                            <div class="freinds__currentuser">
+                                <form method="post" class="freinds__formadd">
+                                    <div class="freinds__avataruser">
+                                        <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                                    </div>
+                                    <div class="freinds__nameuser">
+                                        <span>{{ $user->name }}</span>
+                                    </div>
+                                    <div class="freinds__addblock">
+                                        <button type="submit">Добавить в друзья</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        @endforeach
+
+                    @endif
+
+
+
+
+
+                    {{--<div class="freinds__currentuser">--}}
+                    {{--<form method="post" class="freinds__formadd">--}}
+                    {{--<div class="freinds__avataruser">--}}
+                    {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
+                    {{--</div>--}}
+                    {{--<div class="freinds__nameuser">--}}
+                    {{--<span>Иванов</span>--}}
+                    {{--<span>Иван</span>--}}
+                    {{--</div>--}}
+                    {{--<div class="freinds__addblock">--}}
+                    {{--<button type="submit">Добавить в друзья</button>--}}
+                    {{--</div>--}}
+                    {{--</form>--}}
+                    {{--</div>--}}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

@@ -9,7 +9,8 @@ class FreindController extends Controller
 
     public function index() {
         $title = "Друзья | Picpoint";
-        return view('user.freinds', compact('title'));
+        $users = "Начните поиск друзей";
+        return view('user.freinds', compact('title', 'users'));
     }
 
 }
