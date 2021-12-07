@@ -425,6 +425,12 @@
   display: flex;
   width: 75%;
 }
+.freinds__resultsearch span {
+  width: 100%;
+  font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+  text-align: center;
+}
 .freinds__currentuser {
   border: 1px solid gray;
   display: flex;

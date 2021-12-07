@@ -80,6 +80,13 @@
       //border: $border;
       display: flex;
       width: 75%;
+        span {
+          //border: $border;
+          width: 100%;
+          font-family: Montserrat-Regular;
+          font-size: 1.2rem;
+          text-align: center;
+        }
     }
     &__currentuser {
       border: 1px solid gray;

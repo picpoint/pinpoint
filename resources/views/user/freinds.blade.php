@@ -31,13 +31,14 @@
                 <div class="freinds__userfreinds">
 
                 </div>
+
                 <div class="freinds__resultsearch">
 
-
-                    @if(!is_string($users))
+                    @if(is_string($users))
+                        <span>{{ $users }}</span>
+                    @elseif(sizeof($users))
 
                         @foreach($users as $user)
-
                             <div class="freinds__currentuser">
                                 <form method="post" class="freinds__formadd">
                                     <div class="freinds__avataruser">
@@ -51,31 +52,14 @@
                                     </div>
                                 </form>
                             </div>
-
                         @endforeach
 
+                    @else
+                        <span>По Вашему запросу ничего ненайденно...</span>
                     @endif
 
-
-
-
-
-                    {{--<div class="freinds__currentuser">--}}
-                    {{--<form method="post" class="freinds__formadd">--}}
-                    {{--<div class="freinds__avataruser">--}}
-                    {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
-                    {{--</div>--}}
-                    {{--<div class="freinds__nameuser">--}}
-                    {{--<span>Иванов</span>--}}
-                    {{--<span>Иван</span>--}}
-                    {{--</div>--}}
-                    {{--<div class="freinds__addblock">--}}
-                    {{--<button type="submit">Добавить в друзья</button>--}}
-                    {{--</div>--}}
-                    {{--</form>--}}
-                    {{--</div>--}}
-
                 </div>
+
             </div>
 
         </div>
