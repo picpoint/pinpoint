@@ -132,6 +132,9 @@
       //border: $border;
       display: flex;
       height: 55px;
+        span {
+          display: none;
+        }
         button {
           border: none;
           width: 100%;

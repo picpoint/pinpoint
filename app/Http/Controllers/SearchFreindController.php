@@ -19,8 +19,6 @@ class SearchFreindController extends Controller
         $fieldSearch = $request->search;
         $users = User::where('name', 'LIKE', "%{$fieldSearch}%")->get();
 
-//        dd($users);
-
         return view('user.freinds', compact('users', 'title'));
 
     }

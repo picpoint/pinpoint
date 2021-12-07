@@ -40,7 +40,8 @@
 
                         @foreach($users as $user)
                             <div class="freinds__currentuser">
-                                <form method="post" class="freinds__formadd">
+                                <form method="post" action="{{ route('freindadd', ['id' => $user->id]) }}" class="freinds__formadd">
+                                    @csrf
                                     <div class="freinds__avataruser">
                                         <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                     </div>
@@ -48,6 +49,7 @@
                                         <span>{{ $user->name }}</span>
                                     </div>
                                     <div class="freinds__addblock">
+                                        {{--<span>{{ $user->id }}</span>--}}
                                         <button type="submit">Добавить в друзья</button>
                                     </div>
                                 </form>
