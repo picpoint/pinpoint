@@ -15,10 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::group(['middleware' => 'notregistered'], function() {
+Route::group(['middleware' => 'registered'], function() {
     Route::match(['get', 'post'], '/personalpage', 'CreatePinController@index')->name('personalpage');
     Route::resource('/pp', 'CreatePinController');
     Route::get('/freinds', 'FreindController@index')->name('freinds');
+    Route::post('/search', 'SearchFreindController@search')->name('search');
 });
 
 

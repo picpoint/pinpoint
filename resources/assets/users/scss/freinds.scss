@@ -64,20 +64,20 @@
         }
     }
     &__resultsfrnd {
-      //border: $border;
+      border: 1px solid gray;
       display: flex;
       flex-grow: 1;
       width: 85%;
       margin-top: 20px;
     }
     &__userfreinds {
-      border: $border;
+      border-right: 1px solid gray;
       display: flex;
       width: 25%;
       height: 100%;
     }
     &__resultsearch {
-      border: $border;
+      //border: $border;
       display: flex;
       width: 75%;
     }

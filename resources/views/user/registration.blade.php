@@ -24,7 +24,7 @@
         <form action="{{ route('registration.store') }}" method="post" class="reg__formblock">
             @csrf
             <h3>Регистрация</h3>
-            <input type="text" name="login" placeholder="Логин" value="{{ old('login') }}">
+            <input type="text" name="login" placeholder="Логин (англ.)" value="{{ old('login') }}">
             <input type="email" name="email" placeholder="Почта" value="{{ old('email') }}">
             <input type="password" name="password" placeholder="Пароль">
             <input type="password" name="password_confirmation" placeholder="Подтверждение пароля">

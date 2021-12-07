@@ -409,19 +409,19 @@
   cursor: pointer;
 }
 .freinds__resultsfrnd {
+  border: 1px solid gray;
   display: flex;
   flex-grow: 1;
   width: 85%;
   margin-top: 20px;
 }
 .freinds__userfreinds {
-  border: 1px solid red;
+  border-right: 1px solid gray;
   display: flex;
   width: 25%;
   height: 100%;
 }
 .freinds__resultsearch {
-  border: 1px solid red;
   display: flex;
   width: 75%;
 }
