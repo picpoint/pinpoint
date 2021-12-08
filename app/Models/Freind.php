@@ -9,12 +9,7 @@ class Freind extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['currentuser_id', 'user_id'];
 
-
-    public function users() {
-        return $this->belongsToMany(User::class);
-    }
 
 
 }
