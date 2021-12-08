@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Freind;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class FreindController extends Controller
 {
@@ -12,13 +13,13 @@ class FreindController extends Controller
     public function index() {
         $title = "Друзья | Picpoint";
         $users = "Начните поиск друзей";
-        return view('user.freinds', compact('title', 'users'));
+        $resultFreinds = '';
+        return view('user.freinds', compact('title', 'users', 'resultFreinds'));
     }
 
-    public function addToFreind(Request $request) {
-//        dump(Auth::user()->id);
-//        dd($request->id);
 
+    public function addToFreind(Request $request) {
+        $resultFreinds = null;
         $currentUserId = Auth::user()->id;
         $freindId = $request->id;
 
@@ -33,7 +34,19 @@ class FreindController extends Controller
         ]);
 
         return redirect()->route('freinds');
+    }
+
+
+    public function showFreinds() {
+        $currentUser = Auth::user()->id();
+
+        $resultFreinds = DB::table('freinds')->get();
+
+        dd($resultFreinds);
+
+        return view('freinds', compact('resultFreinds'));
 
     }
+
 
 }

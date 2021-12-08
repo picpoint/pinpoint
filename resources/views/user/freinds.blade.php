@@ -30,38 +30,23 @@
             <div class="freinds__resultsfrnd">
                 <div class="freinds__userfreinds">
 
-                    <div class="freinds__myfreind">
-                        <a href="#">
-                            <div class="freinds__avatarmyfreind">
-                                <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                            </div>
-                            <div class="freinds__namemyfreind">
-                                <span>Иванов</span>
-                            </div>
-                        </a>
-                    </div>
+                    @if($resultFreinds != '')
 
-                    <div class="freinds__myfreind">
-                        <a href="#">
-                            <div class="freinds__avatarmyfreind">
-                                <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                        @foreach($resultFreinds as $res)
+                            <div class="freinds__myfreind">
+                                <a href="#">
+                                    <div class="freinds__avatarmyfreind">
+                                        <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                                    </div>
+                                    <div class="freinds__namemyfreind">
+                                        <span>{{ $res->id }}</span>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="freinds__namemyfreind">
-                                <span>Иванов</span>
-                            </div>
-                        </a>
-                    </div>
+                        @endforeach
 
-                    <div class="freinds__myfreind">
-                        <a href="#">
-                            <div class="freinds__avatarmyfreind">
-                                <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                            </div>
-                            <div class="freinds__namemyfreind">
-                                <span>Иванов</span>
-                            </div>
-                        </a>
-                    </div>
+                    @endif
+
 
                 </div>
 
@@ -73,7 +58,8 @@
 
                         @foreach($users as $user)
                             <div class="freinds__currentuser">
-                                <form method="post" action="{{ route('freindadd', ['id' => $user->id]) }}" class="freinds__formadd">
+                                <form method="post" action="{{ route('freindadd', ['id' => $user->id]) }}"
+                                      class="freinds__formadd">
                                     @csrf
                                     <div class="freinds__avataruser">
                                         <img src="public/assets/users/img/noname.jpg" alt="avatar">
