@@ -82,7 +82,6 @@
                                         <span>{{ $user->name }}</span>
                                     </div>
                                     <div class="freinds__addblock">
-                                        {{--<span>{{ $user->id }}</span>--}}
                                         <button type="submit">Добавить в друзья</button>
                                     </div>
                                 </form>

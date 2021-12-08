@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 16 2021 г., 22:51
+-- Время создания: Дек 08 2021 г., 22:17
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -20,6 +20,38 @@ SET time_zone = "+00:00";
 --
 -- База данных: `pinpoint`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `ch_favorites`
+--
+
+CREATE TABLE `ch_favorites` (
+  `id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `favorite_id` bigint(20) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `ch_messages`
+--
+
+CREATE TABLE `ch_messages` (
+  `id` bigint(20) NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `from_id` bigint(20) NOT NULL,
+  `to_id` bigint(20) NOT NULL,
+  `body` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attachment` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seen` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -51,22 +83,6 @@ CREATE TABLE `freinds` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Дамп данных таблицы `freinds`
---
-
-INSERT INTO `freinds` (`id`, `currentuser_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(14, '20', '21', '2021-11-15 15:37:33', '2021-11-15 15:37:33'),
-(15, '21', '20', '2021-11-15 15:37:33', '2021-11-15 15:37:33'),
-(16, '20', '23', '2021-11-15 15:38:30', '2021-11-15 15:38:30'),
-(17, '23', '20', '2021-11-15 15:38:30', '2021-11-15 15:38:30'),
-(18, '23', '7', '2021-11-16 14:16:18', '2021-11-16 14:16:18'),
-(19, '7', '23', '2021-11-16 14:16:18', '2021-11-16 14:16:18'),
-(20, '20', '22', '2021-11-16 15:04:59', '2021-11-16 15:04:59'),
-(21, '22', '20', '2021-11-16 15:04:59', '2021-11-16 15:04:59'),
-(22, '20', '7', '2021-11-16 16:50:17', '2021-11-16 16:50:17'),
-(23, '7', '20', '2021-11-16 16:50:17', '2021-11-16 16:50:17');
-
 -- --------------------------------------------------------
 
 --
@@ -90,7 +106,14 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2021_11_08_190130_create_pins_table', 2),
 (6, '2021_11_11_133227_create_freinds_table', 3),
-(7, '2021_11_12_112836_alter_table_users_add_index_name', 4);
+(7, '2021_11_12_112836_alter_table_users_add_index_name', 4),
+(8, '2019_09_22_192348_create_messages_table', 5),
+(9, '2019_10_16_211433_create_favorites_table', 5),
+(10, '2019_10_18_223259_add_avatar_to_users', 5),
+(11, '2019_10_20_211056_add_messenger_color_to_users', 5),
+(12, '2019_10_22_000539_add_dark_mode_to_users', 5),
+(13, '2019_10_25_214038_add_active_status_to_users', 5),
+(14, '2021_12_08_190737_create_freinds_table', 6);
 
 -- --------------------------------------------------------
 
@@ -149,7 +172,10 @@ INSERT INTO `pins` (`id`, `user_id`, `latitude`, `longitude`, `commentaries`, `i
 (18, '20', '45.002279', '42.167652', 'гора острая', 'img/20/pWdz8yuJewLnouEHlEf2hxSZkwCJDODpBGkdPSar.jpg', '2021-11-11 08:43:13', '2021-11-11 08:43:13'),
 (19, '21', '45.080417', '41.938541', '34-ка памятник', 'img/21/2iAHv92LChv3iHXtTk1g3BpvvOaXn98gxfxhniXC.jpg', '2021-11-11 08:53:35', '2021-11-11 08:53:35'),
 (20, '21', '45.059251', '41.917926', 'автоприцеп', 'img/21/2jefmLkphH3CvTwHp0pRg96GQ1yUsaORdUcRaV7g.jpg', '2021-11-11 08:56:10', '2021-11-11 08:56:10'),
-(21, '21', '45.056782', '41.925612', 'тропа здоровья', 'img/21/DQ2XCU01K8iUM1Zwhwmnz50FMcVZLgqZngh0SQI0.jpg', '2021-11-11 08:59:02', '2021-11-11 08:59:02');
+(21, '21', '45.056782', '41.925612', 'тропа здоровья', 'img/21/DQ2XCU01K8iUM1Zwhwmnz50FMcVZLgqZngh0SQI0.jpg', '2021-11-11 08:59:02', '2021-11-11 08:59:02'),
+(31, '25', '45.040180', '41.907168', 'подсолнухи', 'img/25/tqT1lvUCql4Wfevs6P7zNrqP1BMsfIGIqIifEA1k.jpg', '2021-12-04 16:43:34', '2021-12-04 16:43:34'),
+(32, '25', '45.091705', '42.049941', 'show', 'img/25/LMl7NnIs2h3YUKy2lMxEwSSfGwPipIbnfEVBqR0h.jpg', '2021-12-04 16:45:26', '2021-12-04 16:45:26'),
+(33, '21', '45.083712', '41.994566', 'mnbmnbmnb', 'img/21/tYaowTCRm8UxU78IMOd1HctRsvlNx6PTq0vOFq5L.jpg', '2021-12-04 16:55:12', '2021-12-04 16:55:12');
 
 -- --------------------------------------------------------
 
@@ -165,23 +191,40 @@ CREATE TABLE `users` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'avatar.png',
+  `messenger_color` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '#2180f3',
+  `dark_mode` tinyint(1) NOT NULL DEFAULT 0,
+  `active_status` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(7, 'den', 'den@mail.ru', NULL, '$2y$10$zYcbUvP5HpEyqo00lO4mf.nFuEQsqdkeGdAssebJvXSF5P3Q9QFem', NULL, '2021-11-04 15:50:42', '2021-11-04 15:50:42'),
-(20, 'qqq', 'qqq@mail.ru', NULL, '$2y$10$.RfGEAYldmrKYsDvMBKH.Odoj01fxgDmlWErHgO1pGRM.ZpBNZe9K', NULL, '2021-11-08 02:12:49', '2021-11-08 02:12:49'),
-(21, 'user1', 'user1@mail.com', NULL, '$2y$10$XbHJq35IBi9PFkDko0WbGOXCHicrwtaMK6uZ.cKuVEDadUyP7AYLC', NULL, '2021-11-09 08:39:52', '2021-11-09 08:39:52'),
-(22, 'user2', 'user2@mail.com', NULL, '$2y$10$i8ZAPYqQA9FnoO1VxYVWouTxCmIvLgF3pp7ogt.5yrnXiTY43rPBi', NULL, '2021-11-15 14:41:57', '2021-11-15 14:41:57'),
-(23, 'user3', 'user3@mail.com', NULL, '$2y$10$ScEdM6B3oywapN2ApNlF..heWt2dkdbFNBkBS3oQn6ROY7dbN1x4W', NULL, '2021-11-15 14:42:39', '2021-11-15 14:42:39');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `avatar`, `messenger_color`, `dark_mode`, `active_status`) VALUES
+(7, 'den', 'den@mail.ru', NULL, '$2y$10$zYcbUvP5HpEyqo00lO4mf.nFuEQsqdkeGdAssebJvXSF5P3Q9QFem', NULL, '2021-11-04 15:50:42', '2021-11-04 15:50:42', 'avatar.png', '#2180f3', 0, 0),
+(20, 'qqq', 'qqq@mail.ru', NULL, '$2y$10$.RfGEAYldmrKYsDvMBKH.Odoj01fxgDmlWErHgO1pGRM.ZpBNZe9K', NULL, '2021-11-08 02:12:49', '2021-11-08 02:12:49', 'avatar.png', '#2180f3', 0, 0),
+(21, 'user1', 'user1@mail.com', NULL, '$2y$10$XbHJq35IBi9PFkDko0WbGOXCHicrwtaMK6uZ.cKuVEDadUyP7AYLC', NULL, '2021-11-09 08:39:52', '2021-11-09 08:39:52', 'avatar.png', '#2180f3', 0, 0),
+(22, 'user2', 'user2@mail.com', NULL, '$2y$10$i8ZAPYqQA9FnoO1VxYVWouTxCmIvLgF3pp7ogt.5yrnXiTY43rPBi', NULL, '2021-11-15 14:41:57', '2021-11-15 14:41:57', 'avatar.png', '#2180f3', 0, 0),
+(23, 'user3', 'user3@mail.com', NULL, '$2y$10$ScEdM6B3oywapN2ApNlF..heWt2dkdbFNBkBS3oQn6ROY7dbN1x4W', NULL, '2021-11-15 14:42:39', '2021-11-15 14:42:39', 'avatar.png', '#2180f3', 0, 0),
+(25, 'test', 'test@mail.ru', NULL, '$2y$10$syg0qAGMRHlzspkzGJN5p.896BVGPud4Qaw456y1wGneyqkD2ftWO', NULL, '2021-12-03 14:10:21', '2021-12-03 14:10:21', 'avatar.png', '#2180f3', 0, 0);
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `ch_favorites`
+--
+ALTER TABLE `ch_favorites`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `ch_messages`
+--
+ALTER TABLE `ch_messages`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `failed_jobs`
@@ -244,13 +287,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `freinds`
 --
 ALTER TABLE `freinds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -262,13 +305,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
