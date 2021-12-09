@@ -30,22 +30,17 @@
             <div class="freinds__resultsfrnd">
                 <div class="freinds__userfreinds">
 
-                    @if(isset($resultFreinds) && $resultFreinds != '')
 
-                        @foreach($resultFreinds as $res)
-                            <div class="freinds__myfreind">
-                                <a href="#">
-                                    <div class="freinds__avatarmyfreind">
-                                        <img src="public/assets/users/img/noname.jpg" alt="avatar">
-                                    </div>
-                                    <div class="freinds__namemyfreind">
-                                        <span>{{ $res->user_id }}</span>
-                                    </div>
-                                </a>
+                    <div class="freinds__myfreind">
+                        <a href="#">
+                            <div class="freinds__avatarmyfreind">
+                                <img src="public/assets/users/img/noname.jpg" alt="avatar">
                             </div>
-                        @endforeach
-
-                    @endif
+                            <div class="freinds__namemyfreind">
+                                <span>Иван</span>
+                            </div>
+                        </a>
+                    </div>
 
 
                 </div>

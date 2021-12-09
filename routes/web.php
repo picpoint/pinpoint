@@ -21,7 +21,6 @@ Route::group(['middleware' => 'registered'], function() {
     Route::get('/freinds', 'FreindController@index')->name('freinds');
     Route::get('/search', 'SearchFreindController@search')->name('search');
     Route::post('/search', 'FreindController@addToFreind')->name('freindadd');
-//    Route::post('/freinds', 'FreindController@showFreinds')->name('freinds.show');
 });
 
 

@@ -13,14 +13,11 @@ class FreindController extends Controller
     public function index() {
         $title = "Друзья | Picpoint";
         $users = "Начните поиск друзей";
-//        $resultFreinds = '';
-        $resultFreinds = DB::table('freinds')->get();
-        return view('user.freinds', compact('title', 'users', 'resultFreinds'));
+        return view('user.freinds', compact('title', 'users'));
     }
 
 
     public function addToFreind(Request $request) {
-        $resultFreinds = '';
         $currentUserId = Auth::user()->id;
         $freindId = $request->id;
 
@@ -38,14 +35,7 @@ class FreindController extends Controller
     }
 
 
-    public function showFreinds() {
-        $currentUser = Auth::user()->id();
 
-        $resultFreinds = DB::table('freinds')->get();
-
-        return view('freinds.show', compact('resultFreinds'));
-
-    }
 
 
 }
