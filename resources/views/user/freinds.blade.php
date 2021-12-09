@@ -30,7 +30,7 @@
             <div class="freinds__resultsfrnd">
                 <div class="freinds__userfreinds">
 
-                    @if($resultFreinds != '')
+                    @if(isset($resultFreinds) && $resultFreinds != '')
 
                         @foreach($resultFreinds as $res)
                             <div class="freinds__myfreind">
@@ -39,7 +39,7 @@
                                         <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                     </div>
                                     <div class="freinds__namemyfreind">
-                                        <span>{{ $res->id }}</span>
+                                        <span>{{ $res->user_id }}</span>
                                     </div>
                                 </a>
                             </div>
