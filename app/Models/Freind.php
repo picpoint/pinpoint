@@ -11,4 +11,10 @@ class Freind extends Model
 
     protected $fillable = ['currentuser_id', 'user_id'];
 
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

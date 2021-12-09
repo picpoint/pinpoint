@@ -1,8 +1,6 @@
 .freinds {
   //border: $border;
   display: flex;
-  width: 100vw;
-  height: 100vh;
     &__wrp {
       //border: $border;
       display: flex;
@@ -11,9 +9,10 @@
       height: 100%;
     }
     &__sidebarfrnd {
-      //border: $border;
+      border: $border;
       display: flex;
       justify-content: center;
+      //flex-grow: 1;
       width: 100%;
       height: 50px;
       background-color: $colorbluepanel;
@@ -23,7 +22,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex-grow: 1;
+      //flex-grow: 1;
       width: 100%;
     }
     &__searchblockfrnd {
@@ -66,8 +65,9 @@
     &__resultsfrnd {
       border: 1px solid gray;
       display: flex;
-      flex-grow: 1;
+      //flex-grow: 1;
       width: 85%;
+      height: 100%;
       margin-top: 20px;
     }
     &__userfreinds {

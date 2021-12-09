@@ -13,7 +13,9 @@ class FreindController extends Controller
     public function index() {
         $title = "Друзья | Picpoint";
         $users = "Начните поиск друзей";
-        return view('user.freinds', compact('title', 'users'));
+        $currentUser = Auth::user()->id;
+        $res = DB::table('freinds')->where('currentuser_id', '=', $currentUser)->get();
+        return view('user.freinds', compact('title', 'users', 'res'));
     }
 
 
@@ -33,6 +35,12 @@ class FreindController extends Controller
 
         return redirect()->route('personalpage');
     }
+
+
+//    public function showFreinds() {
+//        $res = DB::table('freinds')->get();
+//        return view('user.freinds', compact('res'));
+//    }
 
 
 

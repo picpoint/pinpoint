@@ -351,8 +351,6 @@
 
 .freinds {
   display: flex;
-  width: 100vw;
-  height: 100vh;
 }
 .freinds__wrp {
   display: flex;
@@ -361,6 +359,7 @@
   height: 100%;
 }
 .freinds__sidebarfrnd {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -371,7 +370,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
   width: 100%;
 }
 .freinds__searchblockfrnd {
@@ -411,8 +409,8 @@
 .freinds__resultsfrnd {
   border: 1px solid gray;
   display: flex;
-  flex-grow: 1;
   width: 85%;
+  height: 100%;
   margin-top: 20px;
 }
 .freinds__userfreinds {

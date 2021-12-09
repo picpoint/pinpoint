@@ -30,17 +30,35 @@
             <div class="freinds__resultsfrnd">
                 <div class="freinds__userfreinds">
 
+                    @if($res == '')
+                        <span>Друзей пока нет ...</span>
+                    @else
 
-                    <div class="freinds__myfreind">
-                        <a href="#">
-                            <div class="freinds__avatarmyfreind">
-                                <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                        @foreach($res as $rs)
+                            <div class="freinds__myfreind">
+                                <a href="#">
+                                    <div class="freinds__avatarmyfreind">
+                                        <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                                    </div>
+                                    <div class="freinds__namemyfreind">
+                                        <span>{{ $rs-> }}</span>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="freinds__namemyfreind">
-                                <span>Иван</span>
-                            </div>
-                        </a>
-                    </div>
+                        @endforeach
+
+                    @endif
+
+                    {{--<div class="freinds__myfreind">--}}
+                    {{--<a href="#">--}}
+                    {{--<div class="freinds__avatarmyfreind">--}}
+                    {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
+                    {{--</div>--}}
+                    {{--<div class="freinds__namemyfreind">--}}
+                    {{--<span>Иван</span>--}}
+                    {{--</div>--}}
+                    {{--</a>--}}
+                    {{--</div>--}}
 
 
                 </div>
