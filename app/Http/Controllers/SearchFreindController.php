@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Freind;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,7 @@ class SearchFreindController extends Controller
 
         $title = "Результаты поиска";
         $currentUser = Auth::user()->id;
-        $res = DB::table('freinds')->where('currentuser_id', '=', $currentUser)->get();
+        $resFreinds = DB::table('freinds')->where('currentuser_id', '=', $currentUser)->get();
 
         $request->validate([
             'search' => 'required',
@@ -24,7 +25,7 @@ class SearchFreindController extends Controller
         $fieldSearch = $request->search;
         $users = User::where('name', 'LIKE', "%{$fieldSearch}%")->get();
 
-        return view('user.freinds', compact('users', 'title', 'res'));
+        return view('user.freinds', compact('users', 'title', 'resFreinds'));
 
     }
 

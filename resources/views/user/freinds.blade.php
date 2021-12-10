@@ -30,18 +30,18 @@
             <div class="freinds__resultsfrnd">
                 <div class="freinds__userfreinds">
 
-                    @if($res == '')
+                    @if($resFreinds == '')
                         <span>Друзей пока нет ...</span>
                     @else
 
-                        @foreach($res as $rs)
+                        @foreach($resFreinds as $freind)
                             <div class="freinds__myfreind">
                                 <a href="#">
                                     <div class="freinds__avatarmyfreind">
                                         <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                     </div>
                                     <div class="freinds__namemyfreind">
-                                        <span>{{ $rs-> }}</span>
+                                        <span>{{ $freind->user->name }}</span>
                                     </div>
                                 </a>
                             </div>
