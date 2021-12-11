@@ -369,7 +369,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  flex-grow: 1;
 }
 .freinds__searchblockfrnd {
   display: flex;
@@ -511,6 +511,33 @@
   font-family: Montserrat-Regular;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+.messages {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.messages__wrp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.messages__sidebarmsg {
+  display: flex;
+  height: 50px;
+}
+.messages__contentmsg {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.messages__usrmsg {
+  border: 1px solid red;
+  display: flex;
+  width: 85%;
+  height: 100%;
 }
 
 body {

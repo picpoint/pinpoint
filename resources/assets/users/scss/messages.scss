@@ -1,0 +1,33 @@
+.messages {
+  //border: $border;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+    &__wrp {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    &__sidebarmsg {
+      //border: $border;
+      display: flex;
+      height: 50px;
+    }
+    &__contentmsg {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    &__usrmsg {
+      border: $border;
+      display: flex;
+      width: 85%;
+      height: 100%;
+    }
+
+
+
+}

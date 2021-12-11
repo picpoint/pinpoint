@@ -4,7 +4,7 @@
             <i class="fa fa-thumb-tack" aria-hidden="true"></i>
             <span>карта</span>
         </a>
-        <a href="#">
+        <a href="{{ route('messages') }}">
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <span>сообщения</span>
         </a>
