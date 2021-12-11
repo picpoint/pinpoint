@@ -14,7 +14,7 @@ class FreindController extends Controller
         $title = "Друзья | Picpoint";
         $users = "Начните поиск друзей";
         $currentUser = Auth::user()->id;
-        $resFreinds = Freind::all();
+        $resFreinds = Freind::where('user_id', '!=', $currentUser)->get();
 
         return view('user.freinds', compact('title', 'users', 'resFreinds'));
     }

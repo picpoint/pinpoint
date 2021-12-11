@@ -16,7 +16,7 @@ class SearchFreindController extends Controller
 
         $title = "Результаты поиска";
         $currentUser = Auth::user()->id;
-        $resFreinds = DB::table('freinds')->where('currentuser_id', '=', $currentUser)->get();
+        $resFreinds = Freind::where('user_id', '!=', $currentUser)->get();
 
         $request->validate([
             'search' => 'required',
