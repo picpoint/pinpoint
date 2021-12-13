@@ -11,43 +11,57 @@
 </head>
 <body>
 
-    <section class="messages">
-        <div class="messages__wrp">
-            <div class="messages__sidebarmsg">
-                @include('user.layouts.sidebar')
-            </div>
+<section class="messages">
+    <div class="messages__wrp">
+        <div class="messages__sidebarmsg">
+            @include('user.layouts.sidebar')
+        </div>
 
-            <div class="messages__contentmsg">
-                <div class="messages__usrmsg">
-                    <div class="messages__freindsmsg">
+        <div class="messages__contentmsg">
+            <div class="messages__usrmsg">
+                <div class="messages__freindsmsg">
 
+
+                    @foreach($allFreinds as $freind)
                         <div class="freinds__myfreind">
                             <a href="#">
                                 <div class="freinds__avatarmyfreind">
                                     <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                 </div>
                                 <div class="freinds__namemyfreind">
-                                    <span>Иванов</span>
+                                    <span>{{ $freind->user_id }}</span>
                                 </div>
                             </a>
                         </div>
+                    @endforeach
+
+                    {{--<div class="freinds__myfreind">--}}
+                    {{--<a href="#">--}}
+                    {{--<div class="freinds__avatarmyfreind">--}}
+                    {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
+                    {{--</div>--}}
+                    {{--<div class="freinds__namemyfreind">--}}
+                    {{--<span>Иванов</span>--}}
+                    {{--</div>--}}
+                    {{--</a>--}}
+                    {{--</div>--}}
+
+                </div>
+                <div class="messages__messagesfreind">
+                    <div class="messages__currentmessages">
 
                     </div>
-                    <div class="messages__messagesfreind">
-                        <div class="messages__currentmessages">
-
-                        </div>
-                        <div class="messages__sendmessages">
-                            <form action="#" method="post" class="messages__sendmsgform">
-                                <input type="text" name="sendmessage">
-                                <button type="submit" name="btnsendmsg">ОТПРАВИТЬ</button>
-                            </form>
-                        </div>
+                    <div class="messages__sendmessages">
+                        <form action="#" method="post" class="messages__sendmsgform">
+                            <input type="text" name="sendmessage">
+                            <button type="submit" name="btnsendmsg">ОТПРАВИТЬ</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 </body>
 </html>

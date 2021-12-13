@@ -531,7 +531,7 @@
 .messages__contentmsg {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  height: 80%;
 }
 .messages__usrmsg {
   border: 1px solid gray;
@@ -543,6 +543,7 @@
 .messages__freindsmsg {
   border-right: 1px solid gray;
   display: flex;
+  flex-direction: column;
   width: 25%;
 }
 .messages__messagesfreind {
@@ -551,17 +552,15 @@
   width: 75%;
 }
 .messages__currentmessages {
-  border: 1px solid red;
   display: flex;
   flex-grow: 1;
 }
 .messages__sendmessages {
-  border: 1px solid red;
+  border-top: 1px solid gray;
   display: flex;
   height: 70px;
 }
 .messages__sendmsgform {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -569,18 +568,21 @@
 }
 .messages__sendmsgform input {
   border: 1px solid gray;
-  border-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
   width: 50%;
   height: 40px;
   padding-left: 10px;
 }
 .messages__sendmsgform button {
+  border: none;
   height: 45px;
   width: 120px;
   background-color: #112b66;
   color: white;
   font-weight: bold;
   font-family: Montserrat-Regular;
+  cursor: pointer;
 }
 
 body {
