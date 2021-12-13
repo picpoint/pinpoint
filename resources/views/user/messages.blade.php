@@ -19,7 +19,31 @@
 
             <div class="messages__contentmsg">
                 <div class="messages__usrmsg">
+                    <div class="messages__freindsmsg">
 
+                        <div class="freinds__myfreind">
+                            <a href="#">
+                                <div class="freinds__avatarmyfreind">
+                                    <img src="public/assets/users/img/noname.jpg" alt="avatar">
+                                </div>
+                                <div class="freinds__namemyfreind">
+                                    <span>Иванов</span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="messages__messagesfreind">
+                        <div class="messages__currentmessages">
+
+                        </div>
+                        <div class="messages__sendmessages">
+                            <form action="#" method="post" class="messages__sendmsgform">
+                                <input type="text" name="sendmessage">
+                                <button type="submit" name="btnsendmsg">ОТПРАВИТЬ</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

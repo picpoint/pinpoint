@@ -534,10 +534,53 @@
   flex-grow: 1;
 }
 .messages__usrmsg {
-  border: 1px solid red;
+  border: 1px solid gray;
   display: flex;
   width: 85%;
   height: 100%;
+  margin-top: 80px;
+}
+.messages__freindsmsg {
+  border-right: 1px solid gray;
+  display: flex;
+  width: 25%;
+}
+.messages__messagesfreind {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.messages__currentmessages {
+  border: 1px solid red;
+  display: flex;
+  flex-grow: 1;
+}
+.messages__sendmessages {
+  border: 1px solid red;
+  display: flex;
+  height: 70px;
+}
+.messages__sendmsgform {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.messages__sendmsgform input {
+  border: 1px solid gray;
+  border-radius: 7px;
+  width: 50%;
+  height: 40px;
+  padding-left: 10px;
+}
+.messages__sendmsgform button {
+  height: 45px;
+  width: 120px;
+  background-color: #112b66;
+  color: white;
+  font-weight: bold;
+  font-family: Montserrat-Regular;
 }
 
 body {

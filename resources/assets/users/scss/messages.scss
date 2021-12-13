@@ -22,11 +22,56 @@
       flex-grow: 1;
     }
     &__usrmsg {
-      border: $border;
+      border: 1px solid gray;
       display: flex;
       width: 85%;
       height: 100%;
+      margin-top: 80px;
     }
+    &__freindsmsg {
+      border-right: 1px solid gray;
+      display: flex;
+      width: 25%;
+    }
+    &__messagesfreind {
+      //border: 1px solid gray;
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+    }
+    &__currentmessages {
+      border: $border;
+      display: flex;
+      flex-grow: 1;
+    }
+    &__sendmessages {
+      border: $border;
+      display: flex;
+      height: 70px;
+    }
+    &__sendmsgform {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+        input {
+          border: 1px solid gray;
+          border-radius: 7px;
+          width: 50%;
+          height: 40px;
+          padding-left: 10px;
+        }
+        button {
+          height: 45px;
+          width: 120px;
+          background-color: $colorbluepanel;
+          color: white;
+          font-weight: bold;
+          font-family: Montserrat-Regular;
+        }
+    }
+
 
 
 
