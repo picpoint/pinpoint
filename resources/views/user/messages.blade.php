@@ -24,27 +24,30 @@
 
                     @foreach($allFreinds as $freind)
                         <div class="freinds__myfreind">
+                            <span>{{ $freind->user->id }}</span>
                             <a href="#">
                                 <div class="freinds__avatarmyfreind">
                                     <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                 </div>
                                 <div class="freinds__namemyfreind">
-                                    <span>{{ $freind->user_id }}</span>
+                                    <span>{{ $freind->user->name }}</span>
                                 </div>
                             </a>
                         </div>
                     @endforeach
 
+
                     {{--<div class="freinds__myfreind">--}}
-                    {{--<a href="#">--}}
-                    {{--<div class="freinds__avatarmyfreind">--}}
-                    {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
+                        {{--<a href="#">--}}
+                            {{--<div class="freinds__avatarmyfreind">--}}
+                                {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
+                            {{--</div>--}}
+                            {{--<div class="freinds__namemyfreind">--}}
+                                {{--<span>Иванов</span>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
                     {{--</div>--}}
-                    {{--<div class="freinds__namemyfreind">--}}
-                    {{--<span>Иванов</span>--}}
-                    {{--</div>--}}
-                    {{--</a>--}}
-                    {{--</div>--}}
+
 
                 </div>
                 <div class="messages__messagesfreind">
@@ -62,6 +65,8 @@
         </div>
     </div>
 </section>
+
+<script src="public/assets/users/js/messageTo.js"></script>
 
 </body>
 </html>
