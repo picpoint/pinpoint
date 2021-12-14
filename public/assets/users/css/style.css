@@ -566,6 +566,10 @@
   align-items: center;
   width: 100%;
 }
+.messages__sendmsgform span {
+  border: 1px solid red;
+  display: none;
+}
 .messages__sendmsgform input {
   border: 1px solid gray;
   border-bottom-left-radius: 7px;
