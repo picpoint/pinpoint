@@ -41,7 +41,7 @@
       width: 75%;
     }
     &__currentmessages {
-      //border: $border;
+      border: $border;
       display: flex;
       flex-grow: 1;
     }
@@ -56,10 +56,6 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-        span {
-          border: $border;
-          display: none;
-        }
         input {
           border: 1px solid gray;
           //border-radius: 7px;
@@ -68,6 +64,9 @@
           width: 50%;
           height: 40px;
           padding-left: 10px;
+            &:nth-child(2) {
+              display: none;
+            }
         }
         button {
           border: none;
