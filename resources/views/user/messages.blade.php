@@ -24,7 +24,7 @@
 
                     @foreach($allFreinds as $freind)
                         <div class="freinds__myfreind">
-                            <span>{{ $freind->user->id }}</span>
+                            <span class="userid">{{ $freind->user->id }}</span>
                             <a href="#">
                                 <div class="freinds__avatarmyfreind">
                                     <img src="public/assets/users/img/noname.jpg" alt="avatar">
@@ -57,7 +57,7 @@
                     <div class="messages__sendmessages">
                         <form action="#" method="post" class="messages__sendmsgform">
                             <input type="text" name="sendmessage">
-                            <button type="submit" name="btnsendmsg">ОТПРАВИТЬ</button>
+                            <button type="submit" name="btnsendmsg" class="btnsendmsg">ОТПРАВИТЬ</button>
                         </form>
                     </div>
                 </div>
