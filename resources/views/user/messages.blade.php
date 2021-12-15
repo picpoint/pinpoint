@@ -37,18 +37,6 @@
                     @endforeach
 
 
-                    {{--<div class="freinds__myfreind">--}}
-                        {{--<a href="#">--}}
-                            {{--<div class="freinds__avatarmyfreind">--}}
-                                {{--<img src="public/assets/users/img/noname.jpg" alt="avatar">--}}
-                            {{--</div>--}}
-                            {{--<div class="freinds__namemyfreind">--}}
-                                {{--<span>Иванов</span>--}}
-                            {{--</div>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-
-
                 </div>
                 <div class="messages__messagesfreind">
                     <div class="messages__currentmessages">

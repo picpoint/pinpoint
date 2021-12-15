@@ -13,7 +13,7 @@ class MessageController extends Controller
     public function index() {
         $title = "Сообщения | Pinpoint";
         $currentUser = Auth::user()->id;
-        $allFreinds = Freind::where('user_id', '!=', $currentUser)->get();
+        $allFreinds = Freind::where('user_id', '!=', $currentUser)->where('currentuser_id', '=', $currentUser)->get();
 
         return view('user.messages', compact('title', 'allFreinds'));
     }
@@ -24,7 +24,7 @@ class MessageController extends Controller
 
         $title = "Сообщения | Pinpoint";
         $currentUser = Auth::user()->id;
-        $allFreinds = Freind::where('user_id', '!=', $currentUser)->get();
+        $allFreinds = Freind::where('user_id', '!=', $currentUser)->where('currentuser_id', '=', $currentUser)->get();
 
         $currentUserId = Auth::user()->id;
 
