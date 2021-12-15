@@ -23,10 +23,11 @@ class MessageController extends Controller
 //        dd($request->all());
 
         $title = "Сообщения | Pinpoint";
-        $currentUser = Auth::user()->id;
-        $allFreinds = Freind::where('user_id', '!=', $currentUser)->where('currentuser_id', '=', $currentUser)->get();
-
+//        $currentUser = Auth::user()->id;
         $currentUserId = Auth::user()->id;
+        $allFreinds = Freind::where('user_id', '!=', $currentUserId)->where('currentuser_id', '=', $currentUserId)->get();
+
+
 
         $request->validate([
             'idfreind' => 'required',
@@ -39,7 +40,11 @@ class MessageController extends Controller
             'message' => $request->sendmessage,
         ]);
 
-        return view('user.messages', compact('title', 'allFreinds'));
+
+//        return true;
+
+
+//        return view('user.messages', compact('title', 'allFreinds'));
 
     }
 
