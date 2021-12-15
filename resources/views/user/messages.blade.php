@@ -24,7 +24,7 @@
 
                     @foreach($allFreinds as $freind)
                         <div class="freinds__myfreind">
-                            <span class="userid">{{ $freind->user->id }}</span>
+                            {{--<span class="userid">{{ $freind->user->id }}</span>--}}
                             <a href="#">
                                 <div class="freinds__avatarmyfreind">
                                     <img src="public/assets/users/img/noname.jpg" alt="avatar">
@@ -57,6 +57,7 @@
 </section>
 
 <script src="public/assets/users/js/messageTo.js"></script>
+<script src="public/assets/users/js/sendMessageAjax.js"></script>
 
 </body>
 </html>

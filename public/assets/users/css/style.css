@@ -552,7 +552,6 @@
   width: 75%;
 }
 .messages__currentmessages {
-  border: 1px solid red;
   display: flex;
   flex-grow: 1;
 }
