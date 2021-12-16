@@ -20,13 +20,12 @@ class MessageController extends Controller
 
 
     public function writeMessage(Request $request) {
-//        dd($request->all());
+
+//        dd($request);
 
         $title = "Сообщения | Pinpoint";
-//        $currentUser = Auth::user()->id;
         $currentUserId = Auth::user()->id;
         $allFreinds = Freind::where('user_id', '!=', $currentUserId)->where('currentuser_id', '=', $currentUserId)->get();
-
 
 
         $request->validate([
@@ -44,7 +43,7 @@ class MessageController extends Controller
 //        return true;
 
 
-//        return view('user.messages', compact('title', 'allFreinds'));
+        return view('user.messages', compact('title', 'allFreinds'));
 
     }
 

@@ -1,42 +1,38 @@
 let sendmsgform = document.querySelector('.messages__sendmsgform');
 
 console.log(sendmsgform);
+console.log(btnsendmsg);
 
 
 
 
 
-// let	id_product = 321;
-// let qty_product = 2;
+sendmsgform.addEventListener('submit', function () {
+    console.log("click btn");
+
+    e.preventDefault();
+
+    var currentuser_id = 000;
+    var user_id = 111;
+    var message = 333;
+
+    const request = new XMLHttpRequest();
+    const url = "/sendmsg";
+    const params = "currentuser_id=" + currentuser_id + "&user_id=" + user_id + "&message=" + message;
+    request.open("POST", url, true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    request.addEventListener("readystatechange", function(e) {
 
 
+        if(request.readyState === 4 && request.status === 200) {
+            console.log(request.responseText);
+        }
 
+    });
 
-// Создаем экземпляр класса XMLHttpRequest
-const request = new XMLHttpRequest();
-
-// Указываем путь до файла на сервере, который будет обрабатывать наш запрос
-const url = "/messages";
-
-// Так же как и в GET составляем строку с данными, но уже без пути к файлу
-// const params = "id_product=" + id_product+ "&qty_product=" + qty_product;
-
-/* Указываем что соединение	у нас будет POST, говорим что путь к файлу в переменной url, и что запрос у нас
- асинхронный, по умолчанию так и есть не стоит его указывать, еще есть 4-й параметр пароль авторизации, но этот
- параметр тоже необязателен.*/
-request.open("POST", url, true);
-
-//В заголовке говорим что тип передаваемых данных закодирован.
-request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-request.addEventListener("readystatechange", function(e) {
-    // e.preventDefault();
-
-    if(request.readyState === 4 && request.status === 200) {
-    console.log(request.responseText);
-    }
+    request.send(params);
 
 });
 
-//	Вот здесь мы и передаем строку с данными, которую формировали выше. И собственно выполняем запрос.
-request.send();
+

@@ -43,7 +43,7 @@
 
                     </div>
                     <div class="messages__sendmessages">
-                        <form action="{{ route('sendmsg') }}" method="post" class="messages__sendmsgform">
+                        <form method="post" class="messages__sendmsgform">
                             @csrf
                             <input type="text" name="idfreind" class="idfreind">
                             <input type="text" name="sendmessage">
