@@ -1,29 +1,29 @@
 let sendmsgform = document.querySelector('.messages__sendmsgform');
+let fieldmessage = document.querySelector('.fieldmessage');
 
-console.log(sendmsgform);
-console.log(btnsendmsg);
+// console.log(sendmsgform);
+// console.log(btnsendmsg);
+// console.log(sendmessage);
 
 
 
 
 
-sendmsgform.addEventListener('submit', function () {
+sendmsgform.addEventListener('submit', function (e) {
     console.log("click btn");
 
     e.preventDefault();
 
-    var currentuser_id = 000;
-    var user_id = 111;
-    var message = 333;
 
     const request = new XMLHttpRequest();
-    const url = "/sendmsg";
-    const params = "currentuser_id=" + currentuser_id + "&user_id=" + user_id + "&message=" + message;
+    const url = "sendmsg";
+    const params = fieldmessage.value;
+    console.log(params);
     request.open("POST", url, true);
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     request.addEventListener("readystatechange", function(e) {
-
+        // e.preventDefault();
 
         if(request.readyState === 4 && request.status === 200) {
             console.log(request.responseText);

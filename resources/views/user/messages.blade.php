@@ -46,7 +46,7 @@
                         <form method="post" class="messages__sendmsgform">
                             @csrf
                             <input type="text" name="idfreind" class="idfreind">
-                            <input type="text" name="sendmessage">
+                            <input type="text" name="sendmessage" class="fieldmessage">
                             <button type="submit" name="btnsendmsg" class="btnsendmsg">ОТПРАВИТЬ</button>
                         </form>
                     </div>
