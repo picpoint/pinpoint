@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="public/assets/users/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/assets/users/css/style.css">
     <title>{{ $title }}</title>
@@ -25,14 +26,14 @@
                     @foreach($allFreinds as $freind)
                         <div class="freinds__myfreind">
                             {{--<span class="userid">{{ $freind->user->id }}</span>--}}
-                            <a href="#">
+                            <div>
                                 <div class="freinds__avatarmyfreind">
                                     <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                 </div>
                                 <div class="freinds__namemyfreind">
                                     <span>{{ $freind->user->name }}</span>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     @endforeach
 

@@ -40,7 +40,7 @@ class MessageController extends Controller
         ]);
 
 
-//        return;
+        return true;
 
 
 //        return view('user.messages', compact('title', 'allFreinds'));
