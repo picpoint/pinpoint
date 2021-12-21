@@ -92,6 +92,11 @@
           width: 100%;
         }
     }
+    &__frnd {
+      //border: $border;
+      display: flex;
+      width: 100%;
+    }
     &__avatarmyfreind {
       border-right: 1px solid gray;
       display: flex;

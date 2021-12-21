@@ -434,6 +434,10 @@
   color: black;
   width: 100%;
 }
+.freinds__frnd {
+  display: flex;
+  width: 100%;
+}
 .freinds__avatarmyfreind {
   border-right: 1px solid gray;
   display: flex;
@@ -587,6 +591,9 @@
   font-weight: bold;
   font-family: Montserrat-Regular;
   cursor: pointer;
+}
+.messages .userid {
+  display: none;
 }
 
 body {

@@ -25,8 +25,8 @@
 
                     @foreach($allFreinds as $freind)
                         <div class="freinds__myfreind">
-                            {{--<span class="userid">{{ $freind->user->id }}</span>--}}
-                            <div>
+                            <span class="userid">{{ $freind->user->id }}</span>
+                            <div class="freinds__frnd">
                                 <div class="freinds__avatarmyfreind">
                                     <img src="public/assets/users/img/noname.jpg" alt="avatar">
                                 </div>
