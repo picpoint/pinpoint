@@ -21,7 +21,7 @@ class MessageController extends Controller
 
     public function writeMessage(Request $request) {
 
-//        dd($request);
+        dd($request);
 
         $title = "Сообщения | Pinpoint";
         $currentUserId = Auth::user()->id;
@@ -40,7 +40,7 @@ class MessageController extends Controller
         ]);
 
 
-        return true;
+//        return true;
 
 
 //        return view('user.messages', compact('title', 'allFreinds'));
