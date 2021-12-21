@@ -21,7 +21,7 @@ class MessageController extends Controller
 
     public function writeMessage(Request $request) {
 
-        dd($request);
+//        dd($request);
 
         $title = "Сообщения | Pinpoint";
         $currentUserId = Auth::user()->id;

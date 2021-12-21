@@ -9,10 +9,21 @@ sendmsgform.addEventListener('submit', function (event) {
 
     const request = new XMLHttpRequest();
     const url = "messages";
-    const params = "_token=" + token.value + "&idfreind=" + idfreind.value + "&fieldmessage=" + fieldmessage.value;
+    // const params = "_token=" + token.value + "&idfreind=" + idfreind.value + "&fieldmessage=" + fieldmessage.value;
+    // const params = "_token=" + token.value + '&currentuser_id=123&user_id=123&message=123;
+
+
+    const params = [{
+        "_token": `token.value`,
+        'currentuser_id': '123',
+        'user_id': '123',
+        'message': '123
+    }];
+
+
+
     console.log(params);
 
-    // request.responseType =	"json";
 
     request.open("POST", url, true);
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
