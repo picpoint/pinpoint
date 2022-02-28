@@ -4,7 +4,7 @@
             <i class="fa fa-thumb-tack" aria-hidden="true"></i>
             <span>карта</span>
         </a>
-        <a href="{{ route('messages') }}">
+        <a href="#">
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <span>сообщения</span>
         </a>
@@ -12,7 +12,7 @@
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <span>метки</span>
         </a>
-        <a href="{{ route('freinds') }}">
+        <a href="#">
             <i class="fa fa-users" aria-hidden="true"></i>
             <span>друзья</span>
         </a>

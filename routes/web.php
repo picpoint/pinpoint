@@ -18,11 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'registered'], function() {
     Route::match(['get', 'post'], '/personalpage', 'CreatePinController@index')->name('personalpage');
     Route::resource('/pp', 'CreatePinController');
-    Route::get('/freinds', 'FreindController@index')->name('freinds');
     Route::get('/search', 'SearchFreindController@search')->name('search');
     Route::post('/search', 'FreindController@addToFreind')->name('freindadd');
-    Route::get('/messages', 'MessageController@index')->name('messages');
-    Route::post('/messages', 'MessageController@writeMessage')->name('sendmsg');
 });
 
 
