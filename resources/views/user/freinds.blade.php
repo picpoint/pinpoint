@@ -11,19 +11,38 @@
 <body>
 
 <section class="freinds">
-    <div class="freinds__wrp">
+    <div class="freinds__wrapper">
 
-        <div class="freinds__headerfrd">
+        <div class="freinds__header">
             @include('user.layouts.sidebar')
         </div>
 
-        <div class="freinds__contentfrd">
-            <div class="freinds__searchblockfrd">
-                <form action="#" method="post" name="searchform">
-                    <input type="search" name="searchfield">
-                    <button type="submit" name="searchbtn">Найти</button>
-                </form>
+        <div class="freinds__content">
+
+            {{--<div class="freinds__searchblock">--}}
+                {{--<form action="#" method="post" name="formsearchfreinds">--}}
+                    {{--<input type="search" name="searchfield">--}}
+                    {{--<button type="submit">НАЙТИ</button>--}}
+                {{--</form>--}}
+            {{--</div>--}}
+
+            <div class="freinds__contentwrapper">
+
+                <div class="freinds__currentfreind">
+                    <div class="freinds__pictureblock">
+                        <img src="#" alt="avatar">
+                    </div>
+                    <div class="freinds__infoblock">
+                        <span>ФИО</span>
+                        <span>аписать сообщение</span>
+                    </div>
+                    <div class="freinds__actionblock">
+                        <button>Удалить из друзей</button>
+                    </div>
+                </div>
+
             </div>
+
         </div>
 
 

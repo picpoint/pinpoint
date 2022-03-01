@@ -3,8 +3,8 @@
   display: flex;
   height: 100vh;
   width: 100vw;
-  &__wrp {
-    //border: $border;
+  &__wrapper {
+    border: $border;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -12,43 +12,78 @@
     width: 100%;
     z-index: 1;
   }
-  &__headerfrd {
-    //border: $border;
+  &__header {
+    border: $border;
     display: flex;
     height: 50px;
     width: 100%;
   }
-  &__contentfrd {
-    border: $border;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-  &__searchblockfrd {
+  &__content {
     border: $border;
     display: flex;
     justify-content: center;
-    height: 70px;
-      form {
+    flex-grow: 1;
+  }
+  //&__searchblock {
+  //  border: $border;
+  //  display: flex;
+  //  justify-content: center;
+  //  height: 70px;
+  //    form {
+  //      //border: $border;
+  //      display: flex;
+  //      justify-content: center;
+  //      align-items: center;
+  //      width: 50%;
+  //        input {
+  //          width: 100%;
+  //          height: 40px;
+  //          font-size: 1.1rem;
+  //        }
+  //        button {
+  //          width: 150px;
+  //          height: 40px;
+  //          background-color: $colorbrend;
+  //          color: white;
+  //          font-weight: bolder;
+  //          border: none;
+  //          cursor: pointer;
+  //        }
+  //    }
+  //}
+
+  &__contentwrapper {
+    border: $border;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin-top: 20px;
+  }
+  &__currentfreind {
+    border: $border;
+    display: flex;
+    width: 700px;
+    height: 150px;
+    margin: 10px 0;
+  }
+  &__pictureblock {
+    border: $border;
+    display: flex;
+    width: 150px;
+    height: 150px;
+      img {
         border: $border;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-          input {
-            height: 30px;
-            width: 50%;
-          }
-          button {
-            border: none;
-            height: 30px;
-            width: 100px;
-            background-color: $colorbluepanel;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-          }
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
       }
+  }
+  &__infoblock {
+    border: $border;
+    display: flex;
+    width: 400px;
   }
 
 

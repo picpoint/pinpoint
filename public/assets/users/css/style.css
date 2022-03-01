@@ -355,7 +355,8 @@
   height: 100vh;
   width: 100vw;
 }
-.freinds__wrp {
+.freinds__wrapper {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -363,42 +364,50 @@
   width: 100%;
   z-index: 1;
 }
-.freinds__headerfrd {
+.freinds__header {
+  border: 1px solid red;
   display: flex;
   height: 50px;
   width: 100%;
 }
-.freinds__contentfrd {
+.freinds__content {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.freinds__contentwrapper {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-}
-.freinds__searchblockfrd {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  height: 70px;
-}
-.freinds__searchblockfrd form {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 60%;
+  height: 100%;
+  margin-top: 20px;
 }
-.freinds__searchblockfrd form input {
-  height: 30px;
-  width: 50%;
+.freinds__currentfreind {
+  border: 1px solid red;
+  display: flex;
+  width: 700px;
+  height: 150px;
+  margin: 10px 0;
 }
-.freinds__searchblockfrd form button {
-  border: none;
-  height: 30px;
-  width: 100px;
-  background-color: #112b66;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+.freinds__pictureblock {
+  border: 1px solid red;
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+.freinds__pictureblock img {
+  border: 1px solid red;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+.freinds__infoblock {
+  border: 1px solid red;
+  display: flex;
+  width: 400px;
 }
 
 body {
