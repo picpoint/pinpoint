@@ -184,14 +184,6 @@
       }
     }
 
-    //&__navbarpp {
-    //  border: $border;
-    //  display: flex;
-    //  position: absolute;
-    //  height: 350px;
-    //  width: 100%;
-    //  z-index: 1;
-    //}
     &__profile {
       //border: $border;
       display: flex;
@@ -251,9 +243,6 @@
           text-decoration: none;
           color: white;
           font-family: Montserrat-Regular;
-          //&:nth-child(2) {
-          //  background-color: gray;
-          //}
             &:hover {
               background-color: #000041;
               border-radius: 7px;
@@ -266,6 +255,7 @@
     &__exit {
       //border: $border;
       display: flex;
+      justify-content: center;
       width: 5%;
         a {
           //border: $border;
@@ -295,10 +285,3 @@
 .hidedatas {
   display: none;
 }
-
-//.ymaps-2-1-79-balloon {
-//  border: none;
-//  border-radius: 15px;
-//  width: 400px;
-//  height: 400px;
-//}

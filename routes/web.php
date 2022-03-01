@@ -20,6 +20,7 @@ Route::group(['middleware' => 'registered'], function() {
     Route::resource('/pp', 'CreatePinController');
     Route::get('/search', 'SearchFreindController@search')->name('search');
     Route::post('/search', 'FreindController@addToFreind')->name('freindadd');
+    Route::get('/freinds', 'FreindController@index')->name('freinds');
 });
 
 
