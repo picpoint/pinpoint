@@ -21,7 +21,34 @@
   &__contentfrd {
     border: $border;
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
+  }
+  &__searchblockfrd {
+    border: $border;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+      form {
+        border: $border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+          input {
+            height: 30px;
+            width: 50%;
+          }
+          button {
+            border: none;
+            height: 30px;
+            width: 100px;
+            background-color: $colorbluepanel;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+      }
   }
 
 

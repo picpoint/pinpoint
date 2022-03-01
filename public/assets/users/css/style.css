@@ -371,7 +371,34 @@
 .freinds__contentfrd {
   border: 1px solid red;
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
+}
+.freinds__searchblockfrd {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+}
+.freinds__searchblockfrd form {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.freinds__searchblockfrd form input {
+  height: 30px;
+  width: 50%;
+}
+.freinds__searchblockfrd form button {
+  border: none;
+  height: 30px;
+  width: 100px;
+  background-color: #112b66;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 body {

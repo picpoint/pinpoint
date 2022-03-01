@@ -18,7 +18,12 @@
         </div>
 
         <div class="freinds__contentfrd">
-
+            <div class="freinds__searchblockfrd">
+                <form action="#" method="post" name="searchform">
+                    <input type="search" name="searchfield">
+                    <button type="submit" name="searchbtn">Найти</button>
+                </form>
+            </div>
         </div>
 
 
