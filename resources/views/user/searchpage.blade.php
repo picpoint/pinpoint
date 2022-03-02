@@ -29,6 +29,22 @@
                     </div>
                     <div class="searchp__resultblock">
 
+                        <div class="freinds__currentfreind">
+                            <div class="freinds__pictureblock">
+                                <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                            </div>
+                            <div class="freinds__infoblock">
+                                <span>Фамилия</span>
+                                <span>Имя</span>
+                                <a href="#">Написать сообщение</a>
+                            </div>
+                            <div class="freinds__actionblock">
+                                <form action="#" method="post" name="btndelete">
+                                    <button type="submit">Добавить в друзья</button>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="searchp__blockfilter">
