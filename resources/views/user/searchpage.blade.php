@@ -10,119 +10,34 @@
 </head>
 <body>
 
-<section class="freinds">
-    <div class="freinds__wrapper">
+<section class="searchp">
+    <div class="searchp__wrapper">
 
-        <div class="freinds__header">
+        <div class="searchp__header">
             @include('user.layouts.sidebar')
         </div>
 
-        <div class="freinds__content">
+        <div class="searchp__content">
+            <div class="searchp__contentwrp">
 
-            <div class="freinds__searchblock">
-                <form action="#" method="post" name="formsearchfreinds">
-                    <input type="search" name="searchfield">
-                    <button type="submit">НАЙТИ</button>
-                </form>
+                <div class="searchp__blockresult">
+                    <div class="searchp__searchblock">
+                        <form action="#" method="post" name="formsearchfreinds">
+                            <input type="search" name="searchfield">
+                            <button type="submit">НАЙТИ</button>
+                        </form>
+                    </div>
+                    <div class="searchp__resultblock">
+
+                    </div>
+                </div>
+                <div class="searchp__blockfilter">
+                    <div class="searchp__filter">
+                        <a href="#">Люди</a>
+                        <a href="#">Метки</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="freinds__contentwrapper">
-
-                <div class="freinds__currentfreind">
-                    <div class="freinds__pictureblock">
-                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                    </div>
-                    <div class="freinds__infoblock">
-                        <span>Фамилия</span>
-                        <span>Имя</span>
-                        <a href="#">Написать сообщение</a>
-                    </div>
-                    <div class="freinds__actionblock">
-                        <form action="#" method="post" name="btndelete">
-                            <button type="submit">Удалить из друзей</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="freinds__currentfreind">
-                    <div class="freinds__pictureblock">
-                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                    </div>
-                    <div class="freinds__infoblock">
-                        <span>Фамилия</span>
-                        <span>Имя</span>
-                        <a href="#">Написать сообщение</a>
-                    </div>
-                    <div class="freinds__actionblock">
-                        <form action="#" method="post" name="btndelete">
-                            <button type="submit">Удалить из друзей</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="freinds__currentfreind">
-                    <div class="freinds__pictureblock">
-                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                    </div>
-                    <div class="freinds__infoblock">
-                        <span>Фамилия</span>
-                        <span>Имя</span>
-                        <a href="#">Написать сообщение</a>
-                    </div>
-                    <div class="freinds__actionblock">
-                        <form action="#" method="post" name="btndelete">
-                            <button type="submit">Удалить из друзей</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="freinds__currentfreind">
-                    <div class="freinds__pictureblock">
-                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                    </div>
-                    <div class="freinds__infoblock">
-                        <span>Фамилия</span>
-                        <span>Имя</span>
-                        <a href="#">Написать сообщение</a>
-                    </div>
-                    <div class="freinds__actionblock">
-                        <form action="#" method="post" name="btndelete">
-                            <button type="submit">Удалить из друзей</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="freinds__currentfreind">
-                    <div class="freinds__pictureblock">
-                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                    </div>
-                    <div class="freinds__infoblock">
-                        <span>Фамилия</span>
-                        <span>Имя</span>
-                        <a href="#">Написать сообщение</a>
-                    </div>
-                    <div class="freinds__actionblock">
-                        <form action="#" method="post" name="btndelete">
-                            <button type="submit">Удалить из друзей</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="freinds__currentfreind">
-                    <div class="freinds__pictureblock">
-                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                    </div>
-                    <div class="freinds__infoblock">
-                        <span>Фамилия</span>
-                        <span>Имя</span>
-                        <a href="#">Написать сообщение</a>
-                    </div>
-                    <div class="freinds__actionblock">
-                        <form action="#" method="post" name="btndelete">
-                            <button type="submit">Удалить из друзей</button>
-                        </form>
-                    </div>
-                </div>
-
-
-
-            </div>
-
         </div>
 
 

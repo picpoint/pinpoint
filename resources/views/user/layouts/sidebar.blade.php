@@ -28,7 +28,7 @@
             <i class="fa fa-picture-o" aria-hidden="true"></i>
             <span>альбомы</span>
         </a>
-        <a href="#">
+        <a href="{{ route('search') }}">
             <i class="fa fa-search" aria-hidden="true"></i>
             <span>поиск</span>
         </a>

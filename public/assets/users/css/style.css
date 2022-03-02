@@ -386,6 +386,7 @@
   width: 100%;
   height: 40px;
   font-size: 1.1rem;
+  font-family: Montserrat-Regular;
 }
 .freinds__searchblock form button {
   width: 150px;
@@ -393,6 +394,7 @@
   background-color: #0573b7;
   color: white;
   font-weight: bolder;
+  font-family: Montserrat-Regular;
   border: none;
   cursor: pointer;
 }
@@ -430,12 +432,15 @@
 }
 .freinds__infoblock span {
   padding-left: 30px;
+  margin: 5px 0;
+  font-family: Montserrat-Regular;
 }
 .freinds__infoblock a {
   text-align: center;
-  margin: 30px 0 0 15px;
-  width: 170px;
+  margin: 20px 0 0 20px;
+  width: 200px;
   text-decoration: none;
+  font-family: Montserrat-Regular;
 }
 .freinds__actionblock {
   display: flex;
@@ -450,11 +455,105 @@
 }
 .freinds__actionblock form button {
   border: none;
-  width: 140px;
-  height: 35px;
+  width: 200px;
+  height: 40px;
+  margin-right: 10px;
   background-color: #0573b7;
+  font-family: Montserrat-Regular;
   color: white;
   cursor: pointer;
+}
+
+.searchp {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.searchp__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.searchp__header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+}
+.searchp__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.searchp__contentwrp {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  margin: 30px 0;
+}
+.searchp__blockresult {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+}
+.searchp__searchblock {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+}
+.searchp__searchblock form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+.searchp__searchblock form input {
+  width: 100%;
+  height: 40px;
+  font-size: 1.1rem;
+}
+.searchp__searchblock form button {
+  width: 150px;
+  height: 40px;
+  background-color: #0573b7;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
+.searchp__resultblock {
+  display: flex;
+  height: 100%;
+}
+.searchp__blockfilter {
+  border: 1px solid lightgray;
+  display: flex;
+  width: 30%;
+  height: 100%;
+}
+.searchp__filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.searchp__filter a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0 10px 15px;
+  font-family: Montserrat-Regular;
+}
+.searchp__filter a:hover {
+  background-color: #f1f1f1;
 }
 
 body {
