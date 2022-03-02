@@ -352,11 +352,8 @@
 
 .freinds {
   display: flex;
-  height: 100vh;
-  width: 100vw;
 }
 .freinds__wrapper {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -365,19 +362,15 @@
   z-index: 1;
 }
 .freinds__header {
-  border: 1px solid red;
   display: flex;
   height: 50px;
   width: 100%;
 }
 .freinds__content {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
 }
 .freinds__contentwrapper {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,28 +379,56 @@
   margin-top: 20px;
 }
 .freinds__currentfreind {
-  border: 1px solid red;
+  border: 1px solid lightgrey;
   display: flex;
   width: 700px;
   height: 150px;
   margin: 10px 0;
 }
 .freinds__pictureblock {
-  border: 1px solid red;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 150px;
 }
 .freinds__pictureblock img {
-  border: 1px solid red;
-  border-radius: 50%;
   height: 150px;
   width: 150px;
 }
 .freinds__infoblock {
-  border: 1px solid red;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 400px;
+}
+.freinds__infoblock span {
+  padding-left: 30px;
+}
+.freinds__infoblock a {
+  text-align: center;
+  margin: 30px 0 0 15px;
+  width: 170px;
+  text-decoration: none;
+}
+.freinds__actionblock {
+  display: flex;
+  width: 150px;
+}
+.freinds__actionblock form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.freinds__actionblock form button {
+  border: none;
+  width: 140px;
+  height: 35px;
+  background-color: #0573b7;
+  color: white;
+  cursor: pointer;
 }
 
 body {
