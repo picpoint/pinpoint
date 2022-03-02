@@ -21,44 +21,45 @@
   &__content {
     //border: $border;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     //height: auto;
     //flex-grow: 1;
   }
-  //&__searchblock {
-  //  border: $border;
-  //  display: flex;
-  //  justify-content: center;
-  //  height: 70px;
-  //    form {
-  //      //border: $border;
-  //      display: flex;
-  //      justify-content: center;
-  //      align-items: center;
-  //      width: 50%;
-  //        input {
-  //          width: 100%;
-  //          height: 40px;
-  //          font-size: 1.1rem;
-  //        }
-  //        button {
-  //          width: 150px;
-  //          height: 40px;
-  //          background-color: $colorbrend;
-  //          color: white;
-  //          font-weight: bolder;
-  //          border: none;
-  //          cursor: pointer;
-  //        }
-  //    }
-  //}
+  &__searchblock {
+    //border: $border;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+      form {
+        //border: $border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+          input {
+            width: 100%;
+            height: 40px;
+            font-size: 1.1rem;
+          }
+          button {
+            width: 150px;
+            height: 40px;
+            background-color: $colorbrend;
+            color: white;
+            font-weight: bolder;
+            border: none;
+            cursor: pointer;
+          }
+      }
+  }
 
   &__contentwrapper {
     //border: $border;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 100%;
     height: 100%;
     margin-top: 20px;
   }

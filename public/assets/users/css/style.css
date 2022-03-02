@@ -368,13 +368,39 @@
 }
 .freinds__content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+.freinds__searchblock {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+}
+.freinds__searchblock form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.freinds__searchblock form input {
+  width: 100%;
+  height: 40px;
+  font-size: 1.1rem;
+}
+.freinds__searchblock form button {
+  width: 150px;
+  height: 40px;
+  background-color: #0573b7;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
 }
 .freinds__contentwrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 100%;
   height: 100%;
   margin-top: 20px;
 }
