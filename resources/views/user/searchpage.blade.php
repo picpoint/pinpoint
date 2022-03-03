@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/assets/users/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/assets/users/css/style.css">
@@ -22,28 +23,33 @@
 
                 <div class="searchp__blockresult">
                     <div class="searchp__searchblock">
-                        <form action="#" method="post" name="formsearchfreinds">
+                        <form action="{{ route('search') }}" method="post" name="formsearchfreinds">
+                            @csrf
                             <input type="search" name="searchfield">
                             <button type="submit">НАЙТИ</button>
                         </form>
                     </div>
                     <div class="searchp__resultblock">
 
-                        <div class="freinds__currentfreind">
-                            <div class="freinds__pictureblock">
-                                <img src="public/assets/users/img/noname2.jpg" alt="avatar">
-                            </div>
-                            <div class="freinds__infoblock">
-                                <span>Фамилия</span>
-                                <span>Имя</span>
-                                <a href="#">Написать сообщение</a>
-                            </div>
-                            <div class="freinds__actionblock">
-                                <form action="#" method="post" name="btndelete">
-                                    <button type="submit">Добавить в друзья</button>
-                                </form>
-                            </div>
-                        </div>
+                        @if($result !='')
+                            @foreach($result as $res)
+                                <div class="searchp__currentfreind">
+                                    <div class="searchp__pictureblock">
+                                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                    </div>
+                                    <div class="searchp__infoblock">
+                                        <span>{{ $res->name }}</span>
+                                        {{--<span>Имя</span>--}}
+                                        <a href="#">Написать сообщение</a>
+                                    </div>
+                                    <div class="searchp__actionblock">
+                                        <form action="#" method="post" name="btndelete">
+                                            <button type="submit">Добавить в друзья</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
 
                     </div>
                 </div>
@@ -55,8 +61,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
     </div>
