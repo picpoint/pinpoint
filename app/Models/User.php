@@ -44,6 +44,9 @@ class User extends Authenticatable
 
 
 
+    public function freind() {
+        return $this->belongsToMany(Freind::class);
+    }
 
 
 
