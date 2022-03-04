@@ -14,8 +14,12 @@ class FreindController extends Controller
 
 
     public function addToFreind(Request $request, $id) {
-        dump($id);
-        dd($request->all());
+//        dump($id);
+//        dd($request->all());
+
+
+
+
     }
 
 
