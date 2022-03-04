@@ -39,11 +39,12 @@
                                     </div>
                                     <div class="searchp__infoblock">
                                         <span>{{ $res->name }}</span>
-                                        {{--<span>Имя</span>--}}
+                                        <span>{{ $res->id }}</span>
                                         <a href="#">Написать сообщение</a>
                                     </div>
                                     <div class="searchp__actionblock">
-                                        <form action="#" method="post" name="btndelete">
+                                        <form action="{{ route('add.freind', ['id' => $res->id]) }}" method="post" name="btndelete">
+                                            @csrf
                                             <button type="submit">Добавить в друзья</button>
                                         </form>
                                     </div>

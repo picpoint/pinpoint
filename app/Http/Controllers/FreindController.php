@@ -12,4 +12,11 @@ class FreindController extends Controller
         return view('user.freinds', compact('title'));
     }
 
+
+    public function addToFreind(Request $request, $id) {
+        dump($id);
+        dd($request->all());
+    }
+
+
 }

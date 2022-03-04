@@ -9,18 +9,17 @@ class SearchPageController extends Controller
 {
 
     public function index() {
-        $title = 'Поиск';
+        $title = "Поиск | Pinpoint";
         $result = '';
         return view('user.searchpage', compact('title', 'result'));
     }
 
 
     public function search(Request $request) {
-//        dd($request->all());
-        $title = 'Поиск';
+        $title = "Поиск | Pinpoint";
         $result = DB::table('users')->where('name', 'LIKE', "%{$request->searchfield}%")->get();
 
-        return view('user.searchpage', compact('result', 'title'));
+        return view('user.searchpage', compact('title', 'result'));
     }
 
 
