@@ -36,8 +36,8 @@
                                 <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                             </div>
                             <div class="freinds__infoblock">
-                                <span>{{ $freind->user_id }}</span>
-                                <span>Имя</span>
+                                <span>{{ $freind->user->name }}</span>
+                                {{--<span>Имя</span>--}}
                                 <a href="#">Написать сообщение</a>
                             </div>
                             <div class="freinds__actionblock">

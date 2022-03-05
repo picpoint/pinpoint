@@ -16,8 +16,7 @@ class FreindController extends Controller
         $freinds = '';
 
         $currentUser = Auth::user()->id;
-        $freinds = DB::table('freinds')->where('currentuser_id', '=', $currentUser)->get();
-        dd($freinds);
+        $freinds = Freind::where('currentuser_id', '=', $currentUser)->get();
 
         return view('user.freinds', compact('title', 'freinds'));
     }
