@@ -23,6 +23,8 @@ Route::group(['middleware' => 'registered'], function() {
     Route::get('/search', 'SearchPageController@index')->name('search');
     Route::post('/search', 'SearchPageController@search');
     Route::get('/messages', 'MessageController@index')->name('messages');
+    Route::get('/messages/{id}', 'MessageController@writeMessageForm')->name('messages.id');
+    Route::post('/messages/{id}', 'MessageController@writeMessageToUser')->name('messages.id');
 });
 
 

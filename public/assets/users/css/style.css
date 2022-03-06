@@ -636,6 +636,133 @@
   flex-direction: column;
   justify-content: center;
 }
+.messages__contentwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+.messages__currentfreind {
+  border: 1px solid lightgrey;
+  display: flex;
+  width: 700px;
+  height: 150px;
+  margin: 10px 0;
+}
+.messages__pictureblock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+.messages__pictureblock img {
+  height: 150px;
+  width: 150px;
+}
+.messages__infoblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+.messages__infoblock span {
+  padding-left: 30px;
+  margin: 5px 0;
+  font-family: Montserrat-Regular;
+}
+.messages__infoblock a {
+  text-align: center;
+  margin: 20px 0 0 20px;
+  width: 200px;
+  text-decoration: none;
+  font-family: Montserrat-Regular;
+}
+.messages__actionblock {
+  display: flex;
+  width: 150px;
+}
+.messages__actionblock form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.messages__actionblock form button {
+  border: none;
+  width: 200px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #0573b7;
+  font-family: Montserrat-Regular;
+  color: white;
+  cursor: pointer;
+}
+
+.msgto {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.msgto__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.msgto__header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+}
+.msgto__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.msgto__contentwrapper {
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 95%;
+}
+.msgto__blockmsgs {
+  display: flex;
+  height: 100%;
+}
+.msgto__blocksend {
+  border-top: 1px solid lightgray;
+  display: flex;
+  height: 50px;
+}
+.msgto__blocksend form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.msgto__blocksend form input {
+  border: none;
+  width: 100%;
+  font-family: Montserrat-Regular;
+  font-size: 1.1rem;
+  padding-left: 10px;
+}
+.msgto__blocksend form button {
+  border: none;
+  width: 150px;
+  background-color: #112b66;
+  color: white;
+  cursor: pointer;
+  font-family: Montserrat-Regular;
+}
 
 body {
   min-height: 100vh;

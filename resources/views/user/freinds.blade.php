@@ -38,7 +38,7 @@
                             <div class="freinds__infoblock">
                                 <span>{{ $freind->user->name }}</span>
                                 {{--<span>Имя</span>--}}
-                                <a href="#">Написать сообщение</a>
+                                <a href="{{ route('messages.id', ['id' => $freind->user_id]) }}">Написать сообщение</a>
                             </div>
                             <div class="freinds__actionblock">
                                 <form action="#" method="post" name="btndelete">
