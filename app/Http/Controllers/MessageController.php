@@ -14,11 +14,7 @@ class MessageController extends Controller
     public function index() {
         $title = "Сообщения | Pinpoint";
         $currentUser = Auth::user()->id;
-//        $data = DB::table('messages')->where('currentuser_id', '=', $currentUser)->get();
-
         $data = Message::where('currentuser_id', '=', $currentUser)->get();
-
-//        dd($data);
 
         return view('user.messages', compact('title', 'data'));
     }
@@ -27,7 +23,6 @@ class MessageController extends Controller
     public function writeMessageForm(Request $request, $id) {
         $title = 'Чат | Pinpoint';
         $currentUser = Auth::user()->id;
-
 
         return view('user.messagesto', compact('title'));
     }
