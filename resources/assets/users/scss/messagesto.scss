@@ -37,7 +37,22 @@
   &__blockmsgs {
     //border: $border;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 100%;
+      span {
+        //border: $border;
+        display: flex;
+        justify-content: center;
+        font-family: Montserrat-Regular;
+        font-size: 1.1rem;
+        background-color: #eaeaea;
+        width: 350px;
+        //height: auto;
+        padding: 5px 0 5px 5px;
+        margin: 5px 0;
+        border-radius: 15px;
+      }
   }
   &__blocksend {
     border-top: 1px solid lightgray;

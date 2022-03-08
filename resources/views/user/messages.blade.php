@@ -22,15 +22,15 @@
         <div class="messages__content">
             <div class="messages__contentwrapper">
 
-                @if(isset($data))
-                    @foreach($data as $dt)
+                @if(isset($hasMsg))
+                    @foreach($hasMsg as $dt)
                         <div class="messages__currentfreind">
                             <div class="messages__pictureblock">
                                 <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                             </div>
                             <div class="messages__infoblock">
-                                <span>{{ $dt->user->name }}</span>
-                                <a href="#">Написать сообщение</a>
+                                <span>{{ $dt[0]->name }}</span>
+                                <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">Перейти к чату</a>
                             </div>
                             <div class="messages__actionblock">
                                 <form action="#" method="post" name="btndelete">

@@ -22,6 +22,10 @@
             <div class="msgto__contentwrapper">
                 <div class="msgto__blockmsgs">
 
+                    @foreach($chat as $message)
+                        <span>{{ $message->message }}</span>
+                    @endforeach
+
                 </div>
                 <div class="msgto__blocksend">
                     <form action="#" method="post">
