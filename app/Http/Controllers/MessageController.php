@@ -28,6 +28,7 @@ class MessageController extends Controller
     }
 
 
+    
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
 
