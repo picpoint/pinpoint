@@ -52,12 +52,7 @@ class MessageController extends Controller
         $title = 'Чат | Pinpoint';
         $currentUser = Auth::user()->id;
 
-//        dump($id);
-
-        $chat = DB::table('messages')->where('currentuser_id', '=', $currentUser)->where('user_id', '=', $id)->get();
-
-//        dump($chat);
-
+        $chat = DB::table('messages')->where('currentuser_id', '=', $currentUser)->get();
 
 
         return view('user.messagesto', compact('title', 'chat'));
