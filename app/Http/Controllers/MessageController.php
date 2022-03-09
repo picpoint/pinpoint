@@ -60,6 +60,7 @@ class MessageController extends Controller
             ->where('currentuser_id', '=', $id)
             ->where('user_id', '=', $currentUser)
             ->union($cht)
+            ->orderBy('created_at')
             ->get();
 
 
