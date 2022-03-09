@@ -23,7 +23,11 @@
                 <div class="msgto__blockmsgs">
 
                     @foreach($chat as $message)
-                        <span>{{ $message->message }}</span>
+                        @if($message->currentuser_id == $currentUser)
+                            <span style="align-self: flex-end">{{ $message->message }}</span>
+                        @else
+                            <span>{{ $message->message }}</span>
+                        @endif
                     @endforeach
 
                 </div>
