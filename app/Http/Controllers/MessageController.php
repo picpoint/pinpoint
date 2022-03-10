@@ -15,9 +15,9 @@ class MessageController extends Controller
     public function index() {
         $title = "Сообщения | Pinpoint";
         $currentUser = Auth::user()->id;
-//        $data = Message::where('currentuser_id', '=', $currentUser)->get();
 
         $arrRes = [];
+        $hasMsg = [];
 
         $dataMe = DB::table('messages')->where('currentuser_id', $currentUser)->pluck('user_id');
 
@@ -34,13 +34,15 @@ class MessageController extends Controller
 
         $usersWithMsg = array_unique($arrRes);
 
-//        dd($usersWithMsg);
 
         foreach ($usersWithMsg as $key => $value) {
             $hasMsg[] = User::where('id', $value)->get();
         }
 
-//        dd($hasMsg);
+
+        if (count($hasMsg) == 0) {
+            $hasMsg = [];
+        }
 
 
         return view('user.messages', compact('title','hasMsg'));

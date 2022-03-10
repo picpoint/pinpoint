@@ -22,7 +22,7 @@
         <div class="messages__content">
             <div class="messages__contentwrapper">
 
-                @if(isset($hasMsg))
+                @if(count($hasMsg) != 0)
                     @foreach($hasMsg as $dt)
                         <div class="messages__currentfreind">
                             <div class="messages__pictureblock">
@@ -39,6 +39,10 @@
                             </div>
                         </div>
                     @endforeach
+                    @else
+                        <div class="messages__notmsg">
+                            <span>У Вас нет сообщений</span>
+                        </div>
                 @endif
 
 

@@ -701,6 +701,13 @@
   color: white;
   cursor: pointer;
 }
+.messages__notmsg {
+  display: flex;
+}
+.messages__notmsg span {
+  font-family: Montserrat-Regular;
+  font-size: 1.1rem;
+}
 
 .msgto {
   display: flex;
