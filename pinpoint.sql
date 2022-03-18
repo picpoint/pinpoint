@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 09 2022 г., 21:56
+-- Время создания: Мар 18 2022 г., 16:51
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -193,7 +193,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (12, '2019_10_22_000539_add_dark_mode_to_users', 5),
 (13, '2019_10_25_214038_add_active_status_to_users', 5),
 (14, '2021_12_08_190737_create_freinds_table', 6),
-(15, '2021_12_13_184221_create_messages_table', 7);
+(15, '2021_12_13_184221_create_messages_table', 7),
+(16, '0000_00_00_000000_create_websockets_statistics_entries_table', 8);
 
 -- --------------------------------------------------------
 
@@ -291,6 +292,22 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (25, 'test', 'test@mail.ru', NULL, '$2y$10$syg0qAGMRHlzspkzGJN5p.896BVGPud4Qaw456y1wGneyqkD2ftWO', NULL, '2021-12-03 14:10:21', '2021-12-03 14:10:21', 'avatar.png', '#2180f3', 0, 0),
 (26, 'user4', 'user4@mail.com', NULL, '$2y$10$TZ.DQ2Vn7S3HRXnfNxga8eARWgTP5OFm7kQ9FbTHUxoWbvJQdbr42', NULL, '2022-02-28 16:25:47', '2022-02-28 16:25:47', 'avatar.png', '#2180f3', 0, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `websockets_statistics_entries`
+--
+
+CREATE TABLE `websockets_statistics_entries` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `app_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `peak_connection_count` int(11) NOT NULL,
+  `websocket_message_count` int(11) NOT NULL,
+  `api_message_count` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -361,6 +378,12 @@ ALTER TABLE `users`
   ADD KEY `users_name_index` (`name`);
 
 --
+-- Индексы таблицы `websockets_statistics_entries`
+--
+ALTER TABLE `websockets_statistics_entries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -386,7 +409,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -405,6 +428,12 @@ ALTER TABLE `pins`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT для таблицы `websockets_statistics_entries`
+--
+ALTER TABLE `websockets_statistics_entries`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
