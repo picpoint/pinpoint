@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageCreated;
 use App\Models\Message;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
@@ -80,6 +81,8 @@ class MessageController extends Controller
             'message' => $request->sendmsg,
         ]);
 
+
+//        event(new MessageCreated($request->sendmsg));
 
         return redirect()->route('messages.id', compact('id'));
     }
