@@ -32,9 +32,11 @@ class NewMessageCreatedNotification
     public function handle(MessageCreated $event)
     {
 
-//        Redis::subscribe(['test-channel'], function ($message) {
-//            echo $message;
-//        });
+        Redis::subscribe(['test-channel'], function ($message) {
+            echo $message;
+        });
+
+        dump($event);
 
     }
 }

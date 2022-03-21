@@ -82,7 +82,7 @@ class MessageController extends Controller
         ]);
 
 
-//        event(new MessageCreated($request->sendmsg));
+        event(new MessageCreated($request->sendmsg));
 
         return redirect()->route('messages.id', compact('id'));
     }
