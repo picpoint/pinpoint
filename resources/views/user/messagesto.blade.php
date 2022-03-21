@@ -46,5 +46,11 @@
 </section>
 
 
+<script src="/public/assets/users/js/laravelEcho.js">
+
+</script>
+
+
+
 </body>
 </html>

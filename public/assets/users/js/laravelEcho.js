@@ -1,5 +1,6 @@
 import Echo from 'laravel-echo';
 
+
 window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
@@ -8,3 +9,6 @@ window.Echo = new Echo({
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
     forceTLS: true
 });
+
+
+alert('echo hi');
