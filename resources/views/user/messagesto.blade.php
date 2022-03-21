@@ -46,7 +46,7 @@
 </section>
 
 
-<script src="public/assets/users/js/webSockets.js">
+<script src="/public/assets/users/js/webSockets.js">
 
 </script>
 
