@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Redis;
 
-class NewMessageCreatedNotification
+class NewMessageCreatedNotification implements ShouldQueue
 {
 
     protected $signature = 'redis:subscribe';
@@ -32,8 +32,13 @@ class NewMessageCreatedNotification
     public function handle(MessageCreated $event)
     {
 
+        $this->event = $event;
+
         Redis::subscribe(['test-channel'], function ($message) {
             echo $message;
+            
+            dump($message);
+            dump($this->event);
         });
 
         dump($event);

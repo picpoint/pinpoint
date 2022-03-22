@@ -11,3 +11,11 @@ window.Echo = new Echo({
     disableStats: true,
     enabledTransports: ['ws', 'wss'] // <- added this param
 });
+
+
+
+
+// Echo.private(`test-channel`)
+//     .listen('MessageCreated', (e) => {
+//         console.log(e.order);
+//     });

@@ -21,7 +21,10 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   disableStats: true,
   enabledTransports: ['ws', 'wss'] // <- added this param
 
-});
+}); // Echo.private(`test-channel`)
+//     .listen('MessageCreated', (e) => {
+//         console.log(e.order);
+//     });
 
 /***/ }),
 

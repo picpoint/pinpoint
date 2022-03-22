@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redis;
 
 class MessageController extends Controller
 {
@@ -82,7 +83,11 @@ class MessageController extends Controller
         ]);
 
 
+        Redis::set('msg' . $currentUser, $request->sendmsg);
+        dump(Redis::get('msg'. $request->sendmsg));
+
         event(new MessageCreated($request->sendmsg));
+        MessageCreated::dispatch($request->sendmsg);
 
         return redirect()->route('messages.id', compact('id'));
     }
