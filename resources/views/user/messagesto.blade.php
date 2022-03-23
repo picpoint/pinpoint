@@ -60,8 +60,9 @@
     });
 
     var channel = pusher.subscribe('test-channel');
-    channel.bind('MessageCreated', function(data) {
+    channel.bind('App\\Events\\MessageCreated', function(data) {
         alert(JSON.stringify(data));
+        console.log(data);
     });
 </script>
 
