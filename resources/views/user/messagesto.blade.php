@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="msgto__blocksend">
-                    <form action="#" method="post">
+                    <form method="post">
                         @csrf
                         <input type="text" name="sendmsg">
                         <button type="submit">ОТПРАВИТЬ</button>
@@ -56,7 +56,7 @@
 <script>
 
     let blockmsgs = document.querySelector('.msgto__blockmsgs');
-    console.log(blockmsgs);
+//    console.log(blockmsgs);
     let datamsg;
 
     Pusher.logToConsole = true;
@@ -75,9 +75,13 @@
 
     });
 
-    blockmsgs.appendChild(datamsg);
+//    blockmsgs.appendChild(datamsg);
 
 </script>
+
+
+
+
 
 
 </body>

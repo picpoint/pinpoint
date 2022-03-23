@@ -89,7 +89,7 @@ class MessageController extends Controller
         event(new MessageCreated($request->sendmsg));
         MessageCreated::dispatch($request->sendmsg);
 
-        return redirect()->route('messages.id', compact('id'));
+//        return redirect()->route('messages.id', compact('id'));
     }
 
 
