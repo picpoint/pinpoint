@@ -1,21 +1,37 @@
-import Echo from "laravel-echo"
+// import Echo from "laravel-echo"
+//
+// window.Pusher = require('pusher-js');
+//
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     wsHost: window.location.hostname,
+//     wsPort: 6001,
+//     forceTLS: false,
+//     disableStats: true,
+//     enabledTransports: ['ws', 'wss'] // <- added this param
+// });
+
+
+import Echo from 'laravel-echo';
 
 window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
-    wsHost: window.location.hostname,
-    wsPort: 6001,
-    forceTLS: false,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    forceTLS: true,
     disableStats: true,
     enabledTransports: ['ws', 'wss'] // <- added this param
 });
 
 
+// Echo.private('test-chanel');
 
 
-// Echo.private(`test-channel`)
+//
+// Echo.channel('test-channel')
 //     .listen('MessageCreated', (e) => {
-//         console.log(e.order);
+//         console.log(e);
 //     });

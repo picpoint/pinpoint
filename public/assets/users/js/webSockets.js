@@ -10,20 +10,34 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var laravel_echo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-echo */ "./node_modules/laravel-echo/dist/echo.js");
+// import Echo from "laravel-echo"
+//
+// window.Pusher = require('pusher-js');
+//
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     wsHost: window.location.hostname,
+//     wsPort: 6001,
+//     forceTLS: false,
+//     disableStats: true,
+//     enabledTransports: ['ws', 'wss'] // <- added this param
+// });
 
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "2203",
-  wsHost: window.location.hostname,
-  wsPort: 6001,
-  forceTLS: false,
+  key: "d31a890437419c80f25b",
+  cluster: "eu",
+  forceTLS: true,
   disableStats: true,
   enabledTransports: ['ws', 'wss'] // <- added this param
 
-}); // Echo.private(`test-channel`)
+}); // Echo.private('test-chanel');
+//
+// Echo.channel('test-channel')
 //     .listen('MessageCreated', (e) => {
-//         console.log(e.order);
+//         console.log(e);
 //     });
 
 /***/ }),

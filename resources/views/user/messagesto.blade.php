@@ -47,7 +47,22 @@
 
 
 <script src="/public/assets/users/js/webSockets.js">
+</script>
 
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+
+
+<script>
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('d31a890437419c80f25b', {
+        cluster: 'eu'
+    });
+
+    var channel = pusher.subscribe('test-channel');
+    channel.bind('MessageCreated', function(data) {
+        alert(JSON.stringify(data));
+    });
 </script>
 
 

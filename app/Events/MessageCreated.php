@@ -34,6 +34,6 @@ class MessageCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('test-channel', $this->message);
+        return new Channel('test-channel');
     }
 }
