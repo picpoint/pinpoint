@@ -32,10 +32,10 @@
 
                 </div>
                 <div class="msgto__blocksend">
-                    <form method="post">
+                    <form method="post" class="sendmsg">
                         @csrf
                         <input type="text" name="sendmsg">
-                        <button type="submit">ОТПРАВИТЬ</button>
+                        <button type="submit" class="btnsendmessage">ОТПРАВИТЬ</button>
                     </form>
                 </div>
             </div>
@@ -56,7 +56,10 @@
 <script>
 
     let blockmsgs = document.querySelector('.msgto__blockmsgs');
-//    console.log(blockmsgs);
+    let btnsendmessage = document.querySelector('.btnsendmessage');
+
+    console.log(btnsendmessage);
+
     let datamsg;
 
     Pusher.logToConsole = true;
@@ -70,12 +73,17 @@
 //        alert(JSON.stringify(data));
         console.log(data.message);
         datamsg = data.message;
-//        blockmsgs.appendChild(datamsg);
-//        blockmsgs.appendChild(data.message);
-
+        let span = document.createElement('span');
+        span.innerText = datamsg;
+        blockmsgs.appendChild(span);
     });
 
-//    blockmsgs.appendChild(datamsg);
+
+    btnsendmessage.addEventListener('click', function (e) {
+//        e.preventDefault();
+    });
+
+
 
 </script>
 
