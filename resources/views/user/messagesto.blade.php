@@ -46,13 +46,19 @@
 </section>
 
 
-<script src="/public/assets/users/js/webSockets.js">
-</script>
+{{--<script src="/public/assets/users/js/webSockets.js">--}}
+{{--</script>--}}
+
+
 
 <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 
-
 <script>
+
+    let blockmsgs = document.querySelector('.msgto__blockmsgs');
+    console.log(blockmsgs);
+    let datamsg;
+
     Pusher.logToConsole = true;
 
     var pusher = new Pusher('d31a890437419c80f25b', {
@@ -61,9 +67,16 @@
 
     var channel = pusher.subscribe('test-channel');
     channel.bind('App\\Events\\MessageCreated', function(data) {
-        alert(JSON.stringify(data));
-        console.log(data);
+//        alert(JSON.stringify(data));
+        console.log(data.message);
+        datamsg = data.message;
+//        blockmsgs.appendChild(datamsg);
+//        blockmsgs.appendChild(data.message);
+
     });
+
+    blockmsgs.appendChild(datamsg);
+
 </script>
 
 

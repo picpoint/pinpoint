@@ -36,7 +36,7 @@ class NewMessageCreatedNotification implements ShouldQueue
 
         Redis::subscribe(['test-channel'], function ($message) {
             echo $message;
-            
+
             dump($message);
             dump($this->event);
         });
