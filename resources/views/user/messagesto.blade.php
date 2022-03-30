@@ -59,11 +59,11 @@
     let blockmsgs = document.querySelector('.msgto__blockmsgs');
     let btnsendmessage = document.querySelector('.btnsendmessage');
 
-    console.log(btnsendmessage);
+//    console.log(btnsendmessage);
 
     let datamsg;
 
-    Pusher.logToConsole = true;
+//    Pusher.logToConsole = true;
 
     var pusher = new Pusher('d31a890437419c80f25b', {
         cluster: 'eu'
@@ -72,10 +72,10 @@
     var channel = pusher.subscribe('test-channel');
     channel.bind('App\\Events\\MessageCreated', function(data) {
 //        alert(JSON.stringify(data));
-        console.log(data.message);
-        datamsg = data.message;
+//        console.log(data.message);
+//        datamsg = data.message;
         let span = document.createElement('span');
-        span.innerText = datamsg;
+        span.innerText = data.message;
         blockmsgs.appendChild(span);
     });
 
