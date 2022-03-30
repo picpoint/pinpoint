@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redis;
 class NewMessageCreatedNotification implements ShouldQueue
 {
 
-    protected $signature = 'redis:subscribe';
+    protected $signature = 'ПОДПИСКА!!!!!!!';
     protected $description = 'Подписка в Redis канал';
 
     /**
@@ -34,14 +34,14 @@ class NewMessageCreatedNotification implements ShouldQueue
 
         $this->event = $event;
 
-        Redis::subscribe(['test-channel'], function ($message) {
-            echo $message;
-
-            dump($message);
-            dump($this->event);
-        });
-
-        dump($event);
+//        Redis::subscribe(['test-channel'], function ($message) {
+//            echo $message;
+//
+//            dump($message);
+//            dump($this->event);
+//        });
+//
+//        dump($event);
 
     }
 }

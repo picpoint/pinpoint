@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/public/assets/users/css/font-awesome.min.css">
     <link rel="stylesheet" href="/public/assets/users/css/style.css">
     <title>{{ $title }}</title>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <body>
 
@@ -51,7 +52,7 @@
 
 
 
-<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+
 
 <script>
 
@@ -80,6 +81,7 @@
 
 
     btnsendmessage.addEventListener('click', function (e) {
+//        window.stop();
 //        e.preventDefault();
     });
 

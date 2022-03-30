@@ -83,13 +83,13 @@ class MessageController extends Controller
         ]);
 
 
-        Redis::set('msg' . $currentUser, $request->sendmsg);
-        dump(Redis::get('msg'. $request->sendmsg));
+//        Redis::set('msg' . $currentUser, $request->sendmsg);
+//        dump(Redis::get('msg'. $request->sendmsg));
 
         event(new MessageCreated($request->sendmsg));
-        MessageCreated::dispatch($request->sendmsg);
+//        MessageCreated::dispatch($request->sendmsg);
 
-//        return redirect()->route('messages.id', compact('id'));
+        return redirect()->route('messages.id', compact('id'));
     }
 
 
