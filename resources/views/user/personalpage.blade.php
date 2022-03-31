@@ -5,8 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="public/assets/users/css/font-awesome.min.css">
-    <link rel="stylesheet" href="public/assets/users/css/style.css">
+    <link rel="stylesheet" href="/public/assets/users/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/assets/users/css/style.css">
     <title>{{ $title }}</title>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0735696f-0a98-472f-9ffc-143c71d3f506"
             type="text/javascript"></script>
@@ -15,7 +15,27 @@
 <body>
 
 <section class="pp">
+
+
+
     <div class="pp__wrp" id="map">
+
+
+        <div class="pp__errlocate">
+            <div class="pp__errmsg">
+                <div class="pp__errclose">
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                </div>
+                <div class="pp__errnotice">
+                    <span>К сожалению Вы запретили доступ к вашему местоположению ...  :-(</span>
+                    <span>Для нормальной работы приложения, в настройках вашего браузера разрещите геолокацию,
+                    обновите браузер(Ctrl + F5) и разрешите доступ к своему местоположению</span>
+                </div>
+                <div class="pp__errok">
+                    <button class="close">OK</button>
+                </div>
+            </div>
+        </div>
 
 
         <div class="pp__sendfile">
@@ -132,8 +152,9 @@
 </section>
 
 
-<script src="public/assets/users/js/contextMenuOnMap.js"></script>
-<script src="public/assets/users/js/mapbasics.js" type="text/javascript"></script>
+<script src="/public/assets/users/js/contextMenuOnMap.js"></script>
+<script src="/public/assets/users/js/mapbasics.js"></script>
+<script src="/public/assets/users/js/errLocatePosition.js"></script>
 {{--<script src="public/assets/users/js/showBallons.js"></script>--}}
 </body>
 </html>
