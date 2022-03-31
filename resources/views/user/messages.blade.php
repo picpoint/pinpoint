@@ -32,11 +32,11 @@
                                 <span>{{ $dt[0]->name }}</span>
                                 <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">Перейти к чату</a>
                             </div>
-                            <div class="messages__actionblock">
-                                <form action="#" method="post" name="btndelete">
-                                    <button type="submit">Удалить из друзей</button>
-                                </form>
-                            </div>
+                            {{--<div class="messages__actionblock">--}}
+                                {{--<form action="#" method="post" name="btndelete">--}}
+                                    {{--<button type="submit">Удалить из друзей</button>--}}
+                                {{--</form>--}}
+                            {{--</div>--}}
                         </div>
                     @endforeach
                     @else

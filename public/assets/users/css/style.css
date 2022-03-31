@@ -470,51 +470,55 @@
 }
 .freinds__contentwrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
+  align-self: center;
+  width: 65%;
   height: 100%;
   margin-top: 20px;
 }
 .freinds__currentfreind {
   border: 1px solid lightgrey;
   display: flex;
-  width: 700px;
-  height: 150px;
-  margin: 10px 0;
+  flex-direction: column;
+  width: 200px;
+  height: 323px;
+  margin: 20px;
 }
 .freinds__pictureblock {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 .freinds__pictureblock img {
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
 }
 .freinds__infoblock {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 400px;
 }
 .freinds__infoblock span {
-  padding-left: 30px;
-  margin: 5px 0;
-  font-family: Montserrat-Regular;
-}
-.freinds__infoblock a {
+  width: 100%;
   text-align: center;
-  margin: 20px 0 0 20px;
-  width: 200px;
-  text-decoration: none;
   font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+.freinds__writemessageto {
+  display: flex;
+  justify-content: center;
+}
+.freinds__writemessageto a {
+  text-decoration: none;
+  color: #0573b7;
+  font-family: Montserrat-Regular;
+  font-weight: bolder;
 }
 .freinds__actionblock {
   display: flex;
-  width: 150px;
+  width: 100%;
 }
 .freinds__actionblock form {
   display: flex;
@@ -526,8 +530,8 @@
 .freinds__actionblock form button {
   border: none;
   width: 200px;
-  height: 40px;
-  margin-right: 10px;
+  height: 50px;
+  margin-top: 10px;
   background-color: #0573b7;
   font-family: Montserrat-Regular;
   color: white;

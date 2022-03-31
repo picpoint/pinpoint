@@ -31,14 +31,32 @@
 
                 @if($freinds != '')
                     @foreach($freinds as $freind)
+                        {{--<div class="freinds__currentfreind">--}}
+                            {{--<div class="freinds__pictureblock">--}}
+                                {{--<img src="public/assets/users/img/noname2.jpg" alt="avatar">--}}
+                            {{--</div>--}}
+                            {{--<div class="freinds__infoblock">--}}
+                                {{--<span>{{ $freind->user->name }}</span>--}}
+                                {{--<span>Имя</span>--}}
+                                {{--<a href="{{ route('messages.id', ['id' => $freind->user_id]) }}">Написать сообщение</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="freinds__actionblock">--}}
+                                {{--<form action="#" method="post" name="btndelete">--}}
+                                    {{--<button type="submit">Удалить из друзей</button>--}}
+                                {{--</form>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
                         <div class="freinds__currentfreind">
                             <div class="freinds__pictureblock">
                                 <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                             </div>
                             <div class="freinds__infoblock">
                                 <span>{{ $freind->user->name }}</span>
-                                {{--<span>Имя</span>--}}
-                                <a href="{{ route('messages.id', ['id' => $freind->user_id]) }}">Написать сообщение</a>
+                                {{--<span>Иван</span>--}}
+                            </div>
+                            <div class="freinds__writemessageto">
+                                <a href="{{ route('messages.id', ['id' => $freind->user->id]) }}">Написать сообщение</a>
                             </div>
                             <div class="freinds__actionblock">
                                 <form action="#" method="post" name="btndelete">
@@ -46,6 +64,7 @@
                                 </form>
                             </div>
                         </div>
+
                     @endforeach
                 @endif
 
