@@ -32,7 +32,7 @@
                     обновите браузер(Ctrl + F5) и разрешите доступ к своему местоположению</span>
                 </div>
                 <div class="pp__errok">
-                    <button class="close">OK</button>
+                    <button class="close">Понятно</button>
                 </div>
             </div>
         </div>

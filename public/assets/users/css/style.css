@@ -63,7 +63,7 @@
   z-index: 1;
 }
 .pp__errlocate {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -128,7 +128,7 @@
   border-radius: 7px;
   color: white;
   font-weight: bolder;
-  background-color: lightgreen;
+  background-color: #00ad1e;
   outline: none;
   cursor: pointer;
 }

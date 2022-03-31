@@ -6,9 +6,6 @@ var myMap;                                                                      
 let arrCurrentCoords = [];                                                                // пустой массив для записи туда координат геолокации
 
 
-console.log(errlocate);
-
-console.log("Hello world");
 
 
 function locatePosition() {                                                             // ф-ия определения текущей позиции
