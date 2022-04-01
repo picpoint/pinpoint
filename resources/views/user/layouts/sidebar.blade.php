@@ -32,10 +32,10 @@
             <i class="fa fa-search" aria-hidden="true"></i>
             <span>поиск</span>
         </a>
-        {{--<a href="#">--}}
-            {{--<i class="fa fa-cogs" aria-hidden="true"></i>--}}
-            {{--<span>настройка</span>--}}
-        {{--</a>--}}
+        <a href="#">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            <span>настройка</span>
+        </a>
 
     </div>
 

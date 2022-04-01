@@ -30,13 +30,14 @@
                             </div>
                             <div class="messages__infoblock">
                                 <span>{{ $dt[0]->name }}</span>
-                                <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">Перейти к чату</a>
+{{--                                <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">Перейти к чату</a>--}}
                             </div>
-                            {{--<div class="messages__actionblock">--}}
-                                {{--<form action="#" method="post" name="btndelete">--}}
-                                    {{--<button type="submit">Удалить из друзей</button>--}}
-                                {{--</form>--}}
-                            {{--</div>--}}
+                            <div class="messages__actionblock">
+                                <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">
+                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                    <span>Перейти к чату</span>
+                                </a>
+                            </div>
                         </div>
                     @endforeach
                     @else
