@@ -19,7 +19,7 @@
         </div>
 
         <div class="settings__content">
-
+            <span>Settings page</span>
         </div>
 
 
