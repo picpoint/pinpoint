@@ -25,7 +25,7 @@
 
                     @foreach($chat as $message)
                         @if($message->currentuser_id == $currentUser)
-                            <span style="align-self: flex-end">{{ $message->message }}</span>
+                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
                         @else
                             <span>{{ $message->message }}</span>
                         @endif

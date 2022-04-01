@@ -1,7 +1,7 @@
 .msgto {
   //border: $border;
   display: flex;
-  //height: 1000px;
+  height: 100vh;
   //width: 100vw;
   overflow: hidden;
   &__wrapper {
@@ -30,23 +30,28 @@
   }
   &__contentwrapper {
     border: 1px solid lightgray;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 95%;
-  }
-  &__blockmsgs {
     //border: $border;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+  }
+  &__blockmsgs {
+    //border: $border;
+    display: inline-block;
+    flex-direction: column;
     justify-content: flex-end;
-    //height: 500px;
-    overflow-y: scroll;
+    //flex-wrap: wrap;
+    height: 700px;
+    flex-grow: 1;
+    overflow-y: scroll; /* прокрутка по вертикали */
       span {
         //border: $border;
         display: flex;
         justify-content: center;
-        //align-self: flex-end;
+        //position: relative;
+        //left: 60%;
         font-family: Montserrat-Regular;
         font-size: 1.1rem;
         background-color: #eaeaea;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat-Regular";
   src: url("/public/assets/users/fonts/Montserrat-Regular.ttf");
@@ -766,12 +767,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 60px;
   text-decoration: none;
 }
 .messages__actionblock a i {
   font-size: 2.5rem;
-  color: #112b66;
+  color: #0573b7;
 }
 .messages__actionblock a span {
   font-size: 1rem;
@@ -787,6 +788,7 @@
 
 .msgto {
   display: flex;
+  height: 100vh;
   overflow: hidden;
 }
 .msgto__wrapper {
@@ -813,14 +815,18 @@
   border: 1px solid lightgray;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 50%;
-  height: 95%;
+  height: 100%;
 }
 .msgto__blockmsgs {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: flex-end;
+  height: 700px;
+  flex-grow: 1;
   overflow-y: scroll;
+  /* прокрутка по вертикали */
 }
 .msgto__blockmsgs span {
   display: flex;
