@@ -38,9 +38,9 @@
                                         <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                                     </div>
                                     <div class="searchp__infoblock">
+                                        <span>{{ $res->surname }}</span>
                                         <span>{{ $res->name }}</span>
-                                        <span>{{ $res->id }}</span>
-                                        <a href="#">Написать сообщение</a>
+                                        <a href="{{ route('messages.id', ['id' => $res->id]) }}">Написать сообщение</a>
                                     </div>
                                     <div class="searchp__actionblock">
                                         <form action="{{ route('add.freind', ['id' => $res->id]) }}" method="post" name="btndelete">

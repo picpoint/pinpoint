@@ -17,7 +17,7 @@ class SearchPageController extends Controller
 
     public function search(Request $request) {
         $title = "Поиск | Pinpoint";
-        $result = DB::table('users')->where('name', 'LIKE', "%{$request->searchfield}%")->get();
+        $result = DB::table('users')->where('surname', 'LIKE', "%{$request->searchfield}%")->get();
 
         return view('user.searchpage', compact('title', 'result'));
     }

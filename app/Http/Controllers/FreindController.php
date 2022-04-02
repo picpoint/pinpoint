@@ -18,17 +18,6 @@ class FreindController extends Controller
         $currentUser = Auth::user()->id;
         $freinds = Freind::where('currentuser_id', '=', $currentUser)->get();
 
-
-//        $rawData = Redis::set('boo', 'foo');
-//
-//
-//        $res = Redis::transaction(function ($redis) {
-//            $redis->incr('user_visit', 1);
-//            $redis->incr('total_visit', 1);
-//        });
-//
-//        dd($redis);
-
         return view('user.freinds', compact('title', 'freinds'));
     }
 

@@ -18,14 +18,17 @@ class UserController extends Controller
 
 
     public function store(Request $request) {
+
         $request->validate([
-            'login' => 'required',
+            'surname' => 'required',
+            'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed'
         ]);
 
         $user = User::create([
-            'name' => $request->login,
+            'surname' => $request->surname,
+            'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);
@@ -60,7 +63,6 @@ class UserController extends Controller
 
         return redirect()->back()->with('error', 'Логин или пароль неправильны...');
 
-//        dd($request->all());
     }
 
 

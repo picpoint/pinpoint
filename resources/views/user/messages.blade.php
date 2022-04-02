@@ -29,6 +29,7 @@
                                 <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                             </div>
                             <div class="messages__infoblock">
+                                <span>{{ $dt[0]->surname }}</span>
                                 <span>{{ $dt[0]->name }}</span>
 {{--                                <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">Перейти к чату</a>--}}
                             </div>

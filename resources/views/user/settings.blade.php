@@ -33,9 +33,9 @@
                         <div class="settings__lftname">
                             <span>Имя</span>
                         </div>
-                        <div class="settings__lftpatronymic">
-                            <span>Отчество</span>
-                        </div>
+                        {{--<div class="settings__lftpatronymic">--}}
+                            {{--<span>Отчество</span>--}}
+                        {{--</div>--}}
                         <div class="settings__lftemail">
                             <span>email</span>
                         </div>
@@ -51,14 +51,14 @@
 
                         </div>
                         <div class="settings__rghtsurname">
-                            <a href="#">Редактировать</a>
+                            <a href="#">{{ $user->surname }}</a>
                         </div>
                         <div class="settings__rghtname">
                             <a href="#">{{ $user->name }}</a>
                         </div>
-                        <div class="settings__rghtpatronymic">
-                            <a href="#">Редактировать</a>
-                        </div>
+                        {{--<div class="settings__rghtpatronymic">--}}
+                            {{--<a href="#">Редактировать</a>--}}
+                        {{--</div>--}}
                         <div class="settings__rghtemail">
                             <a href="#">{{ $user->email }}</a>
                         </div>
