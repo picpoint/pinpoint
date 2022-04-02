@@ -1,9 +1,18 @@
 .settings {
   //border: $border;
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
   height: 100vh;
   width: 100vw;
+    &__wrapper {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
     &__header {
       //border: $border;
       display: flex;
@@ -13,8 +22,17 @@
     &__content {
       border: $border;
       display: flex;
-      //height: 100%;
+      justify-content: center;
+      height: 100%;
       //width: 100%;
       //height: calc(100% - 50px);
     }
+    &__contentwrp {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      width: 65%;
+      margin: 20px 0;
+    }
+
 }

@@ -867,9 +867,16 @@
 
 .settings {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100vw;
+}
+.settings__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 .settings__header {
   display: flex;
@@ -879,6 +886,15 @@
 .settings__content {
   border: 1px solid red;
   display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.settings__contentwrp {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: 20px 0;
 }
 
 body {

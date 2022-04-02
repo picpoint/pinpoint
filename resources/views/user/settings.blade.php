@@ -19,7 +19,9 @@
         </div>
 
         <div class="settings__content">
-            <span>Settings page</span>
+            <div class="settings__contentwrp">
+                
+            </div>
         </div>
 
 
