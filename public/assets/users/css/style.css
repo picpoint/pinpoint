@@ -884,17 +884,214 @@
   width: 100%;
 }
 .settings__content {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 100%;
 }
 .settings__contentwrp {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 65%;
   margin: 20px 0;
+}
+.settings__cardofuser {
+  border: 1px solid lightgray;
+  display: flex;
+  width: 80%;
+}
+.settings__leftcard {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.settings__lftavatar {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+.settings__lftavatar a {
+  height: 200px;
+  width: 200px;
+}
+.settings__lftavatar a img {
+  width: 200px;
+  height: 200px;
+}
+.settings__lftsurname {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__lftsurname span {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-align: center;
+}
+.settings__lftname {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__lftname span {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-align: center;
+}
+.settings__lftpatronymic {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__lftpatronymic span {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-align: center;
+}
+.settings__lftemail {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__lftemail span {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-align: center;
+}
+.settings__lftphone {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__lftphone span {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-align: center;
+}
+.settings__lftdateofreg {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__lftdateofreg span {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-align: center;
+}
+.settings__rightcard {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.settings__rghtavatar {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+}
+.settings__rghtsurname {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__rghtsurname a {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: gray;
+}
+.settings__rghtname {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__rghtname a {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: gray;
+}
+.settings__rghtpatronymic {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__rghtpatronymic a {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: gray;
+}
+.settings__rghtemail {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__rghtemail a {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: gray;
+}
+.settings__rghtphone {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__rghtphone a {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: gray;
+}
+.settings__rghtdateofreg {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.settings__rghtdateofreg a {
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: gray;
 }
 
 body {

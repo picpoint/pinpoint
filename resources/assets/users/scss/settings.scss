@@ -1,3 +1,30 @@
+//---------------------
+// MIXINS
+
+@mixin mixinfield {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+@mixin mixinlink {
+  a {
+    font-size: 1.2rem;
+    font-family: Montserrat-Regular;
+    text-decoration: none;
+    color: gray;
+  }
+}
+
+//---------------------
+
+
+
+
+
 .settings {
   //border: $border;
   display: flex;
@@ -20,7 +47,7 @@
       width: 100%;
     }
     &__content {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       height: 100%;
@@ -28,11 +55,142 @@
       //height: calc(100% - 50px);
     }
     &__contentwrp {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 65%;
       margin: 20px 0;
     }
+    &__cardofuser {
+      border: 1px solid lightgray;
+      display: flex;
+      width: 80%;
+      //height: 80%;
+    }
+    &__leftcard {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+    }
+    &__lftavatar {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      height: 200px;
+        a {
+          //border: $border;
+          height: 200px;
+          width: 200px;
+          img {
+            //border: $border;
+            width: 200px;
+            height: 200px;
+          }
+        }
+    }
+    &__lftsurname {
+        @include mixinfield;
+          span {
+            //border: $border;
+            //width: 100%;
+            font-size: 1.2rem;
+            font-family: Montserrat-Regular;
+            text-align: center;
+          }
+    }
+    &__lftname {
+      @include mixinfield;
+        span {
+          //border: $border;
+          //width: 100%;
+          font-size: 1.2rem;
+          font-family: Montserrat-Regular;
+          text-align: center;
+        }
+    }
+    &__lftpatronymic {
+      @include mixinfield;
+        span {
+          //border: $border;
+          //width: 100%;
+          font-size: 1.2rem;
+          font-family: Montserrat-Regular;
+          text-align: center;
+        }
+    }
+    &__lftemail {
+      @include mixinfield;
+        span {
+          //border: $border;
+          //width: 100%;
+          font-size: 1.2rem;
+          font-family: Montserrat-Regular;
+          text-align: center;
+        }
+    }
+    &__lftphone {
+      @include mixinfield;
+        span {
+          //border: $border;
+          //width: 100%;
+          font-size: 1.2rem;
+          font-family: Montserrat-Regular;
+          text-align: center;
+        }
+    }
+    &__lftdateofreg {
+      @include mixinfield;
+      span {
+        //border: $border;
+        //width: 100%;
+        font-size: 1.2rem;
+        font-family: Montserrat-Regular;
+        text-align: center;
+      }
+    }
+
+
+    &__rightcard {
+      //border: $border;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+    }
+    &__rghtavatar {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      height: 200px;
+      width: 100%;
+    }
+    &__rghtsurname {
+      @include mixinfield;
+        @include mixinlink;
+    }
+    &__rghtname {
+      @include mixinfield;
+        @include mixinlink;
+    }
+    &__rghtpatronymic {
+      @include mixinfield;
+        @include mixinlink;
+    }
+    &__rghtemail {
+      @include mixinfield;
+        @include mixinlink;
+    }
+    &__rghtphone {
+      @include mixinfield;
+        @include mixinlink;
+    }
+    &__rghtdateofreg {
+      @include mixinfield;
+        @include mixinlink;
+    }
+
 
 }
