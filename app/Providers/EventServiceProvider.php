@@ -22,9 +22,9 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
 
-        MessageCreated::class => [
-            NewMessageCreatedNotification::class,
-        ]
+//        MessageCreated::class => [
+//            NewMessageCreatedNotification::class,
+//        ]
     ];
 
     /**

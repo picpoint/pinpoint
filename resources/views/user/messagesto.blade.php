@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/assets/users/css/font-awesome.min.css">
     <link rel="stylesheet" href="/public/assets/users/css/style.css">
     <title>{{ $title }}</title>
-    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    {{--<script src="https://js.pusher.com/7.0/pusher.min.js"></script>--}}
 </head>
 <body>
 
@@ -35,7 +35,7 @@
                 <div class="msgto__blocksend">
                     <form method="post" class="sendmsg">
                         @csrf
-                        <input type="text" name="sendmsg">
+                        <input type="text" name="sendmsg" placeholder="input message">
                         <button type="submit" class="btnsendmessage">ОТПРАВИТЬ</button>
                     </form>
                 </div>
@@ -54,40 +54,40 @@
 
 
 
-<script>
+{{--<script>--}}
 
-    let blockmsgs = document.querySelector('.msgto__blockmsgs');
-    let btnsendmessage = document.querySelector('.btnsendmessage');
+    {{--let blockmsgs = document.querySelector('.msgto__blockmsgs');--}}
+    {{--let btnsendmessage = document.querySelector('.btnsendmessage');--}}
 
-//    console.log(btnsendmessage);
+{{--//    console.log(btnsendmessage);--}}
 
-    let datamsg;
+    {{--let datamsg;--}}
 
-//    Pusher.logToConsole = true;
+{{--//    Pusher.logToConsole = true;--}}
 
-    var pusher = new Pusher('d31a890437419c80f25b', {
-        cluster: 'eu'
-    });
+    {{--var pusher = new Pusher('d31a890437419c80f25b', {--}}
+        {{--cluster: 'eu'--}}
+    {{--});--}}
 
-    var channel = pusher.subscribe('test-channel');
-    channel.bind('App\\Events\\MessageCreated', function(data) {
-//        alert(JSON.stringify(data));
-//        console.log(data.message);
-//        datamsg = data.message;
-        let span = document.createElement('span');
-        span.innerText = data.message;
-        blockmsgs.appendChild(span);
-    });
-
-
-    btnsendmessage.addEventListener('click', function (e) {
-//        window.stop();
-//        e.preventDefault();
-    });
+    {{--var channel = pusher.subscribe('test-channel');--}}
+    {{--channel.bind('App\\Events\\MessageCreated', function(data) {--}}
+{{--//        alert(JSON.stringify(data));--}}
+{{--//        console.log(data.message);--}}
+{{--//        datamsg = data.message;--}}
+        {{--let span = document.createElement('span');--}}
+        {{--span.innerText = data.message;--}}
+        {{--blockmsgs.appendChild(span);--}}
+    {{--});--}}
 
 
+    {{--btnsendmessage.addEventListener('click', function (e) {--}}
+{{--//        window.stop();--}}
+{{--//        e.preventDefault();--}}
+    {{--});--}}
 
-</script>
+
+
+{{--</script>--}}
 
 
 
