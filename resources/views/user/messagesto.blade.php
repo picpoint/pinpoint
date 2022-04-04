@@ -56,27 +56,24 @@
     let token = document.getElementsByTagName('input')[0];
 
     btnsend.addEventListener("click", (e) => {
-        e.preventDefault();
-
-//        console.log(title.value);
-//        console.log(token.value);
+//        e.preventDefault();
 
         const params = "_token=" + token.value + "&title=" + title.value;
 
         console.log(params);
 
         var xhr = new XMLHttpRequest();
-        const url = "{{ route('messages.id') }}";
-//        xhr.open("POST", url, true);
+        const url = "{{ route('msgto', ['id' => $message->user_id]) }}";
+        xhr.open("POST", url, true);
 
-        {{--xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");--}}
-            {{--xhr.addEventListener("readystatechange", () => {--}}
-                {{--if (xhr.readyState == 4 && xhr.status == 200) {--}}
-                {{--console.log(xhr.responseText);--}}
-            {{--}--}}
-        {{--});--}}
-            {{----}}
-        {{--xhr.send(params);--}}
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.addEventListener("readystatechange", () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+            }
+        });
+
+        xhr.send(params);
 
     });
 </script>
