@@ -66,7 +66,7 @@
                             <a href="#">Редактировать</a>
                         </div>
                         <div class="settings__rghtdateofreg">
-                            <a>{{ $dateOfReg }}</a>
+                            <a style="color: #000;">{{ $dateOfReg }}</a>
                         </div>
                     </div>
                 </div>

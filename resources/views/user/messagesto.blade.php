@@ -31,11 +31,12 @@
                         @endif
                     @endforeach
 
+
                 </div>
                 <div class="msgto__blocksend">
                     <form method="post" class="sendmsg">
                         @csrf
-                        <input type="text" name="sendmsg" placeholder="input message">
+                        <input type="text" name="sendmsg">
                         <button type="submit" class="btnsendmessage">ОТПРАВИТЬ</button>
                     </form>
                 </div>
