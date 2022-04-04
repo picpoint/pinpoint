@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="/public/assets/users/css/font-awesome.min.css">
     <link rel="stylesheet" href="/public/assets/users/css/style.css">
     <title>{{ $title }}</title>
@@ -56,9 +57,14 @@
     let token = document.getElementsByTagName('input')[0];
 
     btnsend.addEventListener("click", (e) => {
-//        e.preventDefault();
 
-        const params = "_token=" + token.value + "&title=" + title.value;
+        console.log({{ $message->user_id }});
+        console.log({{ $message->currentuser_id }});
+        console.log(title.value);
+
+        e.preventDefault();
+
+        const params = "_token=" + token.value + "&currentuser_id=20&user_id=7&message=YES&reading=0";
 
         console.log(params);
 
@@ -77,55 +83,6 @@
 
     });
 </script>
-
-
-
-
-
-{{--<script src="/public/assets/users/js/webSockets.js">--}}
-{{--</script>--}}
-
-
-
-
-
-{{--<script>--}}
-
-    {{--let blockmsgs = document.querySelector('.msgto__blockmsgs');--}}
-    {{--let btnsendmessage = document.querySelector('.btnsendmessage');--}}
-
-{{--//    console.log(btnsendmessage);--}}
-
-    {{--let datamsg;--}}
-
-{{--//    Pusher.logToConsole = true;--}}
-
-    {{--var pusher = new Pusher('d31a890437419c80f25b', {--}}
-        {{--cluster: 'eu'--}}
-    {{--});--}}
-
-    {{--var channel = pusher.subscribe('test-channel');--}}
-    {{--channel.bind('App\\Events\\MessageCreated', function(data) {--}}
-{{--//        alert(JSON.stringify(data));--}}
-{{--//        console.log(data.message);--}}
-{{--//        datamsg = data.message;--}}
-        {{--let span = document.createElement('span');--}}
-        {{--span.innerText = data.message;--}}
-        {{--blockmsgs.appendChild(span);--}}
-    {{--});--}}
-
-
-    {{--btnsendmessage.addEventListener('click', function (e) {--}}
-{{--//        window.stop();--}}
-{{--//        e.preventDefault();--}}
-    {{--});--}}
-
-
-
-{{--</script>--}}
-
-
-
 
 
 
