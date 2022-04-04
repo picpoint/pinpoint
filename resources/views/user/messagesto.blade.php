@@ -36,7 +36,8 @@
                 <div class="msgto__blocksend">
                     <form method="post" class="sendmsg">
                         @csrf
-                        <input type="text" name="sendmsg">
+                        @method('POST')
+                        <input type="text" name="sendmsg" class="inpsendmsg">
                         <button type="submit" class="btnsendmessage">ОТПРАВИТЬ</button>
                     </form>
                 </div>
@@ -46,6 +47,42 @@
 
     </div>
 </section>
+
+
+
+<script>
+    let btnsend = document.querySelector('.btnsendmessage');
+    let title = document.querySelector('.inpsendmsg');
+    let token = document.getElementsByTagName('input')[0];
+
+    btnsend.addEventListener("click", (e) => {
+        e.preventDefault();
+
+//        console.log(title.value);
+//        console.log(token.value);
+
+        const params = "_token=" + token.value + "&title=" + title.value;
+
+        console.log(params);
+
+        var xhr = new XMLHttpRequest();
+        const url = "{{ route('messages.id') }}";
+//        xhr.open("POST", url, true);
+
+        {{--xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");--}}
+            {{--xhr.addEventListener("readystatechange", () => {--}}
+                {{--if (xhr.readyState == 4 && xhr.status == 200) {--}}
+                {{--console.log(xhr.responseText);--}}
+            {{--}--}}
+        {{--});--}}
+            {{----}}
+        {{--xhr.send(params);--}}
+
+    });
+</script>
+
+
+
 
 
 {{--<script src="/public/assets/users/js/webSockets.js">--}}
