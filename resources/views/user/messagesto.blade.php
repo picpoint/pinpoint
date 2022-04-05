@@ -56,16 +56,8 @@
     let token = document.getElementsByTagName('input')[0];
 
     btnsend.addEventListener("click", (e) => {
-
-        console.log({{ $message->currentuser_id }});
-        console.log({{ $message->user_id }});
-        console.log(title.value);
-
         e.preventDefault();
-
         const params = "_token=" + token.value + "&currentuser_id=" + {{ $currentUser }} + "&user_id=" + {{ $id }} + "&message=" + title.value;
-
-        console.log(params);
 
         var xhr = new XMLHttpRequest();
         const url = "{{ route('msgto', ['id' => $message->user_id]) }}";
@@ -79,6 +71,8 @@
         });
 
         xhr.send(params);
+
+        title.value = '';
 
     });
 </script>

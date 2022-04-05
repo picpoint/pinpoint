@@ -52,6 +52,7 @@ class MessageController extends Controller
 
 
 
+
     public function writeMessageForm(Request $request, $id) {
         $title = 'Чат | Pinpoint';
         $currentUser = Auth::user()->id;
