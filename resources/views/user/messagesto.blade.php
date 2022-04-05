@@ -64,9 +64,9 @@
 
         e.preventDefault();
 
-        const params = "_token=" + token.value + "&currentuser_id=20&user_id=7&message=YES&reading=0";
+        const params = "_token=" + token.value + "&currentuser_id=20&user_id=7&message=" + title.value;
 
-        console.log(params);
+//        console.log(params);
 
         var xhr = new XMLHttpRequest();
         const url = "{{ route('msgto', ['id' => $message->user_id]) }}";
@@ -75,7 +75,7 @@
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.addEventListener("readystatechange", () => {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log(xhr.responseText);
+//                console.log(xhr.responseText);
             }
         });
 
