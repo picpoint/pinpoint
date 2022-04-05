@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/public/assets/users/css/font-awesome.min.css">
     <link rel="stylesheet" href="/public/assets/users/css/style.css">
     <title>{{ $title }}</title>
-    {{--<script src="https://js.pusher.com/7.0/pusher.min.js"></script>--}}
 </head>
 <body>
 
@@ -75,6 +74,28 @@
         title.value = '';
 
     });
+</script>
+
+
+<script>
+    setInterval(() => {
+
+        var xhr = new XMLHttpRequest();
+        const getUrl = "{{ route('messages.id', ['id' => $message->user_id]) }}";
+        xhr.open("GET", getUrl);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
+
+        xhr.addEventListener('readystatechange', () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let rawDatas = JSON.parse(xhr.responseText);
+                console.log(rawDatas);
+            }
+        });
+
+        xhr.send();
+
+    }, 10000);
+
 </script>
 
 
