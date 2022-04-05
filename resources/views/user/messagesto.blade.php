@@ -32,7 +32,6 @@
                         @endif
                     @endforeach
 
-
                 </div>
                 <div class="msgto__blocksend">
                     <form method="post" class="sendmsg">
@@ -58,15 +57,15 @@
 
     btnsend.addEventListener("click", (e) => {
 
-        console.log({{ $message->user_id }});
         console.log({{ $message->currentuser_id }});
+        console.log({{ $message->user_id }});
         console.log(title.value);
 
         e.preventDefault();
 
-        const params = "_token=" + token.value + "&currentuser_id=20&user_id=7&message=" + title.value;
+        const params = "_token=" + token.value + "&currentuser_id=" + {{ $currentUser }} + "&user_id=" + {{ $id }} + "&message=" + title.value;
 
-//        console.log(params);
+        console.log(params);
 
         var xhr = new XMLHttpRequest();
         const url = "{{ route('msgto', ['id' => $message->user_id]) }}";
@@ -76,7 +75,7 @@
             xhr.addEventListener("readystatechange", () => {
                 if (xhr.readyState == 4 && xhr.status == 200) {
 //                console.log(xhr.responseText);
-            }
+                }
         });
 
         xhr.send(params);

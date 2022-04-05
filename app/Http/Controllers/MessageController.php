@@ -68,8 +68,9 @@ class MessageController extends Controller
             ->get();
 
 
-        return view('user.messagesto', compact('title', 'chat', 'currentUser'));
+        return view('user.messagesto', compact('title', 'chat', 'currentUser', 'id'));
     }
+
 
 
 
@@ -77,7 +78,7 @@ class MessageController extends Controller
         $currentUser = Auth::user()->id;
         Message::create($request->all());
 
-        return redirect()->route('messages.id', compact('id'));
+        return redirect()->route('messages.id', compact('id', 'currentUser'));
     }
 
 
