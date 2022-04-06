@@ -24,11 +24,11 @@
                 <div class="msgto__blockmsgs">
 
                     @foreach($chat as $message)
-                        @if($message->currentuser_id == $currentUser)
-                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
-                        @else
-                            <span>{{ $message->message }}</span>
-                        @endif
+                        {{--@if($message->currentuser_id == $currentUser)--}}
+                        {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
+                        {{--@else--}}
+                        {{--<span>{{ $message->message }}</span>--}}
+                        {{--@endif--}}
                     @endforeach
 
                 </div>
@@ -39,6 +39,11 @@
                         <input type="text" name="sendmsg" class="inpsendmsg">
                         <button type="submit" class="btnsendmessage">ОТПРАВИТЬ</button>
                     </form>
+
+                    <form method="get" class="getmsg">
+                        @csrf
+                        <button type="submit" class="btngetmessage">ПОЛУЧИТЬ</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -48,37 +53,57 @@
 </section>
 
 
-
-
 <script>
-    setInterval(() => {
+
+    let btngetmessage = document.querySelector('.btngetmessage');
+
+    btngetmessage.addEventListener('click', (e) => {
+        e.preventDefault();
+
 
         var xhr = new XMLHttpRequest();
-        const getUrl = "{{ route('messages.id', ['id' => $message->user_id]) }}";
-        xhr.open("GET", getUrl);
+        const url = "{{ route('messages.id', ['id' => $message->user_id]) }}";
+        xhr.open("GET", url);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
-
-        let rawDatas = '';
 
         xhr.addEventListener('readystatechange', () => {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                rawDatas = JSON.parse(xhr.responseText);
+                let rawDatas = JSON.parse(xhr.responseText);
                 console.log(rawDatas);
             }
-
-//            for(let i = 0; i < rawDatas.length; i++) {
-//                console.log(rawDatas[i]);
-//            }
 
         });
 
         xhr.send();
 
-    }, 5000);
+    });
+
+
+
+    {{--setInterval(() => {--}}
+    {{--var xhr = new XMLHttpRequest();--}}
+    {{--const getUrl = "{{ route('messages.id', ['id' => $message->user_id]) }}";--}}
+    {{--xhr.open("GET", getUrl);--}}
+    {{--xhr.setRequestHeader('Content-type', 'application/x-www-form-url');--}}
+
+    {{--let rawDatas = '';--}}
+
+    {{--xhr.addEventListener('readystatechange', () => {--}}
+    {{--if (xhr.readyState == 4 && xhr.status == 200) {--}}
+    {{--rawDatas = JSON.parse(xhr.responseText);--}}
+    {{--console.log(rawDatas);--}}
+    {{--}--}}
+
+    {{--//            for(let i = 0; i < rawDatas.length; i++) {--}}
+    {{--//                console.log(rawDatas[i]);--}}
+    {{--//            }--}}
+
+    {{--});--}}
+
+    {{--xhr.send();--}}
+    {{--}, 15000);--}}
 
 </script>
-
-
 
 
 <script>
@@ -88,7 +113,7 @@
 
     btnsend.addEventListener("click", (e) => {
         e.preventDefault();
-        const params = "_token=" + token.value + "&currentuser_id=" + {{ $currentUser }} + "&user_id=" + {{ $id }} + "&message=" + title.value;
+        const params = "_token=" + token.value + "&currentuser_id=" + {{ $currentUser }} +"&user_id=" + {{ $id }} +"&message=" + title.value;
 
         var xhr = new XMLHttpRequest();
         const url = "{{ route('msgto', ['id' => $message->user_id]) }}";
@@ -107,7 +132,6 @@
 
     });
 </script>
-
 
 
 </body>
