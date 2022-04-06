@@ -49,6 +49,38 @@
 
 
 
+
+<script>
+    setInterval(() => {
+
+        var xhr = new XMLHttpRequest();
+        const getUrl = "{{ route('messages.id', ['id' => $message->user_id]) }}";
+        xhr.open("GET", getUrl);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
+
+        let rawDatas = '';
+
+        xhr.addEventListener('readystatechange', () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                rawDatas = JSON.parse(xhr.responseText);
+                console.log(rawDatas);
+            }
+
+//            for(let i = 0; i < rawDatas.length; i++) {
+//                console.log(rawDatas[i]);
+//            }
+
+        });
+
+        xhr.send();
+
+    }, 5000);
+
+</script>
+
+
+
+
 <script>
     let btnsend = document.querySelector('.btnsendmessage');
     let title = document.querySelector('.inpsendmsg');
@@ -63,10 +95,10 @@
         xhr.open("POST", url, true);
 
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.addEventListener("readystatechange", () => {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+        xhr.addEventListener("readystatechange", () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
 //                console.log(xhr.responseText);
-                }
+            }
         });
 
         xhr.send(params);
@@ -74,28 +106,6 @@
         title.value = '';
 
     });
-</script>
-
-
-<script>
-    setInterval(() => {
-
-        var xhr = new XMLHttpRequest();
-        const getUrl = "{{ route('messages.id', ['id' => $message->user_id]) }}";
-        xhr.open("GET", getUrl);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
-
-        xhr.addEventListener('readystatechange', () => {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                let rawDatas = JSON.parse(xhr.responseText);
-                console.log(rawDatas);
-            }
-        });
-
-        xhr.send();
-
-    }, 10000);
-
 </script>
 
 
