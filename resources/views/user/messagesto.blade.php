@@ -53,6 +53,8 @@
 </section>
 
 
+
+
 <script>
 
     let btngetmessage = document.querySelector('.btngetmessage');
@@ -60,15 +62,39 @@
     btngetmessage.addEventListener('click', (e) => {
         e.preventDefault();
 
+        console.log('click to btn');
+
+        var xhr = new XMLHttpRequest();
+        const url = "{{ route('chat') }}";
+        xhr.open("GET", url);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
+
+        xhr.addEventListener("readystatechange", function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(JSON.parse(xhr.responseText));
+            }
+        });
+
+        xhr.send();
 
 
     });
 
 
-
-
-
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
@@ -97,6 +123,9 @@
 
     });
 </script>
+
+
+
 
 
 </body>

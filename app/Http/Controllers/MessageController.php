@@ -75,32 +75,6 @@ class MessageController extends Controller
 
 
 
-    public function getChat(Request $request, $id) {
-        $title = 'Чат | Pinpoint';
-        $currentUser = Auth::user()->id;
-
-        $cht = DB::table('messages')
-            ->where('currentuser_id', '=', $currentUser)
-            ->where('user_id', '=', $id);
-
-        $chat = DB::table('messages')
-            ->where('currentuser_id', '=', $id)
-            ->where('user_id', '=', $currentUser)
-            ->union($cht)
-            ->orderBy('created_at')
-            ->get();
-
-
-//        dd($chat);
-
-        return $chat;
-
-        return view('user.messagesto', compact('title', 'chat', 'currentUser', 'id'));
-    }
-
-
-
-
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
         Message::create($request->all());
