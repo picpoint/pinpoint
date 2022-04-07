@@ -9,10 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class MessageGetAjaxController extends Controller
 {
 
-    public function index(Request $request) {
+    public function index(Request $request, $id) {
 
         $currentUser = Auth::user()->id;
-        $id = 7;
 
         $cht = DB::table('messages')
             ->where('currentuser_id', '=', $currentUser)

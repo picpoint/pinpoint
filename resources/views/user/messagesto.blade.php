@@ -24,11 +24,11 @@
                 <div class="msgto__blockmsgs">
 
                     @foreach($chat as $message)
-                        @if($message->currentuser_id == $currentUser)
-                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
-                        @else
-                            <span>{{ $message->message }}</span>
-                        @endif
+                        {{--@if($message->currentuser_id == $currentUser)--}}
+                            {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
+                        {{--@else--}}
+                            {{--<span>{{ $message->message }}</span>--}}
+                        {{--@endif--}}
                     @endforeach
 
                 </div>
@@ -58,21 +58,40 @@
 <script>
 
     let btngetmessage = document.querySelector('.btngetmessage');
+    let blockmsgs = document.querySelector('.msgto__blockmsgs');
 
     btngetmessage.addEventListener('click', (e) => {
         e.preventDefault();
 
-        console.log('click to btn');
-
         var xhr = new XMLHttpRequest();
-        const url = "{{ route('chat') }}";
+        const url = "{{ route('chat', ['id' => $message->user_id]) }}";
         xhr.open("GET", url);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
 
+        let rawDataChat = '';
+        let freindId = "{{ $message->user_id }}";
+        console.log(freindId);
+
         xhr.addEventListener("readystatechange", function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log(JSON.parse(xhr.responseText));
+                rawDataChat = JSON.parse(xhr.responseText);
+                console.log(rawDataChat);
             }
+
+            for (let i = 0; i < rawDataChat.length; i++) {
+//                console.log(rawDataChat[i]['currentuser_id']);
+                let span = document.createElement('span');
+                if (rawDataChat[i]['currentuser_id'] == freindId) {
+                    span.innerText = rawDataChat[i]['message'];
+                    blockmsgs.appendChild(span);
+                } else {
+                    span.style = "position: relative; left: 60%;";
+                    span.innerText = rawDataChat[i]['message'];
+                    blockmsgs.appendChild(span);
+                }
+            }
+
+
         });
 
         xhr.send();
