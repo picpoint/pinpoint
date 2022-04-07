@@ -72,20 +72,18 @@
 
         let rawDataChat = '';
         let freindId = "{{ $message->user_id }}";
-        console.log(freindId);
+        let currentuser_id = "{{ $message->currentuser_id }}";
+        console.log("freindId = " + freindId);
+        console.log("currentuser_id = " + currentuser_id);
 
         xhr.addEventListener("readystatechange", function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 rawDataChat = JSON.parse(xhr.responseText);
                 console.log(rawDataChat);
             }
-
-
             for (let i = 0; i < rawDataChat.length; i++) {
                 console.log(rawDataChat[i]['currentuser_id']);
-
                 let span = document.createElement('span');
-
                 if (rawDataChat[i]['currentuser_id'] == freindId) {
                     span.innerText = rawDataChat[i]['message'];
                     blockmsgs.appendChild(span);
@@ -95,8 +93,6 @@
                     blockmsgs.appendChild(span);
                 }
             }
-
-
         });
 
         xhr.send();
