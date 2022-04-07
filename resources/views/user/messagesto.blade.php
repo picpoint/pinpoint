@@ -24,12 +24,14 @@
                 <div class="msgto__blockmsgs">
 
                     @foreach($chat as $message)
-                        {{--@if($message->currentuser_id == $currentUser)--}}
+                        @if($message->currentuser_id == $currentUser)
                             {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
-                        {{--@else--}}
+                        @else
                             {{--<span>{{ $message->message }}</span>--}}
-                        {{--@endif--}}
+                        @endif
                     @endforeach
+
+                    {{--{{ dd($message) }}--}}
 
                 </div>
                 <div class="msgto__blocksend">
@@ -78,9 +80,12 @@
                 console.log(rawDataChat);
             }
 
+
             for (let i = 0; i < rawDataChat.length; i++) {
-//                console.log(rawDataChat[i]['currentuser_id']);
+                console.log(rawDataChat[i]['currentuser_id']);
+
                 let span = document.createElement('span');
+
                 if (rawDataChat[i]['currentuser_id'] == freindId) {
                     span.innerText = rawDataChat[i]['message'];
                     blockmsgs.appendChild(span);
