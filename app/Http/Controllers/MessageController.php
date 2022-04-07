@@ -93,6 +93,8 @@ class MessageController extends Controller
 
 //        dd($chat);
 
+        return $chat;
+
         return view('user.messagesto', compact('title', 'chat', 'currentUser', 'id'));
     }
 

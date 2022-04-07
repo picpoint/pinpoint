@@ -24,11 +24,11 @@
                 <div class="msgto__blockmsgs">
 
                     @foreach($chat as $message)
-                        {{--@if($message->currentuser_id == $currentUser)--}}
-                        {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
-                        {{--@else--}}
-                        {{--<span>{{ $message->message }}</span>--}}
-                        {{--@endif--}}
+                        @if($message->currentuser_id == $currentUser)
+                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
+                        @else
+                            <span>{{ $message->message }}</span>
+                        @endif
                     @endforeach
 
                 </div>
@@ -61,47 +61,12 @@
         e.preventDefault();
 
 
-        var xhr = new XMLHttpRequest();
-        const url = "{{ route('messages.id', ['id' => $message->user_id]) }}";
-        xhr.open("GET", url);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
-
-        xhr.addEventListener('readystatechange', () => {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                let rawDatas = JSON.parse(xhr.responseText);
-                console.log(rawDatas);
-            }
-
-        });
-
-        xhr.send();
 
     });
 
 
 
-    {{--setInterval(() => {--}}
-    {{--var xhr = new XMLHttpRequest();--}}
-    {{--const getUrl = "{{ route('messages.id', ['id' => $message->user_id]) }}";--}}
-    {{--xhr.open("GET", getUrl);--}}
-    {{--xhr.setRequestHeader('Content-type', 'application/x-www-form-url');--}}
 
-    {{--let rawDatas = '';--}}
-
-    {{--xhr.addEventListener('readystatechange', () => {--}}
-    {{--if (xhr.readyState == 4 && xhr.status == 200) {--}}
-    {{--rawDatas = JSON.parse(xhr.responseText);--}}
-    {{--console.log(rawDatas);--}}
-    {{--}--}}
-
-    {{--//            for(let i = 0; i < rawDatas.length; i++) {--}}
-    {{--//                console.log(rawDatas[i]);--}}
-    {{--//            }--}}
-
-    {{--});--}}
-
-    {{--xhr.send();--}}
-    {{--}, 15000);--}}
 
 </script>
 
