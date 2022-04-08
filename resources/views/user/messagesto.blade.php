@@ -62,6 +62,7 @@
     let btngetmessage = document.querySelector('.btngetmessage');
     let blockmsgs = document.querySelector('.msgto__blockmsgs');
 
+
     btngetmessage.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -73,16 +74,16 @@
         let rawDataChat = '';
         let freindId = "{{ $message->user_id }}";
         let currentuser_id = "{{ $message->currentuser_id }}";
-        console.log("freindId = " + freindId);
-        console.log("currentuser_id = " + currentuser_id);
+//        console.log("freindId = " + freindId);
+//        console.log("currentuser_id = " + currentuser_id);
 
         xhr.addEventListener("readystatechange", function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 rawDataChat = JSON.parse(xhr.responseText);
-                console.log(rawDataChat);
+//                console.log(rawDataChat);
             }
             for (let i = 0; i < rawDataChat.length; i++) {
-                console.log(rawDataChat[i]['currentuser_id']);
+//                console.log(rawDataChat[i]['currentuser_id']);
                 let span = document.createElement('span');
                 if (rawDataChat[i]['currentuser_id'] == freindId) {
                     span.innerText = rawDataChat[i]['message'];
@@ -96,6 +97,15 @@
         });
 
         xhr.send();
+
+
+//        setTimeout(() => {
+//            console.log(blockmsgs);
+//
+//            for (let i = 0; i < blockmsgs.childNodes.length; i++) {
+//                console.log(blockmsgs.childNodes[i]);
+//            }
+//        }, 1000);
 
 
     });

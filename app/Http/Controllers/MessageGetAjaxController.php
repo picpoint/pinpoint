@@ -14,7 +14,6 @@ class MessageGetAjaxController extends Controller
         $currentUser = Auth::user()->id;
 
 
-
         $cht = DB::table('messages')
             ->where('currentuser_id', '=', $currentUser)
             ->where('user_id', '=', $id);
