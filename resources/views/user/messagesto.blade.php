@@ -23,19 +23,14 @@
             <div class="msgto__contentwrapper">
                 <div class="msgto__blockmsgs">
 
-                                      
-
-                    {{ dd($id) }}
-
-                    {{--@foreach($chat as $message)--}}
-                        {{--@if($message->currentuser_id == $currentUser)--}}
-                            {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
-                        {{--@else--}}
-                            {{--<span>{{ $message->message }}</span>--}}
-                        {{--@endif--}}
-                    {{--@endforeach--}}
-
-
+                    @foreach($chat as $message)
+                        @if($message->currentuser_id == $currentUser)
+                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
+                        @else
+                            <span>{{ $message->message }}</span>
+                        @endif
+                    @endforeach
+                    
                 </div>
                 <div class="msgto__blocksend">
                     <form method="post" class="sendmsg">
@@ -64,7 +59,7 @@
         const params = "_token=" + token.value + "&currentuser_id=" + {{ $currentUser }} +"&user_id=" + {{ $id }} +"&message=" + title.value;
 
         var xhr = new XMLHttpRequest();
-        const url = "{{ route('msgto', ['id' => $message->user_id]) }}";
+        const url = "{{ route('msgto', ['id' => $id]) }}";
         xhr.open("POST", url, true);
 
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
