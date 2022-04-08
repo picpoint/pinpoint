@@ -23,13 +23,17 @@
             <div class="msgto__contentwrapper">
                 <div class="msgto__blockmsgs">
 
-                    @foreach($chat as $message)
-                        @if($message->currentuser_id == $currentUser)
-                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
-                        @else
-                            <span>{{ $message->message }}</span>
-                        @endif
-                    @endforeach
+                                      
+
+                    {{ dd($id) }}
+
+                    {{--@foreach($chat as $message)--}}
+                        {{--@if($message->currentuser_id == $currentUser)--}}
+                            {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
+                        {{--@else--}}
+                            {{--<span>{{ $message->message }}</span>--}}
+                        {{--@endif--}}
+                    {{--@endforeach--}}
 
 
                 </div>

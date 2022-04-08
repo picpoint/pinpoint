@@ -20,12 +20,12 @@
 
         <div class="freinds__content">
 
-            <div class="freinds__searchblock">
-                <form action="#" method="post" name="formsearchfreinds">
-                    <input type="search" name="searchfield">
-                    <button type="submit">НАЙТИ</button>
-                </form>
-            </div>
+            {{--<div class="freinds__searchblock">--}}
+                {{--<form action="#" method="post" name="formsearchfreinds">--}}
+                    {{--<input type="search" name="searchfield">--}}
+                    {{--<button type="submit">НАЙТИ</button>--}}
+                {{--</form>--}}
+            {{--</div>--}}
 
             <div class="freinds__contentwrapper">
 

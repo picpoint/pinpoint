@@ -47,6 +47,8 @@ class MessageController extends Controller
         }
 
 
+
+
         return view('user.messages', compact('title','hasMsg'));
     }
 
