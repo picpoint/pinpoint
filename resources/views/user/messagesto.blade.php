@@ -25,13 +25,12 @@
 
                     @foreach($chat as $message)
                         @if($message->currentuser_id == $currentUser)
-                            {{--<span style="position: relative; left: 60%;">{{ $message->message }}</span>--}}
+                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
                         @else
-                            {{--<span>{{ $message->message }}</span>--}}
+                            <span>{{ $message->message }}</span>
                         @endif
                     @endforeach
 
-                    {{--{{ dd($message) }}--}}
 
                 </div>
                 <div class="msgto__blocksend">
@@ -41,11 +40,6 @@
                         <input type="text" name="sendmsg" class="inpsendmsg">
                         <button type="submit" class="btnsendmessage">ОТПРАВИТЬ</button>
                     </form>
-
-                    <form method="get" class="getmsg">
-                        @csrf
-                        <button type="submit" class="btngetmessage">ПОЛУЧИТЬ</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -53,77 +47,6 @@
 
     </div>
 </section>
-
-
-
-
-<script>
-
-    let btngetmessage = document.querySelector('.btngetmessage');
-    let blockmsgs = document.querySelector('.msgto__blockmsgs');
-
-
-    btngetmessage.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        var xhr = new XMLHttpRequest();
-        const url = "{{ route('chat', ['id' => $message->user_id]) }}";
-        xhr.open("GET", url);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
-
-        let rawDataChat = '';
-        let freindId = "{{ $message->user_id }}";
-        let currentuser_id = "{{ $message->currentuser_id }}";
-//        console.log("freindId = " + freindId);
-//        console.log("currentuser_id = " + currentuser_id);
-
-        xhr.addEventListener("readystatechange", function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                rawDataChat = JSON.parse(xhr.responseText);
-//                console.log(rawDataChat);
-            }
-            for (let i = 0; i < rawDataChat.length; i++) {
-//                console.log(rawDataChat[i]['currentuser_id']);
-                let span = document.createElement('span');
-                if (rawDataChat[i]['currentuser_id'] == freindId) {
-                    span.innerText = rawDataChat[i]['message'];
-                    blockmsgs.appendChild(span);
-                } else {
-                    span.style = "position: relative; left: 60%;";
-                    span.innerText = rawDataChat[i]['message'];
-                    blockmsgs.appendChild(span);
-                }
-            }
-        });
-
-        xhr.send();
-
-
-//        setTimeout(() => {
-//            console.log(blockmsgs);
-//
-//            for (let i = 0; i < blockmsgs.childNodes.length; i++) {
-//                console.log(blockmsgs.childNodes[i]);
-//            }
-//        }, 1000);
-
-
-    });
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -143,7 +66,6 @@
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.addEventListener("readystatechange", () => {
             if (xhr.readyState == 4 && xhr.status == 200) {
-//                console.log(xhr.responseText);
             }
         });
 
@@ -155,7 +77,7 @@
 </script>
 
 
-
+<script src="/public/assets/users/js/scrollingChatToBottom.js"></script>
 
 
 </body>

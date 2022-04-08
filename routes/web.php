@@ -24,9 +24,6 @@ Route::group(['middleware' => 'registered'], function() {
     Route::post('/search', 'SearchPageController@search');
     Route::get('/messages', 'MessageController@index')->name('messages');
     Route::get('/messages/{id}', 'MessageController@writeMessageForm')->name('messages.id');
-
-    Route::get('/chat/{id}', 'MessageGetAjaxController@index')->name('chat');
-
     Route::post('/messages/{id}', 'MessageController@writeMessageToUser')->name('msgto');
     Route::get('/settings', 'SettingsController@index')->name('settings');
 });
