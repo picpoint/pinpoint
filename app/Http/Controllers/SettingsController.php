@@ -22,4 +22,11 @@ class SettingsController extends Controller
         return view('user.settings', compact('title', 'user', 'dateOfReg'));
     }
 
+
+
+    public function changeAvatar(Request $request) {
+        dd($request->all());
+    }
+
+
 }
