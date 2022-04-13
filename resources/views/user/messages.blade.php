@@ -26,12 +26,15 @@
                     @foreach($hasMsg as $dt)
                         <div class="messages__currentfreind">
                             <div class="messages__pictureblock">
-                                <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                @if($dt[0]->avatar == '')
+                                    <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                @else
+                                    <img src="public/assets/users/{{ $dt[0]->avatar }}" alt="avatar">
+                                @endif
                             </div>
                             <div class="messages__infoblock">
                                 <span>{{ $dt[0]->surname }}</span>
                                 <span>{{ $dt[0]->name }}</span>
-{{--                                <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">Перейти к чату</a>--}}
                             </div>
                             <div class="messages__actionblock">
                                 <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">
@@ -41,10 +44,10 @@
                             </div>
                         </div>
                     @endforeach
-                    @else
-                        <div class="messages__notmsg">
-                            <span>У Вас нет сообщений</span>
-                        </div>
+                @else
+                    <div class="messages__notmsg">
+                        <span>У Вас нет сообщений</span>
+                    </div>
                 @endif
 
 

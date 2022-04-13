@@ -20,24 +20,21 @@
 
         <div class="freinds__content">
 
-            {{--<div class="freinds__searchblock">--}}
-                {{--<form action="#" method="post" name="formsearchfreinds">--}}
-                    {{--<input type="search" name="searchfield">--}}
-                    {{--<button type="submit">НАЙТИ</button>--}}
-                {{--</form>--}}
-            {{--</div>--}}
-
             <div class="freinds__contentwrapper">
 
                 @if($freinds != '')
                     @foreach($freinds as $freind)
                         <div class="freinds__currentfreind">
                             <div class="freinds__pictureblock">
-                                <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                @if($freind->user->avatar == '')
+                                    <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                @else
+                                    <img src="public/assets/users/{{ $freind->user->avatar }}" alt="avatar">
+                                @endif
                             </div>
                             <div class="freinds__infoblock">
                                 <span>{{ $freind->user->surname }}</span>
-{{--                                <span>{{ $freind->user->name }}</span>--}}
+                                <span>{{ $freind->user->name }}</span>
                             </div>
                             <div class="freinds__writemessageto">
                                 <a href="{{ route('messages.id', ['id' => $freind->user->id]) }}">Написать сообщение</a>

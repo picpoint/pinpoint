@@ -35,7 +35,11 @@
                             @foreach($result as $res)
                                 <div class="searchp__currentfreind">
                                     <div class="searchp__pictureblock">
-                                        <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                        @if($res->avatar == '')
+                                            <img src="public/assets/users/img/noname2.jpg" alt="avatar">
+                                        @else
+                                            <img src="public/assets/users/{{ $res->avatar }}" alt="avatar">
+                                        @endif
                                     </div>
                                     <div class="searchp__infoblock">
                                         <span>{{ $res->surname }}</span>
@@ -43,7 +47,8 @@
                                         <a href="{{ route('messages.id', ['id' => $res->id]) }}">Написать сообщение</a>
                                     </div>
                                     <div class="searchp__actionblock">
-                                        <form action="{{ route('add.freind', ['id' => $res->id]) }}" method="post" name="btndelete">
+                                        <form action="{{ route('add.freind', ['id' => $res->id]) }}" method="post"
+                                              name="btndelete">
                                             @csrf
                                             <button type="submit">Добавить в друзья</button>
                                         </form>

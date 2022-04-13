@@ -816,7 +816,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 75%;
   height: 100%;
 }
 .msgto__blockmsgs {
@@ -911,11 +911,7 @@
   justify-content: center;
   height: 200px;
 }
-.settings__lftavatar a {
-  height: 200px;
-  width: 200px;
-}
-.settings__lftavatar a img {
+.settings__lftavatar img {
   width: 200px;
   height: 200px;
 }

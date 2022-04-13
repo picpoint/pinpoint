@@ -23,13 +23,13 @@
                 <div class="settings__cardofuser">
                     <div class="settings__leftcard">
                         <div class="settings__lftavatar">
-                            <a href="#">
+
                                 @if($user->avatar == '')
                                     <img src="/public/assets/users/img/avatar.png" alt="avatar">
                                 @else
                                     <img src="/public/assets/users/{{ $user->avatar }}" alt="avatar">
                                 @endif
-                            </a>
+
                         </div>
                         <div class="settings__lftsurname">
                             <span>Фамилия</span>
