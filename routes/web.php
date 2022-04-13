@@ -25,8 +25,10 @@ Route::group(['middleware' => 'registered'], function() {
     Route::get('/messages', 'MessageController@index')->name('messages');
     Route::get('/messages/{id}', 'MessageController@writeMessageForm')->name('messages.id');
     Route::post('/messages/{id}', 'MessageController@writeMessageToUser')->name('msgto');
-    Route::get('/settings', 'SettingsController@index')->name('settings');
-    Route::post('/settings', 'SettingsController@changeAvatar')->name('changeavatar');
+    Route::resource('/settings', 'SettingsController');
+
+//    Route::get('/settings', 'SettingsController@index')->name('settings');
+//    Route::post('/settings', 'SettingsController@changeAvatar')->name('changeavatar');
 });
 
 

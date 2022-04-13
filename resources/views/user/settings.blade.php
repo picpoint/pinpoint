@@ -48,7 +48,7 @@
                     </div>
                     <div class="settings__rightcard">
                         <div class="settings__rghtavatar">
-                            <form action="{{ route('changeavatar') }}" method="post" name="formchangeavatar" class="settings__rghtform">
+                            <form action="{{ route('changeavatar') }}" method="post" name="formchangeavatar" class="settings__rghtform" enctype="multipart/form-data">
                                 @csrf
                                 <input type="file" name="fieldchangeavatar">
                                 <button type="submit" name="btnchangeavatar">Заменить аватар</button>
