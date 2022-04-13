@@ -24,7 +24,11 @@
                     <div class="settings__leftcard">
                         <div class="settings__lftavatar">
                             <a href="#">
-                                <img src="/public/assets/users/img/avatar.png" alt="avatar">
+                                @if($user->avatar == '')
+                                    <img src="/public/assets/users/img/avatar.png" alt="avatar">
+                                @else
+                                    <img src="/public/assets/users/{{ $user->avatar }}" alt="avatar">
+                                @endif
                             </a>
                         </div>
                         <div class="settings__lftsurname">
@@ -34,7 +38,7 @@
                             <span>Имя</span>
                         </div>
                         {{--<div class="settings__lftpatronymic">--}}
-                            {{--<span>Отчество</span>--}}
+                        {{--<span>Отчество</span>--}}
                         {{--</div>--}}
                         <div class="settings__lftemail">
                             <span>email</span>
@@ -48,7 +52,8 @@
                     </div>
                     <div class="settings__rightcard">
                         <div class="settings__rghtavatar">
-                            <form action="{{ route('changeavatar') }}" method="post" name="formchangeavatar" class="settings__rghtform" enctype="multipart/form-data">
+                            <form action="{{ route('changeavatar') }}" method="post" name="formchangeavatar"
+                                  class="settings__rghtform" enctype="multipart/form-data">
                                 @csrf
                                 <input type="file" name="fieldchangeavatar">
                                 <button type="submit" name="btnchangeavatar">Заменить аватар</button>
@@ -61,7 +66,7 @@
                             <a href="#">{{ $user->name }}</a>
                         </div>
                         {{--<div class="settings__rghtpatronymic">--}}
-                            {{--<a href="#">Редактировать</a>--}}
+                        {{--<a href="#">Редактировать</a>--}}
                         {{--</div>--}}
                         <div class="settings__rghtemail">
                             <a href="#">{{ $user->email }}</a>

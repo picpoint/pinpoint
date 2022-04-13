@@ -21,6 +21,7 @@ class SettingsController extends Controller
         $title = 'Настройки | Pinpoint';
         $id = Auth::user()->id;
         $raw = DB::table('users')->where('id', '=', $id)->get();
+
         $user = $raw[0];
 
         $dateOfReg = Carbon::parse($user->created_at)->format('d.m.Y');
@@ -29,69 +30,21 @@ class SettingsController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+
+    public function changeAvatar(Request $request) {
+
+        $id = Auth::user()->id;
+        $dataOfUser = User::find($id);
+
+        $img = $request->file('fieldchangeavatar')->storeAs("/img/{$id}", 'avatar.jpg');
+
+        DB::table('users')->where('id', $id)->update(['avatar' => $img]);
+
+        return redirect()->route('settings');
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
