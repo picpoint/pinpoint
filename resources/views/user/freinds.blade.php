@@ -26,7 +26,7 @@
                     @foreach($freinds as $freind)
                         <div class="freinds__currentfreind">
                             <div class="freinds__pictureblock">
-                                @if($freind->user->avatar == null)
+                                @if($freind->user->avatar == "")
                                     <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                                 @else
                                     <img src="public/assets/users/{{ $freind->user->avatar }}" alt="avatar">

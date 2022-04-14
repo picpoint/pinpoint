@@ -35,7 +35,6 @@ class SettingsController extends Controller
     public function changeAvatar(Request $request) {
 
         $id = Auth::user()->id;
-        $dataOfUser = User::find($id);
 
         $img = $request->file('fieldchangeavatar')->storeAs("/img/{$id}", 'avatar.jpg');
 
