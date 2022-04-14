@@ -40,8 +40,8 @@
                                 <a href="{{ route('messages.id', ['id' => $freind->user->id]) }}">Написать сообщение</a>
                             </div>
                             <div class="freinds__actionblock">
-                                <form action="#" method="post" name="btndelete">
-                                    <button type="submit">Удалить из друзей</button>
+                                <form  name="btndelete">
+                                    <button type="submit" style="background-color: lightgray">Удалить из друзей</button>
                                 </form>
                             </div>
                         </div>
