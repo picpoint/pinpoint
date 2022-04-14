@@ -24,7 +24,7 @@
                     <div class="settings__leftcard">
                         <div class="settings__lftavatar">
 
-                                @if($user->avatar == '')
+                                @if($user->avatar == null)
                                     <img src="/public/assets/users/img/avatar.png" alt="avatar">
                                 @else
                                     <img src="/public/assets/users/{{ $user->avatar }}" alt="avatar">

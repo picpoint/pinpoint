@@ -26,7 +26,7 @@
                     @foreach($hasMsg as $dt)
                         <div class="messages__currentfreind">
                             <div class="messages__pictureblock">
-                                @if($dt[0]->avatar == '')
+                                @if($dt[0]->avatar == null)
                                     <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                                 @else
                                     <img src="public/assets/users/{{ $dt[0]->avatar }}" alt="avatar">

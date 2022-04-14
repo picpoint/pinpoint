@@ -35,7 +35,7 @@
                             @foreach($result as $res)
                                 <div class="searchp__currentfreind">
                                     <div class="searchp__pictureblock">
-                                        @if($res->avatar == '')
+                                        @if($res->avatar == null)
                                             <img src="public/assets/users/img/noname2.jpg" alt="avatar">
                                         @else
                                             <img src="public/assets/users/{{ $res->avatar }}" alt="avatar">
