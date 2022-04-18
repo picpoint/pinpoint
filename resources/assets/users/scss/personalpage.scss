@@ -323,7 +323,7 @@
           font-family: Montserrat-Regular;
           transition: $transition;
             &:hover {
-              background-color: #03008a;
+              background-color: $colorbrend;
               border-radius: 7px;
               transition: $transition;
             }

@@ -474,7 +474,7 @@
 .freinds__searchblock form button {
   width: 150px;
   height: 40px;
-  background-color: #0573b7;
+  background-color: #03008a;
   color: white;
   font-weight: bolder;
   font-family: Montserrat-Regular;
@@ -526,7 +526,7 @@
 }
 .freinds__writemessageto a {
   text-decoration: none;
-  color: #0573b7;
+  color: #03008a;
   font-family: Montserrat-Regular;
   font-weight: bolder;
 }
@@ -546,7 +546,7 @@
   width: 200px;
   height: 50px;
   margin-top: 10px;
-  background-color: #0573b7;
+  background-color: #03008a;
   font-family: Montserrat-Regular;
   color: white;
   cursor: pointer;
@@ -612,7 +612,7 @@
 .searchp__searchblock form button {
   width: 150px;
   height: 40px;
-  background-color: #0573b7;
+  background-color: #03008a;
   color: white;
   font-weight: bolder;
   border: none;
@@ -676,7 +676,7 @@
   width: 200px;
   height: 40px;
   margin-right: 50px;
-  background-color: #0573b7;
+  background-color: #03008a;
   font-family: Montserrat-Regular;
   color: white;
   cursor: pointer;
@@ -785,7 +785,7 @@
 }
 .messages__actionblock a i {
   font-size: 2.5rem;
-  color: #0573b7;
+  color: #03008a;
 }
 .messages__actionblock a span {
   font-size: 1rem;
@@ -1040,7 +1040,7 @@
   height: 40px;
   font-family: Montserrat-Regular;
   font-size: 1rem;
-  background-color: #0573b7;
+  background-color: #03008a;
   color: white;
   cursor: pointer;
 }
