@@ -106,7 +106,7 @@
       z-index: 2;
     }
     &__hdrsf {
-      // border: @border;
+      //border: $border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -117,7 +117,7 @@
       border-top-right-radius: 7px;
     }
     &__hdricon {
-      // border: @border;
+       //border: $border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -260,45 +260,12 @@
         cursor: pointer;
       }
     }
-
-    &__profile {
-      //border: $border;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      width: 350px;
-      height: 350px;
-      border-bottom-right-radius: 7px;
-      background-color: $colorbluepanel;
-      z-index: 10;
-    }
-    &__userpict {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 85%;
-    }
-    &__userfullname {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      height: 15%;
-      width: 100%;
-        span {
-          //border: $border;
-          align-self: center;
-          margin: 0 5px;
-          font-family: Montserrat-Regular;
-          font-size: 1.1rem;
-          color: white;
-        }
-    }
     &__sidebar {
-      //border: $border;
+      border: $border;
       display: flex;
-      position: absolute;
+      justify-content: space-between;
       align-self: flex-end;
+      position: absolute;
       height: 50px;
       width: 100%;
       //width: calc(100% - 350px);
@@ -307,11 +274,12 @@
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
     &__tools {
-      //border: $border;
+      border: $border;
       display: flex;
       width: 95%;
+      transition: $transition;
         a {
-          //border: $border;
+          border: $border;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -334,12 +302,19 @@
               font-size: 0.9rem;
             }
         }
+      @media (max-width: 1140px) {
+        width: 90%;
+      }
+      @media (max-width: 720px) {
+        width: auto;
+      }
     }
     &__exit {
-      //border: $border;
+      border: $border;
       display: flex;
       justify-content: center;
       width: 5%;
+      transition: $transition;
         a {
           //border: $border;
           display: flex;
@@ -363,6 +338,10 @@
             span {
               font-size: 0.9rem;
             }
+        }
+        @media (max-width: 1140px) {
+          margin-right: 10px;
+          transition: $transition;
         }
     }
 }
