@@ -152,7 +152,7 @@
   align-items: center;
   height: 40px;
   width: 100%;
-  background-color: #112b66;
+  background-color: #030053;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
@@ -235,7 +235,7 @@
 .pp__addfiles button {
   width: 150px;
   height: 30px;
-  background-color: #112b66;
+  background-color: #030053;
   color: white;
   font-weight: bold;
 }
@@ -291,7 +291,7 @@
   width: 350px;
   height: 350px;
   border-bottom-right-radius: 7px;
-  background-color: #112b66;
+  background-color: #030053;
   z-index: 10;
 }
 .pp__userpict {
@@ -319,8 +319,9 @@
   align-self: flex-end;
   height: 50px;
   width: 100%;
-  background-color: #112b66;
+  background-color: #030053;
   z-index: 10;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .pp__tools {
   display: flex;
@@ -329,20 +330,25 @@
 .pp__tools a {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   margin-left: 10px;
-  padding: 0 15px;
+  padding: 0 10px;
   text-decoration: none;
   color: white;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
 }
 .pp__tools a:hover {
-  background-color: #000041;
+  background-color: #03008a;
   border-radius: 7px;
+  transition: ease-in-out 0.5s;
 }
 .pp__tools a i {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+.pp__tools a span {
+  font-size: 0.9rem;
 }
 .pp__exit {
   display: flex;
@@ -352,18 +358,24 @@
 .pp__exit a {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 15px;
   text-decoration: none;
   color: white;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
 }
 .pp__exit a:hover {
-  background-color: #000041;
+  background-color: #03008a;
+  border-radius: 7px;
+  transition: ease-in-out 0.5s;
 }
 .pp__exit a i {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+.pp__exit a span {
+  font-size: 0.9rem;
 }
 
 .showblock {
@@ -860,7 +872,7 @@
 .msgto__blocksend form button {
   border: none;
   width: 150px;
-  background-color: #112b66;
+  background-color: #030053;
   color: white;
   cursor: pointer;
   font-family: Montserrat-Regular;
