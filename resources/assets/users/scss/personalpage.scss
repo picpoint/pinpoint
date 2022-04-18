@@ -261,7 +261,7 @@
       }
     }
     &__sidebar {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: space-between;
       align-self: flex-end;
@@ -274,12 +274,12 @@
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
     &__tools {
-      border: $border;
+      //border: $border;
       display: flex;
       width: 95%;
       transition: $transition;
         a {
-          border: $border;
+          //border: $border;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -310,7 +310,7 @@
       }
     }
     &__exit {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       width: 5%;

@@ -304,7 +304,6 @@
   cursor: pointer;
 }
 .pp__sidebar {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
@@ -316,13 +315,11 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .pp__tools {
-  border: 1px solid red;
   display: flex;
   width: 95%;
   transition: ease-in-out 0.5s;
 }
 .pp__tools a {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -356,7 +353,6 @@
   }
 }
 .pp__exit {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   width: 5%;
