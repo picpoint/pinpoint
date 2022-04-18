@@ -27,12 +27,13 @@
         input {
           border: 1px solid gray;
           width: 400px;
-          height: 40px;
+          height: 45px;
           margin: 10px;
           border-radius: 5px;
           font-family: Montserrat-Regular;
           padding-left: 10px;
           font-size: 1.1rem;
+          transition: $transition;
         }
         button {
           width: 250px;
@@ -45,6 +46,24 @@
           font-size: 1.1rem;
           font-weight:bolder;
           cursor: pointer;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          button {
+            width: 410px;
+            transition: $transition;
+          }
+        }
+        @media (max-width: 480px) {
+          input {
+            width: 280px;
+            transition: $transition;
+          }
+          button {
+            width: 290px;
+            transition: $transition;
+            font-size: 1rem;
+          }
         }
     }
 

@@ -36,22 +36,27 @@ body {
     //  transition: $transition;
     //}
     &__headerhp {
-      border: $border;
+      //border: $border;
       display: flex;
       justify-content: center;
       height: 70px;
-        @media (max-width: 720px) {
-          flex-direction: column;
-          height: 200px;
-        }
+      @media (max-width: 720px) {
+        height: 100px;
+      }
     }
     &__headerwrp {
-      border: $border;
+      //border: $border;
       display: flex;
       width: 60%;
+        @media (max-width: 720px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 95%;
+        }
     }
     &__headerlogo {
-      border: $border;
+      //border: $border;
       display: flex;
       align-items: center;
       width: 50%;
@@ -70,6 +75,12 @@ body {
             transition: $transition;
           }
         }
+      @media (max-width: 720px) {
+        justify-content: center;
+          a {
+            font-size: 1.7rem;
+          }
+      }
     }
     &__headernavigation {
       //border: $border;
@@ -77,6 +88,7 @@ body {
       justify-content: flex-end;
       align-items: center;
       width: 50%;
+      transition: $transition;
         a {
           //border: $border;
           text-decoration: none;
@@ -93,6 +105,21 @@ body {
           transition: $transition;
         }
       }
+      @media (max-width: 720px) {
+        width: 80%;
+        justify-content: space-around;
+        margin-top: 15px;
+          a {
+            font-size: 1.3rem;
+          }
+      }
+      @media (max-width: 540px) {
+        width: 90%;
+        //justify-content: space-between;
+        margin-top: 15px;
+        transition: $transition;
+      }
+
     }
 
     &__contenthp {
@@ -115,6 +142,14 @@ body {
         }
         @media (max-width: 960px) {
           width: 70%;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          width: 85%;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          width: 100%;
           transition: $transition;
         }
     }

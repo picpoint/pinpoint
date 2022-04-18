@@ -30,12 +30,13 @@
 .reg__formblock input {
   border: 1px solid gray;
   width: 400px;
-  height: 40px;
+  height: 45px;
   margin: 10px;
   border-radius: 5px;
   font-family: Montserrat-Regular;
   padding-left: 10px;
   font-size: 1.1rem;
+  transition: ease-in-out 0.5s;
 }
 .reg__formblock button {
   width: 250px;
@@ -48,6 +49,24 @@
   font-size: 1.1rem;
   font-weight: bolder;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .reg__formblock button {
+    width: 410px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .reg__formblock input {
+    width: 280px;
+    transition: ease-in-out 0.5s;
+  }
+  .reg__formblock button {
+    width: 290px;
+    transition: ease-in-out 0.5s;
+    font-size: 1rem;
+  }
 }
 
 .pp {
@@ -419,6 +438,7 @@
   font-family: Montserrat-Regular;
   padding-left: 10px;
   font-size: 1.1rem;
+  transition: ease-in-out 0.5s;
 }
 .login__formblock button {
   width: 250px;
@@ -431,6 +451,37 @@
   font-size: 1.1rem;
   font-weight: bolder;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .login__formblock h3 {
+    transition: ease-in-out 0.5s;
+  }
+  .login__formblock input {
+    width: 350px;
+    height: 40px;
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+  .login__formblock button {
+    width: 360px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .login__formblock h3 {
+    transition: ease-in-out 0.5s;
+  }
+  .login__formblock input {
+    width: 280px;
+    height: 45px;
+    transition: ease-in-out 0.5s;
+  }
+  .login__formblock button {
+    width: 290px;
+    transition: ease-in-out 0.5s;
+    font-size: 1rem;
+  }
 }
 
 .freinds {
@@ -1146,24 +1197,28 @@ body {
   height: 100vh;
 }
 .homepage__headerhp {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 70px;
 }
 @media (max-width: 720px) {
   .homepage__headerhp {
-    flex-direction: column;
-    height: 200px;
+    height: 100px;
   }
 }
 .homepage__headerwrp {
-  border: 1px solid red;
   display: flex;
   width: 60%;
 }
+@media (max-width: 720px) {
+  .homepage__headerwrp {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+  }
+}
 .homepage__headerlogo {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   width: 50%;
@@ -1182,11 +1237,20 @@ body {
     transition: ease-in-out 0.5s;
   }
 }
+@media (max-width: 720px) {
+  .homepage__headerlogo {
+    justify-content: center;
+  }
+  .homepage__headerlogo a {
+    font-size: 1.7rem;
+  }
+}
 .homepage__headernavigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 50%;
+  transition: ease-in-out 0.5s;
 }
 .homepage__headernavigation a {
   text-decoration: none;
@@ -1200,6 +1264,23 @@ body {
 @media (max-width: 1140px) {
   .homepage__headernavigation a {
     font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .homepage__headernavigation {
+    width: 80%;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  .homepage__headernavigation a {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 540px) {
+  .homepage__headernavigation {
+    width: 90%;
+    margin-top: 15px;
     transition: ease-in-out 0.5s;
   }
 }
@@ -1222,6 +1303,18 @@ body {
 @media (max-width: 960px) {
   .homepage__contenthpwrp {
     width: 70%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .homepage__contenthpwrp {
+    width: 85%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .homepage__contenthpwrp {
+    width: 100%;
     transition: ease-in-out 0.5s;
   }
 }
