@@ -1146,15 +1146,24 @@ body {
   height: 100vh;
 }
 .homepage__headerhp {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   height: 70px;
 }
+@media (max-width: 720px) {
+  .homepage__headerhp {
+    flex-direction: column;
+    height: 200px;
+  }
+}
 .homepage__headerwrp {
+  border: 1px solid red;
   display: flex;
   width: 60%;
 }
 .homepage__headerlogo {
+  border: 1px solid red;
   display: flex;
   align-items: center;
   width: 50%;
@@ -1165,6 +1174,13 @@ body {
   font-weight: bolder;
   color: black;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1400px) {
+  .homepage__headerlogo a {
+    font-size: 1.5rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .homepage__headernavigation {
   display: flex;
@@ -1179,6 +1195,13 @@ body {
   font-weight: bolder;
   color: black;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1140px) {
+  .homepage__headernavigation a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .homepage__contenthp {
   display: flex;
@@ -1191,9 +1214,16 @@ body {
   align-content: center;
   align-items: center;
   width: 60%;
+  transition: ease-in-out 0.5s;
 }
 .homepage__contenthpwrp img {
   width: 100%;
+}
+@media (max-width: 960px) {
+  .homepage__contenthpwrp {
+    width: 70%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .homepage__footerhp {
   display: flex;
@@ -1210,4 +1240,11 @@ body {
   text-decoration: none;
   color: black;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .homepage__footerwrp a {
+    font-size: 0.8rem;
+    transition: ease-in-out 0.5s;
+  }
 }
