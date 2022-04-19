@@ -315,6 +315,7 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .pp__tools {
+  border: 1px solid red;
   display: flex;
   width: 95%;
   transition: ease-in-out 0.5s;
@@ -353,6 +354,7 @@
   }
 }
 .pp__exit {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   width: 5%;
