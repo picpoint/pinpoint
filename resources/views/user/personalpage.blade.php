@@ -21,13 +21,16 @@
 
         <div class="pp__errlocate">
             <div class="pp__errmsg">
-                <div class="pp__errclose">
-                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-                </div>
+                {{--<div class="pp__errclose">--}}
+                    {{--<i class="fa fa-times-circle-o" aria-hidden="true"></i>--}}
+                {{--</div>--}}
                 <div class="pp__errnotice">
-                    <span>К сожалению Вы запретили доступ к вашему местоположению ...  :-(</span>
-                    <span>Для нормальной работы приложения, в настройках вашего браузера разрещите геолокацию,
-                    обновите браузер(Ctrl + F5) и разрешите доступ к своему местоположению</span>
+                    <span>К сожалению, мы не смогли определить Ваше местоположение ...  :-(</span>
+                    <span>Почему это произошло?</span>
+                    <span>В Вашем браузере или операционной системе стоит запрет геолокации.</span>
+                    <span>Для нормальной работы приложения, в настройках вашего браузера
+                            или операционной системы разрещите геолокацию и обновите браузер(Ctrl + F5)
+                    </span>
                 </div>
                 <div class="pp__errok">
                     <button class="close">Понятно</button>

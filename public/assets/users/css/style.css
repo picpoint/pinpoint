@@ -95,11 +95,27 @@
 .pp__errmsg {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   width: 500px;
   height: 400px;
   background-color: white;
   border-radius: 7px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .pp__errmsg {
+    justify-content: space-around;
+    width: 350px;
+    height: 300px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 540px) {
+  .pp__errmsg {
+    width: 270px;
+    height: 350px;
+  }
 }
 .pp__errclose {
   display: flex;
@@ -119,27 +135,53 @@
   justify-content: center;
   align-items: center;
   width: 95%;
-  height: 65%;
+  height: 75%;
 }
 .pp__errnotice span {
   align-self: center;
   width: 100%;
   margin: 10px 0;
   text-align: center;
+  font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
 }
 .pp__errnotice span:nth-child(1) {
   font-weight: bolder;
   font-size: 1.3rem;
 }
 .pp__errnotice span:nth-child(2) {
-  font-size: 1.1rem;
+  font-style: italic;
+}
+.pp__errnotice span:nth-child(3) {
+  text-decoration: underline;
+}
+@media (max-width: 960px) {
+  .pp__errnotice span {
+    margin: 3px 0;
+  }
+  .pp__errnotice span:nth-child(1) {
+    font-size: 0.9rem;
+    transition: ease-in-out 0.5s;
+  }
+  .pp__errnotice span:nth-child(2) {
+    font-size: 0.8rem;
+    transition: ease-in-out 0.5s;
+  }
+  .pp__errnotice span:nth-child(3) {
+    font-size: 0.8rem;
+    transition: ease-in-out 0.5s;
+  }
+  .pp__errnotice span:nth-child(4) {
+    font-size: 0.8rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pp__errok {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 25%;
+  transition: ease-in-out 0.5s;
 }
 .pp__errok button {
   width: 150px;
@@ -148,9 +190,18 @@
   border-radius: 7px;
   color: white;
   font-weight: bolder;
-  background-color: #00ad1e;
+  background-color: #095300;
   outline: none;
   cursor: pointer;
+  margin-top: -25px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .pp__errok button {
+    height: 35px;
+    width: 100px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pp__sendfile {
   display: none;
