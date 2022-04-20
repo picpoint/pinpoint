@@ -40,52 +40,66 @@
   &__currentfreind {
     border: 1px solid lightgrey;
     display: flex;
-    width: 700px;
-    height: 150px;
-    margin: 10px 0;
+    width: 600px;
+    height: 100px;
+    margin: 2px 0;
+    transition: $transition;
+      @media (max-width: 1140px) {
+        width: 500px;
+        transition: $transition;
+      }
+      @media (max-width: 960px) {
+        width: 400px;
+        transition: $transition;
+      }
+      @media (max-width: 540px) {
+        flex-direction: column;
+        align-items: center;
+        height: 250px;
+        transition: $transition;
+      }
   }
   &__pictureblock {
-    //border: $border;
+    border: $border;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     img {
       //border: $border;
       //border-radius: 50%;
-      height: 150px;
-      width: 150px;
+      height: 100px;
+      width: 100px;
     }
   }
   &__infoblock {
-    //border: $border;
+    border: $border;
     display: flex;
-    flex-direction: column;
+    //flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 400px;
     span {
-      //border: $border;
-      padding-left: 30px;
+      border: $border;
+      padding-left: 10px;
       margin: 5px 0;
       font-family: Montserrat-Regular;
-    }
-    a {
-      //border: $border;
-      text-align: center;
-      margin: 20px 0 0 20px;
-      width: 200px;
-      text-decoration: none;
-      font-family: Montserrat-Regular;
+      transition: $transition;
+        @media (max-width: 960px) {
+          font-size: 0.9rem;
+          padding: 0 3px;
+          transition: $transition;
+        }
     }
   }
   &__actionblock {
-    //border: $border;
+    border: $border;
     border-left: 1px solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 200px;
       a {
         //border: $border;
         display: flex;
@@ -96,12 +110,31 @@
         height: 60px;
         text-decoration: none;
           i {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: $colorbrend;
+            transition: $transition;
           }
           span {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-family: Montserrat-Regular;
+            transition: $transition;
+          }
+          @media (max-width: 960px) {
+            i {
+              font-size: 1.4rem;
+              color: $colorbrend;
+              transition: $transition;
+            }
+            span {
+              font-size: 0.7rem;
+              transition: $transition;
+            }
+          }
+      }
+      @media (max-width: 540px) {
+        //border: none;
+          a {
+            //height: 30px;
           }
       }
   }

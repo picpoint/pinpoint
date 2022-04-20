@@ -939,45 +939,71 @@
 .messages__currentfreind {
   border: 1px solid lightgrey;
   display: flex;
-  width: 700px;
-  height: 150px;
-  margin: 10px 0;
+  width: 600px;
+  height: 100px;
+  margin: 2px 0;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1140px) {
+  .messages__currentfreind {
+    width: 500px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 960px) {
+  .messages__currentfreind {
+    width: 400px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 540px) {
+  .messages__currentfreind {
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .messages__pictureblock {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 .messages__pictureblock img {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 .messages__infoblock {
+  border: 1px solid red;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 400px;
 }
 .messages__infoblock span {
-  padding-left: 30px;
+  border: 1px solid red;
+  padding-left: 10px;
   margin: 5px 0;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
 }
-.messages__infoblock a {
-  text-align: center;
-  margin: 20px 0 0 20px;
-  width: 200px;
-  text-decoration: none;
-  font-family: Montserrat-Regular;
+@media (max-width: 960px) {
+  .messages__infoblock span {
+    font-size: 0.9rem;
+    padding: 0 3px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .messages__actionblock {
+  border: 1px solid red;
   border-left: 1px solid lightgray;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 200px;
 }
 .messages__actionblock a {
   display: flex;
@@ -988,12 +1014,25 @@
   text-decoration: none;
 }
 .messages__actionblock a i {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #03008a;
+  transition: ease-in-out 0.5s;
 }
 .messages__actionblock a span {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .messages__actionblock a i {
+    font-size: 1.4rem;
+    color: #03008a;
+    transition: ease-in-out 0.5s;
+  }
+  .messages__actionblock a span {
+    font-size: 0.7rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .messages__notmsg {
   display: flex;

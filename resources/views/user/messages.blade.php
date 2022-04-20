@@ -39,7 +39,7 @@
                             </div>
                             <div class="messages__actionblock">
                                 <a href="{{ route('messages.id', ['id' => $dt[0]->id]) }}">
-                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-message"></i>
                                     <span>Перейти к чату</span>
                                 </a>
                             </div>
