@@ -1126,7 +1126,6 @@
   height: 100%;
 }
 .msgto__blockmsgs {
-  border: 1px solid red;
   display: inline-block;
   flex-direction: column;
   justify-content: flex-end;
@@ -1141,14 +1140,38 @@
   font-family: Montserrat-Regular;
   font-size: 1.1rem;
   width: 350px;
-  padding: 5px 0 5px 5px;
+  padding: 7px 0 7px 13px;
   margin: 5px 0;
   border-radius: 15px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1140px) {
+  .msgto__blockmsgs span {
+    width: 250px;
+    font-size: 0.9rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .msgto__blockmsgs span {
+    width: 200px;
+    font-size: 0.8rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .msgto__blockmsgs span {
+    width: 150px;
+    font-size: 0.7rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .msgto__blocksend {
   border-top: 1px solid lightgray;
   display: flex;
   height: 50px;
+  margin-top: 10px;
+  transition: ease-in-out 0.5s;
 }
 .msgto__blocksend form {
   display: flex;
@@ -1169,6 +1192,27 @@
   color: white;
   cursor: pointer;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .msgto__blocksend {
+    height: 40px;
+    transition: ease-in-out 0.5s;
+  }
+  .msgto__blocksend button {
+    font-size: 0.7rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 540px) {
+  .msgto__blocksend {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
+  .msgto__blocksend button {
+    font-size: 0.6rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 
 .settings {

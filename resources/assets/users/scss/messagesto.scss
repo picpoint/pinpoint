@@ -38,7 +38,7 @@
     height: 100%;
   }
   &__blockmsgs {
-    border: $border;
+    //border: $border;
     display: inline-block;
     flex-direction: column;
     justify-content: flex-end;
@@ -55,15 +55,39 @@
         font-family: Montserrat-Regular;
         font-size: 1.1rem;
         width: 350px;
-        padding: 5px 0 5px 5px;
+        padding: 7px 0 7px 13px;
         margin: 5px 0;
         border-radius: 15px;
+        transition: $transition;
+      }
+      @media (max-width: 1140px) {
+          span {
+            width: 250px;
+            font-size: 0.9rem;
+            transition: $transition;
+          }
+      }
+      @media (max-width: 720px) {
+        span {
+          width: 200px;
+          font-size: 0.8rem;
+          transition: $transition;
+        }
+      }
+      @media (max-width: 480px) {
+        span {
+          width: 150px;
+          font-size: 0.7rem;
+          transition: $transition;
+        }
       }
   }
   &__blocksend {
     border-top: 1px solid lightgray;
     display: flex;
     height: 50px;
+    margin-top: 10px;
+    transition: $transition;
       form {
         //border: $border;
         display: flex;
@@ -83,7 +107,24 @@
             color: white;
             cursor: pointer;
             font-family: Montserrat-Regular;
+            transition: $transition;
           }
+      }
+      @media (max-width: 720px) {
+        height: 40px;
+        transition: $transition;
+          button {
+            font-size: 0.7rem;
+            transition: $transition;
+          }
+      }
+      @media (max-width: 540px) {
+        height: 35px;
+        transition: $transition;
+        button {
+          font-size: 0.6rem;
+          transition: $transition;
+        }
       }
   }
 
