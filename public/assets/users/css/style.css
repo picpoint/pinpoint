@@ -960,31 +960,61 @@
   .messages__currentfreind {
     flex-direction: column;
     align-items: center;
-    height: 250px;
+    width: 150px;
+    height: 235px;
     transition: ease-in-out 0.5s;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 480px) {
+  .messages__currentfreind {
+    width: 130px;
+    height: 215px;
   }
 }
 .messages__pictureblock {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
   height: 100px;
+  transition: ease-in-out 0.5s;
 }
 .messages__pictureblock img {
   height: 100px;
   width: 100px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 540px) {
+  .messages__pictureblock {
+    width: 150px;
+    height: 150px;
+  }
+  .messages__pictureblock img {
+    height: 100%;
+    width: 100%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .messages__pictureblock {
+    width: 130px;
+    height: 130px;
+    transition: ease-in-out 0.5s;
+  }
+  .messages__pictureblock img {
+    height: 100%;
+    width: 100%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .messages__infoblock {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
 }
 .messages__infoblock span {
-  border: 1px solid red;
   padding-left: 10px;
   margin: 5px 0;
   font-family: Montserrat-Regular;
@@ -997,8 +1027,12 @@
     transition: ease-in-out 0.5s;
   }
 }
+@media (max-width: 540px) {
+  .messages__infoblock {
+    width: 100%;
+  }
+}
 .messages__actionblock {
-  border: 1px solid red;
   border-left: 1px solid lightgray;
   display: flex;
   justify-content: center;
@@ -1012,6 +1046,7 @@
   align-items: center;
   height: 60px;
   text-decoration: none;
+  color: black;
 }
 .messages__actionblock a i {
   font-size: 1.8rem;
@@ -1032,6 +1067,21 @@
   .messages__actionblock a span {
     font-size: 0.7rem;
     transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .messages__actionblock a i {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 540px) {
+  .messages__actionblock {
+    border-top: 1px solid lightgrey;
+    border-left: none;
+    width: 100%;
+  }
+  .messages__actionblock a {
+    height: 50px;
   }
 }
 .messages__notmsg {
