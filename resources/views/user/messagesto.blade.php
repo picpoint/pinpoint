@@ -26,9 +26,9 @@
 
                     @foreach($chat as $message)
                         @if($message->currentuser_id == $currentUser)
-                            <span style="position: relative; left: 60%;">{{ $message->message }}</span>
+                            <span style="margin: 0 0 0 auto; background-color: #daffd8">{{ $message->message }}</span>
                         @else
-                            <span>{{ $message->message }}</span>
+                            <span style="background-color: #e1f7ff">{{ $message->message }}</span>
                         @endif
                     @endforeach
                     

@@ -38,7 +38,7 @@
     height: 100%;
   }
   &__blockmsgs {
-    //border: $border;
+    border: $border;
     display: inline-block;
     flex-direction: column;
     justify-content: flex-end;
@@ -54,7 +54,6 @@
         //left: 60%;
         font-family: Montserrat-Regular;
         font-size: 1.1rem;
-        background-color: #eaeaea;
         width: 350px;
         padding: 5px 0 5px 5px;
         margin: 5px 0;
