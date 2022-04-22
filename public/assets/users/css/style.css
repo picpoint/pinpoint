@@ -707,7 +707,7 @@
   display: flex;
   flex-direction: column;
   width: 150px;
-  height: 250px;
+  height: 265px;
   margin: 20px;
 }
 .freinds__pictureblock {
@@ -738,10 +738,12 @@
 }
 .freinds__writemessageto a {
   text-decoration: none;
+  text-align: center;
   color: #03008a;
   font-size: 0.8rem;
   font-family: Montserrat-Regular;
   font-weight: bolder;
+  line-height: 1.3;
 }
 .freinds__actionblock {
   display: flex;
@@ -841,20 +843,21 @@
 .searchp__currentfreind {
   border: 1px solid lightgrey;
   display: flex;
-  width: 90%;
-  height: 150px;
+  width: 600px;
+  height: 100px;
   margin: 10px 0;
 }
 .searchp__pictureblock {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 .searchp__pictureblock img {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 .searchp__infoblock {
   display: flex;
@@ -879,14 +882,17 @@
   width: 150px;
 }
 .searchp__actionblock form {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  align-self: center;
   width: 100%;
   height: 100%;
 }
 .searchp__actionblock form button {
-  border: none;
+  border: 1px solid red;
   width: 200px;
   height: 40px;
   margin-right: 50px;
