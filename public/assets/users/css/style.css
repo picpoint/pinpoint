@@ -1428,11 +1428,31 @@
   align-items: center;
   width: 65%;
   margin: 20px 0;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__contentwrp {
+    width: 80%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__cardofuser {
   border: 1px solid lightgray;
   display: flex;
   width: 80%;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1400px) {
+  .settings__cardofuser {
+    width: 90%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 1140px) {
+  .settings__cardofuser {
+    width: 100%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__leftcard {
   display: flex;
@@ -1540,6 +1560,7 @@
   width: 100%;
 }
 .settings__rghtform {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1553,6 +1574,7 @@
   padding: 15px;
   border-radius: 5px;
   cursor: copy;
+  transition: ease-in-out 0.5s;
 }
 .settings__rghtform button {
   border: none;
@@ -1564,6 +1586,12 @@
   background-color: #03008a;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 1140px) {
+  .settings__rghtform input {
+    width: 70%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtsurname {
   border-top: 1px solid lightgray;

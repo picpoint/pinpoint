@@ -51,8 +51,6 @@
       display: flex;
       justify-content: center;
       height: 100%;
-      //width: 100%;
-      //height: calc(100% - 50px);
     }
     &__contentwrp {
       //border: $border;
@@ -61,12 +59,25 @@
       align-items: center;
       width: 65%;
       margin: 20px 0;
+      transition: $transition;
+        @media (max-width: 960px) {
+          width: 80%;
+          transition: $transition;
+        }
     }
     &__cardofuser {
       border: 1px solid lightgray;
       display: flex;
       width: 80%;
-      //height: 80%;
+      transition: $transition;
+        @media (max-width: 1400px) {
+          width: 90%;
+          transition: $transition;
+        }
+        @media (max-width: 1140px) {
+          width: 100%;
+          transition: $transition;
+        }
     }
     &__leftcard {
       //border: $border;
@@ -163,7 +174,7 @@
       width: 100%;
     }
     &__rghtform {
-      //border: $border;
+      border: $border;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -176,6 +187,7 @@
           padding: 15px;
           border-radius: 5px;
           cursor: copy;
+          transition: $transition;
         }
         button {
           border: none;
@@ -187,6 +199,12 @@
           background-color: $colorbrend;
           color: white;
           cursor: pointer;
+        }
+        @media (max-width: 1140px) {
+          input {
+            width: 70%;
+            transition: $transition;
+          }
         }
     }
     &__rghtsurname {
