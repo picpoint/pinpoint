@@ -1436,6 +1436,12 @@
     transition: ease-in-out 0.5s;
   }
 }
+@media (max-width: 480px) {
+  .settings__contentwrp {
+    width: 95%;
+    transition: ease-in-out 0.5s;
+  }
+}
 .settings__cardofuser {
   border: 1px solid lightgray;
   display: flex;
@@ -1464,10 +1470,34 @@
   display: flex;
   justify-content: center;
   height: 200px;
+  transition: ease-in-out 0.5s;
 }
 .settings__lftavatar img {
   width: 200px;
   height: 200px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftavatar {
+    height: 150px;
+    transition: ease-in-out 0.5s;
+  }
+  .settings__lftavatar img {
+    width: 150px;
+    height: 150px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .settings__lftavatar {
+    height: 100px;
+    transition: ease-in-out 0.5s;
+  }
+  .settings__lftavatar img {
+    width: 100px;
+    height: 100px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftsurname {
   border-top: 1px solid lightgray;
@@ -1476,11 +1506,25 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftsurname {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftsurname span {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-align: center;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__lftsurname span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftname {
   border-top: 1px solid lightgray;
@@ -1489,11 +1533,24 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftname {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftname span {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-align: center;
+}
+@media (max-width: 720px) {
+  .settings__lftname span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftpatronymic {
   border-top: 1px solid lightgray;
@@ -1502,11 +1559,24 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftpatronymic {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftpatronymic span {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-align: center;
+}
+@media (max-width: 720px) {
+  .settings__lftpatronymic span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftemail {
   border-top: 1px solid lightgray;
@@ -1515,11 +1585,24 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftemail {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftemail span {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-align: center;
+}
+@media (max-width: 720px) {
+  .settings__lftemail span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftphone {
   border-top: 1px solid lightgray;
@@ -1528,11 +1611,24 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftphone {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftphone span {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-align: center;
+}
+@media (max-width: 720px) {
+  .settings__lftphone span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftdateofreg {
   border-top: 1px solid lightgray;
@@ -1541,11 +1637,24 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__lftdateofreg {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__lftdateofreg span {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-align: center;
+}
+@media (max-width: 720px) {
+  .settings__lftdateofreg span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rightcard {
   display: flex;
@@ -1559,8 +1668,17 @@
   height: 200px;
   width: 100%;
 }
+@media (max-width: 960px) {
+  .settings__rghtavatar {
+    height: 150px;
+  }
+}
+@media (max-width: 720px) {
+  .settings__rghtavatar {
+    height: 100px;
+  }
+}
 .settings__rghtform {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1586,10 +1704,41 @@
   background-color: #03008a;
   color: white;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
 }
 @media (max-width: 1140px) {
   .settings__rghtform input {
     width: 70%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 960px) {
+  .settings__rghtform button {
+    height: 35px;
+    width: 150px;
+    font-size: 0.9rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .settings__rghtform input {
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+  }
+  .settings__rghtform button {
+    height: 30px;
+    width: 80%;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 0.9rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .settings__rghtform button {
+    font-size: 0.8rem;
     transition: ease-in-out 0.5s;
   }
 }
@@ -1600,12 +1749,26 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__rghtsurname {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtsurname a {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-decoration: none;
   color: gray;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__rghtsurname a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtname {
   border-top: 1px solid lightgray;
@@ -1614,12 +1777,26 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__rghtname {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtname a {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-decoration: none;
   color: gray;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__rghtname a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtpatronymic {
   border-top: 1px solid lightgray;
@@ -1628,12 +1805,26 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__rghtpatronymic {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtpatronymic a {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-decoration: none;
   color: gray;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__rghtpatronymic a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtemail {
   border-top: 1px solid lightgray;
@@ -1642,12 +1833,26 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__rghtemail {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtemail a {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-decoration: none;
   color: gray;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__rghtemail a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtphone {
   border-top: 1px solid lightgray;
@@ -1656,12 +1861,26 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__rghtphone {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtphone a {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-decoration: none;
   color: gray;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__rghtphone a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtdateofreg {
   border-top: 1px solid lightgray;
@@ -1670,12 +1889,26 @@
   align-items: center;
   width: 100%;
   height: 50px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 960px) {
+  .settings__rghtdateofreg {
+    height: 35px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .settings__rghtdateofreg a {
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
   text-decoration: none;
   color: gray;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .settings__rghtdateofreg a {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 
 body {
