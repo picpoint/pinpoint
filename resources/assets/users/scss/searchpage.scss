@@ -28,7 +28,7 @@
     flex-grow: 1;
   }
   &__contentwrp {
-    border: $border;
+    //border: $border;
     display: flex;
     width: 60%;
     height: 100%;
@@ -42,6 +42,10 @@
         width: 80%;
         transition: $transition;
       }
+      @media (max-width: 720px) {
+        width: 95%;
+        transition: $transition;
+      }
   }
   &__blockresult {
     border-top: 1px solid lightgray;
@@ -51,6 +55,12 @@
     flex-direction: column;
     width: 80%;
     height: 100%;
+      @media (max-width: 720px) {
+        width: 85%;
+      }
+      @media (max-width: 480px) {
+        width: 80%;
+      }
   }
   &__searchblock {
     //border: $border;
@@ -64,20 +74,31 @@
       justify-content: center;
       align-items: center;
       width: 95%;
-      input {
-        width: 100%;
-        height: 40px;
-        font-size: 1.1rem;
-      }
-      button {
-        width: 150px;
-        height: 40px;
-        background-color: $colorbrend;
-        color: white;
-        font-weight: bolder;
-        border: none;
-        cursor: pointer;
-      }
+        input {
+          width: 100%;
+          height: 40px;
+          font-size: 1.1rem;
+          padding-left: 5px;
+        }
+        button {
+          width: 150px;
+          height: 40px;
+          background-color: $colorbrend;
+          color: white;
+          font-weight: bolder;
+          border: none;
+          cursor: pointer;
+        }
+        @media (max-width: 720px) {
+          input {
+            height: 35px;
+            font-size: 0.9rem;
+          }
+          button {
+            height: 35px;
+            font-size: 0.8rem;
+          }
+        }
     }
   }
   &__resultblock {
@@ -91,7 +112,6 @@
 
   &__currentfreind {
     border: 1px solid lightgrey;
-    //border: $border;
     display: flex;
     width: 500px;
     height: 100px;
@@ -101,20 +121,34 @@
         width: 400px;
         transition: $transition;
       }
+      @media (max-width: 540px) {
+        flex-direction: column;
+        align-items: center;
+        width: 150px;
+        height: 240px;
+        margin: 10px 0;
+        transition: $transition;
+      }
   }
   &__pictureblock {
-    border: $border;
+    //border: $border;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 100px;
-    img {
-      //border: $border;
-      //border-radius: 50%;
-      height: 100px;
-      width: 100px;
-    }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      @media (max-width: 540px) {
+        width: 150px;
+        height: 150px;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
   }
   &__infoblock {
     //border: $border;
@@ -127,6 +161,7 @@
         //border: $border;
         padding-left: 30px;
         margin: 5px 0;
+        text-align: center;
         font-family: Montserrat-Regular;
         transition: $transition;
       }
@@ -152,6 +187,23 @@
             transition: $transition;
           }
       }
+      @media (max-width: 540px) {
+        width: 100%;
+          span {
+            padding: 0;
+            margin: 0;
+          }
+          a {
+            //border: $border;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 30px;
+            margin: 0;
+            font-size: 0.7rem;
+          }
+      }
   }
   &__actionblock {
     border-left: 1px solid lightgrey;
@@ -160,27 +212,27 @@
     align-items: center;
     width: 180px;
     transition: $transition;
-    form {
-      //border: $border;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      transition: $transition;
-      button {
-        border: none;
+      form {
+        //border: $border;
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 40px;
-        background-color: $colorbrend;
-        font-family: Montserrat-Regular;
-        font-size: 0.8rem;
-        color: white;
-        cursor: pointer;
+        width: 100%;
+        height: 100%;
         transition: $transition;
-      }
+        button {
+          border: none;
+          display: flex;
+          align-items: center;
+          width: 100px;
+          height: 40px;
+          background-color: $colorbrend;
+          font-family: Montserrat-Regular;
+          font-size: 0.8rem;
+          color: white;
+          cursor: pointer;
+          transition: $transition;
+        }
     }
     @media (max-width: 1400px) {
       width: 140px;
@@ -195,6 +247,19 @@
           }
         }
     }
+    @media (max-width: 540px) {
+      //border: $border;
+      margin: 5px 0;
+      width: 100%;
+        form {
+          button {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+          }
+        }
+    }
 
   }
 
@@ -203,6 +268,15 @@
     display: flex;
     width: 20%;
     height: 100%;
+    transition: $transition;
+      @media (max-width: 720px) {
+        width: 15%;
+        transition: $transition;
+      }
+      @media (max-width: 480px) {
+        width: 20%;
+        transition: $transition;
+      }
   }
   &__filter {
     //border: $border;
@@ -210,14 +284,32 @@
     flex-direction: column;
     width: 100%;
     height: auto;
+    transition: $transition;
       a {
+        //border: $border;
         text-decoration: none;
         color: black;
         padding: 10px 0 10px 15px;
         font-family: Montserrat-Regular;
+        transition: $transition;
           &:hover {
             background-color: #f1f1f1;
           }
+      }
+      @media (max-width: 720px) {
+        transition: $transition;
+        a {
+          padding: 5px 0;
+          text-align: center;
+          transition: $transition;
+        }
+      }
+      @media (max-width: 540px) {
+        transition: $transition;
+        a {
+          font-size: 0.8rem;
+          transition: $transition;
+        }
       }
   }
 
