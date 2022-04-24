@@ -558,6 +558,37 @@
   display: none;
 }
 
+.ymaps-2-1-79-balloon__layout {
+  border: 1px solid red;
+  display: flex;
+}
+
+.ymaps-2-1-79-balloon__content {
+  border: 1px solid red;
+  display: flex;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .ymaps-2-1-79-balloon__content {
+    width: 300px;
+    height: 350px;
+    transition: ease-in-out 0.5s;
+  }
+}
+
+.ymaps-2-1-79-balloon__content img {
+  width: 400px;
+  height: 300px;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 720px) {
+  .ymaps-2-1-79-balloon__content img {
+    width: 300px;
+    height: 300px;
+    transition: ease-in-out 0.5s;
+  }
+}
+
 .login {
   display: flex;
   justify-content: center;
