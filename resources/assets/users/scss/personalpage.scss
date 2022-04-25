@@ -502,25 +502,58 @@
 .ymaps-2-1-79-balloon__layout {
   border: $border;
   display: flex;
+  transition: $transition;
+    @media (max-width: 960px) {
+      width: 400px;
+      height: 410px;
+      transition: $transition;
+    }
 }
 .ymaps-2-1-79-balloon__content {
   border: $border;
   display: flex;
+  flex-wrap: wrap;
+  height: 400px;
   transition: $transition;
     @media (max-width: 720px) {
-      width: 300px;
+      width: 350px;
       height: 350px;
       transition: $transition;
     }
 }
 
+
+.ymaps-2-1-79-balloon__content>ymaps {
+  border: $border;
+  display: flex;
+  width: 355px!important;
+  height: 400px!important;
+}
+
+
+.ymaps-2-1-79-balloon__content>ymaps>ymaps {
+  border: $border;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap!important;
+  width: 355px;
+  height: 400px;
+}
+
+
+.ymaps-2-1-79-balloon__content>ymaps>ymaps:nth-child(3) {
+  border: $border;
+}
+
+
 .ymaps-2-1-79-balloon__content img {
-  width: 400px;
-  height: 300px;
+  //display: flex;
   transition: $transition;
     @media (max-width: 720px) {
-      width: 300px;
-      height: 300px;
       transition: $transition;
     }
 }
+
+
+
+
