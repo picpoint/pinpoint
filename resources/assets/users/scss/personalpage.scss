@@ -500,20 +500,20 @@
 
 
 .ymaps-2-1-79-balloon__layout {
-  border: $border;
+  //border: $border;
   display: flex;
   transition: $transition;
     @media (max-width: 960px) {
       width: 400px;
-      height: 410px;
+      height: 450px;
       transition: $transition;
     }
 }
 .ymaps-2-1-79-balloon__content {
-  border: $border;
+  //border: $border;
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
+  height: 450px;
   transition: $transition;
     @media (max-width: 720px) {
       width: 350px;
@@ -526,8 +526,13 @@
 .ymaps-2-1-79-balloon__content>ymaps {
   border: $border;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 355px!important;
-  height: 400px!important;
+  height: 410px!important;
+    //@media (max-width: 960px) {
+    //  width: 400px!important;
+    //}
 }
 
 
@@ -536,14 +541,12 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap!important;
-  width: 355px;
+  width: 330px;
   height: 400px;
 }
 
 
-.ymaps-2-1-79-balloon__content>ymaps>ymaps:nth-child(3) {
-  border: $border;
-}
+
 
 
 .ymaps-2-1-79-balloon__content img {
