@@ -436,6 +436,17 @@
     transition: ease-in-out 0.5s;
   }
 }
+.pp__addpin {
+  border: 1px solid red;
+  display: flex;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  margin: 0 15px 15px 0;
+  z-index: 10;
+}
 .pp__sidebar {
   display: flex;
   justify-content: space-between;

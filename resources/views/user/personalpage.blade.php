@@ -80,10 +80,14 @@
                     <button type="submit" name="addpinbtn">Добавить метку</button>
                 </div>
             </form>
+
         </div>
 
         @include('user.layouts.sidebar')
 
+        <div class="pp__addpin">
+
+        </div>
 
         <div class="hidedatas">
             @foreach($pins as $pin)
