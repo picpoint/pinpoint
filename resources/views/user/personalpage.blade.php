@@ -85,8 +85,8 @@
 
         @include('user.layouts.sidebar')
 
-        <div class="pp__addpin">
-
+        <div class="pp__addpin animate-pulse" data-tooltip="Кликни и создай метку">
+            <i class="fa-solid fa-location-dot"></i>
         </div>
 
         <div class="hidedatas">

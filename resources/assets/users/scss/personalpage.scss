@@ -375,15 +375,66 @@
     }
 
     &__addpin {
-      border: $border;
+      border: 1px solid #1d7d02;
       display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       bottom: 0;
       right: 0;
-      margin: 0 15px 15px 0;
+      margin: 0 25px 25px 0;
+      background-color: $colorgreen;
+      border-radius: 50%;
+      box-shadow: 0px 0px 18px -1px rgba(2, 2, 2, 0.61);
       z-index: 10;
+      cursor: pointer;
+        i {
+          color: white;
+          font-size: 1.7rem;
+        }
+    }
+
+    [data-tooltip]::after {
+      border-radius: 7px;
+      content: attr(data-tooltip);
+      position: absolute;
+      width: 180px;
+      left: -230px;
+      top: 30px;
+      background: $colorbrend;
+      color: #fff;
+      padding: 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+      opacity: 0;
+      transition: 1s;
+      font-family: Montserrat-Regular;
+      font-size: 0.9rem;
+    }
+    [data-tooltip]:hover::after {
+      opacity: 1;
+      top: 0.8rem;
+    }
+
+    .animate-pulse {
+      animation: animate_pulse 1.5s infinite;
+    }
+    .animate-pulse:hover {
+      animation: none;
+    }
+
+    @keyframes animate_pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgb(11, 136, 0);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(228, 25, 49, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(228, 25, 49, 0);
+      }
     }
 
     &__sidebar {
