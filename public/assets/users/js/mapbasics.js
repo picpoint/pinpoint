@@ -64,7 +64,7 @@ function init () {                                                              
 
         getAddress(coords);                                                                 // вызываем ф-ию получения адреса
 
-        function createPlacemark(coords) {                                                  // ф-ия создания метки/пина, казывающей куда кликнул пользователь
+        function createPlacemark(coords) {                                                  // ф-ия создания метки/пина, показывающей куда кликнул пользователь
             return new ymaps.Placemark(coords, {
             }, {
                 preset: 'islands#violetDotIconWithCaption',                                   // устанавливаем прессет отличный от стандартных меток

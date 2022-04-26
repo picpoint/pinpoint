@@ -105,6 +105,7 @@
 <script src="/public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="/public/assets/users/js/mapbasics.js"></script>
 <script src="/public/assets/users/js/errLocatePosition.js"></script>
+<script src="/public/assets/users/js/createPinViaIcon.js"></script>
 {{--<script src="public/assets/users/js/showBallons.js"></script>--}}
 </body>
 </html>
