@@ -24,7 +24,7 @@ sendmsgform.addEventListener('submit', function (event) {
 
 
 
-    console.log(params);
+    // console.log(params);
 
 
     request.open("POST", url, true);
