@@ -457,27 +457,6 @@
   color: white;
   font-size: 1.7rem;
 }
-.pp [data-tooltip]::after {
-  border-radius: 7px;
-  content: attr(data-tooltip);
-  position: absolute;
-  width: 180px;
-  left: -230px;
-  top: 30px;
-  background: #03008a;
-  color: #fff;
-  padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  pointer-events: none;
-  opacity: 0;
-  transition: 1s;
-  font-family: Montserrat-Regular;
-  font-size: 0.9rem;
-}
-.pp [data-tooltip]:hover::after {
-  opacity: 1;
-  top: 0.8rem;
-}
 .pp .animate-pulse {
   -webkit-animation: animate_pulse 2.5s infinite;
           animation: animate_pulse 2.5s infinite;

@@ -23,33 +23,36 @@ class ContextMenuOnMapClass {                                                   
             this.getPlaceName();                                                            // вызываем ф-ию для получения адреса в шапке формы создания пинов
         });
 
+
+
+        // this.addpin.addEventListener('click', (e) => {
+        //     // let windowWidth = document.documentElement.clientWidth;
+        //     // let windowHeight = document.documentElement.clientHeight;
+        //     //
+        //     // // console.log(windowWidth);
+        //     // // console.log(windowHeight);
+        //     // // console.log(this.sendfile);
+        //     // // console.log(this.closeform);
+        //     //
+        //     // this.sendfile.classList.remove('showblock');                                    // удаляем класс showblock показа формы
+        //     // this.sendfile.classList.add('showblock');                                       // и сразу же его показываем, чтоб не нужно было делать 2 клика
+        //     // this.sendfile.style.left = e.clientX / 2 - 100 + 'px';                                    // присваиваем координаты окна на форму
+        //     // this.sendfile.style.top = e.clientY / 2 - 100 + 'px';
+        //     // this.getPlaceName();                                                            // вызываем ф-ию для получения адреса в шапке формы создания пинов
+        //
+        //
+        //     // var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
+        //     // console.log(coords);
+        //
+        //
+        // });
+
+
+
         this.closeform.addEventListener('click', () => {                                  // на крестик закрытия вешаем событие клика
             this.sendfile.classList.toggle('showblock');                                    // так же вешаем класс скрытия/показа формы
         });
     }
-
-
-
-    contextMenuBtn() {
-        this.addpin.addEventListener('click', (e) => {
-            let windowWidth = document.documentElement.clientWidth;
-            let windowHeight = document.documentElement.clientHeight;
-
-            console.log(windowWidth);
-            console.log(windowHeight);
-            console.log(this.sendfile);
-            console.log(this.closeform);
-
-
-            this.sendfile.classList.remove('showblock');                                    // удаляем класс showblock показа формы
-            this.sendfile.classList.add('showblock');                                       // и сразу же его показываем, чтоб не нужно было делать 2 клика
-            this.sendfile.style.left = e.clientX / 2 - 100 + 'px';                                    // присваиваем координаты окна на форму
-            this.sendfile.style.top = e.clientY / 2 - 100 + 'px';
-            this.getPlaceName();                                                            // вызываем ф-ию для получения адреса в шапке формы создания пинов
-
-        });
-    }
-
 
 
 
@@ -65,4 +68,3 @@ class ContextMenuOnMapClass {                                                   
 
 let rightClick = new ContextMenuOnMapClass(sendfile, closeform, addpin);
 rightClick.contextMenu();
-rightClick.contextMenuBtn();

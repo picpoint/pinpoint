@@ -2,13 +2,14 @@ const lat = document.querySelector('.pp__latitude');                            
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
 const arrdt = document.querySelector('.pp__arrdt');
 let errlocate = document.querySelector('.pp__errlocate');
+// let addpin = document.querySelector('.pp__addpin');
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 let arrCurrentCoords = [];                                                                // пустой массив для записи туда координат геолокации
 
 
 
 
-function locatePosition() {                                                             // ф-ия определения текущей позиции
+function locatePosition() {                                                             // ф-ия определения текущей позиции на карте
     return new Promise((resolve, reject) => {                                             // возвращаем промис
     navigator.geolocation.getCurrentPosition((position) => {                            // получаем позицию геолокации
     let lat = (position.coords.latitude).toFixed(6);                                  // получение широты из позиции
@@ -49,6 +50,12 @@ function init () {                                                              
 
 
 
+    addpin.addEventListener('click', () => {
+        console.log(addpin);
+    });
+
+
+
     myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
         var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
         lat.value = coords[0].toPrecision(8);                                               // координаты широты
@@ -81,6 +88,8 @@ function init () {                                                              
         }
 
     });
+
+
 
     includeShowBalloons("public/assets/users/js/showBallons.js");                                             // вызываем ф-ию includeShowBalloons внутри ф-ии карты
 
