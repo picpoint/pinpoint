@@ -3,7 +3,8 @@ const lon = document.querySelector('.pp__longitude');                           
 const arrdt = document.querySelector('.pp__arrdt');
 let errlocate = document.querySelector('.pp__errlocate');
 // let addpin = document.querySelector('.pp__addpin');
-let pin = document.querySelectorAll('.ymaps-2-1-79-svg-icon');
+// let pin = document.querySelectorAll('.ymaps-2-1-79-svg-icon');
+let aim = document.querySelector('.pp__aim');
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 let arrCurrentCoords = [];                                                                // пустой массив для записи туда координат геолокации
 
@@ -57,14 +58,6 @@ function init () {                                                              
         var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
         lat.value = coords[0].toPrecision(8);                                               // координаты широты
         lon.value = coords[1].toPrecision(8);                                               // координаты долготы
-        // var coords = e.get('coords');
-        // console.log(coords);
-
-        let windowWidth = document.documentElement.clientWidth;
-        let windowHeight = document.documentElement.clientHeight;
-
-        // console.log(windowHeight, windowWidth);
-        // console.log(pin);
 
         if (myPlacemark) {
             myPlacemark.geometry.setCoordinates(coords);                                    // Если метка уже создана – просто передвигаем ее.
@@ -99,16 +92,19 @@ function init () {                                                              
 
     addpin.addEventListener('click', (e) => {
 
-        var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
-        lat.value = coords[0].toPrecision(8);                                               // координаты широты
-        lon.value = coords[1].toPrecision(8);                                               // координаты долготы
-        // var coords = e.get('coords');
-        console.log(coords);
+        console.log(e);
 
-        let windowWidth = document.documentElement.clientWidth;
-        let windowHeight = document.documentElement.clientHeight;
+        console.log(document.body.clientWidth / 2);
+        console.log(document.body.clientHeight / 2);
 
-        // console.log(windowHeight, windowWidth);
+        console.log(aim);
+
+        aim.style = 'display: flex';
+
+        setTimeout(() => {
+            aim.style = 'display: none';
+        }, 1000);
+
 
     });
 

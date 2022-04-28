@@ -457,6 +457,22 @@
   color: white;
   font-size: 1.7rem;
 }
+.pp__aim {
+  border: 1px solid gray;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 50%;
+  right: 50%;
+  border-radius: 50%;
+  z-index: 10;
+}
+.pp__aim span {
+  transform: rotate(45deg);
+}
 .pp .animate-pulse {
   -webkit-animation: animate_pulse 2.5s infinite;
           animation: animate_pulse 2.5s infinite;

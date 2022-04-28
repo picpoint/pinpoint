@@ -89,6 +89,11 @@
             <i class="fa-solid fa-location-dot"></i>
         </div>
 
+        <div class="pp__aim">
+            <span>+</span>
+        </div>
+
+
         <div class="hidedatas">
             @foreach($pins as $pin)
                 <span>{{ $pin->latitude }}</span>
@@ -105,7 +110,6 @@
 <script src="/public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="/public/assets/users/js/mapbasics.js"></script>
 <script src="/public/assets/users/js/errLocatePosition.js"></script>
-<script src="/public/assets/users/js/createPinViaIcon.js"></script>
 {{--<script src="public/assets/users/js/showBallons.js"></script>--}}
 </body>
 </html>
