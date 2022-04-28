@@ -110,6 +110,8 @@
 <script src="/public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="/public/assets/users/js/mapbasics.js"></script>
 <script src="/public/assets/users/js/errLocatePosition.js"></script>
+<script src="/public/assets/users/js/hammer.js"></script>
+<script src="/public/assets/users/js/ht.js"></script>
 {{--<script src="public/assets/users/js/showBallons.js"></script>--}}
 </body>
 </html>

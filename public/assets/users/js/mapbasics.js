@@ -108,9 +108,12 @@ function init () {                                                              
 
 
 
-        console.log(map);
+        console.log(document.body.clientHeight);
+        console.log(document.body.clientWidth);
 
-
+        document.body.addEventListener('contextmenu', () => {
+           console.log('context');
+        });
 
 
     });
