@@ -5,6 +5,7 @@ let errlocate = document.querySelector('.pp__errlocate');
 // let addpin = document.querySelector('.pp__addpin');
 // let pin = document.querySelectorAll('.ymaps-2-1-79-svg-icon');
 let aim = document.querySelector('.pp__aim');
+let map = document.querySelector('.ymaps-2-1-79-map');
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 let arrCurrentCoords = [];                                                                // пустой массив для записи туда координат геолокации
 
@@ -92,18 +93,24 @@ function init () {                                                              
 
     addpin.addEventListener('click', (e) => {
 
-        console.log(e);
+        // console.log(e);
 
-        console.log(document.body.clientWidth / 2);
-        console.log(document.body.clientHeight / 2);
+        // console.log(document.body.clientWidth / 2);
+        // console.log(document.body.clientHeight / 2);
 
-        console.log(aim);
+        // console.log(aim);
 
         aim.style = 'display: flex';
 
         setTimeout(() => {
             aim.style = 'display: none';
         }, 1000);
+
+
+
+        console.log(map);
+
+
 
 
     });
