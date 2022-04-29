@@ -93,13 +93,6 @@ function init () {                                                              
 
     addpin.addEventListener('click', (e) => {
 
-        // console.log(e);
-
-        // console.log(document.body.clientWidth / 2);
-        // console.log(document.body.clientHeight / 2);
-
-        // console.log(aim);
-
         aim.style = 'display: flex';
 
         setTimeout(() => {
@@ -109,13 +102,46 @@ function init () {                                                              
         let coordX = document.body.clientWidth / 2;
         let coordY = document.body.clientHeight / 2;
 
-        console.log(coordX);
-        console.log(coordY);
+        console.log('coord X = ' + coordX);
+        console.log('coord Y = ' + coordY);
 
         function simulateClick(x, y) {
             var clickEvent = document.createEvent('MouseEvents');
             clickEvent.initMouseEvent('contextmenu', true, true, window, 0, 0, 0, x, y, false, false, false, false, 0, null);
             document.elementFromPoint(x, y).dispatchEvent(clickEvent);
+
+            myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
+                var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
+                lat.value = coords[0].toPrecision(8);                                               // координаты широты
+                lon.value = coords[1].toPrecision(8);                                               // координаты долготы
+
+                if (myPlacemark) {
+                    myPlacemark.geometry.setCoordinates(coords);                                    // Если метка уже создана – просто передвигаем ее.
+                } else {
+                    myPlacemark = createPlacemark(coords);                                          // Если нет – создаем.
+                    myMap.geoObjects.add(myPlacemark);                                              // добавляем на карту
+                }
+
+                getAddress(coords);                                                                 // вызываем ф-ию получения адреса
+
+                function createPlacemark(coords) {                                                  // ф-ия создания метки/пина, показывающей куда кликнул пользователь
+                    return new ymaps.Placemark(coords, {
+                    }, {
+                        preset: 'islands#violetDotIconWithCaption',                                   // устанавливаем прессет отличный от стандартных меток
+                        draggable: false
+                    });
+                }
+
+
+                function getAddress(coords) {                                                       // Определяем адрес по координатам (обратное геокодирование).
+                    ymaps.geocode(coords).then(function (res) {                                       // геокодирование на карте
+                        var firstGeoObject = res.geoObjects.get(0);                                     // получение геообъекта
+                        window.curPosition = firstGeoObject.getAddressLine();                       // в windowsStorage сохраняем строку с адресом для передачи в шапку формы создания пина
+                    });
+                }
+
+            });
+
         }
 
         simulateClick(coordX, coordY);
