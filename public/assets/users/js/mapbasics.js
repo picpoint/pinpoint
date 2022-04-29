@@ -106,16 +106,19 @@ function init () {                                                              
             aim.style = 'display: none';
         }, 1000);
 
+        let coordX = document.body.clientWidth / 2;
+        let coordY = document.body.clientHeight / 2;
 
+        console.log(coordX);
+        console.log(coordY);
 
-        console.log(document.body.clientHeight);
-        console.log(document.body.clientWidth);
+        function simulateClick(x, y) {
+            var clickEvent = document.createEvent('MouseEvents');
+            clickEvent.initMouseEvent('contextmenu', true, true, window, 0, 0, 0, x, y, false, false, false, false, 0, null);
+            document.elementFromPoint(x, y).dispatchEvent(clickEvent);
+        }
 
-        document.body.addEventListener('contextmenu', () => {
-           console.log('context');
-        });
-
-
+        simulateClick(coordX, coordY);
     });
 
 
