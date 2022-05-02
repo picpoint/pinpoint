@@ -30,6 +30,10 @@
                                 reprehenderit sint sit tempora. Aliquam aperiam blanditiis,
                                 commodi ipsum placeat quibusdam quo rem vel.
                             </span>
+                            <span>date</span>
+                        </div>
+                        <div class="pinspage__pincontrols">
+
                         </div>
                     </a>
                 </div>

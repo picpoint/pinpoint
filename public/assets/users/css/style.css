@@ -2100,6 +2100,8 @@
   width: 700px;
   height: 150px;
   margin: 5px 0;
+  text-decoration: none;
+  color: black;
 }
 .pinspage__pinpict {
   border: 1px solid red;
@@ -2114,12 +2116,25 @@
 .pinspage__pintext {
   border: 1px solid red;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 400px;
 }
 .pinspage__pintext span {
   border: 1px solid red;
-  text-align: center;
+  margin: 0 20px;
+  height: 85%;
+  text-decoration: none;
+}
+.pinspage__pintext span:nth-child(2) {
+  height: 15%;
+  align-self: flex-start;
+}
+.pinspage__pincontrols {
+  border: 1px solid red;
+  display: flex;
+  width: 150px;
+  height: 150px;
 }
 
 body {
