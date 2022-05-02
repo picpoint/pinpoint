@@ -1,22 +1,18 @@
 <div class="pp__sidebar">
     <div class="pp__tools">
         <a href="{{ route('personalpage') }}">
-            {{--<i class="fa fa-thumb-tack" aria-hidden="true"></i>--}}
             <i class="fa-solid fa-map-location-dot"></i>
             <span>карта</span>
         </a>
-        <a href="#">
-            {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
+        <a href="{{ route('pins.index') }}">
             <i class="fa-solid fa-location-dot"></i>
             <span>метки</span>
         </a>
         <a href="{{ route('messages') }}">
-            {{--<i class="fa fa-envelope-o" aria-hidden="true"></i>--}}
             <i class="fa-solid fa-message"></i>
             <span>сообщения</span>
         </a>
         <a href="{{ route('freinds') }}">
-            {{--<i class="fa fa-users" aria-hidden="true"></i>--}}
             <i class="fa-solid fa-user-group"></i>
             <span>друзья</span>
         </a>

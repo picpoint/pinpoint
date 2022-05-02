@@ -2064,6 +2064,64 @@
   }
 }
 
+.pinspage {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.pinspage__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.pinspage__header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+}
+.pinspage__content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.pinspage__contentwrapper {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 20px 0;
+}
+.pinspage__pin {
+  border: 1px solid red;
+  display: flex;
+  width: 700px;
+  height: 150px;
+  margin: 5px 0;
+}
+.pinspage__pinpict {
+  border: 1px solid red;
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+.pinspage__pinpict img {
+  width: 100%;
+  height: 100%;
+}
+.pinspage__pintext {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+.pinspage__pintext span {
+  border: 1px solid red;
+  text-align: center;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;

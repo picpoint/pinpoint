@@ -14,7 +14,7 @@ class PinController extends Controller
     public function index()
     {
         $title = 'Pins | Pinpoint';
-        return view('user.pins', compact('title'));
+        return view('user.pins.pinspage', compact('title'));
     }
 
     /**
