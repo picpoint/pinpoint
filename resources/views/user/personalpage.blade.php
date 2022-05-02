@@ -85,13 +85,13 @@
 
         @include('user.layouts.sidebar')
 
-        <div class="pp__addpin animate-pulse" {{--data-tooltip="Кликни и создай метку"--}} >
-            <i class="fa-solid fa-location-dot"></i>
-        </div>
+        {{--<div class="pp__addpin animate-pulse" --}}{{--data-tooltip="Кликни и создай метку"--}}{{-- >--}}
+            {{--<i class="fa-solid fa-location-dot"></i>--}}
+        {{--</div>--}}
 
-        <div class="pp__aim">
-            <span>+</span>
-        </div>
+        {{--<div class="pp__aim">--}}
+            {{--<span>+</span>--}}
+        {{--</div>--}}
 
 
         <div class="hidedatas">
@@ -110,8 +110,6 @@
 <script src="/public/assets/users/js/contextMenuOnMap.js"></script>
 <script src="/public/assets/users/js/mapbasics.js"></script>
 <script src="/public/assets/users/js/errLocatePosition.js"></script>
-{{--<script src="/public/assets/users/js/hammer.js"></script>--}}
-{{--<script src="/public/assets/users/js/ht.js"></script>--}}
-{{--<script src="public/assets/users/js/showBallons.js"></script>--}}
+<script src="public/assets/users/js/showBallons.js"></script>
 </body>
 </html>

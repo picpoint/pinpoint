@@ -1,11 +1,5 @@
 const lat = document.querySelector('.pp__latitude');                                      // доступ к полю координат широты
 const lon = document.querySelector('.pp__longitude');                                     // доступ к полю координат долготы
-const arrdt = document.querySelector('.pp__arrdt');
-let errlocate = document.querySelector('.pp__errlocate');
-// let addpin = document.querySelector('.pp__addpin');
-// let pin = document.querySelectorAll('.ymaps-2-1-79-svg-icon');
-let aim = document.querySelector('.pp__aim');
-let map = document.querySelector('.ymaps-2-1-79-map');
 var myMap;                                                                                // инициализация переменной для использования в ф-ии init
 let arrCurrentCoords = [];                                                                // пустой массив для записи туда координат геолокации
 
@@ -86,67 +80,6 @@ function init () {                                                              
         }
 
     });
-
-
-
-
-
-    addpin.addEventListener('click', (e) => {
-
-        aim.style = 'display: flex';
-
-        setTimeout(() => {
-            aim.style = 'display: none';
-        }, 1000);
-
-        let coordX = document.body.clientWidth / 2;
-        let coordY = document.body.clientHeight / 2;
-
-        console.log('coord X = ' + coordX);
-        console.log('coord Y = ' + coordY);
-
-        function simulateClick(x, y) {
-            var clickEvent = document.createEvent('MouseEvents');
-            clickEvent.initMouseEvent('contextmenu', true, true, window, 0, 0, 0, x, y, false, false, false, false, 0, null);
-            document.elementFromPoint(x, y).dispatchEvent(clickEvent);
-
-            myMap.events.add('contextmenu', function (e) {                                        // добавляем событие контекста на карту
-                var coords = e.get('coords');                                                       // получаем координаты объекта при событии on.contextmenu
-                lat.value = coords[0].toPrecision(8);                                               // координаты широты
-                lon.value = coords[1].toPrecision(8);                                               // координаты долготы
-
-                if (myPlacemark) {
-                    myPlacemark.geometry.setCoordinates(coords);                                    // Если метка уже создана – просто передвигаем ее.
-                } else {
-                    myPlacemark = createPlacemark(coords);                                          // Если нет – создаем.
-                    myMap.geoObjects.add(myPlacemark);                                              // добавляем на карту
-                }
-
-                getAddress(coords);                                                                 // вызываем ф-ию получения адреса
-
-                function createPlacemark(coords) {                                                  // ф-ия создания метки/пина, показывающей куда кликнул пользователь
-                    return new ymaps.Placemark(coords, {
-                    }, {
-                        preset: 'islands#violetDotIconWithCaption',                                   // устанавливаем прессет отличный от стандартных меток
-                        draggable: false
-                    });
-                }
-
-
-                function getAddress(coords) {                                                       // Определяем адрес по координатам (обратное геокодирование).
-                    ymaps.geocode(coords).then(function (res) {                                       // геокодирование на карте
-                        var firstGeoObject = res.geoObjects.get(0);                                     // получение геообъекта
-                        window.curPosition = firstGeoObject.getAddressLine();                       // в windowsStorage сохраняем строку с адресом для передачи в шапку формы создания пина
-                    });
-                }
-
-            });
-
-        }
-
-        simulateClick(coordX, coordY);
-    });
-
 
 
 

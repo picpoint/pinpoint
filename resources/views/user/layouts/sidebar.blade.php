@@ -5,7 +5,7 @@
             <i class="fa-solid fa-map-location-dot"></i>
             <span>карта</span>
         </a>
-        <a href="{{ route('pins') }}">
+        <a href="#">
             {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
             <i class="fa-solid fa-location-dot"></i>
             <span>метки</span>
