@@ -2084,15 +2084,16 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 50px);
 }
 .pinspage__contentwrapper {
-  border: 1px solid red;
+  border: 1px solid lightgray;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
   margin: 20px 0;
+  overflow-y: scroll;
 }
 .pinspage__pin {
   border: 1px solid lightgray;
@@ -2154,6 +2155,30 @@
 }
 .pinspage__pincontrols a i {
   font-size: 1.5rem;
+}
+
+.pinedit {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.pinedit__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.pinedit__header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+}
+.pinedit__content {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 50px);
 }
 
 body {

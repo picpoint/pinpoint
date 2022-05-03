@@ -61,7 +61,8 @@ class PinController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title = 'Редактирование метки | Pinpoint';
+        return view('user.pins.pinedit', compact('title', 'id'));
     }
 
     /**

@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/public/assets/users/css/all.css">
-    <link rel="stylesheet" href="public/assets/users/css/style.css">
+    <link rel="stylesheet" href="/public/assets/users/css/style.css">
     <title>{{ $title }}</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
                             <a href="#">
                                 <i class="fa-solid fa-share"></i>
                             </a>
-                            <a href="#">
+                            <a href="{{ route('pins.edit', ['pin' => $pin->id]) }}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <a href="#">
