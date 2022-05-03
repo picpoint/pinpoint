@@ -11,19 +11,26 @@
 </head>
 <body>
 
-    <section class="pinedit">
-        <div class="pinedit__wrapper">
-            <div class="pinedit__header">
-                @include('user.layouts.sidebar')
-            </div>
-
-            <div class="pinedit__content">
-
-            </div>
-
-
+<section class="pinedit">
+    <div class="pinedit__wrapper">
+        <div class="pinedit__header">
+            @include('user.layouts.sidebar')
         </div>
-    </section>
+
+        <div class="pinedit__content">
+            <div class="pinedit__contentwrapper">
+                <form method="post">
+                    <textarea name="commentaries" id="commentaries">
+                        {{ $pin[0]->commentaries }}
+                    </textarea>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
 
 </body>
 </html>
