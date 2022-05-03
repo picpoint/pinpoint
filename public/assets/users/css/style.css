@@ -2095,7 +2095,7 @@
   margin: 20px 0;
 }
 .pinspage__pin {
-  border: 1px solid red;
+  border: 1px solid lightgray;
   display: flex;
   width: 700px;
   height: 150px;
@@ -2104,7 +2104,6 @@
   color: black;
 }
 .pinspage__pinpict {
-  border: 1px solid red;
   display: flex;
   width: 150px;
   height: 150px;
@@ -2114,27 +2113,47 @@
   height: 100%;
 }
 .pinspage__pintext {
-  border: 1px solid red;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 400px;
 }
 .pinspage__pintext span {
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 20px;
   height: 85%;
   text-decoration: none;
+  font-family: Montserrat-Regular;
 }
 .pinspage__pintext span:nth-child(2) {
   height: 15%;
   align-self: flex-start;
+  font-size: 0.8rem;
 }
 .pinspage__pincontrols {
-  border: 1px solid red;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 150px;
+}
+.pinspage__pincontrols a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+.pinspage__pincontrols a i {
+  font-size: 1.5rem;
 }
 
 body {

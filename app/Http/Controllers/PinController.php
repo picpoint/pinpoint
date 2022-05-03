@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PinController extends Controller
 {
@@ -14,7 +16,9 @@ class PinController extends Controller
     public function index()
     {
         $title = 'Pins | Pinpoint';
-        return view('user.pins.pinspage', compact('title'));
+        $userId = Auth::user()->id;
+        $allPins = DB::table('pins')->where('user_id', $userId)->get();
+        return view('user.pins.pinspage', compact('title', 'allPins'));
     }
 
     /**

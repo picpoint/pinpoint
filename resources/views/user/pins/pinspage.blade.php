@@ -11,36 +11,43 @@
 </head>
 <body>
 
-    <section class="pinspage">
-        <div class="pinspage__wrapper">
-            <div class="pinspage__header">
-                @include('user.layouts.sidebar')
-            </div>
+<section class="pinspage">
+    <div class="pinspage__wrapper">
+        <div class="pinspage__header">
+            @include('user.layouts.sidebar')
+        </div>
 
-            <div class="pinspage__content">
-                <div class="pinspage__contentwrapper">
-                    <a href="#" class="pinspage__pin">
+        <div class="pinspage__content">
+            <div class="pinspage__contentwrapper">
+
+                @foreach($allPins as $pin)
+                    <div class="pinspage__pin">
                         <div class="pinspage__pinpict">
-                            <img src="" alt="pin">
+                            <img src="/public/assets/users/{{ $pin->image }}" alt="pin">
                         </div>
                         <div class="pinspage__pintext">
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Dolores ducimus eum eveniet ipsam laboriosam nihil recusandae
-                                reprehenderit sint sit tempora. Aliquam aperiam blanditiis,
-                                commodi ipsum placeat quibusdam quo rem vel.
-                            </span>
-                            <span>date</span>
+                            <span>{{ $pin->commentaries }}</span>
+                            <span>{{ \Carbon\Carbon::parse($pin->created_at)->format('d.m.Y') }}</span>
                         </div>
                         <div class="pinspage__pincontrols">
-
+                            <a href="#">
+                                <i class="fa-solid fa-share"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
+                    </div>
+                @endforeach
 
+            </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
 </body>
 </html>
