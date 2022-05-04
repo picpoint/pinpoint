@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -75,7 +76,34 @@ class PinController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user_id = Auth::user()->id;
+
+        $pinForEdit = Pin::find($id);
+        $pin = DB::table('pins')->where('id', $id)->get();
+
+        if ($request->commentaries != $pin[0]->commentaries) {
+            $pinForEdit->update([
+                'commentaries' => $request->commentaries,
+            ]);
+        }
+
+        $str = "img/$user_id/";
+        $nameFile = str_replace($str, '', $pin[0]->image);
+
+//        dd($nameFile);
+
+        if ($request->pictfield != null) {
+//            dd($pin[0]->image);
+            $pinForEdit->update([
+                'image' => $request->pictfield->storeAs("img/$user_id/", $nameFile)
+            ]);
+        }
+
+
+        session()->flash('success', 'Запись обновлена');
+
+        return redirect()->route('pins.index');
+
     }
 
     /**

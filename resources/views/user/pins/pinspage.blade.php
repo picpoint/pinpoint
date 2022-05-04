@@ -20,6 +20,12 @@
         <div class="pinspage__content">
             <div class="pinspage__contentwrapper">
 
+                @if(session('success'))
+                    <div class="pinspage__success">
+                        <span>{{ session('success') }}</span>
+                    </div>
+                @endif
+
                 @foreach($allPins as $pin)
                     <div class="pinspage__pin">
                         <div class="pinspage__pinpict">

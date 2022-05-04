@@ -20,12 +20,14 @@
         <div class="pinedit__content">
             <div class="pinedit__contentwrapper">
 
-                <form method="post" class="pinedit__form">
+                <form action="{{ route('pins.update', ['pin' => $pin[0]->id]) }}" method="post" class="pinedit__form" enctype="multipart/form-data">
+                    @csrf
+                    @method('PATCH')
                     <textarea name="commentaries" id="commentaries">
                         {{ $pin[0]->commentaries }}
                     </textarea>
                     <img src="/public/assets/users/{{$pin[0]->image}}" alt="picture">
-                    <input type="file" name="pictfield">
+                    <input type="file" name="pictfield" id="pictfield">
                     <button type="submit">Редактировать</button>
                 </form>
 

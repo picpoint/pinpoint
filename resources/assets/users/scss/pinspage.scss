@@ -32,6 +32,23 @@
       margin: 20px 0;
       overflow-y: scroll;
     }
+    &__success {
+      //border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 700px;
+      //height: 150px;
+      background-color: $colorgreen;
+      margin: 20px 0;
+      padding: 5px 0;
+      border-radius: 7px;
+      span {
+        color: white;
+        font-family: Montserrat-Regular;
+        font-size: 1.1rem;
+      }
+    }
     &__pin {
       //border: $border;
       border: 1px solid lightgray;

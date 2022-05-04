@@ -23,7 +23,7 @@
     height: calc(100% - 50px);
   }
   &__contentwrapper {
-    border: $border;
+    border: 1px solid gray;
     display: flex;
     justify-content: center;
     width: 50%;
