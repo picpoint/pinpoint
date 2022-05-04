@@ -20,10 +20,13 @@
         <div class="pinedit__content">
             <div class="pinedit__contentwrapper">
 
-                <form method="post">
+                <form method="post" class="pinedit__form">
                     <textarea name="commentaries" id="commentaries">
                         {{ $pin[0]->commentaries }}
                     </textarea>
+                    <img src="/public/assets/users/{{$pin[0]->image}}" alt="picture">
+                    <input type="file" name="pictfield">
+                    <button type="submit">Редактировать</button>
                 </form>
 
             </div>
