@@ -116,6 +116,19 @@
             font-size: 1.5rem;
           }
       }
+    form {
+      //border: $border;
+        button {
+          border: none;
+          background: none;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+            i {
+              font-size: 1.5rem;
+            }
+        }
+    }
   }
 
 

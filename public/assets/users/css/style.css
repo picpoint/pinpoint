@@ -2171,6 +2171,16 @@
 .pinspage__pincontrols a i {
   font-size: 1.5rem;
 }
+.pinspage__pincontrols form button {
+  border: none;
+  background: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.pinspage__pincontrols form button i {
+  font-size: 1.5rem;
+}
 
 .pinedit {
   display: flex;

@@ -42,9 +42,14 @@
                             <a href="{{ route('pins.edit', ['pin' => $pin->id]) }}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a href="#">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
+                            <form action="{{ route('pins.destroy', ['pin' => $pin->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                                </a>
+                            </form>
                         </div>
                     </div>
                 @endforeach
