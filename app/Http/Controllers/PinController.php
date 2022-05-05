@@ -109,21 +109,11 @@ class PinController extends Controller
      */
     public function destroy($id)
     {
-        $user_id = Auth::user()->id;
-
-//        dd($user_id);
-
-        $rawData = DB::table('pins')->where('id', $id)->get();
-
-        $patToImg = "img/$user_id/";
-        $nameFile = str_replace($patToImg, '', $rawData[0]->image);
-
-//        dump($nameFile);
-//        dd($rawData[0]->image);
+        $currentPin = DB::table('pins')->where('id', $id)->get();
 
         Pin::destroy($id);
 
-        unlink("C:/OpenServer/domains/pinpoint/public/assets/users/" . $rawData[0]->image);
+        unlink("C:/OpenServer/domains/pinpoint/public/assets/users/" . $currentPin[0]->image);
 
         session()->flash('success', 'Запись удалена');
         return redirect()->route('pins.index');
