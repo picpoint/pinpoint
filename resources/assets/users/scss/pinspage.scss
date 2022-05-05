@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 50%;
+      width: 55%;
       margin: 20px 0;
       overflow-y: scroll;
     }
@@ -58,15 +58,28 @@
       margin: 5px 0;
       text-decoration: none;
       color: black;
+      transition: $transition;
+        @media (max-width: 1400px) {
+          width: 600px;
+          height: 100px;
+          transition: $transition;
+        }
     }
     &__pinpict {
       //border: $border;
       display: flex;
       width: 150px;
       height: 150px;
+      transition: $transition;
         img {
           width: 100%;
           height: 100%;
+          transition: $transition;
+        }
+        @media (max-width: 1400px) {
+          width: 100px;
+          height: 100px;
+          transition: $transition;
         }
     }
     &__pintext {
@@ -85,11 +98,18 @@
           height: 85%;
           text-decoration: none;
           font-family: Montserrat-Regular;
+          transition: $transition;
             &:nth-child(2) {
               height: 15%;
               align-self: flex-start;
               font-size: 0.8rem;
             }
+        }
+        @media (max-width: 1400px) {
+          span {
+            font-size: 0.8rem;
+            transition: $transition;
+          }
         }
     }
   &__pincontrols {
@@ -116,19 +136,22 @@
             font-size: 1.5rem;
           }
       }
-    form {
-      //border: $border;
-        button {
-          border: none;
-          background: none;
-          width: 30px;
-          height: 30px;
-          cursor: pointer;
-            i {
-              font-size: 1.5rem;
-            }
-        }
-    }
+      form {
+        //border: $border;
+          button {
+            border: none;
+            background: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+              i {
+                font-size: 1.5rem;
+              }
+          }
+      }
+      @media (max-width: 1400px) {
+        
+      }
   }
 
 

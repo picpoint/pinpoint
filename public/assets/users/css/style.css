@@ -2091,7 +2091,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 55%;
   margin: 20px 0;
   overflow-y: scroll;
 }
@@ -2118,15 +2118,32 @@
   margin: 5px 0;
   text-decoration: none;
   color: black;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1400px) {
+  .pinspage__pin {
+    width: 600px;
+    height: 100px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pinspage__pinpict {
   display: flex;
   width: 150px;
   height: 150px;
+  transition: ease-in-out 0.5s;
 }
 .pinspage__pinpict img {
   width: 100%;
   height: 100%;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1400px) {
+  .pinspage__pinpict {
+    width: 100px;
+    height: 100px;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pinspage__pintext {
   border-left: 1px solid lightgray;
@@ -2144,11 +2161,18 @@
   height: 85%;
   text-decoration: none;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
 }
 .pinspage__pintext span:nth-child(2) {
   height: 15%;
   align-self: flex-start;
   font-size: 0.8rem;
+}
+@media (max-width: 1400px) {
+  .pinspage__pintext span {
+    font-size: 0.8rem;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pinspage__pincontrols {
   display: flex;
@@ -2181,7 +2205,6 @@
 .pinspage__pincontrols form button i {
   font-size: 1.5rem;
 }
-
 .pinedit {
   display: flex;
   height: 100vh;
