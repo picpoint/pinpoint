@@ -93,7 +93,7 @@ class PinController extends Controller
 
         if ($request->pictfield != null) {
             $pinForEdit->update([
-                'image' => $request->pictfield->storeAs("img/$user_id/", $nameFile)
+                'image' => $request->pictfield->storeAs("img/$user_id", $nameFile)
             ]);
         }
 
@@ -111,13 +111,19 @@ class PinController extends Controller
     {
         $user_id = Auth::user()->id;
 
-        dd($user_id);
+//        dd($user_id);
 
         $rawData = DB::table('pins')->where('id', $id)->get();
 
-        dd($rawData[0]->image);
+        $patToImg = "img/$user_id/";
+        $nameFile = str_replace($patToImg, '', $rawData[0]->image);
+
+//        dump($nameFile);
+//        dd($rawData[0]->image);
 
         Pin::destroy($id);
+
+        unlink("C:/OpenServer/domains/pinpoint/public/assets/users/" . $rawData[0]->image);
 
         session()->flash('success', 'Запись удалена');
         return redirect()->route('pins.index');
