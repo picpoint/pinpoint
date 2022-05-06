@@ -2094,6 +2094,25 @@
   width: 55%;
   margin: 20px 0;
   overflow-y: scroll;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1400px) {
+  .pinspage__contentwrapper {
+    width: 65%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 960px) {
+  .pinspage__contentwrapper {
+    width: 70%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .pinspage__contentwrapper {
+    width: 80%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pinspage__success {
   display: flex;
@@ -2127,6 +2146,21 @@
     transition: ease-in-out 0.5s;
   }
 }
+@media (max-width: 960px) {
+  .pinspage__pin {
+    width: 500px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .pinspage__pin {
+    flex-direction: column;
+    height: 500px;
+    width: 200px;
+    margin: 30px 0;
+    transition: ease-in-out 0.5s;
+  }
+}
 .pinspage__pinpict {
   display: flex;
   width: 150px;
@@ -2142,6 +2176,13 @@
   .pinspage__pinpict {
     width: 100px;
     height: 100px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .pinspage__pinpict {
+    width: 200px;
+    height: 200px;
     transition: ease-in-out 0.5s;
   }
 }
@@ -2174,12 +2215,29 @@
     transition: ease-in-out 0.5s;
   }
 }
+@media (max-width: 960px) {
+  .pinspage__pintext {
+    width: 300px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .pinspage__pintext {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid lightgrey;
+    width: 200px;
+    height: 150px;
+    transition: ease-in-out 0.5s;
+  }
+}
 .pinspage__pincontrols {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
   height: 150px;
+  transition: ease-in-out 0.5s;
 }
 .pinspage__pincontrols a {
   display: flex;
@@ -2191,9 +2249,11 @@
   margin: 5px;
   text-decoration: none;
   color: black;
+  transition: ease-in-out 0.5s;
 }
 .pinspage__pincontrols a i {
   font-size: 1.5rem;
+  transition: ease-in-out 0.5s;
 }
 .pinspage__pincontrols form button {
   border: none;
@@ -2204,7 +2264,57 @@
 }
 .pinspage__pincontrols form button i {
   font-size: 1.5rem;
+  transition: ease-in-out 0.5s;
 }
+@media (max-width: 1400px) {
+  .pinspage__pincontrols {
+    width: 100px;
+    height: 100px;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__pincontrols a {
+    width: 25px;
+    height: 25px;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__pincontrols a i {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__pincontrols form button i {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .pinspage__pincontrols {
+    width: 100%;
+    height: 50px;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__pincontrols a {
+    width: 40px;
+    height: 40px;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__pincontrols a i {
+    font-size: 1.3rem;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__pincontrols form {
+    height: 40px;
+    width: 40px;
+  }
+  .pinspage__pincontrols form button {
+    height: 40px;
+    width: 40px;
+  }
+  .pinspage__pincontrols form button i {
+    font-size: 1.3rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+
 .pinedit {
   display: flex;
   height: 100vh;
@@ -2233,6 +2343,13 @@
   justify-content: center;
   width: 50%;
   margin: 20px 0;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1140px) {
+  .pinedit__contentwrapper {
+    width: 65%;
+    transition: ease-in-out 0.5s;
+  }
 }
 .pinedit__form {
   display: flex;
@@ -2268,7 +2385,6 @@
   color: white;
   cursor: pointer;
 }
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;

@@ -28,6 +28,11 @@
     justify-content: center;
     width: 50%;
     margin: 20px 0;
+    transition: $transition;
+      @media (max-width: 1140px) {
+        width: 65%;
+        transition: $transition;
+      }
   }
   &__form {
     //border: $border;
@@ -65,6 +70,9 @@
         background-color: $colorbrend;
         color: white;
         cursor: pointer;
+      }
+      @media (max-width: 1140px) {
+        
       }
   }
 

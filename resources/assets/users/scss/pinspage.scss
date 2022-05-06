@@ -31,6 +31,19 @@
       width: 55%;
       margin: 20px 0;
       overflow-y: scroll;
+      transition: $transition;
+        @media (max-width: 1400px) {
+          width: 65%;
+          transition: $transition;
+        }
+        @media (max-width: 960px) {
+          width: 70%;
+          transition: $transition;
+        }
+        @media (max-width: 480px) {
+          width: 80%;
+          transition: $transition;
+        }
     }
     &__success {
       //border: $border;
@@ -64,6 +77,17 @@
           height: 100px;
           transition: $transition;
         }
+        @media (max-width: 960px) {
+          width: 500px;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          flex-direction: column;
+          height: 500px;
+          width: 200px;
+          margin: 30px 0;
+          transition: $transition;
+        }
     }
     &__pinpict {
       //border: $border;
@@ -79,6 +103,11 @@
         @media (max-width: 1400px) {
           width: 100px;
           height: 100px;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          width: 200px;
+          height: 200px;
           transition: $transition;
         }
     }
@@ -111,6 +140,18 @@
             transition: $transition;
           }
         }
+        @media (max-width: 960px) {
+          width: 300px;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid lightgrey;
+          width: 200px;
+          height: 150px;
+          transition: $transition;
+        }
     }
   &__pincontrols {
     //border: $border;
@@ -120,6 +161,7 @@
     align-items: center;
     width: 150px;
     height: 150px;
+    transition: $transition;
       a {
         //border: $border;
         display: flex;
@@ -131,9 +173,11 @@
         margin: 5px;
         text-decoration: none;
         color: black;
+        transition: $transition;
           i {
             //border: $border;
             font-size: 1.5rem;
+            transition: $transition;
           }
       }
       form {
@@ -146,12 +190,63 @@
             cursor: pointer;
               i {
                 font-size: 1.5rem;
+                transition: $transition;
               }
           }
       }
       @media (max-width: 1400px) {
-        
+        width: 100px;
+        height: 100px;
+        transition: $transition;
+          a {
+            width: 25px;
+            height: 25px;
+            transition: $transition;
+            i {
+              font-size: 1rem;
+              transition: $transition;
+            }
+          }
+          form {
+            button {
+              i {
+                font-size: 1rem;
+                transition: $transition;
+              }
+            }
+          }
       }
+      @media (max-width: 720px) {
+        width: 100%;
+        height: 50px;
+        transition: $transition;
+        a {
+          //border: $border;
+          width: 40px;
+          height: 40px;
+          transition: $transition;
+          i {
+            font-size: 1.3rem;
+            transition: $transition;
+          }
+        }
+        form {
+          //border: $border;
+          height: 40px;
+          width: 40px;
+          button {
+            height: 40px;
+            width: 40px;
+            //border: $border;
+            i {
+              font-size: 1.3rem;
+              transition: $transition;
+            }
+          }
+        }
+      }
+
+
   }
 
 
