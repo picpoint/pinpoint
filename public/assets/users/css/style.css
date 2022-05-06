@@ -2123,11 +2123,40 @@
   margin: 20px 0;
   padding: 5px 0;
   border-radius: 7px;
+  transition: ease-in-out 0.5s;
 }
 .pinspage__success span {
   color: white;
   font-family: Montserrat-Regular;
   font-size: 1.1rem;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1400px) {
+  .pinspage__success {
+    width: 600px;
+    transition: ease-in-out 0.5s;
+  }
+  .pinspage__success span {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 960px) {
+  .pinspage__success {
+    width: 500px;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .pinspage__success {
+    width: 85%;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .pinspage__success span {
+    font-size: 0.9rem;
+  }
 }
 .pinspage__pin {
   border: 1px solid lightgray;
@@ -2351,6 +2380,12 @@
     transition: ease-in-out 0.5s;
   }
 }
+@media (max-width: 720px) {
+  .pinedit__contentwrapper {
+    width: 75%;
+    transition: ease-in-out 0.5s;
+  }
+}
 .pinedit__form {
   display: flex;
   flex-direction: column;
@@ -2364,11 +2399,13 @@
   margin-top: 50px;
   font-size: 1.2rem;
   font-family: Montserrat-Regular;
+  transition: ease-in-out 0.5s;
 }
 .pinedit__form img {
   margin-top: 30px;
   width: 250px;
   height: 250px;
+  transition: ease-in-out 0.5s;
 }
 .pinedit__form input {
   margin-top: 30px;
@@ -2384,7 +2421,52 @@
   background-color: #03008a;
   color: white;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
 }
+@media (max-width: 1140px) {
+  .pinedit__form textarea {
+    font-size: 1.1rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 960px) {
+  .pinedit__form textarea {
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+  .pinedit__form img {
+    width: 200px;
+    height: 200px;
+    transition: ease-in-out 0.5s;
+  }
+  .pinedit__form button {
+    width: 150px;
+    height: 35px;
+    font-size: 0.9rem;
+    transition: ease-in-out 0.5s;
+  }
+}
+@media (max-width: 720px) {
+  .pinedit__form textarea {
+    width: 80%;
+    height: 150px;
+  }
+}
+@media (max-width: 540px) {
+  .pinedit__form textarea {
+    font-size: 0.9rem;
+  }
+  .pinedit__form img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .pinedit__form textarea {
+    font-size: 0.8rem;
+  }
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;

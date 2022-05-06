@@ -51,16 +51,38 @@
       justify-content: center;
       align-items: center;
       width: 700px;
-      //height: 150px;
       background-color: $colorgreen;
       margin: 20px 0;
       padding: 5px 0;
       border-radius: 7px;
-      span {
-        color: white;
-        font-family: Montserrat-Regular;
-        font-size: 1.1rem;
-      }
+      transition: $transition;
+        span {
+          color: white;
+          font-family: Montserrat-Regular;
+          font-size: 1.1rem;
+          transition: $transition;
+        }
+        @media (max-width: 1400px) {
+          width: 600px;
+          transition: $transition;
+            span {
+              font-size: 1rem;
+              transition: $transition;
+            }
+        }
+        @media (max-width: 960px) {
+          width: 500px;
+          transition: $transition;
+        }
+        @media (max-width: 720px) {
+          width: 85%;
+          transition: $transition;
+        }
+        @media (max-width: 480px) {
+          span {
+            font-size: 0.9rem;
+          }
+        }
     }
     &__pin {
       //border: $border;

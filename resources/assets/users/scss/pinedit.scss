@@ -33,6 +33,10 @@
         width: 65%;
         transition: $transition;
       }
+      @media (max-width: 720px) {
+        width: 75%;
+        transition: $transition;
+      }
   }
   &__form {
     //border: $border;
@@ -48,12 +52,14 @@
         margin-top: 50px;
         font-size: 1.2rem;
         font-family: Montserrat-Regular;
+        transition: $transition;
       }
       img {
         //border: $border;
         margin-top: 30px;
         width: 250px;
         height: 250px;
+        transition: $transition;
       }
       input {
         //border: $border;
@@ -70,10 +76,52 @@
         background-color: $colorbrend;
         color: white;
         cursor: pointer;
+        transition: $transition;
       }
       @media (max-width: 1140px) {
-        
+        textarea {
+          font-size: 1.1rem;
+          transition: $transition;
+        }
       }
+      @media (max-width: 960px) {
+        textarea {
+          font-size: 1rem;
+          transition: $transition;
+        }
+        img {
+          width: 200px;
+          height: 200px;
+          transition: $transition;
+        }
+        button {
+          width: 150px;
+          height: 35px;
+          font-size: 0.9rem;
+          transition: $transition;
+        }
+      }
+      @media (max-width: 720px) {
+        textarea {
+          width: 80%;
+          height: 150px;
+        }
+      }
+      @media (max-width: 540px) {
+        textarea {
+          font-size: 0.9rem;
+        }
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    @media (max-width: 480px) {
+      textarea {
+        font-size: 0.8rem;
+      }
+    }
+
   }
 
 
