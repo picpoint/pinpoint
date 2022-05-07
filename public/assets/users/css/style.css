@@ -2080,6 +2080,60 @@
   height: 50px;
   width: 100%;
 }
+.pinspage__myfreinds {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.pinspage__formrepost {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.pinspage__myfreindsblock {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 7px;
+  background-color: white;
+}
+.pinspage__myfreindsblockhdr {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+.pinspage__myfreindsblockhdr span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat-Regular;
+  font-size: 1.1rem;
+}
+.pinspage__myfreindsblockhdr span:nth-child(1) {
+  width: 450px;
+  height: 50px;
+}
+.pinspage__myfreindsblockhdr span:nth-child(2) {
+  width: 50px;
+  height: 50px;
+  font-size: 2.5rem;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.pinspage__myfreindsblockselector {
+  display: flex;
+  height: 300px;
+}
 .pinspage__content {
   display: flex;
   justify-content: center;

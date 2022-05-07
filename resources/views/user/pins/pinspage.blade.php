@@ -17,6 +17,20 @@
             @include('user.layouts.sidebar')
         </div>
 
+        <div class="pinspage__myfreinds">
+            <form method="post" name="formrepost" class="pinspage__formrepost">
+                <div class="pinspage__myfreindsblock">
+                    <div class="pinspage__myfreindsblockhdr">
+                        <span>Поделиться</span>
+                        <span>+</span>
+                    </div>
+                    <div class="pinspage__myfreindsblockselector">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <div class="pinspage__content">
             <div class="pinspage__contentwrapper">
 

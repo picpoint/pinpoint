@@ -12,21 +12,21 @@
             <i class="fa-solid fa-message"></i>
             <span>сообщения</span>
         </a>
+        <a href="#">
+            <i class="fa fa-bullhorn" aria-hidden="true"></i>
+            <span>новости</span>
+        </a>
         <a href="{{ route('freinds') }}">
             <i class="fa-solid fa-user-group"></i>
             <span>друзья</span>
         </a>
         {{--<a href="#">--}}
-            {{--<i class="fa fa-bullhorn" aria-hidden="true"></i>--}}
-            {{--<span>новости</span>--}}
+        {{--<i class="fa fa-globe" aria-hidden="true"></i>--}}
+        {{--<span>маршруты</span>--}}
         {{--</a>--}}
         {{--<a href="#">--}}
-            {{--<i class="fa fa-globe" aria-hidden="true"></i>--}}
-            {{--<span>маршруты</span>--}}
-        {{--</a>--}}
-        {{--<a href="#">--}}
-            {{--<i class="fa fa-picture-o" aria-hidden="true"></i>--}}
-            {{--<span>альбомы</span>--}}
+        {{--<i class="fa fa-picture-o" aria-hidden="true"></i>--}}
+        {{--<span>альбомы</span>--}}
         {{--</a>--}}
         <a href="{{ route('search') }}">
             {{--<i class="fa fa-search" aria-hidden="true"></i>--}}
