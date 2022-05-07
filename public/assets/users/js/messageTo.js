@@ -14,4 +14,3 @@ for (var i = 0; i < freindsblock.children.length; i++) {
     });
 
 }
-

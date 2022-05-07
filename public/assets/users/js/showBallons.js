@@ -36,4 +36,3 @@ for (var i = 0, y = 0; i < hidedatas.length; i++) {
 
 
 }
-
