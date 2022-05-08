@@ -16,8 +16,8 @@
       height: 50px;
       width: 100%;
     }
-    &__myfreinds {
-      border: $border;
+    &__share {
+      //border: $border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -28,23 +28,14 @@
       z-index: 10;
     }
     &__formrepost {
-      border: $border;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-    }
-    &__myfreindsblock {
-      //border: $border;
       display: flex;
       flex-direction: column;
       width: 500px;
-      height: 500px;
+      height: 270px;
       border-radius: 7px;
       background-color: white;
     }
-    &__myfreindsblockhdr {
+    &__shareblockhdr {
       //border: $border;
       display: flex;
       width: 100%;
@@ -69,10 +60,36 @@
           }
         }
     }
-    &__myfreindsblockselector {
+    &__shareblockselector {
       //border: $border;
       display: flex;
-      height: 300px;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+        select {
+          //border: $border;
+          width: 350px;
+          height: 35px;
+          font-family: Montserrat-Regular;
+          font-size: 1rem;
+        }
+    }
+    &__sharebtn {
+      //border: $border;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 70px;
+        button {
+          border: none;
+          height: 45px;
+          width: 130px;
+          background-color: $colorbrend;
+          color: white;
+          margin-right: 30px;
+          font-family: Montserrat-Regular;
+          cursor: pointer;
+        }
     }
 
     &__content {

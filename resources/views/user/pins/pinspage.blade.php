@@ -17,16 +17,21 @@
             @include('user.layouts.sidebar')
         </div>
 
-        <div class="pinspage__myfreinds">
+        <div class="pinspage__share">
             <form method="post" name="formrepost" class="pinspage__formrepost">
-                <div class="pinspage__myfreindsblock">
-                    <div class="pinspage__myfreindsblockhdr">
-                        <span>Поделиться</span>
-                        <span>+</span>
-                    </div>
-                    <div class="pinspage__myfreindsblockselector">
-
-                    </div>
+                @csrf
+                <div class="pinspage__shareblockhdr">
+                    <span>Поделиться</span>
+                    <span>+</span>
+                </div>
+                <div class="pinspage__shareblockselector">
+                    <select name="selectfreinds" id="selectfreinds">
+                        <option value="#">Выбери</option>
+                        <option value="#">second</option>
+                    </select>
+                </div>
+                <div class="pinspage__sharebtn">
+                    <button type="submit">Поделиться</button>
                 </div>
             </form>
         </div>
@@ -62,7 +67,6 @@
                                 <button type="submit">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
-                                </a>
                             </form>
                         </div>
                     </div>

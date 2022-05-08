@@ -2080,8 +2080,7 @@
   height: 50px;
   width: 100%;
 }
-.pinspage__myfreinds {
-  border: 1px solid red;
+.pinspage__share {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2092,47 +2091,63 @@
   z-index: 10;
 }
 .pinspage__formrepost {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.pinspage__myfreindsblock {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 500px;
+  height: 270px;
   border-radius: 7px;
   background-color: white;
 }
-.pinspage__myfreindsblockhdr {
+.pinspage__shareblockhdr {
   display: flex;
   width: 100%;
   height: 50px;
 }
-.pinspage__myfreindsblockhdr span {
+.pinspage__shareblockhdr span {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Montserrat-Regular;
   font-size: 1.1rem;
 }
-.pinspage__myfreindsblockhdr span:nth-child(1) {
+.pinspage__shareblockhdr span:nth-child(1) {
   width: 450px;
   height: 50px;
 }
-.pinspage__myfreindsblockhdr span:nth-child(2) {
+.pinspage__shareblockhdr span:nth-child(2) {
   width: 50px;
   height: 50px;
   font-size: 2.5rem;
   transform: rotate(45deg);
   cursor: pointer;
 }
-.pinspage__myfreindsblockselector {
+.pinspage__shareblockselector {
   display: flex;
-  height: 300px;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+.pinspage__shareblockselector select {
+  width: 350px;
+  height: 35px;
+  font-family: Montserrat-Regular;
+  font-size: 1rem;
+}
+.pinspage__sharebtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+}
+.pinspage__sharebtn button {
+  border: none;
+  height: 45px;
+  width: 130px;
+  background-color: #03008a;
+  color: white;
+  margin-right: 30px;
+  font-family: Montserrat-Regular;
+  cursor: pointer;
 }
 .pinspage__content {
   display: flex;
