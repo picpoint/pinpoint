@@ -2081,7 +2081,8 @@
   width: 100%;
 }
 .pinspage__share {
-  display: flex;
+  border: 1px solid red;
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;

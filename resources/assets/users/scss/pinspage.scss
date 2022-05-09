@@ -17,8 +17,8 @@
       width: 100%;
     }
     &__share {
-      //border: $border;
-      display: flex;
+      border: $border;
+      display: none;
       justify-content: center;
       align-items: center;
       position: absolute;

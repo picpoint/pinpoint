@@ -22,7 +22,7 @@
                 @csrf
                 <div class="pinspage__shareblockhdr">
                     <span>Поделиться</span>
-                    <span>+</span>
+                    <span class="pinspage__close">+</span>
                 </div>
                 <div class="pinspage__shareblockselector">
                     <select name="selectfreinds" id="selectfreinds">
@@ -55,7 +55,7 @@
                             <span>{{ \Carbon\Carbon::parse($pin->created_at)->format('d.m.Y') }}</span>
                         </div>
                         <div class="pinspage__pincontrols">
-                            <a href="#">
+                            <a href="#" class="sharebtn">
                                 <i class="fa-solid fa-share"></i>
                             </a>
                             <a href="{{ route('pins.edit', ['pin' => $pin->id]) }}">
@@ -77,6 +77,8 @@
 
     </div>
 </section>
+
+<script src="/public/assets/users/js/closeFormShare.js"></script>
 
 </body>
 </html>
