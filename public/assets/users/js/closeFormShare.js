@@ -3,10 +3,6 @@ let closeBtn = document.querySelector('.pinspage__close');
 let shareBtn = document.querySelectorAll('.sharebtn');
 
 
-// console.log(shareWindow);
-// console.log(closeBtn);
-// console.log(shareBtn);
-
 
 
 class CloseFormShare {

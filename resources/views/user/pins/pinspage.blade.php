@@ -55,7 +55,7 @@
                             <span>{{ \Carbon\Carbon::parse($pin->created_at)->format('d.m.Y') }}</span>
                         </div>
                         <div class="pinspage__pincontrols">
-                            <a href="#" class="sharebtn">
+                            <a href="#" id="{{ $pin->id }}" class="sharebtn">
                                 <i class="fa-solid fa-share"></i>
                             </a>
                             <a href="{{ route('pins.edit', ['pin' => $pin->id]) }}">
