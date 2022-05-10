@@ -72,6 +72,12 @@
           height: 35px;
           font-family: Montserrat-Regular;
           font-size: 1rem;
+            option {
+              font-family: Montserrat-Regular;
+            }
+        }
+        span {
+          display: none;
         }
     }
     &__sharebtn {

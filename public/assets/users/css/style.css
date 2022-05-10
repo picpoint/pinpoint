@@ -2134,6 +2134,12 @@
   font-family: Montserrat-Regular;
   font-size: 1rem;
 }
+.pinspage__shareblockselector select option {
+  font-family: Montserrat-Regular;
+}
+.pinspage__shareblockselector span {
+  display: none;
+}
 .pinspage__sharebtn {
   display: flex;
   justify-content: flex-end;

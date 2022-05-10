@@ -21,7 +21,7 @@
             <form method="post" name="formrepost" class="pinspage__formrepost">
                 @csrf
                 <div class="pinspage__shareblockhdr">
-                    <span>Поделиться</span>
+                    <span>Поделиться пином</span>
                     <span class="pinspage__close">+</span>
                 </div>
                 <div class="pinspage__shareblockselector">
@@ -29,6 +29,7 @@
                         <option value="#">Выбери</option>
                         <option value="#">second</option>
                     </select>
+                    <span class="hideid">pin</span>
                 </div>
                 <div class="pinspage__sharebtn">
                     <button type="submit">Поделиться</button>

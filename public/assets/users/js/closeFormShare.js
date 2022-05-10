@@ -1,29 +1,31 @@
 let shareWindow = document.querySelector('.pinspage__share');
 let closeBtn = document.querySelector('.pinspage__close');
 let shareBtn = document.querySelectorAll('.sharebtn');
+let hideid = document.querySelector('.hideid');
 
 
 
 
 class CloseFormShare {
 
-    constructor(shareWindow, closeBtn, shareBtn) {
+    constructor(shareWindow, closeBtn, shareBtn, hideid) {
         this.shareWindow = shareWindow;
         this.closeBtn = closeBtn;
         this.shareBtn = shareBtn;
+        this.hideid = hideid;
     }
 
 
     closeForm() {
-        closeBtn.addEventListener('click', () => {
-            shareWindow.style.display = 'none';
+        this.closeBtn.addEventListener('click', () => {
+            this.shareWindow.style.display = 'none';
         });
 
 
-        for (let i = 0; i < shareBtn.length; i++) {
-            shareBtn[i].addEventListener('click', () => {
-               console.log(shareBtn[i]);
-               shareWindow.style.display = 'flex';
+        for (let i = 0; i < this.shareBtn.length; i++) {
+            this.shareBtn[i].addEventListener('click', () => {
+               this.shareWindow.style.display = 'flex';
+               this.hideid.innerText = this.shareBtn[i].id;
             });
         }
 
@@ -33,5 +35,5 @@ class CloseFormShare {
 }
 
 
-let closeShareForm = new CloseFormShare(shareWindow, closeBtn, shareBtn);
+let closeShareForm = new CloseFormShare(shareWindow, closeBtn, shareBtn, hideid);
 closeShareForm.closeForm();
