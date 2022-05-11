@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Freind;
 use App\Models\Pin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +20,9 @@ class PinController extends Controller
         $title = 'Pins | Pinpoint';
         $userId = Auth::user()->id;
         $allPins = DB::table('pins')->where('user_id', $userId)->get();
-//        $allFreinds = DB::table('freinds')->where();
-        return view('user.pins.pinspage', compact('title', 'allPins'));
+        $allFreinds = Freind::where('currentuser_id', $userId)->get();
+        
+        return view('user.pins.pinspage', compact('title', 'allPins', 'allFreinds'));
     }
 
     /**

@@ -12,4 +12,10 @@ class Pin extends Model
 
     protected $fillable = ['user_id', 'latitude', 'longitude', 'commentaries', 'image'];
 
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

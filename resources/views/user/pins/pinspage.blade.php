@@ -26,8 +26,10 @@
                 </div>
                 <div class="pinspage__shareblockselector">
                     <select name="selectfreinds" id="selectfreinds">
-                        <option value="#">Выбери</option>
-                        <option value="#">second</option>
+                        <option value="#">Поделиться с ...</option>
+                        @foreach($allFreinds as $freind)
+                            <option value="#">{{ $freind->user->surname }}</option>
+                        @endforeach
                     </select>
                     <span class="hideid">pin</span>
                 </div>
