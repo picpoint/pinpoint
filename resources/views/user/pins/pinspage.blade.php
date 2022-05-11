@@ -18,7 +18,7 @@
         </div>
 
         <div class="pinspage__share">
-            <form method="post" name="formrepost" class="pinspage__formrepost">
+            <form action="{{ route('sharepin') }}" method="post" name="formrepost" class="pinspage__formrepost">
                 @csrf
                 <div class="pinspage__shareblockhdr">
                     <span>Поделиться пином</span>
@@ -31,6 +31,11 @@
                             <option value="{{ $freind->user->id }}">{{ $freind->user->surname }} {{ $freind->user->name }}</option>
                         @endforeach
                     </select>
+
+                    <select name="pinids" id="pinids">
+                        <option value="100">pinids</option>
+                    </select>
+
                     <span class="hideid">pin</span>
                 </div>
                 <div class="pinspage__sharebtn">

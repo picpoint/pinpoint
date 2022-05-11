@@ -28,6 +28,7 @@ Route::group(['middleware' => 'registered'], function() {
     Route::post('/messages/{id}', 'MessageController@writeMessageToUser')->name('msgto');
     Route::get('/settings', 'SettingsController@index')->name('settings');
     Route::post('/settings', 'SettingsController@changeAvatar')->name('changeavatar');
+    Route::post('/sharepin', 'SharePinController@sharePin')->name('sharepin');
 });
 
 

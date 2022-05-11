@@ -2137,7 +2137,7 @@
   font-family: Montserrat-Regular;
 }
 .pinspage__shareblockselector span {
-  display: none;
+  display: flex;
 }
 .pinspage__sharebtn {
   display: flex;
