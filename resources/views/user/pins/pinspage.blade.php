@@ -32,11 +32,10 @@
                         @endforeach
                     </select>
 
-                    <select name="pinids" id="pinids">
+                    <select name="pinid" class="pinspage__pinid">
                         <option value="100">pinids</option>
                     </select>
 
-                    <span class="hideid">pin</span>
                 </div>
                 <div class="pinspage__sharebtn">
                     <button type="submit">Поделиться</button>
@@ -87,6 +86,7 @@
 </section>
 
 <script src="/public/assets/users/js/closeFormShare.js"></script>
+<script src="/public/assets/users/js/insertPinIdForShare.js"></script>
 
 </body>
 </html>
