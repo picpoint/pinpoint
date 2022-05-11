@@ -21,7 +21,7 @@ class PinController extends Controller
         $userId = Auth::user()->id;
         $allPins = DB::table('pins')->where('user_id', $userId)->get();
         $allFreinds = Freind::where('currentuser_id', $userId)->get();
-        
+
         return view('user.pins.pinspage', compact('title', 'allPins', 'allFreinds'));
     }
 

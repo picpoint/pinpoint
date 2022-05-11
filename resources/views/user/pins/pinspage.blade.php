@@ -28,7 +28,7 @@
                     <select name="selectfreinds" id="selectfreinds">
                         <option value="#">Поделиться с ...</option>
                         @foreach($allFreinds as $freind)
-                            <option value="#">{{ $freind->user->surname }}</option>
+                            <option value="{{ $freind->user->id }}">{{ $freind->user->surname }} {{ $freind->user->name }}</option>
                         @endforeach
                     </select>
                     <span class="hideid">pin</span>
