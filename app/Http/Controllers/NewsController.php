@@ -13,7 +13,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Новости | Pinpoint";
+        return view('user.news.newspage', compact('title'));
     }
 
     /**

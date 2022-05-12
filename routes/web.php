@@ -19,6 +19,7 @@ Route::group(['middleware' => 'registered'], function() {
     Route::match(['get', 'post'], '/personalpage', 'CreatePinController@index')->name('personalpage');
     Route::resource('/pp', 'CreatePinController');
     Route::resource('/pins', 'PinController');
+    Route::resource('/news', 'NewsController');
     Route::get('/freinds', 'FreindController@index')->name('freinds');
     Route::post('/freinds/{id}', 'FreindController@addToFreind')->name('add.freind');
     Route::get('/search', 'SearchPageController@index')->name('search');

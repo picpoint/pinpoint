@@ -2543,6 +2543,12 @@
   }
 }
 
+.news {
+  border: 1px solid red;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
 body {
   min-height: 100vh;
   scroll-behavior: smooth;

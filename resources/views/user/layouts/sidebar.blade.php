@@ -12,7 +12,7 @@
             <i class="fa-solid fa-message"></i>
             <span>сообщения</span>
         </a>
-        <a href="#">
+        <a href="{{ route('news.index') }}">
             <i class="fa fa-bullhorn" aria-hidden="true"></i>
             <span>новости</span>
         </a>

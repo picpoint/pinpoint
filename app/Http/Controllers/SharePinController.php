@@ -19,7 +19,7 @@ class SharePinController extends Controller
             'pin_id' => $request->pinid,
         ]);
 
-        session()->flash('success', 'Выподелились пином');
+        session()->flash('success', 'Вы поделились пином');
 
         return redirect()->route('pins.index');
 
