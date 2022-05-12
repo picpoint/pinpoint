@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class News extends Model
 {
     use HasFactory;
+
+    public $fillable = ['source_user', 'receiver_user', 'pin_id'];
+
 }
