@@ -2136,6 +2136,10 @@
 .pinspage__shareblockselector select option {
   font-family: Montserrat-Regular;
 }
+.pinspage__pinid {
+  border: 1px solid red;
+  display: none;
+}
 .pinspage__sharebtn {
   display: flex;
   justify-content: flex-end;

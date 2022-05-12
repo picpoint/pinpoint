@@ -26,14 +26,14 @@
                 </div>
                 <div class="pinspage__shareblockselector">
                     <select name="selectfreinds" id="selectfreinds">
-                        <option value="#">Поделиться с ...</option>
+                        <option value="#">Поделиться с ... &#11015;</option>
                         @foreach($allFreinds as $freind)
                             <option value="{{ $freind->user->id }}">{{ $freind->user->surname }} {{ $freind->user->name }}</option>
                         @endforeach
                     </select>
 
                     <select name="pinid" class="pinspage__pinid">
-                        <option value="100">pinids</option>
+                        <option value="#">pinids</option>
                     </select>
 
                 </div>

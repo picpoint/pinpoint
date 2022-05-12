@@ -2,9 +2,6 @@ let pinid = document.querySelector('.pinspage__pinid');
 let sharebtn = document.querySelectorAll('.sharebtn');
 
 
-// console.log(pinid);
-// console.log(sharebtn);
-
 
 
 class SharePinId {
@@ -17,10 +14,9 @@ class SharePinId {
 
     sharePin() {
         for (let i = 0; i < this.sharebtn.length; i++) {
-            // console.log(this.sharebtn[i]);
             
             this.sharebtn[i].addEventListener('click', () => {
-                console.log(this.sharebtn[i]);
+                this.pinid.firstElementChild.value = this.sharebtn[i].id;
             });
 
         }

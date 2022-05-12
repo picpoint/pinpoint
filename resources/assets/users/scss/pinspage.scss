@@ -76,9 +76,10 @@
               font-family: Montserrat-Regular;
             }
         }
-        //span {
-        //  display: flex;
-        //}
+    }
+    &__pinid {
+      border: $border;
+      display: none;
     }
     &__sharebtn {
       //border: $border;
