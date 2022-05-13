@@ -17,7 +17,23 @@
                 @include('user.layouts.sidebar')
             </div>
 
+            <div class="news__content">
+                <div class="news__contentwrapper">
+                    <div class="news__currentnews">
+                        <div class="news__currentnewsimg">
+                            <img src="#" alt="picture">
+                        </div>
+                        <div class="news__currentnewstext">
+                            <span>text</span>
+                        </div>
+                        <div class="news__currentnewscontrols">
+                            <form action="" method="post">
 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
