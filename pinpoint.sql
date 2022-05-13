@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 12 2022 г., 08:52
+-- Время создания: Май 13 2022 г., 16:46
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -290,6 +290,17 @@ CREATE TABLE `news` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `news`
+--
+
+INSERT INTO `news` (`id`, `source_user`, `receiver_user`, `pin_id`, `created_at`, `updated_at`) VALUES
+(1, '20', '7', '17', '2022-05-12 13:24:35', '2022-05-12 13:24:35'),
+(2, '20', '21', '34', '2022-05-12 13:40:05', '2022-05-12 13:40:05'),
+(4, '20', '27', '16', '2022-05-12 13:41:15', '2022-05-12 13:41:15'),
+(5, '7', '20', '38', '2022-05-13 13:35:50', '2022-05-13 13:35:50'),
+(6, '7', '20', '39', '2022-05-13 13:45:53', '2022-05-13 13:45:53');
+
 -- --------------------------------------------------------
 
 --
@@ -352,7 +363,8 @@ INSERT INTO `pins` (`id`, `user_id`, `latitude`, `longitude`, `commentaries`, `i
 (33, '21', '45.083712', '41.994566', 'mnbmnbmnb', 'img/21/tYaowTCRm8UxU78IMOd1HctRsvlNx6PTq0vOFq5L.jpg', '2021-12-04 16:55:12', '2021-12-04 16:55:12'),
 (34, '20', '45.043631', '41.969702', 'Краевая библиотека им. Лермонтова.\r\nАдрес: Россия, Ставропольский край, г. Ставрополь ул. Маршала Жукова, дом 17, корпус 5, литер 25.', 'img/20/5qGW1c5TtcYoO5AZtJ1zYZiowBirj6SAm9txB1Zp.jpg', '2022-03-31 12:04:17', '2022-05-06 13:28:45'),
 (35, '28', '45.006115', '41.957895', 'Россия, Ставрополь, урочище Мамайская Лесная Дача', 'img/28/egX7gIKB1dp2rBS900rZLeekriVMY7YYDUqmPXWM.jpg', '2022-04-08 10:12:00', '2022-04-08 10:12:00'),
-(38, '7', '45.007654', '41.954470', 'лес', 'img/7/wtPhEGX2UBFMN72Rp5p8WK7xfpk5pelk8UQoHgXz.png', '2022-05-11 13:13:52', '2022-05-11 13:13:52');
+(38, '7', '45.007654', '41.954470', 'лес', 'img/7/wtPhEGX2UBFMN72Rp5p8WK7xfpk5pelk8UQoHgXz.png', '2022-05-11 13:13:52', '2022-05-11 13:13:52'),
+(39, '7', '45.019049', '41.729628', 'сенгилей', 'img/7/ZVGg7eREwIQ3H0mbSsSr0mm1L8WYCqNDA2t5SUa8.png', '2022-05-13 13:45:45', '2022-05-13 13:45:45');
 
 -- --------------------------------------------------------
 
@@ -521,7 +533,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -533,7 +545,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT для таблицы `pins`
 --
 ALTER TABLE `pins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
@@ -14,7 +16,13 @@ class NewsController extends Controller
     public function index()
     {
         $title = "Новости | Pinpoint";
-        return view('user.news.newspage', compact('title'));
+
+        $userId = Auth::user()->id;
+
+        $allNews = DB::table('news')->where('receiver_user', $userId)->get();
+//        dd($allNews);
+
+        return view('user.news.newspage', compact('title', 'allNews'));
     }
 
     /**

@@ -11,14 +11,16 @@
 </head>
 <body>
 
-    <section class="news">
-        <div class="news__wrapper">
-            <div class="news__header">
-                @include('user.layouts.sidebar')
-            </div>
+<section class="news">
+    <div class="news__wrapper">
+        <div class="news__header">
+            @include('user.layouts.sidebar')
+        </div>
 
-            <div class="news__content">
-                <div class="news__contentwrapper">
+        <div class="news__content">
+            <div class="news__contentwrapper">
+
+                @foreach($allNews as $currentNews)
                     <div class="news__currentnews">
                         <div class="news__currentnewsimg">
                             <img src="#" alt="picture">
@@ -32,12 +34,15 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                @endforeach
+
+
             </div>
-
-
         </div>
-    </section>
+
+
+    </div>
+</section>
 
 </body>
 </html>

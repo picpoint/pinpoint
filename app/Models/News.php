@@ -11,4 +11,10 @@ class News extends Model
 
     public $fillable = ['source_user', 'receiver_user', 'pin_id'];
 
+
+    public function pin() {
+        return $this->belongsTo(Pin::class);
+    }
+
+
 }
