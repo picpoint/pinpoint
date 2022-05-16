@@ -20,17 +20,30 @@
         <div class="news__content">
             <div class="news__contentwrapper">
 
+                @if(session('success'))
+                    <div class="pinspage__success">
+                        <span>{{ session('success') }}</span>
+                    </div>
+                @endif
+
                 @foreach($allNews as $currentNews)
                     <div class="news__currentnews">
                         <div class="news__currentnewsimg">
-                            <img src="#" alt="picture">
+                            <img src="/public/assets/users/{{ $currentNews->pin->image }}" alt="picture">
                         </div>
                         <div class="news__currentnewstext">
-                            <span>text</span>
+                            <span>{{ $currentNews->pin->commentaries }}</span>
                         </div>
                         <div class="news__currentnewscontrols">
-                            <form action="" method="post">
-
+                            <a href="#" id="#" class="sharebtn">
+                                <i class="fa-solid fa-share"></i>
+                            </a>
+                            <form action="{{ route('news.destroy', ['news' => $currentNews->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
                             </form>
                         </div>
                     </div>

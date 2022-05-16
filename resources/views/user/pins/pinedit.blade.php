@@ -20,7 +20,8 @@
         <div class="pinedit__content">
             <div class="pinedit__contentwrapper">
 
-                <form action="{{ route('pins.update', ['pin' => $pin[0]->id]) }}" method="post" class="pinedit__form" enctype="multipart/form-data">
+                <form action="{{ route('pins.update', ['pin' => $pin[0]->id]) }}" method="post" class="pinedit__form"
+                      enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <textarea name="commentaries" id="commentaries">

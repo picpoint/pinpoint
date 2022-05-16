@@ -48,22 +48,68 @@
     display: flex;
     width: 150px;
     height: 150px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
   }
   &__currentnewstext {
+    //border: $border;
+    display: flex;
+    justify-content: center;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
     display: flex;
     width: 400px;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px;
+      height: 85%;
+      text-decoration: none;
+      font-family: Montserrat-Regular;
+      transition: $transition;
+    }
   }
   &__currentnewscontrols {
     //border: $border;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
-      form {
+      a {
         //border: $border;
-        width: 100%;
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        text-decoration: none;
+        color: black;
+        transition: $transition;
+        i {
+          //border: $border;
+          font-size: 1.5rem;
+          transition: $transition;
+        }
       }
+    form {
+      //border: $border;
+      button {
+        border: none;
+        background: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        i {
+          font-size: 1.5rem;
+          transition: $transition;
+        }
+      }
+    }
   }
 
 

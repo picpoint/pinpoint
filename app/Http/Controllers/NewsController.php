@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -16,11 +17,8 @@ class NewsController extends Controller
     public function index()
     {
         $title = "Новости | Pinpoint";
-
         $userId = Auth::user()->id;
-
-        $allNews = DB::table('news')->where('receiver_user', $userId)->get();
-//        dd($allNews);
+        $allNews = News::where('receiver_user', $userId)->get();
 
         return view('user.news.newspage', compact('title', 'allNews'));
     }
@@ -88,6 +86,11 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        News::destroy($id);
+        session()->flash('success', 'Вы удалили пин');
+
+        return redirect()->route('news.index');
+
     }
 }
