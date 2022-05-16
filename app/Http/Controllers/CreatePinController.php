@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use App\Models\Pin;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -20,8 +21,9 @@ class CreatePinController extends Controller
         $title = Auth::user()->name;
         $user_id = Auth::user()->id;
         $pins = DB::table('pins')->where('user_id', $user_id)->get();
+        $sharePins = News::where('receiver_user', $user_id)->get();
 
-        return view('user.personalpage', compact('title', 'pins'));
+        return view('user.personalpage', compact('title', 'pins', 'sharePins'));
     }
 
     /**

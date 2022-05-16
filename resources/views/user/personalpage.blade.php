@@ -22,7 +22,7 @@
         <div class="pp__errlocate">
             <div class="pp__errmsg">
                 {{--<div class="pp__errclose">--}}
-                    {{--<i class="fa fa-times-circle-o" aria-hidden="true"></i>--}}
+                {{--<i class="fa fa-times-circle-o" aria-hidden="true"></i>--}}
                 {{--</div>--}}
                 <div class="pp__errnotice">
                     <span>К сожалению, мы не смогли определить Ваше местоположение ...  :-(</span>
@@ -85,12 +85,12 @@
 
         @include('user.layouts.sidebar')
 
-        <div class="pp__addpin animate-pulse" data-tooltip="Кликни правой кнопкой и создай метку" >
+        <div class="pp__addpin animate-pulse" data-tooltip="Кликни правой кнопкой и создай метку">
             <i class="fa-solid fa-location-dot"></i>
         </div>
 
         {{--<div class="pp__aim">--}}
-            {{--<span>+</span>--}}
+        {{--<span>+</span>--}}
         {{--</div>--}}
 
 
@@ -100,6 +100,12 @@
                 <span>{{ $pin->longitude }}</span>
                 <span>{{ $pin->commentaries }}</span>
                 <span>{{ $pin->image }}</span>
+            @endforeach
+        </div>
+
+        <div class="hidedatasshare">
+            @foreach($sharePins as $sharePin)
+                <span>{{ $sharePin->id }}</span>
             @endforeach
         </div>
 
