@@ -20,6 +20,9 @@ class NewsController extends Controller
         $userId = Auth::user()->id;
         $allNews = News::where('receiver_user', $userId)->get();
 
+//        dd($allNews);
+
+
         return view('user.news.newspage', compact('title', 'allNews'));
     }
 

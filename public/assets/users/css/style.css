@@ -2620,6 +2620,7 @@
 }
 .news__currentnewstext {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
@@ -2635,6 +2636,11 @@
   text-decoration: none;
   font-family: Montserrat-Regular;
   transition: ease-in-out 0.5s;
+}
+.news__currentnewstext span:nth-child(2) {
+  height: 15%;
+  align-self: flex-start;
+  font-size: 0.83rem;
 }
 .news__currentnewscontrols {
   display: flex;

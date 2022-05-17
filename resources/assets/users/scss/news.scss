@@ -56,6 +56,7 @@
   &__currentnewstext {
     //border: $border;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
@@ -70,6 +71,11 @@
       text-decoration: none;
       font-family: Montserrat-Regular;
       transition: $transition;
+        &:nth-child(2) {
+          height: 15%;
+          align-self: flex-start;
+          font-size: 0.83rem;
+        }
     }
   }
   &__currentnewscontrols {

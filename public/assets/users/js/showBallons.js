@@ -9,10 +9,6 @@ var imgPin;
 
 
 
-
-
-
-
 for (var i = 0, y = 0; i < hidedatas.length; i++) {
     // console.log(i + " i " + hidedatas[i].innerText);
 
