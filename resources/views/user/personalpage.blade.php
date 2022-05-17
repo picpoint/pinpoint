@@ -105,7 +105,10 @@
 
         <div class="hidedatasshare">
             @foreach($sharePins as $sharePin)
-                <span>{{ $sharePin->id }}</span>
+                <span>{{ $sharePin->pin->latitude }}</span>
+                <span>{{ $sharePin->pin->longitude }}</span>
+                <span>{{ $sharePin->pin->commentaries }}</span>
+                <span>{{ $sharePin->pin->image }}</span>
             @endforeach
         </div>
 

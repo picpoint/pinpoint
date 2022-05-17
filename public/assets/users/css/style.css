@@ -629,8 +629,7 @@
 }
 
 .hidedatasshare {
-  display: flex;
-  margin-top: 100px;
+  display: none;
 }
 
 .ymaps-2-1-79-controls__control:nth-child(1) {
