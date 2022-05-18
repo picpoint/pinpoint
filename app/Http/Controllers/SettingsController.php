@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\DB;
 class SettingsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Контроллер настройки и отображение данных по пользователю
      *
-     * @return \Illuminate\Http\Response
+     * Метод отображения страницы с данными пользователя
      */
     public function index()
     {
@@ -31,7 +31,9 @@ class SettingsController extends Controller
     }
 
 
-
+    /**
+     * Метод изменения аватара пользователя
+     */
     public function changeAvatar(Request $request) {
 
         $id = Auth::user()->id;

@@ -3,8 +3,9 @@ let closeBtn = document.querySelector('.pinspage__close');
 let shareBtn = document.querySelectorAll('.sharebtn');
 
 
-
-
+/**
+ * Класс закрытия формы "Поделиться пином с другом"
+ */
 class CloseFormShare {
 
     constructor(shareWindow, closeBtn, shareBtn) {
@@ -14,6 +15,12 @@ class CloseFormShare {
     }
 
 
+    /**
+     * Метод закрытия окна "Поделиться"
+     *
+     * for - перебирает все кнопки-значки "поделиться" во всех пинах(новостях) и вешает событие
+     * которое при клике показывет форму "поделиться"
+     */
     closeForm() {
         this.closeBtn.addEventListener('click', () => {
             this.shareWindow.style.display = 'none';

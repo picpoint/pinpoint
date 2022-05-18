@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class SharePinController extends Controller
 {
 
+    /**
+     * Конроллер - поделиться пином с пользователем
+     */
+
     public function sharePin(Request $request) {
 
         $userId = Auth::user()->id;

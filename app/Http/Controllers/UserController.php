@@ -11,12 +11,22 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
+    /**
+     * Контроллер пользователя с базовыми методами
+     *
+     * метод отображения формы регистрации
+     */
+
     public function create() {
         $title = "Регистрация | Pinpoint";
         return view('user.registration', compact('title'));
     }
 
 
+    /**
+     * Метод регистрации пользователя
+     * Auth::login($user) - авторизация сразу после регистрации в ЛК
+     */
     public function store(Request $request) {
 
         $request->validate([
@@ -42,12 +52,18 @@ class UserController extends Controller
     }
 
 
+    /**
+     * Форма логирования на сайте
+     */
     public function loginForm() {
         $title = "PinPoint | Регистрация";
         return view('user.login', compact('title'));
     }
 
 
+    /**
+     * Метод логирования на сайте с проверкой логина и пароля
+     */
     public function login(Request $request) {
         $request->validate([
             'email' => 'required|email',
@@ -66,6 +82,9 @@ class UserController extends Controller
     }
 
 
+    /**
+     * Метод разлогирования
+     */
     public function logout() {
         Auth::logout();
         return redirect()->route('home');

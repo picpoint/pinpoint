@@ -3,7 +3,9 @@ let fieldmessage = document.querySelector('.fieldmessage');
 let token = sendmsgform.firstElementChild;
 
 
-
+/**
+ * Отправка сообщение пользователю Ajax-oм
+ */
 sendmsgform.addEventListener('submit', function (event) {
     event.preventDefault();
 

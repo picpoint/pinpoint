@@ -2,6 +2,9 @@ let pinid = document.querySelector('.pinspage__pinid');
 let sharebtn = document.querySelectorAll('.sharebtn');
 
 
+/**
+ * Класс для получения id пина и передаче id в форму при репосте
+ */
 
 
 class SharePinId {
@@ -12,6 +15,9 @@ class SharePinId {
     }
 
 
+    /**
+     * Метод перебирает кнопки "поделиться", получает id и передаёт в форму
+     */
     sharePin() {
         for (let i = 0; i < this.sharebtn.length; i++) {
             

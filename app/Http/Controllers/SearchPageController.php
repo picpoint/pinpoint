@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\DB;
 class SearchPageController extends Controller
 {
 
+    /**
+     * Контроллер страницы поиска
+     *
+     * метод показа страницы поиска
+     */
+
     public function index() {
         $title = "Поиск | Pinpoint";
         $result = '';
@@ -15,7 +21,9 @@ class SearchPageController extends Controller
     }
 
 
-
+    /**
+     * Метод поиска(не строгий) друзей по Фамилии
+     */
     public function search(Request $request) {
         $title = "Поиск | Pinpoint";
         $result = DB::table('users')->where('surname', 'LIKE', "%{$request->searchfield}%")->get();
