@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\DB;
 class NewsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Ресурс контроллер для работы с новостями(репостами меток)
      *
-     * @return \Illuminate\Http\Response
+     * Главная страница, с метками, которые репостнул пользователю друг
      */
     public function index()
     {
@@ -20,9 +20,7 @@ class NewsController extends Controller
 
         $title = "Новости | Pinpoint";
         $userId = Auth::user()->id;
-        $allNews = News::where('receiver_user', $userId)
-            ->rightJoin('users', 'users.id', '=', 'source_user')
-            ->get();
+        $allNews = News::where('receiver_user', $userId)->rightJoin('users', 'users.id', '=', 'source_user')->get();
 
         return view('user.news.newspage', compact('title', 'allNews', 'arrWhoSharepin'));
     }
@@ -83,10 +81,7 @@ class NewsController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Метод удаления новости(репостнутого пина) из таблицы news
      */
     public function destroy($id)
     {

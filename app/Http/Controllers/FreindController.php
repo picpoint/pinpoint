@@ -47,6 +47,10 @@ class FreindController extends Controller
     }
 
 
+    /**
+     * Получить все записи с моими друзьями
+     */
+
     public function showFreinds() {
         $currentUser = Auth::user()->id();
 

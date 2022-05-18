@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Redis;
 class MessageController extends Controller
 {
 
+    /**
+     * Контроллер для работы с сообщениями
+     *
+     * метод показа страницы с сообщениями
+     * которые отсылал пользователь и которые присылали данному пользователю
+     *
+     * $dataMe - массив id-шников(пользователей) которым я отправил сообщения
+     * $dataToMe - массив id-шников(пользователей) которые отправили сообщения мне
+     * $usersWithMsg - массив уникальных(не повторяющихся) id-шников кто мне отправлял сообщения и кому я отправлял
+     * $hasMsg[] - все записи из БД с ообщениями от поьлзователя и пользователю
+     */
     public function index() {
         $title = "Сообщения | Pinpoint";
         $currentUser = Auth::user()->id;
@@ -47,14 +58,15 @@ class MessageController extends Controller
         }
 
 
-
-
         return view('user.messages', compact('title','hasMsg'));
     }
 
 
-
-
+    /**
+     * Метод показа сообщений текущего пользователя конкретному пользователю
+     * $cht - сообщения которые написал пользователь
+     * $chat - все записи сообщений которые написаны пользователю и которые написаны пользователем
+     */
     public function writeMessageForm(Request $request, $id) {
         $title = 'Чат | Pinpoint';
         $currentUser = Auth::user()->id;
@@ -75,8 +87,9 @@ class MessageController extends Controller
     }
 
 
-
-
+    /**
+     * Метод создания сообщения конкретному пользователю
+     */
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
         Message::create($request->all());

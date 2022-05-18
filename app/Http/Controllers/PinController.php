@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\DB;
 class PinController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Ресурс контроллер для работы с пином
      *
-     * @return \Illuminate\Http\Response
+     * Главная страница отображения всех пинов списком
      */
     public function index()
     {
@@ -58,10 +58,7 @@ class PinController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Метод отображения формы редактирования пина
      */
     public function edit($id)
     {
@@ -71,11 +68,12 @@ class PinController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Метод обновления пина
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * $pinForEdit - отображаем конкретный пин который хотим отредактировать
+     * перый if - если пользователь изменил комментарии
+     * второй if - если пользователь сменил картинку(сохраняем её под тем же именем что и у предыдущей)
+     * $nameFile - берём имя текущей картинки
      */
     public function update(Request $request, $id)
     {
@@ -105,10 +103,8 @@ class PinController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Метод удаления конкретноно пина из БД
+     * а так же удаления конкретно картинки данного пина с жёсткого диска
      */
     public function destroy($id)
     {
