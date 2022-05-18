@@ -33,11 +33,11 @@
                         </div>
                         <div class="news__currentnewstext">
                             <span>{{ $currentNews->pin->commentaries }}</span>
-                            <span>Поделился: {{ $currentNews->source_user }}</span>
+                            <span>Поделился: {{ $currentNews->surname }} {{ $currentNews->lastname }}</span>
                         </div>
                         <div class="news__currentnewscontrols">
                             {{--<a href="#" id="#" class="sharebtn">--}}
-                                {{--<i class="fa-solid fa-share"></i>--}}
+                            {{--<i class="fa-solid fa-share"></i>--}}
                             {{--</a>--}}
                             <form action="{{ route('news.destroy', ['news' => $currentNews->id]) }}" method="post">
                                 @csrf

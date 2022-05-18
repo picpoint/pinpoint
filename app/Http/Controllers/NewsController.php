@@ -16,14 +16,15 @@ class NewsController extends Controller
      */
     public function index()
     {
+        $arrWhoSharepin = [];
+
         $title = "Новости | Pinpoint";
         $userId = Auth::user()->id;
-        $allNews = News::where('receiver_user', $userId)->get();
+        $allNews = News::where('receiver_user', $userId)
+            ->rightJoin('users', 'users.id', '=', 'source_user')
+            ->get();
 
-//        dd($allNews);
-
-
-        return view('user.news.newspage', compact('title', 'allNews'));
+        return view('user.news.newspage', compact('title', 'allNews', 'arrWhoSharepin'));
     }
 
     /**
