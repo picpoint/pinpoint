@@ -11,7 +11,11 @@ use Illuminate\Support\Facades\Redis;
 
 class FreindController extends Controller
 {
-
+    /**
+     * Контроллер для добавления друзей
+     *
+     * главная страница, отображающая всех текущих друзей
+     */
     public function index() {
         $title = "Друзья | Pinpoint";
         $freinds = '';
@@ -22,6 +26,9 @@ class FreindController extends Controller
     }
 
 
+    /**
+     * Добавить пользователя в друзья
+     */
     public function addToFreind(Request $request, $id) {
         $currentUser = Auth::user()->id;
 

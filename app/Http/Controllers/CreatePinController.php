@@ -12,9 +12,10 @@ use Illuminate\Support\Facades\DB;
 class CreatePinController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * ресурс контроллер для создания пина на карте
      *
-     * @return \Illuminate\Http\Response
+     * главная страница на которой показываются все пины текущего юзера
+     * а так же пины которые были репостнуты другом
      */
     public function index()
     {
@@ -37,10 +38,7 @@ class CreatePinController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Создание пина и сохранение его в БД
      */
     public function store(Request $request)
     {
