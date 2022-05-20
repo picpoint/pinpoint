@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Events\MessageCreated;
+use App\Listeners\MessageCreatedNotification;
 use App\Listeners\NewMessageCreatedNotification;
 use App\Models\Message;
 use Illuminate\Auth\Events\Registered;
@@ -22,9 +23,10 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
 
-//        MessageCreated::class => [
-//            NewMessageCreatedNotification::class,
-//        ]
+        MessageCreated::class => [
+            MessageCreatedNotification::class,
+        ]
+
     ];
 
     /**
