@@ -26,6 +26,6 @@ class MessageCreatedNotification
      */
     public function handle(MessageCreated $event)
     {
-        //
+        dump($event);
     }
 }

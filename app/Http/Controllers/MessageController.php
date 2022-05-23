@@ -92,7 +92,8 @@ class MessageController extends Controller
      */
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
-        Message::create($request->all());
+        $message = Message::create($request->all());
+        event(new MessageCreated($message));
 
         return redirect()->route('messages.id', compact('id', 'currentUser'));
     }

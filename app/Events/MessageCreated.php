@@ -14,14 +14,17 @@ class MessageCreated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+
+    public $message = 'Тестовая длииииииинна я строка с каким то сообщением';
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($message)
     {
-        //
+        $this->message = $message;
     }
 
     /**
