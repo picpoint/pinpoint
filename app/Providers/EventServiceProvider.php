@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
+use App\Events\CreatePinEvent;
 use App\Events\MessageCreated;
+use App\Listeners\CreatePinEventNotification;
 use App\Listeners\MessageCreatedNotification;
-use App\Listeners\NewMessageCreatedNotification;
 use App\Models\Message;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -25,7 +26,12 @@ class EventServiceProvider extends ServiceProvider
 
         MessageCreated::class => [
             MessageCreatedNotification::class,
+        ],
+
+        CreatePinEvent::class => [
+            CreatePinEventNotification::class
         ]
+
 
     ];
 

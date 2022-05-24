@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\CreatePinEvent;
 use App\Models\News;
 use App\Models\Pin;
 use App\Models\User;
@@ -46,7 +47,7 @@ class CreatePinController extends Controller
         $user_id = Auth::user()->id;
         $img = $request->file('upfile')->store("img/{$user_id}");
 
-        Pin::create([
+        $pinCreated = Pin::create([
             'user_id' => $user_id,
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
@@ -54,6 +55,10 @@ class CreatePinController extends Controller
             'image' => $img
 
         ]);
+
+        event(new CreatePinEvent($pinCreated));
+
+        dd();
 
         return redirect()->route('personalpage');
     }
