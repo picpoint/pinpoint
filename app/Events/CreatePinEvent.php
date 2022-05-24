@@ -15,7 +15,7 @@ class CreatePinEvent
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
 
-    public $msgNotification = "Пин создан пользователем";
+    public $msgNotification = "Пин создан пользователем!";
 
     /**
      * Create a new event instance.

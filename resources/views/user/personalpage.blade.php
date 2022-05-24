@@ -83,7 +83,11 @@
 
         </div>
 
-        @include('user.layouts.sidebar')
+        {{--@include('user.layouts.sidebar')--}}
+
+        @if(isset($evntMsg))
+            {{ dump($evntMsg) }}
+        @endif
 
         <div class="pp__addpin animate-pulse" data-tooltip="Кликни правой кнопкой и создай метку">
             <i class="fa-solid fa-location-dot"></i>

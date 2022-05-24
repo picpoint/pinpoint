@@ -56,7 +56,9 @@ class CreatePinController extends Controller
 
         ]);
 
-        event(new CreatePinEvent($pinCreated));
+//        event(new CreatePinEvent($pinCreated));
+//        event(new CreatePinEvent($request->msgNotification));
+        CreatePinEvent::dispatch('Какое то событие');
 
         dd();
 
