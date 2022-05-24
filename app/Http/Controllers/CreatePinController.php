@@ -58,9 +58,9 @@ class CreatePinController extends Controller
 
 //        event(new CreatePinEvent($pinCreated));
 //        event(new CreatePinEvent($request->msgNotification));
-        CreatePinEvent::dispatch('Какое то событие');
+        CreatePinEvent::dispatch('Пользователь создал пин');
 
-        dd();
+//        dd();
 
         return redirect()->route('personalpage');
     }
