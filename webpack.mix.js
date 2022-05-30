@@ -23,6 +23,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/assets/users/js/webSockets.js', 'public/assets/users/js/webSockets.js');
 
+mix.js('resources/assets/users/js/eventListenMessage.js', 'public/assets/users/js/eventListenMessage.js');
+
 
 mix.sass('resources/assets/users/scss/style.scss', 'public/assets/users/css/style.css')
     .browserSync({

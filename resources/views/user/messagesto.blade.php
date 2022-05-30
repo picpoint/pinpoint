@@ -79,6 +79,7 @@
 
 <script src="/public/assets/users/js/scrollingChatToBottom.js"></script>
 <script src="/public/assets/users/js/webSockets.js"></script>
+<script src="/public/assets/users/js/eventListenMessage.js"></script>
 
 
 </body>

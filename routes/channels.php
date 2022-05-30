@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Broadcast;
 
 //  App.Models.User.{id}  вместо test-channel
 
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
+Broadcast::channel('test-channel', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });

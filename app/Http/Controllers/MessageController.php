@@ -93,11 +93,10 @@ class MessageController extends Controller
      */
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
-        dd(Message::create($request->all()));
+        Message::create($request->all());
 
-
-//        event(new MessageCreateEvent($message));
-//        MessageCreateEvent::dispatch('Пользователь создал пин');
+        MessageCreateEvent::dispatch("Получено сообщение ..... ");
+        CreatePinEvent::dispatch('Пользователь создал пин');
 
 
         return redirect()->route('messages.id', compact('id', 'currentUser'));
