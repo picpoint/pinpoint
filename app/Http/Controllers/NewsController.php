@@ -85,7 +85,6 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-
         News::destroy($id);
         session()->flash('success', 'Вы удалили пин');
 

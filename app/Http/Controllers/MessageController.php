@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\MessageCreated;
+use App\Events\MessageCreateEvent;
 use App\Models\Message;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
@@ -92,8 +93,12 @@ class MessageController extends Controller
      */
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
-        $message = Message::create($request->all());
-        event(new MessageCreated($message));
+        dd(Message::create($request->all()));
+
+
+//        event(new MessageCreateEvent($message));
+//        MessageCreateEvent::dispatch('Пользователь создал пин');
+
 
         return redirect()->route('messages.id', compact('id', 'currentUser'));
     }
