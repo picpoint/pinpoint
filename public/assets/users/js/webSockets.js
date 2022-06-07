@@ -23,10 +23,6 @@ __webpack_require__.r(__webpack_exports__);
 //     disableStats: true,
 //     enabledTransports: ['ws', 'wss'] // <- added this param
 // });
-// Echo.channel('test-channel')
-//     .listen('MessageCreated', (e) => {
-//         console.log(e);
-//     });
 
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
@@ -37,7 +33,10 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   disableStats: true,
   enabledTransports: ['ws', 'wss'] // <- added this param
 
-}); // Echo.private('test-chanel');
+});
+laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"].channel('test-channel').listen('MessageCreateEvent', function (e) {
+  console.log(e);
+});
 
 /***/ }),
 

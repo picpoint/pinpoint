@@ -14,13 +14,6 @@
 
 
 
-// Echo.channel('test-channel')
-//     .listen('MessageCreated', (e) => {
-//         console.log(e);
-//     });
-
-
-
 import Echo from 'laravel-echo';
 
 window.Pusher = require('pusher-js');
@@ -35,6 +28,9 @@ window.Echo = new Echo({
 });
 
 
-// Echo.private('test-chanel');
 
 
+Echo.channel('test-channel')
+    .listen('MessageCreateEvent', (e) => {
+        console.log(e);
+    });
