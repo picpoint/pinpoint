@@ -26,6 +26,6 @@ class CreatePinEventNotification
      */
     public function handle(CreatePinEvent $event)
     {
-        dd($event->msgNotification);
+        $event->msgNotification;
     }
 }
