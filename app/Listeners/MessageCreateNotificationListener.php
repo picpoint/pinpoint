@@ -26,6 +26,7 @@ class MessageCreateNotificationListener
      */
     public function handle(MessageCreateEvent $event)
     {
+        dump($this->event = $event);
         dd($event->messageNotification);
     }
 }

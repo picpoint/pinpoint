@@ -55,6 +55,7 @@
     let title = document.querySelector('.inpsendmsg');
     let token = document.getElementsByTagName('input')[0];
 
+
     btnsend.addEventListener("click", (e) => {
         e.preventDefault();
         const params = "_token=" + token.value + "&currentuser_id=" + {{ $currentUser }} +"&user_id=" + {{ $id }} +"&message=" + title.value;

@@ -93,6 +93,11 @@ class MessageController extends Controller
      */
     public function writeMessageToUser(Request $request, $id) {
         $currentUser = Auth::user()->id;
+
+//        dump($id);
+//        dump($currentUser);
+//        dd($request->all());
+
         Message::create($request->all());
 
         MessageCreateEvent::dispatch("Получено сообщение ..... ");

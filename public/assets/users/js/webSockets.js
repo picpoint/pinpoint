@@ -33,10 +33,11 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   disableStats: true,
   enabledTransports: ['ws', 'wss'] // <- added this param
 
-});
-laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"].channel('test-channel').listen('MessageCreateEvent', function (e) {
-  console.log(e);
-});
+}); //
+// Echo.channel('test-channel')
+//     .listen('MessageCreateEvent', (e) => {
+//         console.log(e);
+//     });
 
 /***/ }),
 

@@ -1,4 +1,4 @@
-Echo.private(`test-channel`)
+Echo.channel('test-channel')
     .listen('MessageCreateEvent', (e) => {
         console.log(e);
     });

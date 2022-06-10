@@ -29,8 +29,8 @@ window.Echo = new Echo({
 
 
 
-
-Echo.channel('test-channel')
-    .listen('MessageCreateEvent', (e) => {
-        console.log(e);
-    });
+//
+// Echo.channel('test-channel')
+//     .listen('MessageCreateEvent', (e) => {
+//         console.log(e);
+//     });

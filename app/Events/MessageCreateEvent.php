@@ -36,6 +36,6 @@ class MessageCreateEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('test-channel' . $this->messageNotification);
+        return new Channel('test-channel' . $this->messageNotification);
     }
 }
