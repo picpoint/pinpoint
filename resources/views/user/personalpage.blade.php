@@ -124,5 +124,9 @@
 <script src="/public/assets/users/js/mapbasics.js"></script>
 <script src="/public/assets/users/js/errLocatePosition.js"></script>
 <script src="/public/assets/users/js/showBallons.js"></script>
+
+<script src="/public/assets/users/js/hammerjs.js"></script>
+<script src="/public/assets/users/js/emulateTap.js"></script>
+
 </body>
 </html>
