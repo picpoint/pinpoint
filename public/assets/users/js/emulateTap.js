@@ -12,9 +12,13 @@ var hammertime = new Hammer(myMap, {
     ]
 });
 
-hammertime.on('tap', function(ev) {
+
+
+hammertime.on('press', function(ev) {
     alert(ev);
 });
 
 
-hammertime.add( new Hammer.Tap({ event: 'tap', taps: 1 }) );
+
+
+hammertime.add( new Hammer.Press({ event: 'press'}) );
