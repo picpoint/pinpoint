@@ -1,4 +1,4 @@
-let btnclose = document.querySelector('.close');                      // доступ на блоке предупоеждения к кнопке ОК
+let btnclose = document.querySelector('.close');                      // доступ на блоке предупреждения к кнопке ОК
 
 
 

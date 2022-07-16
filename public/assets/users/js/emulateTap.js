@@ -1,7 +1,5 @@
 var myMap = document.querySelector('#map');
 
-console.log(myMap);
-
 
 var hammertime = new Hammer(myMap, {
     recognizers: [
@@ -15,10 +13,16 @@ var hammertime = new Hammer(myMap, {
 
 
 hammertime.on('press', function(ev) {
-    alert(ev);
+    // alert(ev);
+    // alert('emulate tap');
+
+    let longTap = new ContextMenuOnMapClass(sendfile, closeform);
+    longTap.contextMenu();
+
 });
 
 
 
 
 hammertime.add( new Hammer.Press({ event: 'press'}) );
+
