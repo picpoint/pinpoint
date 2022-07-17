@@ -128,5 +128,6 @@
 <script src="/public/assets/users/js/hammerjs.js"></script>
 <script src="/public/assets/users/js/emulateTap.js"></script>
 
+
 </body>
 </html>

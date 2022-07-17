@@ -392,16 +392,6 @@
     transition: ease-in-out 0.5s;
   }
 }
-.pp__latitude {
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-}
-.pp__longitude {
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-}
 .pp__addcontent {
   display: flex;
   justify-content: flex-end;
