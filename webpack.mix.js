@@ -21,7 +21,7 @@ const mix = require('laravel-mix');
 // mix.js('resources/assets/users/js/contextMenuOnMap.js', 'public/assets/users/js/contextMenuOnMap.js');
 
 
-mix.js('resources/assets/users/js/webSockets.js', 'public/assets/users/js/webSockets.js');
+// mix.js('resources/assets/users/js/webSockets.js', 'public/assets/users/js/webSockets.js');
 
 // mix.js('resources/assets/users/js/eventListenMessage.js', 'public/assets/users/js/eventListenMessage.js');
 
