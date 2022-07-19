@@ -154,6 +154,7 @@
       transition: $transition;
         @media (max-width: 720px) {
           width: 300px;
+          height: 350px;
           transition: $transition;
         }
         @media (max-width: 540px) {
@@ -331,14 +332,14 @@
         }
     }
     &__latitude {
-      //visibility: hidden;
-      //width: 0px;
-      //height: 0px;
+      visibility: hidden;
+      width: 0px;
+      height: 0px;
     }
     &__longitude {
-      //visibility: hidden;
-      //width: 0px;
-      //height: 0px;
+      visibility: hidden;
+      width: 0px;
+      height: 0px;
     }
     &__addcontent {
       //border: $border;

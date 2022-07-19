@@ -220,6 +220,7 @@
 @media (max-width: 720px) {
   .pp__sendfile {
     width: 300px;
+    height: 350px;
     transition: ease-in-out 0.5s;
   }
 }
@@ -391,6 +392,16 @@
     height: 70px;
     transition: ease-in-out 0.5s;
   }
+}
+.pp__latitude {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+.pp__longitude {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
 }
 .pp__addcontent {
   display: flex;

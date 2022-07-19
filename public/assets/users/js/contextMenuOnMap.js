@@ -14,12 +14,24 @@ class ContextMenuOnMapClass {                                                   
 
     contextMenu() {                                                                     // метод для создания контекстной формы
         document.addEventListener('contextmenu', (e) => {                                 // на документ вешаем событие контекста
+
+            let screenWith = document.documentElement.clientWidth;
+
             // this.sendfile.classList.toggle('showblock');                                 // на блок вешаем по переключению класс показа/скрытия
             this.sendfile.classList.remove('showblock');                                    // удаляем класс showblock показа формы
             this.sendfile.classList.add('showblock');                                       // и сразу же его показываем, чтоб не нужно было делать 2 клика
             this.sendfile.style.left = e.clientX + 'px';                                    // присваиваем координаты окна на форму
             this.sendfile.style.top = e.clientY + 'px';
             this.getPlaceName();                                                            // вызываем ф-ию для получения адреса в шапке формы создания пинов
+
+            console.log(screenWith);
+
+            if (screenWith < 720) {
+                this.sendfile.style.left = 10 + 'px';                                    // присваиваем координаты окна на форму
+                this.sendfile.style.top = 40 + '%';
+            }
+
+
         });
 
         this.closeform.addEventListener('click', () => {                                  // на крестик закрытия вешаем событие клика
