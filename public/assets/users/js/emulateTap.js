@@ -1,7 +1,7 @@
 var myMap = document.querySelector('#map');
 
 
-function getPlaceName() {                                                                    // ф-ия для показа, в шапке формы создания пинов, адреса по геолокации
+function getPlaceNameMobile() {                                                                    // ф-ия для показа, в шапке формы создания пинов, адреса по геолокации
     setTimeout(() => {
         hdrplace.innerHTML = window.curPosition;                                        // делаем мааааленькую задержку и из windowsStorage получаем данные
     }, 500);
@@ -9,13 +9,22 @@ function getPlaceName() {                                                       
 
 
 function tapMobile(ev) {
+    let screenWith = document.documentElement.clientWidth;
 
     sendfile.classList.remove('showblock');                                    // удаляем класс showblock показа формы
     sendfile.classList.add('showblock');                                       // и сразу же его показываем, чтоб не нужно было делать 2 клика
     sendfile.style.left = ev.clientX + 'px';                                    // присваиваем координаты окна на форму
     sendfile.style.top = ev.clientY + 'px';
-    getPlaceName();
-    getPlaceName();
+
+    if (screenWith < 720) {
+        sendfile.style.left = 10 + 'px';                                    // присваиваем координаты окна на форму
+        sendfile.style.top = 55 + '%';
+    }
+
+    // console.log(hdrplace)
+
+    getPlaceNameMobile();
+    getPlaceNameMobile();
 }
 
 
@@ -30,12 +39,7 @@ var hammertime = new Hammer(myMap, {
 
 
 hammertime.on('press', function (ev) {
-    // alert(ev);
-    // alert(window.curCoords);
-
     tapMobile(ev);
-
-
 });
 
 

@@ -227,6 +227,7 @@
 @media (max-width: 540px) {
   .pp__sendfile {
     width: 250px;
+    height: 250px;
   }
 }
 .pp__hdrsf {
