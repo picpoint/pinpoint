@@ -17,11 +17,16 @@ function tapMobile(ev) {
     sendfile.style.top = ev.clientY + 'px';
 
     if (screenWith < 720) {
-        sendfile.style.left = 10 + 'px';                                    // присваиваем координаты окна на форму
-        sendfile.style.top = 55 + '%';
+        sendfile.style.justifyContent = 'center!important';
+        sendfile.style.alignItems = 'center!important';
+        sendfile.style.alignContent = 'center!important';
+        sendfile.style.alignSelf = 'center!important';
+        sendfile.style.width = 70 + '%';
+
+        // sendfile.style.left = 0 + 'px';                                    // присваиваем координаты окна на форму
+        // sendfile.style.top = 0 + 'px';
     }
 
-    // console.log(hdrplace)
 
     getPlaceNameMobile();
     getPlaceNameMobile();
