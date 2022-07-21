@@ -20,14 +20,6 @@ class ContextMenuOnMapClass {                                                   
             this.sendfile.style.left = e.clientX + 'px';                                    // присваиваем координаты окна на форму
             this.sendfile.style.top = e.clientY + 'px';
             this.getPlaceName();                                                            // вызываем ф-ию для получения адреса в шапке формы создания пинов
-
-
-            // if (screenWith < 720) {
-            //     this.sendfile.style.left = 10 + 'px';                                    // присваиваем координаты окна на форму
-            //     this.sendfile.style.top = 40 + '%';
-            // }
-
-
         });
 
         this.closeform.addEventListener('click', () => {                                  // на крестик закрытия вешаем событие клика
