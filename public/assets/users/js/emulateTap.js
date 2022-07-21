@@ -7,8 +7,13 @@ function getPlaceNameMobile() {                                                 
     setTimeout(() => {
         hdrplace.innerHTML = window.curPosition;                                        // делаем мааааленькую задержку и из windowsStorage получаем данные
         console.log(window.curPosition);
+        console.log(lat.value);
+        console.log(lon.value);
     }, 500);
 }
+
+
+
 
 
 function tapMobile(ev) {
@@ -21,6 +26,7 @@ function tapMobile(ev) {
 
 
 
+    getPlaceNameMobile();
 
 }
 
