@@ -19,7 +19,9 @@ function tapMobile(ev) {
     sendfile.style.left = ev.clientX + 'px';                                    // присваиваем координаты окна на форму
     sendfile.style.top = ev.clientY + 'px';
 
-    // getPlaceNameMobile();
+
+
+
 }
 
 

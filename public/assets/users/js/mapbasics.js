@@ -54,6 +54,7 @@ function init () {                                                              
         lat.value = coords[0].toPrecision(8);                                               // координаты широты
         lon.value = coords[1].toPrecision(8);                                               // координаты долготы
         var coords = e.get('coords');
+        
 
         if (myPlacemark) {
             myPlacemark.geometry.setCoordinates(coords);                                    // Если метка уже создана – просто передвигаем ее.
